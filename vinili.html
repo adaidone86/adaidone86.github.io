@@ -2,25 +2,73 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
-    <title>La mia collezione di Vinili</title>
-    <style>
-        body { font-family: sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; }
-        .album { border-bottom: 1px solid #ccc; padding: 10px 0; }
-        nav { margin-bottom: 20px; }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La mia collezione di Vinili - Antonino Daidone</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-<nav><a href="index.html">← Torna alla Home</a></nav>
-<h1>La mia collezione di Vinili</h1>
 
-<div class="album">
-    <h3>The Dark Side of the Moon</h3>
-    <p>Artista: Pink Floyd | Anno: 1973</p>
+<div class="top-wrapper">
+    <header class="main-header">
+        <div class="header-icon">
+            <i class="fa-solid fa-compact-disc" style="font-size: 80px; color: #0077b5;"></i>
+        </div>
+        <div class="header-text">
+            <h1>La mia collezione</h1>
+            <p>Musica, solchi e storie: i dischi che hanno segnato il mio tempo.</p>
+        </div>
+    </header>
+
+    <nav class="hobby-nav">
+        <ul>
+            <li><a href="index.html" class="hobby-link">Home 🏠</a></li>
+            <li><a href="trekking.html" class="hobby-link">Trekking 🥾</a></li>
+        </ul>
+    </nav>
 </div>
 
-<div class="album">
-    <h3>Kind of Blue</h3>
-    <p>Artista: Miles Davis | Anno: 1959</p>
-</div>
+<section class="about-section">
+    <h2><i class="fa-solid fa-record-vinyl"></i> La mia Vetrina</h2>
+
+    <div class="search-container">
+        <div class="search-box">
+            <i class="fa-solid fa-compact-disc"></i>
+            <input type="text" id="searchTitle" placeholder="Cerca per titolo..." onkeyup="filterAlbums()">
+        </div>
+        <div class="search-box">
+            <i class="fa-solid fa-user-music"></i>
+            <input type="text" id="searchArtist" placeholder="Cerca per artista..." onkeyup="filterAlbums()">
+        </div>
+    </div>
+
+    <div class="album-grid" id="albumGrid">
+
+        <div class="album-item" data-title="The Dark Side of the Moon" data-artist="Pink Floyd">
+            <img src="img/vinile/dark-side.jpg" alt="Dark Side" class="album-cover">
+            <h3>The Dark Side of the Moon</h3>
+            <p><strong>Pink Floyd</strong> | 1973</p>
+            <p class="description">Un capolavoro di ingegneria sonora.</p>
+        </div>
+
+        <div class="album-item" data-title="Kind of Blue" data-artist="Miles Davis">
+            <img src="img/vinile/kind-of-blue.jpg" alt="Kind of Blue" class="album-cover">
+            <h3>Kind of Blue</h3>
+            <p><strong>Miles Davis</strong> | 1959</p>
+            <p class="description">Il disco jazz per eccellenza.</p>
+        </div>
+
+        <div class="album-item" data-title="Led Zeppelin IV" data-artist="Led Zeppelin">
+            <img src="img/vinile/led-zeppelin-4.jpg" alt="Led Zeppelin IV" class="album-cover">
+            <h3>Led Zeppelin IV</h3>
+            <p><strong>Led Zeppelin</strong> | 1971</p>
+            <p class="description">L'energia pura del rock anni '70.</p>
+        </div>
+
+    </div>
+</section>
+
+<script src="js/script.js"></script>
+
 </body>
 </html>
