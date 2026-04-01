@@ -1,0 +1,81 @@
+/* --- Stili Generali --- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #f0f2f5;
+    color: #333;
+}
+
+/* --- Header --- */
+header {
+    background: #ffffff;
+    color: #333;
+    padding: 40px 20px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+header h1 { margin-bottom: 5px; font-size: 2.5em; }
+header p { margin-top: 0; color: #666; font-size: 1.2em; }
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #fff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    margin-top: 15px;
+}
+
+/* --- Menu Hobby --- */
+.hobby-nav {
+    margin-top: 20px;
+    text-align: right;
+    padding-right: 10px;
+}
+
+.hobby-nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+}
+
+.hobby-nav li {
+    display: inline;
+    margin-left: 10px;
+}
+
+.hobby-link {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #0077b5;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.hobby-link:hover {
+    background-color: #005582;
+    transform: translateY(-2px);
+}
+
+/* --- Sezioni Contenuto --- */
+section {
+    background: #fff;
+    padding: 30px;
+    margin-top: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+section h2 { border-bottom: 2px solid #0077b5; display: inline-block; padding-bottom: 5px; color: #0077b5; }
