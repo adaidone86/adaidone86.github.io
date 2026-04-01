@@ -9,34 +9,80 @@ body {
     color: #333;
 }
 
-/* --- Header --- */
-header {
+/* --- Contenitore Unificato (Wrapper) --- */
+.top-wrapper {
     background: #ffffff;
-    color: #333;
-    padding: 40px 20px;
-    text-align: center;
+    overflow: hidden;
     border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    margin-bottom: 25px;
+    border: 1px solid #e2e8f0;
 }
 
-header h1 { margin-bottom: 5px; font-size: 2.5em; }
-header p { margin-top: 0; color: #666; font-size: 1.2em; }
+/* --- Parte Superiore (Header) --- */
+.main-header {
+    background: #f9f9f9;
+    display: flex;
+    align-items: center; /* Centra verticalmente foto e testo */
+    justify-content: center; /* AGGIUNTO: Centra tutto orizzontalmente */
+    gap: 40px; /* Aumentato un po' lo spazio tra foto e testo per equilibrio */
+    padding: 35px;
+}
 
+/* Stile della Foto */
 .profile-img {
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
     object-fit: cover;
-    border: 5px solid #fff;
+    border: 4px solid #fff;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    margin-top: 15px;
+    flex-shrink: 0;
 }
 
-/* --- Menu Hobby --- */
+/* Stile del Testo */
+.header-text {
+    flex-grow: 1;
+    text-align: left;
+}
+
+.header-text h1 {
+    margin: 0;
+    font-size: 2.2em;
+    color: #2d3748;
+    line-height: 1.2; /* Mantiene i nomi compatti quando vanno a capo */
+}
+
+/* --- EFFETTO SCALETTA (Aggiunto qui) --- */
+.header-text h1 span {
+    display: inline-block; /* Necessario per permettere lo spostamento */
+    font-size: 0.8em;       /* Rende i soprannomi un po' più piccoli */
+    color: #4a5568;        /* Grigio leggermente più morbido */
+    font-weight: 400;      /* Meno grassetto rispetto al nome principale */
+}
+
+.spostato-1 {
+    margin-left: 220px;    /* Primo spostamento */
+    margin-top: 5px;
+}
+
+.spostato-2 {
+    margin-left: 280px;    /* Secondo spostamento */
+    margin-top: 5px;
+}
+
+.header-text p {
+    margin-top: 15px;
+    color: #666;
+    font-size: 1.1em;
+}
+
+/* --- Parte Inferiore (Navigazione Hobby) --- */
 .hobby-nav {
-    margin-top: 20px;
+    background: #eceef1; /* Il grigio più scuro che volevi */
+    padding: 12px 20px;
     text-align: right;
-    padding-right: 10px;
+    border-top: 1px solid #e2e8f0;
 }
 
 .hobby-nav ul {
@@ -56,26 +102,34 @@ header p { margin-top: 0; color: #666; font-size: 1.2em; }
     text-decoration: none;
     background-color: #0077b5;
     color: white;
-    padding: 10px 20px;
+    padding: 8px 18px;
     border-radius: 25px;
     font-weight: bold;
     font-size: 0.9em;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    transition: all 0.3s ease;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .hobby-link:hover {
     background-color: #005582;
     transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
 }
 
-/* --- Sezioni Contenuto --- */
-section {
-    background: #fff;
+/* --- Sezione Su di me (Bianca) --- */
+.about-section {
+    background: #ffffff; /* Sfondo bianco come richiesto */
     padding: 30px;
     margin-top: 20px;
     border-radius: 12px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    border: 1px solid #e2e8f0;
 }
 
-section h2 { border-bottom: 2px solid #0077b5; display: inline-block; padding-bottom: 5px; color: #0077b5; }
+.about-section h2 {
+    border-bottom: 2px solid #0077b5;
+    display: inline-block;
+    padding-bottom: 5px;
+    color: #0077b5;
+    margin-top: 0;
+}
