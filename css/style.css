@@ -1,4 +1,6 @@
-/* --- Stili Generali --- */
+/* ============================================================
+   1. STILI GENERALI (Comuni a tutte le pagine)
+   ============================================================ */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
@@ -9,7 +11,7 @@ body {
     color: #333;
 }
 
-/* --- Contenitore Unificato (Wrapper) --- */
+/* Contenitore Unificato (Header + Nav) */
 .top-wrapper {
     background: #ffffff;
     overflow: hidden;
@@ -19,17 +21,16 @@ body {
     border: 1px solid #e2e8f0;
 }
 
-/* --- Parte Superiore (Header) --- */
+/* Header con Foto e Nome */
 .main-header {
     background: #f9f9f9;
     display: flex;
-    align-items: center; /* Centra verticalmente foto e testo */
-    justify-content: center; /* AGGIUNTO: Centra tutto orizzontalmente */
-    gap: 40px; /* Aumentato un po' lo spazio tra foto e testo per equilibrio */
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
     padding: 35px;
 }
 
-/* Stile della Foto */
 .profile-img {
     width: 120px;
     height: 120px;
@@ -40,7 +41,6 @@ body {
     flex-shrink: 0;
 }
 
-/* Stile del Testo */
 .header-text {
     flex-grow: 1;
     text-align: left;
@@ -50,26 +50,19 @@ body {
     margin: 0;
     font-size: 2.2em;
     color: #2d3748;
-    line-height: 1.2; /* Mantiene i nomi compatti quando vanno a capo */
+    line-height: 1.2;
 }
 
-/* --- EFFETTO SCALETTA (Aggiunto qui) --- */
+/* Effetto Scaletta Nomi */
 .header-text h1 span {
-    display: inline-block; /* Necessario per permettere lo spostamento */
-    font-size: 0.8em;       /* Rende i soprannomi un po' più piccoli */
-    color: #4a5568;        /* Grigio leggermente più morbido */
-    font-weight: 400;      /* Meno grassetto rispetto al nome principale */
+    display: inline-block;
+    font-size: 0.8em;
+    color: #4a5568;
+    font-weight: 400;
 }
 
-.spostato-1 {
-    margin-left: 220px;    /* Primo spostamento */
-    margin-top: 5px;
-}
-
-.spostato-2 {
-    margin-left: 280px;    /* Secondo spostamento */
-    margin-top: 5px;
-}
+.spostato-1 { margin-left: 220px; margin-top: 5px; }
+.spostato-2 { margin-left: 280px; margin-top: 5px; }
 
 .header-text p {
     margin-top: 15px;
@@ -77,9 +70,9 @@ body {
     font-size: 1.1em;
 }
 
-/* --- Parte Inferiore (Navigazione Hobby) --- */
+/* Navigazione */
 .hobby-nav {
-    background: #eceef1; /* Il grigio più scuro che volevi */
+    background: #eceef1;
     padding: 12px 20px;
     text-align: right;
     border-top: 1px solid #e2e8f0;
@@ -92,10 +85,7 @@ body {
     display: inline-block;
 }
 
-.hobby-nav li {
-    display: inline;
-    margin-left: 10px;
-}
+.hobby-nav li { display: inline; margin-left: 10px; }
 
 .hobby-link {
     display: inline-block;
@@ -113,12 +103,11 @@ body {
 .hobby-link:hover {
     background-color: #005582;
     transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
 }
 
-/* --- Sezione Su di me (Bianca) --- */
+/* Sezioni Contenuto */
 .about-section {
-    background: #ffffff; /* Sfondo bianco come richiesto */
+    background: #ffffff;
     padding: 30px;
     margin-top: 20px;
     border-radius: 12px;
@@ -134,61 +123,43 @@ body {
     margin-top: 0;
 }
 
-/* --- Griglia dei Vinili --- */
-.album-grid {
-    display: grid;
-    /* Crea colonne che si adattano da sole: minimo 250px di larghezza */
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px; /* Spazio tra i quadrettoni */
-    margin-top: 20px;
+/* ============================================================
+   2. STILI SPECIFICI PER LO SFOGLIATORE VINILI (Swiper)
+   ============================================================ */
+.swiper {
+    width: 320px;
+    height: 480px;
+    margin: 40px auto;
+    padding: 20px 0 50px 0;
+    perspective: 1200px;
 }
 
-/* --- Il Singolo Quadrettone --- */
-.album-item {
-    background: #f9f9f9;
-    border: 1px solid #e2e8f0;
+.swiper-slide.album-item {
+    background: #ffffff;
     border-radius: 12px;
-    padding: 20px;
-    text-align: center; /* Centra tutto nel quadrettone */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-}
-
-.album-item:hover {
-    transform: translateY(-5px); /* Si alza leggermente quando passi il mouse */
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-    border-color: #0077b5;
-}
-
-/* Segnaposto per la copertina (in attesa delle foto reali) */
-.album-cover-placeholder {
-    width: 100%;
-    aspect-ratio: 1 / 1; /* Lo rende un quadrato perfetto */
-    background: #dee2e6;
-    border-radius: 8px;
-    display: flex;
     align-items: center;
-    justify-content: center;
-    font-size: 50px;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+    border: 1px solid #e2e8f0; /* Coerenza con il resto del sito */
+}
+
+.album-cover {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 8px;
     margin-bottom: 15px;
+    border: 2px solid #111;
 }
 
-.album-item h3 {
-    font-size: 1.1em;
-    margin: 10px 0;
-    color: #2d3748;
-}
+.album-info { text-align: center; }
+.album-info h3 { font-size: 1.1em; margin: 0; color: #2d3748; }
+.album-info p { font-size: 0.9em; margin: 5px 0; color: #4a5568; }
 
-.album-item p {
-    font-size: 0.9em;
-    margin: 2px 0;
-}
-
-.album-item .description {
-    font-style: italic;
-    color: #718096;
-    margin-top: 10px;
-    font-size: 0.85em;
+.swiper-pagination-bullet-active {
+    background-color: #0077b5;
 }
