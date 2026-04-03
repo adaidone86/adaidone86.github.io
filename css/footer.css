@@ -1,0 +1,65 @@
+:root {
+    --banana-yellow: #ffdb58;
+    --dark-bg: #1a1a1a;
+    --footer-height: 60px;
+}
+
+.footer-minimal.black-yellow {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: var(--footer-height);
+    background-color: var(--dark-bg);
+    border-top: 3px solid var(--banana-yellow);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    z-index: 1100;
+    color: #eeeeee;
+    font-size: 0.85rem;
+    box-shadow: 0 -4px 15px rgba(0,0,0,0.3);
+}
+
+.footer-left, .footer-right { flex: 1; }
+.footer-right { text-align: right; color: #888; }
+
+.footer-icons {
+    display: flex;
+    gap: 30px;
+}
+
+.social-custom-icon {
+    width: 28px;
+    height: 28px;
+    transition: transform 0.3s, filter 0.3s;
+}
+
+.icon-container:hover .social-custom-icon {
+    transform: translateY(-5px);
+    filter: brightness(1.2);
+}
+
+.tooltip {
+    visibility: hidden;
+    background-color: var(--banana-yellow);
+    color: #111;
+    padding: 6px 12px;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 45px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: all 0.3s;
+    font-weight: bold;
+    font-size: 0.75rem;
+    z-index: 1300;
+}
+
+.icon-container:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+    bottom: 55px;
+}

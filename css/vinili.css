@@ -1,0 +1,88 @@
+/* ============================================================
+   STILI SPECIFICI PER LO SFOGLIATORE VINILI (vinili.css)
+   ============================================================ */
+
+/* 1. Contenitore dello Swiper */
+.swiper {
+    width: 320px;
+    height: 480px;
+    margin: 20px auto;
+    padding: 10px 0 50px 0;
+    /* La prospettiva aiuta l'effetto 3D delle cards */
+    perspective: 1200px;
+}
+
+/* 2. La singola scheda (Slide) */
+.swiper-slide.album-item {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    border: 1px solid #e2e8f0;
+    box-sizing: border-box;
+}
+
+/* 3. Immagine di Copertina */
+.album-cover {
+    width: 100%;
+    aspect-ratio: 1/1; /* Forza il quadrato perfetto */
+    object-fit: cover; /* Evita deformazioni se la foto non è quadrata */
+    border-radius: 12px;
+    margin-bottom: 15px;
+    border: 2px solid #1a1a1a;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* 4. Testi Informativi */
+.album-info {
+    text-align: center;
+    width: 100%;
+}
+
+.album-info h3 {
+    font-size: 1.1rem;
+    margin: 5px 0;
+    color: #1a1a1a;
+    font-weight: bold;
+    /* Evita che titoli lunghi rompano il layout */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.album-info p {
+    font-size: 0.9rem;
+    margin: 5px 0;
+    color: #4a5568;
+}
+
+.genere-tag {
+    display: inline-block;
+    background-color: #f0f7ff;
+    padding: 3px 10px;
+    border-radius: 12px;
+    margin-top: 5px;
+    font-weight: 600;
+}
+
+/* 5. Paginazione (i puntini in basso) */
+.swiper-pagination-bullet-active {
+    background-color: #ffdb58 !important; /* Giallo Banana per coerenza! */
+    width: 12px;
+    height: 12px;
+}
+
+/* 6. Ottimizzazione Mobile */
+@media (max-width: 400px) {
+    .swiper {
+        width: 280px;
+        height: 420px;
+    }
+    .album-info h3 {
+        font-size: 1rem;
+    }
+}
