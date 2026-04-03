@@ -2,22 +2,58 @@
    STILI SPECIFICI PER LO SFOGLIATORE VINILI (vinili.css)
    ============================================================ */
 
-/* Forza la sezione a non avere padding interni eccessivi */
 .about-section {
-    padding-top: 10px !important; /* Riduce al minimo lo spazio sotto l'header */
-    justify-content: flex-start !important; /* Allinea dall'alto invece che dal centro */
+    /* Forza l'allineamento in alto a sinistra/centro */
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-start !important; /* MAI usare center qui */
+
+    padding-top: 0px !important; /* Spazio minimo sotto l'header */
+    margin-top: 100px; /* Altezza dell'header */
+    height: calc(100vh - 160px); /* Altezza dinamica */
+    overflow-y: auto;
 }
 
-.swiper {
+/* LOADER / SPINNER */
+#loader-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Allinea in alto */
+    padding-top: 50px; /* Distanza dall'header durante il caricamento */
+    height: 200px; /* Non serve che sia 400px, altrimenti spinge giù lo spazio */
+    width: 100%;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #ddd;
+    border-top: 5px solid var(--banana-yellow, #ffdb58);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 15px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* SWIPER */
+.mySwiper {
     width: 350px;
     height: 520px;
-    margin: 0 auto;
+    /* Rimuoviamo margini che potrebbero causare spostamenti */
+    margin: 0 auto !important;
+    padding: 0 !important;
 
-    /* AZZERATO IL PADDING SUPERIORE: era 20px, ora 0 */
-    /* Ridotto il padding inferiore: era 60px, ora 20px */
-    padding: 0 0 20px 0;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
 
-    perspective: 1200px;
+    /* Impedisce allo swiper di occupare spazio finché non appare */
+    display: none;
 }
 
 .swiper-slide.album-item {
@@ -32,35 +68,29 @@
     box-sizing: border-box;
 }
 
-/* Rimpiccioliamo leggermente l'area info se lo spazio è poco */
 .album-cover {
     width: 100%;
     aspect-ratio: 1/1;
     object-fit: cover;
     border-radius: 12px;
-    margin-bottom: 10px; /* Ridotto da 15px */
+    margin-bottom: 10px;
     border: 3px solid #1a1a1a;
 }
 
 .album-info h3 {
-    font-size: 1.1rem; /* Ridotto leggermente da 1.2 */
+    font-size: 1.1rem;
     margin: 2px 0;
     color: #1a1a1a;
     font-weight: bold;
 }
 
 .album-info p {
-    font-size: 0.9rem; /* Ridotto leggermente da 0.95 */
+    font-size: 0.9rem;
     margin: 2px 0;
     color: #4a5568;
 }
 
-/* Puoi cancellare questa parte perché abbiamo tolto i puntini nel JS */
-.swiper-pagination-bullet-active {
-    display: none;
-}
-
-.mySwiper {
-    opacity: 0;
-    transition: opacity 0.4s ease-in-out;
+/* Rimuove definitivamente i rimasugli della paginazione */
+.swiper-pagination {
+    display: none !important;
 }

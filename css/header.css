@@ -1,8 +1,16 @@
 :root {
     --banana-yellow: #ffdb58;
     --dark-bg: #1a1a1a;
-    /* Header alzato per ospitare la foto gigante */
     --header-height: 100px;
+    --paper-yellow: #ffdb58; /* Giallo per tutte le linguette */
+}
+
+/* RESET & BODY ADJUSTMENT */
+@media screen {
+    body {
+        padding-top: 140px !important;
+        background-color: #f4f4f4;
+    }
 }
 
 .top-wrapper {
@@ -12,7 +20,7 @@
     width: 100%;
     height: var(--header-height);
     background-color: var(--dark-bg);
-    border-bottom: 4px solid var(--banana-yellow); /* Riga gialla leggermente più spessa */
+    border-bottom: 4px solid var(--banana-yellow);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -30,26 +38,20 @@
 }
 
 .profile-img {
-    /* Dimensione raddoppiata (da 75px a 150px) */
     width: 150px;
     height: 150px;
     border-radius: 50%;
     border: 4px solid var(--banana-yellow);
     object-fit: cover;
     background-color: var(--dark-bg);
-
-    /* POSIZIONAMENTO */
     position: relative;
-    /* La spingiamo giù di 40px così la testa resta
-       sotto il bordo superiore del browser e "sconfina" nel body */
     top: 40px;
-
     box-shadow: 0 6px 15px rgba(0,0,0,0.5);
     z-index: 1200;
 }
 
 .header-text h1 {
-    font-size: 1.2rem; /* Testo leggermente più grande visto l'header XL */
+    font-size: 1.2rem;
     color: #ffffff;
     margin: 0;
     line-height: 1.2;
@@ -61,7 +63,7 @@
     font-size: 1rem;
 }
 
-/* IL MESSAGGIO CENTRALE */
+/* MESSAGGIO CENTRALE */
 .header-text p {
     position: absolute;
     left: 50%;
@@ -69,17 +71,18 @@
     transform: translate(-50%, -50%);
     margin: 0;
     color: #ffffff;
-    font-size: 1.3rem; /* Messaggio più visibile */
+    font-size: 1.3rem;
     font-weight: 600;
     letter-spacing: 1px;
     white-space: nowrap;
     pointer-events: none;
-    text-transform: uppercase; /* Diamo un tocco più "strong" */
+    text-transform: uppercase;
 }
 
-/* ZONA DESTRA */
+/* ZONA DESTRA: LE LINGUETTE */
 .hobby-nav {
-    text-align: right;
+    align-self: flex-end;
+    margin-bottom: -55px; /* Spazio per le linguette lunghe */
 }
 
 .hobby-nav ul {
@@ -87,56 +90,67 @@
     margin: 0;
     padding: 0;
     display: flex;
-    gap: 20px;
+    gap: 10px;
+    align-items: flex-start;
 }
 
+/* STILE LINGUETTA INTERA (Pagine cliccabili) */
 .hobby-link {
-    color: #ffffff;
+    display: block;
+    background-color: var(--paper-yellow);
+    color: #1a1a1a;
     text-decoration: none;
     font-weight: bold;
-    font-size: 1.1rem; /* Menu più grande per equilibrio */
-    transition: all 0.3s;
+    font-size: 0.95rem;
+    padding: 12px 12px 25px 12px;
+    transition: all 0.2s ease-in-out;
     white-space: nowrap;
+
+    /* Bordo superiore tratteggiato */
+    border-top: 1.5px dashed #8b731b;
+    box-shadow: 2px 5px 8px rgba(0,0,0,0.2);
+
+    /* RETTE SOTTO: nessuna maschera clip-path qui */
+    border-radius: 0 0 4px 4px;
 }
 
+/* Inclinazioni naturali per le linguette integre */
+.hobby-nav li:nth-child(odd) .hobby-link:not(.disabled) { transform: rotate(-1deg); }
+.hobby-nav li:nth-child(even) .hobby-link:not(.disabled) { transform: rotate(1deg); }
+
+/* Hover: la linguetta si muove e scurisce leggermente */
 .hobby-link:not(.disabled):hover {
-    color: var(--banana-yellow);
-    transform: scale(1.1);
+    background-color: #f7d046;
+    transform: translateY(8px) rotate(0deg) !important;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.3);
 }
 
+/* STILE LINGUETTA STRAPPATA (Pagina corrente) */
 .hobby-link.disabled {
-    color: #666; /* Grigio più scuro */
+    background-color: #d4b84b; /* Giallo più scuro/ombra per lo strappo */
+    color: #555;
     cursor: default;
     pointer-events: none;
-    opacity: 0.5;
+
+    /* Mozzata e corta */
+    padding: 8px 12px 10px 12px;
+    margin-top: 0;
+
+    /* EFFETTO STRAPPO A ZIG-ZAG SOLO QUI */
+    clip-path: polygon(0% 0%, 100% 0%, 100% 70%, 85% 100%, 70% 75%, 50% 100%, 30% 75%, 15% 100%, 0% 70%);
+
+    border-top: 1px solid #333;
+    box-shadow: none;
+    transform: translateY(-2px) !important;
 }
 
-/* IMPORTANTE: Dobbiamo aggiornare lo spazio nel body
-   perché l'header ora occupa più spazio (100px + sconfinamento foto) */
-@media screen {
-    body {
-        padding-top: 140px !important;
-    }
-}
-
-/* Responsive: Nascondiamo il centro se lo schermo è piccolo */
-@media (max-width: 1100px) {
-    .header-text p {
-        display: none;
-    }
-}
+/* RESPONSIVE */
+@media (max-width: 1100px) { .header-text p { display: none; } }
 
 @media (max-width: 768px) {
-    .top-wrapper {
-        height: 80px;
-        padding: 0 15px;
-    }
-    .profile-img {
-        width: 100px;
-        height: 100px;
-        top: 25px;
-    }
-    .header-text h1 {
-        font-size: 0.9rem;
-    }
+    .top-wrapper { height: 80px; padding: 0 10px; }
+    .profile-img { width: 100px; height: 100px; top: 25px; }
+    .hobby-nav { margin-bottom: -45px; }
+    .hobby-link { padding: 8px 8px 20px 8px; font-size: 0.8rem; }
+    .hobby-link.disabled { padding: 5px 8px 8px 8px; }
 }
