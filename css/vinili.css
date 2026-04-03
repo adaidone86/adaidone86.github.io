@@ -2,14 +2,21 @@
    STILI SPECIFICI PER LO SFOGLIATORE VINILI (vinili.css)
    ============================================================ */
 
+/* Forza la sezione a non avere padding interni eccessivi */
+.about-section {
+    padding-top: 10px !important; /* Riduce al minimo lo spazio sotto l'header */
+    justify-content: flex-start !important; /* Allinea dall'alto invece che dal centro */
+}
+
 .swiper {
     width: 350px;
-    height: 520px; /* Un po' più alto ora che abbiamo spazio */
-
-    /* Centratura assoluta nello spazio della section */
+    height: 520px;
     margin: 0 auto;
 
-    padding: 20px 0 60px 0;
+    /* AZZERATO IL PADDING SUPERIORE: era 20px, ora 0 */
+    /* Ridotto il padding inferiore: era 60px, ora 20px */
+    padding: 0 0 20px 0;
+
     perspective: 1200px;
 }
 
@@ -25,30 +32,35 @@
     box-sizing: border-box;
 }
 
+/* Rimpiccioliamo leggermente l'area info se lo spazio è poco */
 .album-cover {
     width: 100%;
     aspect-ratio: 1/1;
     object-fit: cover;
     border-radius: 12px;
-    margin-bottom: 15px;
+    margin-bottom: 10px; /* Ridotto da 15px */
     border: 3px solid #1a1a1a;
 }
 
 .album-info h3 {
-    font-size: 1.2rem;
-    margin: 5px 0;
+    font-size: 1.1rem; /* Ridotto leggermente da 1.2 */
+    margin: 2px 0;
     color: #1a1a1a;
     font-weight: bold;
 }
 
 .album-info p {
-    font-size: 0.95rem;
-    margin: 5px 0;
+    font-size: 0.9rem; /* Ridotto leggermente da 0.95 */
+    margin: 2px 0;
     color: #4a5568;
 }
 
+/* Puoi cancellare questa parte perché abbiamo tolto i puntini nel JS */
 .swiper-pagination-bullet-active {
-    background-color: #ffdb58 !important;
-    width: 14px;
-    height: 14px;
+    display: none;
+}
+
+.mySwiper {
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
 }
