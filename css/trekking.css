@@ -1,0 +1,94 @@
+/* ============================================================
+   GRIGLIA TREKKING (trekking.css)
+   ============================================================ */
+
+/* Abilitiamo lo scroll invisibile sulla section */
+.about-section {
+    overflow-y: auto;
+    scrollbar-width: none; /* Per Firefox */
+    -ms-overflow-style: none; /* Per Internet Explorer/Edge */
+    padding-top: 40px; /* Spazio per la foto profilo XL */
+}
+
+/* Nasconde la barra per Chrome, Safari e Opera */
+.about-section::-webkit-scrollbar {
+    display: none;
+}
+
+.trek-grid {
+    display: grid;
+    /* Crea 3 colonne uguali */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 100%;
+    max-width: 1000px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.trek-item {
+    background: #ffffff;
+    border-bottom: 4px solid var(--banana-yellow);
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+    min-height: 250px;
+    justify-content: center;
+}
+
+.trek-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.item-icon {
+    font-size: 2rem;
+    color: var(--dark-bg);
+    margin-bottom: 15px;
+}
+
+.trek-item h3 {
+    font-size: 1.1rem;
+    margin: 10px 0;
+    color: #1a1a1a;
+}
+
+.tag {
+    font-size: 0.8rem;
+    background: #f0f0f0;
+    padding: 4px 10px;
+    border-radius: 20px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.trek-details {
+    display: flex;
+    gap: 15px;
+    font-size: 0.85rem;
+    color: #444;
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+    margin-top: auto;
+}
+
+.desc {
+    font-size: 0.9rem;
+    color: #777;
+    margin-top: 10px;
+    line-height: 1.4;
+}
+
+/* RESPONSIVE: 2 colonne su tablet, 1 su mobile */
+@media (max-width: 900px) {
+    .trek-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+    .trek-grid { grid-template-columns: 1fr; }
+    .about-section { padding-top: 80px; } /* Più spazio per la foto profilo su mobile */
+}
