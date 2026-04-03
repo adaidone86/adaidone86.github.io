@@ -8,7 +8,8 @@ html, body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f4f4f4;
     color: #333;
-    /* overflow: hidden;  <-- ELIMINA O COMMENTA QUESTA RIGA */
+    /* Blocca lo scroll della pagina intera */
+    overflow: hidden;
 }
 
 body {
@@ -18,18 +19,29 @@ body {
     flex-direction: column;
 }
 
-/* Modificato per includere sia la classe che il tag section generico */
+/* Modificato per gestire l'Header XL e la Foto Gigante */
 section, .about-section {
-    /* Calcola l'altezza disponibile tra header e footer */
-    min-height: calc(100vh - 120px);
-    margin-top: 60px; /* Spazio per l'header fisso */
-    margin-bottom: 60px; /* Spazio per il footer fisso */
+    /* 1. Sottraiamo l'altezza dell'header (100px) e del footer (60px) */
+    height: calc(100vh - 160px);
+
+    /* 2. Margine superiore per l'Header XL */
+    margin-top: 100px;
+
+    /* 3. Padding superiore EXTRA: questo serve per "spingere" il testo
+       più in basso così la foto gigante (150px) non lo copre! */
+    padding-top: 80px;
+
+    padding-bottom: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Centra verticalmente il contenuto */
     align-items: center;
-    padding: 40px 20px;
     box-sizing: border-box;
+
+    /* 4. Scroll solo dentro la sezione se il testo è troppo lungo */
+    overflow-y: auto;
     text-align: center;
 }
 
@@ -38,7 +50,7 @@ section p, .about-section p {
     max-width: 750px;
     margin: 15px auto;
     line-height: 1.7;
-    font-size: 1.1rem; /* Leggermente più grande per leggibilità */
+    font-size: 1.1rem;
 }
 
 /* Titoli */
@@ -48,6 +60,15 @@ section h2, .about-section h2 {
     padding-bottom: 5px;
     color: #0077b5;
     margin-top: 0;
+}
+
+/* Rendi la barra di scorrimento interna più discreta (opzionale) */
+section::-webkit-scrollbar {
+    width: 6px;
+}
+section::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 10px;
 }
 
 /* ============================================================

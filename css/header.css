@@ -1,7 +1,8 @@
 :root {
     --banana-yellow: #ffdb58;
     --dark-bg: #1a1a1a;
-    --header-height: 60px;
+    /* Header alzato per ospitare la foto gigante */
+    --header-height: 100px;
 }
 
 .top-wrapper {
@@ -11,62 +12,69 @@
     width: 100%;
     height: var(--header-height);
     background-color: var(--dark-bg);
-    border-bottom: 3px solid var(--banana-yellow);
+    border-bottom: 4px solid var(--banana-yellow); /* Riga gialla leggermente più spessa */
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 40px;
     z-index: 1100;
     box-sizing: border-box;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
 }
 
 /* ZONA SINISTRA */
 .main-header {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 20px;
 }
 
 .profile-img {
-    width: 75px;
-    height: 75px;
+    /* Dimensione raddoppiata (da 75px a 150px) */
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
-    border: 3px solid var(--banana-yellow);
+    border: 4px solid var(--banana-yellow);
     object-fit: cover;
     background-color: var(--dark-bg);
+
+    /* POSIZIONAMENTO */
     position: relative;
-    top: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    /* La spingiamo giù di 40px così la testa resta
+       sotto il bordo superiore del browser e "sconfina" nel body */
+    top: 40px;
+
+    box-shadow: 0 6px 15px rgba(0,0,0,0.5);
     z-index: 1200;
 }
 
 .header-text h1 {
-    font-size: 0.95rem;
+    font-size: 1.2rem; /* Testo leggermente più grande visto l'header XL */
     color: #ffffff;
     margin: 0;
-    line-height: 1.1;
+    line-height: 1.2;
 }
 
 .spostato-1, .spostato-2 {
     color: var(--banana-yellow);
     font-weight: bold;
-    font-size: 0.85rem;
+    font-size: 1rem;
 }
 
-/* IL MESSAGGIO CENTRALE (Modificato) */
+/* IL MESSAGGIO CENTRALE */
 .header-text p {
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%); /* Centratura matematica perfetta */
+    transform: translate(-50%, -50%);
     margin: 0;
-    color: #ffffff;      /* Bianco come richiesto */
-    font-size: 1.1rem;   /* Più grande */
-    font-weight: 500;
-    letter-spacing: 0.5px;
+    color: #ffffff;
+    font-size: 1.3rem; /* Messaggio più visibile */
+    font-weight: 600;
+    letter-spacing: 1px;
     white-space: nowrap;
-    pointer-events: none; /* Evita che dia fastidio ai click */
+    pointer-events: none;
+    text-transform: uppercase; /* Diamo un tocco più "strong" */
 }
 
 /* ZONA DESTRA */
@@ -79,31 +87,56 @@
     margin: 0;
     padding: 0;
     display: flex;
-    gap: 15px;
+    gap: 20px;
 }
 
 .hobby-link {
     color: #ffffff;
     text-decoration: none;
     font-weight: bold;
-    font-size: 0.9rem;
-    transition: color 0.3s;
+    font-size: 1.1rem; /* Menu più grande per equilibrio */
+    transition: all 0.3s;
     white-space: nowrap;
 }
 
-.hobby-link:not(.disabled):hover { color: var(--banana-yellow); }
-
-.hobby-link.disabled {
-    color: #888888;
-    cursor: default;
-    pointer-events: none;
-    opacity: 0.6;
+.hobby-link:not(.disabled):hover {
+    color: var(--banana-yellow);
+    transform: scale(1.1);
 }
 
-/* Responsive: se lo schermo è piccolo (es. smartphone),
-   nascondiamo il testo centrale per non coprire il nome */
-@media (max-width: 950px) {
+.hobby-link.disabled {
+    color: #666; /* Grigio più scuro */
+    cursor: default;
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+/* IMPORTANTE: Dobbiamo aggiornare lo spazio nel body
+   perché l'header ora occupa più spazio (100px + sconfinamento foto) */
+@media screen {
+    body {
+        padding-top: 140px !important;
+    }
+}
+
+/* Responsive: Nascondiamo il centro se lo schermo è piccolo */
+@media (max-width: 1100px) {
     .header-text p {
         display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .top-wrapper {
+        height: 80px;
+        padding: 0 15px;
+    }
+    .profile-img {
+        width: 100px;
+        height: 100px;
+        top: 25px;
+    }
+    .header-text h1 {
+        font-size: 0.9rem;
     }
 }

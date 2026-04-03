@@ -20,20 +20,49 @@
     color: #eeeeee;
     font-size: 0.85rem;
     box-shadow: 0 -4px 15px rgba(0,0,0,0.3);
+
+    /* CORREZIONE CRUCIALE */
+    box-sizing: border-box;
 }
 
-.footer-left, .footer-right { flex: 1; }
-.footer-right { text-align: right; color: #888; }
+.footer-left, .footer-right {
+    flex: 1;
+}
+
+.footer-right {
+    text-align: right;
+    color: #888;
+    /* Impedisce al testo di andare a capo se lo spazio è poco */
+    white-space: nowrap;
+}
+
+.footer-left {
+    white-space: nowrap;
+}
+
+.footer-center {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
 
 .footer-icons {
     display: flex;
     gap: 30px;
+    align-items: center;
+}
+
+.icon-container {
+    position: relative;
+    display: flex;
+    align-items: center;
 }
 
 .social-custom-icon {
-    width: 28px;
-    height: 28px;
+    width: 25px; /* Leggermente ridotto per eleganza */
+    height: 25px;
     transition: transform 0.3s, filter 0.3s;
+    display: block;
 }
 
 .icon-container:hover .social-custom-icon {
@@ -56,10 +85,23 @@
     font-weight: bold;
     font-size: 0.75rem;
     z-index: 1300;
+    white-space: nowrap;
+    pointer-events: none;
 }
 
 .icon-container:hover .tooltip {
     visibility: visible;
     opacity: 1;
-    bottom: 55px;
+    bottom: 50px;
+}
+
+/* OTTIMIZZAZIONE PER SMARTPHONE */
+@media (max-width: 850px) {
+    .footer-left, .footer-right {
+        display: none; /* Nasconde i testi laterali per non affollare */
+    }
+    .footer-minimal.black-yellow {
+        justify-content: center; /* Icone al centro */
+        padding: 0 15px;
+    }
 }
