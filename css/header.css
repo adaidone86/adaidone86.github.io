@@ -44,10 +44,11 @@
     border: 4px solid var(--banana-yellow);
     object-fit: cover;
     background-color: var(--dark-bg);
-    position: relative;
-    top: 40px;
+    position: relative; /* Questo è il punto di atterraggio */
+    top: 40px;          /* Questo è il punto di atterraggio */
     box-shadow: 0 6px 15px rgba(0,0,0,0.5);
     z-index: 1200;
+    transition: width 0.3s, height 0.3s; /* Rende più dolce il cambio finale */
 }
 
 .header-text h1 {
@@ -65,9 +66,9 @@
 
 /* MESSAGGIO CENTRALE */
 .header-text p {
-    position: absolute;
+position: absolute;
     left: 50%;
-    top: 50%;
+    top: 50%; /* Torna al centro perfetto dell'header nero */
     transform: translate(-50%, -50%);
     margin: 0;
     color: #ffffff;
@@ -77,6 +78,7 @@
     white-space: nowrap;
     pointer-events: none;
     text-transform: uppercase;
+    z-index: 1000; /* Sta sotto l'immagine se dovessero toccarsi */
 }
 
 /* ZONA DESTRA: LE LINGUETTE */

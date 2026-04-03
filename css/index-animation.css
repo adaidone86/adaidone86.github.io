@@ -1,0 +1,47 @@
+/* Blocca lo scroll all'inizio */
+body.animating {
+    overflow: hidden;
+}
+
+/* Stato iniziale dell'immagine: invisibile */
+.profile-img {
+    opacity: 0;
+}
+
+/* L'animazione di "Ingrandimento sul posto" */
+.profile-img.intro-animation {
+    opacity: 1 !important;
+    z-index: 9999;
+    /* L'immagine parte gigante (scale 3) e torna normale (scale 1) */
+    animation: growAndShrink 1.8s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+    transform-origin: center center; /* Si ingrandisce dal centro della foto */
+}
+
+/* Nascondiamo i testi finché la foto non si è rimpicciolita */
+.header-text, .hobby-nav {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.header-ready .header-text,
+.header-ready .hobby-nav {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transition: opacity 0.8s ease;
+}
+
+@keyframes growAndShrink {
+    0% {
+        opacity: 0;
+        transform: scale(4); /* Parte molto grande */
+        filter: blur(10px);  /* Leggermente sfocata all'inizio per effetto "sogno" */
+    }
+    50% {
+        opacity: 1;
+        filter: blur(0px);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1); /* Torna alla dimensione normale di 150px */
+    }
+}
