@@ -4,7 +4,6 @@ const repo = "adaidone86.github.io";
 
 async function caricaCollezioneAutonoma() {
     const wrapper = document.getElementById('album-wrapper');
-    // Assicurati che il percorso sia esattamente come su GitHub (es. img/vinile)
     const apiUrl = `https://api.github.com/repos/${username}/${repo}/contents/img/vinile`;
 
     try {
@@ -16,18 +15,17 @@ async function caricaCollezioneAutonoma() {
             return;
         }
 
-        wrapper.innerHTML = ""; // Svuota tutto
+        wrapper.innerHTML = "";
 
+        // Usiamo un ciclo for...of per gestire meglio le chiamate async
         for (const item of cartelle) {
             if (item.type === "dir") {
                 const nomeCartella = item.name;
 
                 try {
-                    // Recuperiamo il file JSON
                     const resJson = await fetch(`img/vinile/${nomeCartella}/info.json`);
                     const dati = await resJson.json();
 
-                    // Creiamo la slide dinamicamente
                     const slide = `
                         <div class="swiper-slide album-item">
                             <img src="img/vinile/${nomeCartella}/cover.jpg" alt="${dati.album}" class="album-cover">
@@ -45,7 +43,7 @@ async function caricaCollezioneAutonoma() {
             }
         }
 
-        // Inizializza Swiper solo DOPO che il ciclo for è finito e le slide sono state create
+        // INIZIALIZZAZIONE SWIPER SENZA PAGINATION
         new Swiper(".mySwiper", {
             effect: "cards",
             grabCursor: true,
@@ -55,10 +53,8 @@ async function caricaCollezioneAutonoma() {
                 perSlideOffset: 12,
                 perSlideRotate: 2,
                 slideShadows: true,
-            },
-            pagination: {
-                el: ".swiper-pagination",
-            },
+            }
+            // Rimosso l'oggetto pagination: { el: ".swiper-pagination" }
         });
 
     } catch (error) {
@@ -66,5 +62,4 @@ async function caricaCollezioneAutonoma() {
     }
 }
 
-// Avvia la funzione
 caricaCollezioneAutonoma();
