@@ -1,5 +1,5 @@
 /* ============================================================
-   STILI STRUTTURALI (body.css)
+   STILI STRUTTURALI (body.css) - SPAZIO MINIMO AZZERATO
    ============================================================ */
 html, body {
     height: 100%;
@@ -8,7 +8,6 @@ html, body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f4f4f4;
     color: #333;
-    /* Blocca lo scroll della pagina intera */
     overflow: hidden;
 }
 
@@ -19,19 +18,19 @@ body {
     flex-direction: column;
 }
 
-/* Modificato per gestire l'Header XL e la Foto Gigante */
 section, .about-section {
-    /* 1. Sottraiamo l'altezza dell'header (100px) e del footer (60px) */
+    /* 1. Altezza calcolata: 100vh - (Header 100px + Footer 60px) */
     height: calc(100vh - 160px);
 
-    /* 2. Margine superiore per l'Header XL */
+    /* 2. MARGINE AZZERATO: Lo attacchiamo alla fine dell'header */
     margin-top: 100px;
 
-    /* 3. Padding superiore EXTRA: questo serve per "spingere" il testo
-       più in basso così la foto gigante (150px) non lo copre! */
-    padding-top: 80px;
+    /* 3. PADDING MINIMO:
+       Abbiamo messo 15px solo per non far toccare fisicamente
+       il testo alla riga gialla della navigazione. */
+    padding-top: 15px;
 
-    padding-bottom: 40px;
+    padding-bottom: 20px;
     padding-left: 20px;
     padding-right: 20px;
 
@@ -40,42 +39,37 @@ section, .about-section {
     align-items: center;
     box-sizing: border-box;
 
-    /* 4. Scroll solo dentro la sezione se il testo è troppo lungo */
     overflow-y: auto;
     text-align: center;
 }
 
-/* Stile per i paragrafi */
+/* Rimuove ogni margine residuo dal titolo H2 */
+section h2:first-child, .about-section h2:first-child {
+    margin-top: 0 !important;
+    margin-bottom: 15px;
+}
+
+/* Compattiamo i paragrafi */
 section p, .about-section p {
     max-width: 750px;
-    margin: 15px auto;
-    line-height: 1.7;
+    margin: 8px auto; /* Margine ridotto tra i blocchi di testo */
+    line-height: 1.5;
     font-size: 1.1rem;
 }
 
-/* Titoli */
+/* Titoli compatti */
 section h2, .about-section h2 {
     border-bottom: 2px solid #0077b5;
     display: inline-block;
-    padding-bottom: 5px;
+    padding-bottom: 3px;
     color: #0077b5;
-    margin-top: 0;
 }
 
-/* Rendi la barra di scorrimento interna più discreta (opzionale) */
+/* Scrollbar sottile */
 section::-webkit-scrollbar {
-    width: 6px;
+    width: 4px;
 }
 section::-webkit-scrollbar-thumb {
-    background: #ccc;
+    background: #ddd;
     border-radius: 10px;
-}
-
-/* ============================================================
-   RESPONSIVE
-   ============================================================ */
-@media (max-width: 900px) {
-    body {
-        max-width: 100%;
-    }
 }
