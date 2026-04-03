@@ -13,32 +13,36 @@ body {
 
 /* Contenitore Unificato (Header + Nav) */
 .top-wrapper {
-    background: #ffffff;
-    overflow: hidden;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-    margin-bottom: 25px;
-    border: 1px solid #e2e8f0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px; /* Stessa altezza del footer */
+    background-color: #1a1a1a; /* Nero opaco */
+    border-bottom: 3px solid #ffdb58; /* Riga gialla BANANA in basso */
+    display: flex;
+    justify-content: space-between; /* Distribuisce elementi a sinistra e destra */
+    align-items: center;
+    padding: 0 40px; /* Stesso spazio laterale del footer */
+    z-index: 1001; /* Sopra tutto */
+    box-sizing: border-box;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
 }
 
 /* Header con Foto e Nome */
 .main-header {
-    background: #f9f9f9;
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 40px;
-    padding: 35px;
+    gap: 15px; /* Spazio tra foto e testo */
+    flex: 1;
 }
 
 .profile-img {
-    width: 120px;
-    height: 120px;
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
+    border: 2px solid #ffdb58;
     object-fit: cover;
-    border: 4px solid #fff;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    flex-shrink: 0;
 }
 
 .header-text {
@@ -47,62 +51,52 @@ body {
 }
 
 .header-text h1 {
+    font-size: 1rem; /* Dimensione ridotta per stare nella fascia */
+    color: #ffffff;
     margin: 0;
-    font-size: 2.2em;
-    color: #2d3748;
-    line-height: 1.2;
+    line-height: 1.1;
 }
 
-/* Effetto Scaletta Nomi */
 .header-text h1 span {
-    display: inline-block;
-    font-size: 0.8em;
-    color: #4a5568;
-    font-weight: 400;
+    font-size: 0.9rem;
 }
 
-.spostato-1 { margin-left: 220px; margin-top: 5px; }
-.spostato-2 { margin-left: 280px; margin-top: 5px; }
+.spostato-1, .spostato-2 {
+    color: #ffdb58; /* Rende i nomi alternativi gialli per richiamare il tema */
+    font-weight: bold;
+}
 
 .header-text p {
-    margin-top: 15px;
-    color: #666;
-    font-size: 1.1em;
+    display: none; /* Nascondiamo il sottotitolo nell'header stretto per pulizia */
 }
 
-/* Navigazione */
+/* Navigazione spostata a destra nell'header */
 .hobby-nav {
-    background: #eceef1;
-    padding: 12px 20px;
+    flex: 1;
     text-align: right;
-    border-top: 1px solid #e2e8f0;
 }
 
 .hobby-nav ul {
-    list-style-type: none;
-    padding: 0;
+    list-style: none;
     margin: 0;
-    display: inline-block;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
 }
 
 .hobby-nav li { display: inline; margin-left: 10px; }
 
 .hobby-link {
-    display: inline-block;
+    color: #ffffff;
     text-decoration: none;
-    background-color: #0077b5;
-    color: white;
-    padding: 8px 18px;
-    border-radius: 25px;
     font-weight: bold;
-    font-size: 0.9em;
-    transition: all 0.3s ease;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    font-size: 0.9rem;
+    transition: color 0.3s;
 }
 
 .hobby-link:hover {
-    background-color: #005582;
-    transform: translateY(-2px);
+    color: #ffdb58;
 }
 
 /* Sezioni Contenuto */
@@ -162,4 +156,172 @@ body {
 
 .swiper-pagination-bullet-active {
     background-color: #0077b5;
+}
+
+/* --- FOOTER MINIMAL: BLACK & BANANA YELLOW --- */
+.footer-minimal.black-yellow {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px; /* Altezza sottile */
+    background-color: #1a1a1a; /* Nero opaco elegante */
+    border-top: 3px solid #ffdb58; /* Bordino Giallo Banana! 🍌 */
+    display: flex;
+    justify-content: space-between; /* Distribuzione S-C-D */
+    align-items: center;
+    padding: 0 40px; /* Spazio ai lati */
+    z-index: 1000; /* Sempre in primo piano */
+    font-size: 0.85em; /* Testo discreto */
+    color: #eeeeee; /* Testo quasi bianco per leggerezza */
+    box-sizing: border-box;
+    box-shadow: 0 -4px 15px rgba(0,0,0,0.3); /* Ombra per profondità */
+}
+
+/* Colonne del footer */
+.footer-left, .footer-right {
+    flex: 1;
+}
+
+.footer-right {
+    text-align: right;
+    color: #aaaaaa; /* Testo privacy leggermente più scuro */
+}
+
+.footer-center {
+    flex: 0;
+    display: flex;
+    justify-content: center;
+}
+
+/* Container generale delle icone per l'allineamento orizzontale */
+.footer-icons {
+    display: flex;
+    gap: 25px; /* Spazio tra le icone */
+    align-items: center; /* Allinea verticalmente i container */
+}
+
+.icon-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.icon-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    height: 100%; /* Occupa tutta l'altezza del footer per centrare */
+}
+
+/* Effetto Hover: le icone saltano e diventano gialle */
+.icon-link:hover {
+    transform: translateY(-5px);
+    color: #ffdb58 !important; /* Forza il colore giallo banana al passaggio */
+}
+
+/* Colori specifici delle icone (iniziali) */
+.email-icon { color: #dddddd; }
+.fb-icon { color: #1877F2; font-family: sans-serif; font-weight: bold; }
+.ig-icon { color: #E4405F; }
+
+/* Tooltip Email (invertito per lo sfondo nero) */
+.tooltip {
+    visibility: hidden;
+    background-color: #ffdb58; /* Sfondo giallo banana */
+    color: #1a1a1a; /* Testo nero */
+    padding: 6px 15px;
+    border-radius: 20px; /* Più arrotondato */
+    position: absolute;
+    bottom: 50px; /* Sopra l'icona */
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s, bottom 0.3s;
+    font-weight: bold;
+    font-size: 13px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Triangolino sotto il tooltip */
+.tooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #ffdb58 transparent transparent transparent;
+}
+
+.icon-container:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+    bottom: 55px; /* Sale leggermente all'apparizione */
+}
+
+/* Adattamento Responsive per Smartphone */
+@media (max-width: 850px) {
+    .footer-left, .footer-right {
+        display: none; /* Nasconde i testi laterali */
+    }
+    .footer-minimal.black-yellow {
+        justify-content: center; /* Icone al centro */
+        padding: 0;
+    }
+}
+
+/* Evita che il contenuto della pagina finisca sotto il footer */
+body {
+    padding-top: 80px;
+    padding-bottom: 80px; /* Spazio per il footer */
+    background-color: #f4f4f4; /* Un grigio neutro per far risaltare le fasce nere */
+}
+
+.social-custom-icon,
+.email-custom-icon { /* Aggiunta anche questa classe per sicurezza se presente nell'HTML */
+    display: block;
+    object-fit: contain; /* Mantiene le proporzioni */
+    transition: filter 0.2s ease; /* Transizione per l'effetto luminosità */
+
+    /* Impostiamo una dimensione uniforme per tutte (es. 28px) */
+    width: 28px;
+    height: 28px;
+}
+
+.icon-container:hover .icon-link {
+    transform: translateY(-5px); /* Salto verso l'alto */
+}
+
+/* Effetto luminosità sull'immagine all'hover */
+.icon-container:hover img {
+    filter: brightness(1.2);
+}
+
+.tooltip {
+    visibility: hidden;
+    background-color: #ffdb58; /* Giallo Banana */
+    color: #1a1a1a;
+    padding: 6px 15px;
+    border-radius: 20px;
+    position: absolute;
+    bottom: 50px; /* Posizionato sopra l'icona (adattato per icone 28px) */
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s, bottom 0.3s;
+    font-weight: bold;
+    font-size: 13px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    z-index: 1001;
+}
+
+.icon-container:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+    bottom: 55px; /* Sale leggermente all'apparizione */
 }

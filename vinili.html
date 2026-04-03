@@ -10,18 +10,13 @@
 </head>
 <body>
 
-<div class="top-wrapper">
-    <header class="main-header">
+<header class="top-wrapper black-yellow">
+    <div class="main-header">
         <img src="foto-profilo.png" alt="Foto di Antonino Daidone" class="profile-img">
         <div class="header-text">
-            <h1>
-                Ciao, sono Antonino!!<br>
-                <span class="spostato-1">o Tonino!!</span><br>
-                <span class="spostato-2">o Nino!!</span>
-            </h1>
-            <p>La mia collezione di Vinili</p>
+            <h1>I miei Vinili</h1>
         </div>
-    </header>
+    </div>
 
     <nav class="hobby-nav">
         <ul>
@@ -29,15 +24,54 @@
             <li><a href="trekking.html" class="hobby-link">Trekking 🥾</a></li>
         </ul>
     </nav>
-</div>
+</header>
 
 <section class="about-section">
-    <h2><i class="fa-solid fa-record-vinyl"></i> Lo Sfogliatore 3D</h2>
+    <div class="section-intro" style="text-align: center; margin-bottom: 20px;">
+        <i class="fa-solid fa-record-vinyl" style="font-size: 50px; color: #ffdb58; margin-bottom: 10px;"></i>
+        <h2>Lo Sfogliatore 3D</h2>
+        <p>La mia collezione personale: musica da ascoltare e da guardare.</p>
+    </div>
+
     <div class="swiper mySwiper">
-        <div class="swiper-wrapper" id="album-wrapper"></div>
+        <div class="swiper-wrapper" id="album-wrapper">
+        </div>
         <div class="swiper-pagination"></div>
     </div>
 </section>
+
+<footer class="footer-minimal black-yellow">
+    <div class="footer-left">
+        Sito creato da Antonino Daidone - Aprile 2026
+    </div>
+
+    <div class="footer-center">
+        <div class="footer-icons">
+            <div class="icon-container">
+                <a href="https://www.facebook.com/profile.php?id=61556644940973&locale=it_IT" target="_blank" class="icon-link" title="Profilo Facebook">
+                    <img src="img/ico/fb.ico" alt="Facebook" class="social-custom-icon">
+                </a>
+            </div>
+
+            <div class="icon-container">
+                <a href="mailto:daidone.antonino.86@gmail.com" class="icon-link" title="Invia un'email">
+                    <img src="img/ico/email.ico" alt="Email" class="social-custom-icon">
+                    <span class="tooltip">daidone.antonino.86@gmail.com</span>
+                </a>
+            </div>
+
+            <div class="icon-container">
+                <a href="https://www.instagram.com/daidone_antonino/" target="_blank" class="icon-link" title="Profilo Instagram">
+                    <img src="img/ico/ig.ico" alt="Instagram" class="social-custom-icon">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-right">
+        Tutte le informazioni sono riservate ©
+    </div>
+</footer>
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="js/script-vinile.js"></script>
