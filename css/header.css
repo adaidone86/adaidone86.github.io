@@ -56,7 +56,6 @@
     width: 150px;
     height: 150px;
     position: relative;
-    top: 40px;
     flex-shrink: 0;
     z-index: 1200;
 }
@@ -161,7 +160,7 @@ position: absolute;
 
 @media (max-width: 768px) {
     .top-wrapper { height: 80px; padding: 0 10px; }
-    .profile-img { width: 100px; height: 100px; top: 25px; }
+    /*.profile-img { width: 100px; height: 100px; top: 25px; }*/
     .hobby-nav { margin-bottom: -45px; }
     .hobby-link { padding: 8px 8px 20px 8px; font-size: 0.8rem; }
     .hobby-link.disabled { padding: 5px 8px 8px 8px; }

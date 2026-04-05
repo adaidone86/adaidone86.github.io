@@ -1,7 +1,16 @@
-/* flip-animation.css - Solo logica 3D e animazione */
+/* ============================================================
+   FLIP-ANIMATION.CSS - Versione Definitiva
+   ============================================================ */
 
 .profile-flip-container {
+    width: 150px;
+    height: 150px;
     perspective: 1000px;
+    display: inline-flex;
+    position: relative;
+    flex-shrink: 0;
+    margin: 0;
+    padding: 0;
 }
 
 .profile-flip-card {
@@ -9,16 +18,35 @@
     width: 100%;
     height: 100%;
     transform-style: preserve-3d;
+    /* Questo sposta la moneta verso il basso SENZA spostare il contenitore */
+    top: 40px;
+
     animation: flipCoin 1.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-    animation-delay: 0.6s;
+    animation-delay: 0.4s;
 }
 
 .profile-img.front,
 .profile-img.back {
-    position: absolute; /* Si sovrappongono dentro il container */
-    top: 0; left: 0;    /* Rispetto al container, non all'header! */
+    position: absolute;
+    top: 0 !important;
+    left: 0 !important;
+    width: 150px !important;
+    height: 150px !important;
     backface-visibility: hidden;
-    margin: 0 !important; /* Evita interferenze */
+    margin: 0 !important;
+    border-radius: 50%;
+    border: 4px solid var(--banana-yellow);
+    object-fit: cover;
+}
+
+/* ANTI-FLICKER */
+.profile-img.front {
+    opacity: 0;
+}
+
+/* Il JS aggiungerà questa classe */
+.flip-ready .profile-img.front {
+    opacity: 1;
 }
 
 .profile-img.back {
@@ -28,4 +56,10 @@
 @keyframes flipCoin {
     0% { transform: rotateY(0deg); }
     100% { transform: rotateY(180deg); }
+}
+
+@media (max-width: 768px) {
+    .profile-flip-container { width: 100px; height: 100px; }
+    .profile-flip-card { top: 25px; }
+    .profile-img.front, .profile-img.back { width: 100px !important; height: 100px !important; }
 }

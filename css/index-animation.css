@@ -3,6 +3,15 @@ body.animating {
     overflow: hidden;
 }
 
+.main-header > .profile-img {
+    top: 40px; /* Ripristiniamo il top solo per l'immagine singola della home */
+    opacity: 0; /* Parte invisibile per l'effetto intro */
+}
+
+@media (max-width: 768px) {
+    .main-header > .profile-img { top: 25px; }
+}
+
 /* Stato iniziale dell'immagine: invisibile */
 .profile-img {
     opacity: 0;
