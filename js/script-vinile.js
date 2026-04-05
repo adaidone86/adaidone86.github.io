@@ -2,12 +2,55 @@
 const username = "adaidone86";
 const repo = "adaidone86.github.io";
 
+// --- FUNZIONI PER IL MODAL (POP-UP) ---
+
+function openVinylModal(dati, folderName) {
+    const modal = document.getElementById('vinyl-modal');
+    const videoContainer = document.getElementById('modal-video');
+
+    // Inseriamo i testi
+    document.getElementById('modal-title').innerText = dati.album;
+    document.getElementById('modal-artist').innerText = dati.artista;
+    document.getElementById('modal-description').innerText = dati.descrizione || "Nessun aneddoto disponibile per questo disco.";
+
+    // Gestione Video (Cerca il file video.mp4 nella cartella del disco)
+    // Se nel JSON hai specificato un link diverso usa quello, altrimenti usa il default locale
+    const videoSource = dati.video || `img/vinile/${folderName}/video.mp4`;
+
+    videoContainer.innerHTML = `
+        <video controls autoplay muted loop>
+            <source src="${videoSource}" type="video/mp4">
+            Il tuo browser non supporta il tag video.
+        </video>
+    `;
+
+    modal.style.display = "block";
+    document.body.style.overflow = "hidden"; // Blocca lo scroll della pagina
+}
+
+function closeModal() {
+    const modal = document.getElementById('vinyl-modal');
+    if (modal) {
+        modal.style.display = "none";
+        document.getElementById('modal-video').innerHTML = ""; // Stoppa il video svuotando il contenitore
+        document.body.style.overflow = "auto"; // Riattiva lo scroll
+    }
+}
+
+// Chiudi cliccando sulla X o fuori dal modal
+document.addEventListener('click', (e) => {
+    if (e.target.classList.contains('close-modal') || e.target.id === 'vinyl-modal') {
+        closeModal();
+    }
+});
+
+// --- CARICAMENTO COLLEZIONE ---
+
 async function caricaCollezioneAutonoma() {
     const wrapper = document.getElementById('album-wrapper');
     const swiperElement = document.querySelector('.mySwiper');
     const loader = document.getElementById('loader-container');
 
-    // Assicuriamoci che lo swiper sia invisibile prima di iniziare
     swiperElement.style.opacity = "0";
 
     const apiUrl = `https://api.github.com/repos/${username}/${repo}/contents/img/vinile`;
@@ -38,9 +81,14 @@ async function caricaCollezioneAutonoma() {
                             <span class="genere-tag" style="font-size: 0.8em; color: #0077b5;">${dati.genere}</span>
                         </div>
                     `;
+
+                    // --- AGGIUNGIAMO L'EVENTO CLICK PER IL MODAL ---
+                    slide.addEventListener('click', () => {
+                        openVinylModal(dati, nomeCartella);
+                    });
+
                     wrapper.appendChild(slide);
 
-                    // Precaricamento immagine nella cache
                     promesseImmagini.push(new Promise(resolve => {
                         const img = new Image();
                         img.src = coverPath;
@@ -51,13 +99,10 @@ async function caricaCollezioneAutonoma() {
             }
         }
 
-        // Attendiamo che GitHub risponda e che le immagini siano caricate
         await Promise.all(promesseImmagini);
 
-// Mostriamo lo swiper a livello di blocco prima di inizializzarlo
         swiperElement.style.display = "block";
 
-        // Inizializziamo lo Swiper
         new Swiper(".mySwiper", {
             effect: "cards",
             grabCursor: true,
@@ -73,7 +118,6 @@ async function caricaCollezioneAutonoma() {
             }
         });
 
-        // NASCONDI LOADER E MOSTRA SWIPER
         if (loader) loader.style.display = "none";
         swiperElement.style.opacity = "1";
 

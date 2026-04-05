@@ -2,5 +2,7 @@
     "artista": "Queen",
     "album": "A Night At The Opera",
     "anno": "1975",
-    "genere": "Progressive rock"
+    "genere": "Progressive rock",
+    "descrizione": "L'opera rock definitiva, contiene Bohemian Rhapsody.",
+    "video": "img/vinile/night-at-the-opera/video.mp4"
 }

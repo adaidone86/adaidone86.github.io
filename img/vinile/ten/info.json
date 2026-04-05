@@ -2,5 +2,7 @@
     "artista": "Pearl Jam",
     "album": "Ten",
     "anno": "1991",
-    "genere": "Grunge / Rock alternativo"
+    "genere": "Grunge / Rock alternativo",
+    "descrizione": "L'anima di Seattle racchiusa in un disco potente e cupo.",
+    "video": "img/vinile/ten/video.mp4"
 }

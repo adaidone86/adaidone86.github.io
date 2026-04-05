@@ -2,5 +2,7 @@
     "artista": "AC/DC",
     "album": "Back in Black",
     "anno": "1980",
-    "genere": "Hard rock"
+    "genere": "Hard rock",
+    "descrizione": "Un muro di suono dedicato alla memoria di Bon Scott.",
+    "video": "img/vinile/back-in-black/video.mp4"
 }

@@ -2,5 +2,7 @@
     "artista": "Evanescence",
     "album": "Fallen",
     "anno": "2003",
-    "genere": "Nu metal"
+    "genere": "Nu metal",
+    "descrizione": "Gothic rock potente con la voce angelica di Amy Lee.",
+    "video": "img/vinile/fallen/video.mp4"
 }

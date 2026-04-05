@@ -2,5 +2,7 @@
     "artista": "The Doors",
     "album": "The Doors",
     "anno": "1967",
-    "genere": "Rock psichedelico"
+    "genere": "Rock psichedelico",
+    "descrizione": "L'esordio folgorante di Jim Morrison e soci.",
+    "video": "img/vinile/the-doors/video.mp4"
 }

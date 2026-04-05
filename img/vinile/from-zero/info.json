@@ -2,5 +2,7 @@
     "artista": "Linkin Park",
     "album": "From Zero",
     "anno": "2024",
-    "genere": "Alternative metal"
+    "genere": "Alternative metal",
+    "descrizione": "Il nuovo inizio dopo anni di silenzio.",
+    "video": "img/vinile/from-zero/video.mp4"
 }

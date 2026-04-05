@@ -2,5 +2,7 @@
     "artista": "Greta Van Fleet",
     "album": "From The Fires",
     "anno": "2017",
-    "genere": "Hard rock"
+    "genere": "Hard rock",
+    "descrizione": "Il ritorno del rock classico con una voce che ricorda i Led Zeppelin.",
+    "video": "img/vinile/from-the-fires/video.mp4"
 }

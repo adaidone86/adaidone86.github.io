@@ -1,10 +1,8 @@
 {
-  "artista": "Miles Davis",
-  "album": "Kind of Blue",
-  "anno": "1959",
-  "genere": "Modal jazz",
-  "classificazione": "Nuovo",
-  "costo_reale": "13,95 €",
-  "link_acquisto": "https://www.amazon.it/dp/B0CPN3WPHW",
-  "data_acquisto": "26/03/2026"
+    "artista": "Miles Davis",
+    "album": "Kind of Blue",
+    "anno": "1959",
+    "genere": "Modal jazz",
+    "descrizione": "Il capolavoro del jazz modale, un disco che non stanca mai.",
+    "video": "img/vinile/kind-of-blue/video.mp4"
 }

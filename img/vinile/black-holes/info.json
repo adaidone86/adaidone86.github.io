@@ -2,5 +2,7 @@
     "artista": "Muse",
     "album": "Black Holes & Revelations",
     "anno": "2006",
-    "genere": "Rock alternativo"
+    "genere": "Rock alternativo",
+    "descrizione": "Un mix epico di rock, elettronica e fantascienza.",
+    "video": "img/vinile/black-holes/video.mp4"
 }

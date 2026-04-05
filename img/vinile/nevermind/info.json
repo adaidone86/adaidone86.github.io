@@ -2,5 +2,7 @@
     "artista": "Nirvana",
     "album": "Nevermind",
     "anno": "1991",
-    "genere": "Grunge"
+    "genere": "Grunge",
+    "descrizione": "Il disco che ha definito una generazione.",
+    "video": "img/vinile/nevermind/video.mp4"
 }

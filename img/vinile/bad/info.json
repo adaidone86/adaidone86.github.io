@@ -2,5 +2,7 @@
     "artista": "Michael Jackson",
     "album": "Bad",
     "anno": "1987",
-    "genere": "Pop / Dance"
+    "genere": "Pop / Dance",
+    "descrizione": "Il re del pop al suo apice creativo dopo Thriller.",
+    "video": "img/vinile/bad/video.mp4"
 }

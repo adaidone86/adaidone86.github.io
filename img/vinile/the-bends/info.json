@@ -2,5 +2,7 @@
     "artista": "Radiohead",
     "album": "The Bends",
     "anno": "1995",
-    "genere": "Alternative rock"
+    "genere": "Alternative rock",
+    "descrizione": "Il passaggio verso il rock sperimentale e malinconico.",
+    "video": "img/vinile/the-bends/video.mp4"
 }

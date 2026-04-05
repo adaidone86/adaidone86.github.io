@@ -2,5 +2,7 @@
     "artista": "Metallica",
     "album": "Metallica (The Black Album)",
     "anno": "1991",
-    "genere": "Heavy metal"
+    "genere": "Heavy metal",
+    "descrizione": "Il disco che ha portato il metal nelle classifiche mondiali.",
+    "video": "img/vinile/metallica-black/video.mp4"
 }

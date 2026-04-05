@@ -2,5 +2,7 @@
     "artista": "Nina Simone",
     "album": "Little Girl Blue",
     "anno": "1958",
-    "genere": "Jazz"
+    "genere": "Jazz",
+    "descrizione": "L'eleganza e la forza di una delle voci più iconiche del jazz.",
+    "video": "img/vinile/little-girl-blue/video.mp4"
 }

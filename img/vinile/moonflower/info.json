@@ -2,5 +2,7 @@
     "artista": "Santana",
     "album": "Moonflower",
     "anno": "1977",
-    "genere": "Rock"
+    "genere": "Rock",
+    "descrizione": "Un mix perfetto di energia live e precisione in studio.",
+    "video": "img/vinile/moonflower/video.mp4"
 }

@@ -2,5 +2,7 @@
     "artista": "The Verve",
     "album": "Urban Hymns",
     "anno": "1997",
-    "genere": "Britpop"
+    "genere": "Britpop",
+    "descrizione": "Contiene Bitter Sweet Symphony, un inno generazionale.",
+    "video": "img/vinile/urban-hymns/video.mp4"
 }

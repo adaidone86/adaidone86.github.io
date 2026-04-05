@@ -2,5 +2,7 @@
     "artista": "Etta James",
     "album": "At Last!",
     "anno": "1960",
-    "genere": "R&B / Blues"
+    "genere": "R&B / Blues",
+    "descrizione": "La voce definitiva del blues e dell'R&B classico.",
+    "video": "img/vinile/at-last/video.mp4"
 }

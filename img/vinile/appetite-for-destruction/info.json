@@ -2,5 +2,7 @@
     "artista": "Guns N' Roses",
     "album": "Appetite for destruction",
     "anno": "1987",
-    "genere": "Hard rock"
+    "genere": "Hard rock",
+    "descrizione": "Energia pura, il miglior album d'esordio hard rock di sempre.",
+    "video": "img/vinile/appetite-for-destruction/video.mp4"
 }

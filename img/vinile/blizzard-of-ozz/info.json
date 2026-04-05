@@ -2,5 +2,7 @@
     "artista": "Ozzy Osbourne",
     "album": "Blizzard of Ozz",
     "anno": "1980",
-    "genere": "Heavy metal"
+    "genere": "Heavy metal",
+    "descrizione": "L'inizio della carriera solista del Principe delle Tenebre.",
+    "video": "img/vinile/blizzard-of-ozz/video.mp4"
 }
