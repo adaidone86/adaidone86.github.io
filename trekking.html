@@ -6,6 +6,7 @@
     <title>Le mie Escursioni - Antonino Daidone</title>
     <link rel="icon" type="image/png" href="img/ico/banana.png">
     <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/flip-animation.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/body.css">
     <link rel="stylesheet" href="css/trekking.css">
@@ -15,7 +16,12 @@
 
 <div class="top-wrapper">
     <header class="main-header">
-        <img src="foto-profilo.png" alt="Foto di Antonino Daidone" class="profile-img">
+        <div class="profile-flip-container">
+            <div class="profile-flip-card">
+                <img src="img/personali/foto-profilo.png" alt="Foto Profilo" class="profile-img front">
+                <img src="img/personali/trekking.jpg" alt="Foto Trekking" class="profile-img back">
+            </div>
+        </div>
         <div class="header-text">
             <h1>
                 Ciao, sono Antonino!!<br>

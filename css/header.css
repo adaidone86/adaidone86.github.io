@@ -37,18 +37,28 @@
     gap: 20px;
 }
 
-.profile-img {
+.profile-img,
+.profile-flip-card img {
     width: 150px;
     height: 150px;
-    border-radius: 50%;
-    border: 4px solid var(--banana-yellow);
+    border-radius: 50%; /* Torna tonda! */
+    border: 4px solid var(--banana-yellow); /* Torna il bordo giallo! */
     object-fit: cover;
     background-color: var(--dark-bg);
-    position: relative; /* Questo è il punto di atterraggio */
-    top: 40px;          /* Questo è il punto di atterraggio */
     box-shadow: 0 6px 15px rgba(0,0,0,0.5);
+    display: block;
+}
+
+/* Regola per la posizione nell'header */
+/* Se è una foto singola O il contenitore della moneta */
+.profile-img,
+.profile-flip-container {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    top: 40px;
+    flex-shrink: 0;
     z-index: 1200;
-    transition: width 0.3s, height 0.3s; /* Rende più dolce il cambio finale */
 }
 
 .header-text h1 {
