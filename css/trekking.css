@@ -1,5 +1,5 @@
 /* ============================================================
-   GRIGLIA TREKKING (trekking.css)
+   GRIGLIA TREKKING (trekking.css) - AGGIORNATO
    ============================================================ */
 
 /* Abilitiamo lo scroll invisibile sulla section */
@@ -7,7 +7,7 @@
     overflow-y: auto;
     scrollbar-width: none; /* Per Firefox */
     -ms-overflow-style: none; /* Per Internet Explorer/Edge */
-    padding-top: 40px; /* Spazio per la foto profilo XL */
+    padding-top: 40px;
 }
 
 /* Nasconde la barra per Chrome, Safari e Opera */
@@ -17,7 +17,6 @@
 
 .trek-grid {
     display: grid;
-    /* Crea 3 colonne uguali */
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     width: 100%;
@@ -37,7 +36,7 @@
     align-items: center;
     transition: transform 0.3s ease;
     min-height: 250px;
-    justify-content: center;
+    /* Rimosso justify-content: center per permettere al contenuto di fluire bene */
 }
 
 .trek-item:hover {
@@ -73,7 +72,7 @@
     color: #444;
     border-top: 1px solid #eee;
     padding-top: 10px;
-    margin-top: auto;
+    margin-top: 10px;
 }
 
 .desc {
@@ -81,6 +80,59 @@
     color: #777;
     margin-top: 10px;
     line-height: 1.4;
+    text-align: center;
+}
+
+/* --- NUOVA SEZIONE: BOX GUIDA ESCURSIONISTICA --- */
+
+.guida-box {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px dashed #ddd; /* Riga tratteggiata per separare */
+    width: 100%; /* Occupa tutta la larghezza della card */
+}
+
+.guida-label {
+    font-size: 0.65rem;
+    color: #888;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.guida-link {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centra la guida nella card */
+    text-decoration: none;
+    color: #1a1a1a;
+    gap: 12px;
+    transition: all 0.2s ease;
+}
+
+.guida-link:hover {
+    transform: scale(1.05);
+    color: var(--dark-bg);
+}
+
+.guida-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid var(--banana-yellow);
+    object-fit: cover;
+    background-color: #f9f9f9;
+}
+
+.guida-link span {
+    font-size: 0.85rem;
+    font-weight: bold;
+    border-bottom: 1px solid transparent;
+}
+
+.guida-link:hover span {
+    border-bottom: 1px solid var(--banana-yellow);
 }
 
 /* RESPONSIVE: 2 colonne su tablet, 1 su mobile */
@@ -90,5 +142,5 @@
 
 @media (max-width: 600px) {
     .trek-grid { grid-template-columns: 1fr; }
-    .about-section { padding-top: 80px; } /* Più spazio per la foto profilo su mobile */
+    .about-section { padding-top: 80px; }
 }

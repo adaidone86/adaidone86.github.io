@@ -1,0 +1,24 @@
+[
+  {
+    "titolo": "Sentiero degli Dei",
+    "luogo": "Costiera Amalfitana",
+    "difficolta": "E",
+    "durata": "4h",
+    "descrizione": "Un percorso mozzafiato sospeso tra cielo e mare.",
+    "icona": "fa-map-location-dot",
+    "guida_nome": "Dario Favi",
+    "guida_foto": "img/trekking/landscape.png",
+    "guida_sito": "https://landscapewalkingtours.com/"
+  },
+  {
+    "titolo": "Monte Bianco",
+    "luogo": "Alpi",
+    "difficolta": "EE",
+    "durata": "3 giorni",
+    "descrizione": "Esperienza intensa tra i ghiacciai e panorami alpini.",
+    "icona": "fa-snowflake",
+    "guida_nome": "Giacomo Criscenti",
+    "guida_foto": "img/trekking/itinerrando.png",
+    "guida_sito": "https://www.itinarrando.com/"
+  }
+]
