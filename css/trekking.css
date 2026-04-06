@@ -1,5 +1,5 @@
 /* ============================================================
-   GRIGLIA TREKKING (trekking.css) - VERSION 2.1
+   GRIGLIA TREKKING (trekking.css) - VERSION 2.2
    ============================================================ */
 
 /* 1. BLOCCO SCROLL GLOBALE (Solo per questa pagina) */
@@ -17,11 +17,8 @@ html, body {
     bottom: 60px; /* Altezza Footer */
     left: 0;
     right: 0;
-
     overflow-y: auto;
-    /* RIMOSSO IL FLEXBOX QUI PER EVITARE CONFLITTI DI CENTRATURA */
     display: block;
-
     background-color: #f4f4f4;
     cursor: ns-resize;
     scrollbar-width: none;
@@ -39,19 +36,11 @@ html, body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    width: 90%; /* Usa una percentuale per sicurezza */
+    width: 90%;
     max-width: 1000px;
-
-    /* CENTRATURA ORIZZONTALE DEFINITIVA */
     margin: 0 auto;
-
-    /* DISTACCO DALL'HEADER:
-       Aumentiamo il padding superiore. Se 70px non bastavano,
-       mettiamo 100px: questo garantisce che la prima riga "nasca"
-       100 pixel più in basso rispetto al bordo dell'header nero. */
     padding-top: 100px;
-    padding-bottom: 150px; /* Spazio generoso in fondo per il footer */
-
+    padding-bottom: 150px;
     box-sizing: border-box;
 }
 
@@ -67,9 +56,7 @@ html, body {
     align-items: center;
     transition: transform 0.3s ease;
     min-height: 250px;
-
-    /* CURSORE: All'interno della card il cursore torna normale per facilitare la lettura */
-    cursor: default;
+    cursor: pointer; /* Ora tutta la card è cliccabile per le foto */
 }
 
 .trek-item:hover {
@@ -141,8 +128,6 @@ html, body {
     color: #1a1a1a;
     gap: 12px;
     transition: all 0.2s ease;
-
-    /* CURSORE: Manina sui link cliccabili */
     cursor: pointer;
 }
 
@@ -169,6 +154,78 @@ html, body {
     border-bottom: 1px solid var(--banana-yellow);
 }
 
+/* ============================================================
+   MODAL E GALLERIA ORIZZONTALE
+   ============================================================ */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 3000; /* Sopra tutto */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    overflow: hidden; /* Blocca lo scroll verticale della modal */
+}
+
+.modal-content {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center; /* Centra le foto verticalmente */
+}
+
+#gallery-container {
+    display: flex; /* Foto affiancate */
+    gap: 30px;
+    padding: 0 50px;
+    width: 100%;
+    overflow-x: auto; /* Abilita scorrimento orizzontale */
+    scroll-snap-type: x mandatory; /* Effetto calamita */
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Scrollbar personalizzata per la galleria */
+#gallery-container::-webkit-scrollbar {
+    height: 8px;
+}
+#gallery-container::-webkit-scrollbar-thumb {
+    background: var(--banana-yellow);
+    border-radius: 10px;
+}
+
+.gallery-img {
+    flex: 0 0 auto;
+    width: auto;
+    max-width: 85vw; /* Occupa quasi tutta la larghezza */
+    height: 75vh;    /* Occupa gran parte dell'altezza */
+    object-fit: contain;
+    border-radius: 15px;
+    scroll-snap-align: center;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+    border: 2px solid rgba(255, 219, 88, 0.2);
+}
+
+.close-modal {
+    position: fixed;
+    top: 20px;
+    right: 35px;
+    color: var(--banana-yellow);
+    font-size: 60px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 3100;
+    transition: transform 0.2s;
+}
+
+.close-modal:hover {
+    transform: scale(1.2);
+}
+
 /* 5. RESPONSIVE */
 @media (max-width: 900px) {
     .trek-grid { grid-template-columns: repeat(2, 1fr); }
@@ -177,8 +234,8 @@ html, body {
 @media (max-width: 600px) {
     .trek-grid {
         grid-template-columns: 1fr;
-        padding-top: 40px; /* Ridotto per mobile per non sprecare spazio */
+        padding-top: 40px;
     }
-    /* Su mobile l'area scrollable parte un po' più giù per l'header ridotto */
     .about-section { top: 80px; }
+    .gallery-img { height: 60vh; max-width: 90vw; }
 }
