@@ -1,13 +1,32 @@
 /* ============================================================
-   GRIGLIA TREKKING (trekking.css) - AGGIORNATO
+   GRIGLIA TREKKING (trekking.css) - VERSION 2.1
    ============================================================ */
 
-/* Abilitiamo lo scroll invisibile sulla section */
+/* 1. BLOCCO SCROLL GLOBALE (Solo per questa pagina) */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Impedisce alla pagina intera di scorrere */
+}
+
+/* 2. AREA DI SCORRIMENTO INDIPENDENTE */
 .about-section {
+    position: fixed;
+    top: 100px; /* Altezza Header */
+    bottom: 60px; /* Altezza Footer */
+    left: 0;
+    right: 0;
+
     overflow-y: auto;
-    scrollbar-width: none; /* Per Firefox */
-    -ms-overflow-style: none; /* Per Internet Explorer/Edge */
-    padding-top: 40px;
+    /* RIMOSSO IL FLEXBOX QUI PER EVITARE CONFLITTI DI CENTRATURA */
+    display: block;
+
+    background-color: #f4f4f4;
+    cursor: ns-resize;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    z-index: 10;
 }
 
 /* Nasconde la barra per Chrome, Safari e Opera */
@@ -15,16 +34,28 @@
     display: none;
 }
 
+/* 3. GRIGLIA DEI CONTENUTI */
 .trek-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    width: 100%;
+    width: 90%; /* Usa una percentuale per sicurezza */
     max-width: 1000px;
-    padding: 20px;
+
+    /* CENTRATURA ORIZZONTALE DEFINITIVA */
+    margin: 0 auto;
+
+    /* DISTACCO DALL'HEADER:
+       Aumentiamo il padding superiore. Se 70px non bastavano,
+       mettiamo 100px: questo garantisce che la prima riga "nasca"
+       100 pixel più in basso rispetto al bordo dell'header nero. */
+    padding-top: 100px;
+    padding-bottom: 150px; /* Spazio generoso in fondo per il footer */
+
     box-sizing: border-box;
 }
 
+/* 4. SINGOLA CARD TREKKING */
 .trek-item {
     background: #ffffff;
     border-bottom: 4px solid var(--banana-yellow);
@@ -36,7 +67,9 @@
     align-items: center;
     transition: transform 0.3s ease;
     min-height: 250px;
-    /* Rimosso justify-content: center per permettere al contenuto di fluire bene */
+
+    /* CURSORE: All'interno della card il cursore torna normale per facilitare la lettura */
+    cursor: default;
 }
 
 .trek-item:hover {
@@ -83,13 +116,12 @@
     text-align: center;
 }
 
-/* --- NUOVA SEZIONE: BOX GUIDA ESCURSIONISTICA --- */
-
+/* --- BOX GUIDA ESCURSIONISTICA --- */
 .guida-box {
     margin-top: 15px;
     padding-top: 15px;
-    border-top: 1px dashed #ddd; /* Riga tratteggiata per separare */
-    width: 100%; /* Occupa tutta la larghezza della card */
+    border-top: 1px dashed #ddd;
+    width: 100%;
 }
 
 .guida-label {
@@ -104,11 +136,14 @@
 .guida-link {
     display: flex;
     align-items: center;
-    justify-content: center; /* Centra la guida nella card */
+    justify-content: center;
     text-decoration: none;
     color: #1a1a1a;
     gap: 12px;
     transition: all 0.2s ease;
+
+    /* CURSORE: Manina sui link cliccabili */
+    cursor: pointer;
 }
 
 .guida-link:hover {
@@ -128,19 +163,22 @@
 .guida-link span {
     font-size: 0.85rem;
     font-weight: bold;
-    border-bottom: 1px solid transparent;
 }
 
 .guida-link:hover span {
     border-bottom: 1px solid var(--banana-yellow);
 }
 
-/* RESPONSIVE: 2 colonne su tablet, 1 su mobile */
+/* 5. RESPONSIVE */
 @media (max-width: 900px) {
     .trek-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 600px) {
-    .trek-grid { grid-template-columns: 1fr; }
-    .about-section { padding-top: 80px; }
+    .trek-grid {
+        grid-template-columns: 1fr;
+        padding-top: 40px; /* Ridotto per mobile per non sprecare spazio */
+    }
+    /* Su mobile l'area scrollable parte un po' più giù per l'header ridotto */
+    .about-section { top: 80px; }
 }
