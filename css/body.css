@@ -57,17 +57,16 @@ body.animating {
 .page-container {
     position: relative;
     width: 100%;
-    height: calc(100vh - 160px);
+    height: calc(100vh - 200px); /* Aumentiamo un po' lo spazio per sicurezza */
     margin-top: 100px;
-    overflow: visible !important;
+    overflow: hidden !important; /* Il contenitore non deve mai scrollare */
 }
 
 /* Stile base delle sezioni di testo */
 section, .art-section {
     width: 100%;
-    height: 100%;
-    /* Aumentiamo il padding inferiore a 100px per "spingere" l'ultima riga sopra il footer */
-    padding: 20px 30px 100px 30px;
+    height: 100%; /* Occupa tutto lo spazio del page-container */
+    padding: 20px 30px 150px 30px !important; /* PAD FONDAMENTALE: 150px sotto */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -75,12 +74,11 @@ section, .art-section {
     text-align: center;
     background-color: transparent;
 
-    /* Confermiamo lo scroll nascosto */
-    overflow-y: scroll !important;
+    /* Nasconde la barra ma permette lo scorrimento */
+    overflow-y: auto !important;
     overflow-x: hidden !important;
     scrollbar-width: none;
     -ms-overflow-style: none;
-    scroll-behavior: smooth;
 }
 
 /* Stile standard dei titoli H2 */
@@ -103,9 +101,15 @@ section p, .art-section p {
 
 /* Scrollbar minimale */
 section::-webkit-scrollbar {
-    width: 6px;
+    display: none !important;
 }
+
 section::-webkit-scrollbar-thumb {
     background: #ccc;
     border-radius: 10px;
+}
+
+.last-paragraph {
+    margin-bottom: 80px !important; /* Forza spazio extra dopo l'ultimo testo */
+    padding-bottom: 20px;
 }

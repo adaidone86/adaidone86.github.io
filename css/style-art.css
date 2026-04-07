@@ -12,7 +12,6 @@
 
 .art-section {
     width: 100%;
-    height: 100%;
     padding: 20px 30px;
     display: flex;
     flex-direction: column;
@@ -186,16 +185,13 @@
 /* Controlli Giallo Banana */
 .scroll-controls {
     position: absolute;
-    right: 30px; /* Spostate un po' più all'interno per sicurezza */
-    top: 50%;
+    right: 20px;
+    top: 55%; /* Leggermente più basso per non sovrapporsi al testo */
     transform: translateY(-50%);
     display: flex;
     flex-direction: column;
     gap: 15px;
-    z-index: 1000;
-    opacity: 0; /* Nascondiamo all'inizio */
-    visibility: hidden;
-    transition: opacity 0.5s ease;
+    z-index: 2000; /* Sempre sopra tutto */
 }
 
 /* Classe per mostrare le frecce dopo l'intro */
