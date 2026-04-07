@@ -2,7 +2,6 @@
    STYLE-ART.CSS - Effetti artistici con immagini e testo
    ============================================================ */
 
-/* Il contenitore che permette la visibilità esterna */
 .page-container {
     position: relative;
     width: 100%;
@@ -11,7 +10,6 @@
     overflow: visible !important;
 }
 
-/* La sezione del testo (centrata e con scorrimento) */
 .art-section {
     width: 100%;
     height: 100%;
@@ -26,23 +24,18 @@
     background-color: transparent;
 }
 
-/* Effetto Leggibilità: Testo scuro con alone bianco (Glow) */
 .art-section h2,
 .art-section p {
     position: relative;
     z-index: 2;
     color: #1a1a1a;
-    /* Questo alone bianco permette di leggere il testo scuro sopra l'immagine */
     text-shadow: 0 0 12px rgba(255, 255, 255, 0.9), 0 0 5px rgba(255, 255, 255, 0.8);
 }
 
-/* Base per l'immagine (::before) - Comune a tutte le varianti */
+/* Base per l'immagine - Rimosso il posizionamento fisso */
 .art-section::before {
     content: "";
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 65%; /* Spostata a destra */
     width: 550px;
     height: 550px;
     background-size: contain;
@@ -55,12 +48,65 @@
     display: block !important;
 }
 
+/* --- CLASSI DI POSIZIONAMENTO --- */
+
+/* Posizione a Destra (quella che avevi prima) */
+.img-right::before {
+    top: 50%;
+    left: 65%;
+    transform: translateY(-70%);
+}
+
+/* Posizione Centrale (quella che hai chiesto per Work) */
+.img-center::before {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    width: 1000px;
+    height: 1000px;
+}
+
+/* Esempio Posizione a Sinistra (opzionale) */
+.img-left::before {
+    top: 30%;
+    left: 10%;
+    transform: translate(-100%, -50%);
+}
+
 /* --- VARIANTI IMMAGINI --- */
 
 .bg-home::before {
     background-image: url('../img/home/sfondo.png');
 }
 
-.bg-work::before {
-    background-image: url('../img/lavoro/informatica.png');
+.art-bg-img {
+    position: absolute; /* Fondamentale per posizionarle liberamente */
+    width: 350px;       /* Puoi regolare la dimensione a piacere */
+    height: 350px;
+    object-fit: contain; /* Assicura che l'immagine non venga deformata */
+    z-index: 0;         /* Mette le immagini SOTTO il testo */
+    pointer-events: none; /* L'immagine non intralcia il mouse o la selezione testo */
+
+    /* Filtri per renderle artistiche e leggere (opzionale, ma consigliato) */
+    filter: brightness(1.1) saturate(0.8);
+    opacity: 0.8;
+    display: block !important;
+}
+
+/* --- Posizionamento SPECIFICO 1: Alto a Sinistra --- */
+.img-top-left {
+    top: 50px;    /* Distanza dal bordo superiore della section */
+    left: 20px;   /* Distanza dal bordo sinistro */
+
+    /* Spostamento per farla sporgere a sinistra fuori dai 900px del corpo */
+    transform: translateX(-50%);
+}
+
+/* --- Posizionamento SPECIFICO 2: Basso a Sinistra --- */
+.img-bottom-left {
+    bottom: 90px; /* Distanza dal bordo inferiore (quindi in basso) */
+    left: -100px;   /* Distanza dal bordo sinistro */
+
+    /* Spostamento per farla sporgere a sinistra fuori dai 900px del corpo */
+    transform: translateX(200%);
 }
