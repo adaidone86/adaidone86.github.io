@@ -1,75 +1,76 @@
 /* ============================================================
-   STILI STRUTTURALI (body.css) - SPAZIO MINIMO AZZERATO
+   STILI STRUTTURALI (body.css) - BASE PULITA
    ============================================================ */
-html, body {
+html {
     height: 100%;
-    margin: 0;
+}
+
+body {
+    height: 100%;
+    margin: 0 auto;
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f4f4f4;
     color: #333;
-    overflow: hidden;
-}
-
-body {
     max-width: 900px;
-    margin: 0 auto;
     display: flex;
     flex-direction: column;
+    /* Permette agli elementi artistici esterni di sporgere */
+    overflow: visible !important;
 }
 
-section, .about-section {
-    /* 1. Altezza calcolata: 100vh - (Header 100px + Footer 60px) */
+/* Override per le animazioni intro */
+body.animating {
+    overflow-x: visible !important;
+}
+
+/* Contenitore base per le sezioni */
+.page-container {
+    position: relative;
+    width: 100%;
     height: calc(100vh - 160px);
-
-    /* 2. MARGINE AZZERATO: Lo attacchiamo alla fine dell'header */
     margin-top: 100px;
+    overflow: visible !important;
+}
 
-    /* 3. PADDING MINIMO:
-       Abbiamo messo 15px solo per non far toccare fisicamente
-       il testo alla riga gialla della navigazione. */
-    padding-top: 15px;
-
-    padding-bottom: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
-
+/* Stile base delle sezioni di testo */
+section, .art-section {
+    width: 100%;
+    height: 100%;
+    padding: 20px 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
     box-sizing: border-box;
-
     overflow-y: auto;
+    overflow-x: visible !important;
     text-align: center;
+    background-color: transparent;
 }
 
-/* Rimuove ogni margine residuo dal titolo H2 */
-section h2:first-child, .about-section h2:first-child {
-    margin-top: 0 !important;
-    margin-bottom: 15px;
-}
-
-/* Compattiamo i paragrafi */
-section p, .about-section p {
-    max-width: 750px;
-    margin: 8px auto; /* Margine ridotto tra i blocchi di testo */
-    line-height: 1.5;
-    font-size: 1.1rem;
-}
-
-/* Titoli compatti */
-section h2, .about-section h2 {
+/* Stile standard dei titoli H2 */
+section h2, .art-section h2 {
     border-bottom: 2px solid #0077b5;
     display: inline-block;
     padding-bottom: 3px;
     color: #0077b5;
+    margin-top: 0;
+    margin-bottom: 15px;
 }
 
-/* Scrollbar sottile */
+/* Stile standard dei paragrafi */
+section p, .art-section p {
+    max-width: 700px;
+    margin: 12px auto;
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+
+/* Scrollbar minimale */
 section::-webkit-scrollbar {
-    width: 4px;
+    width: 6px;
 }
 section::-webkit-scrollbar-thumb {
-    background: #ddd;
+    background: #ccc;
     border-radius: 10px;
 }
