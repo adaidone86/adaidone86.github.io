@@ -68,15 +68,15 @@
 
 /* Esempio Posizione a Sinistra (opzionale) */
 .img-left::before {
-    top: 30%;
-    left: 10%;
+    top: 40%;
+    left: 20%;
     transform: translate(-100%, -50%);
 }
 
 /* --- VARIANTI IMMAGINI --- */
 
 .bg-home::before {
-    background-image: url('../img/home/sfondo.png');
+    background-image: url('../img/home/banana-b&n.png');
 }
 
 .art-bg-img {
