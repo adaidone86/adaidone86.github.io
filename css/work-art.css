@@ -1,0 +1,31 @@
+.art-bg-img {
+    position: absolute; /* Fondamentale per posizionarle liberamente */
+    width: 350px;       /* Puoi regolare la dimensione a piacere */
+    height: 350px;
+    object-fit: contain; /* Assicura che l'immagine non venga deformata */
+    z-index: 0;         /* Mette le immagini SOTTO il testo */
+    pointer-events: none; /* L'immagine non intralcia il mouse o la selezione testo */
+
+    /* Filtri per renderle artistiche e leggere (opzionale, ma consigliato) */
+    filter: brightness(1.1) saturate(0.8);
+    opacity: 0.8;
+    display: block !important;
+}
+
+/* --- Posizionamento SPECIFICO 1: Alto a Sinistra --- */
+.img-top-left {
+    top: 50px;    /* Distanza dal bordo superiore della section */
+    left: 20px;   /* Distanza dal bordo sinistro */
+
+    /* Spostamento per farla sporgere a sinistra fuori dai 900px del corpo */
+    transform: translateX(-50%);
+}
+
+/* --- Posizionamento SPECIFICO 2: Basso a Sinistra --- */
+.img-bottom-left {
+    bottom: 90px; /* Distanza dal bordo inferiore (quindi in basso) */
+    left: -100px;   /* Distanza dal bordo sinistro */
+
+    /* Spostamento per farla sporgere a sinistra fuori dai 900px del corpo */
+    transform: translateX(200%);
+}
