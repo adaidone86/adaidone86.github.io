@@ -110,3 +110,76 @@
     /* Spostamento per farla sporgere a sinistra fuori dai 900px del corpo */
     transform: translateX(200%);
 }
+
+/* Contenitore per centrare il bottone */
+.download-container {
+    text-align: center;
+    margin: 40px 0;
+}
+
+/* Il Bottone Specifico */
+.btn-setteh-download {
+    float: right;           /* Sposta a destra */
+    margin-left: 25px;      /* Distanza dal testo a sinistra */
+    margin-bottom: 10px;    /* Distanza dal testo sotto */
+    margin-top: 10px;       /* Regola questo valore per allinearlo alla riga che preferisci */
+
+    /* Mantieni lo stile precedente, ma riduci leggermente il padding se occupa troppo spazio */
+    padding: 12px 25px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+    color: #ffdb58;
+    border: 3px solid #ffdb58;
+    border-radius: 8px;
+    font-weight: 800;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 0px #b89b3e;
+}
+/* Pulizia per evitare che il footer o altri elementi salgano sopra il float */
+.page-container::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Stile per il numero 7 dentro il bottone */
+.btn-setteh-download .number-7 {
+    background: #ffdb58;
+    color: #000;
+    padding: 0 6px;
+    border-radius: 3px;
+    font-size: 1.1rem;
+}
+
+/* Effetto Hover (Passaggio del mouse) */
+.btn-setteh-download:hover {
+    background: #ffdb58;
+    color: #000;
+    box-shadow: 0 3px 0px #b89b3e, 0 5px 15px rgba(255, 219, 88, 0.4);
+    transform: translateY(2px);
+}
+
+/* Effetto Click (Pressione) */
+.btn-setteh-download:active {
+    box-shadow: 0 0px 0px #b89b3e;
+    transform: translateY(5px);
+}
+
+/* Icona del 7 all'interno del bottone */
+.btn-setteh-download .number-7 {
+    font-size: 1.5rem;
+    background: #ffdb58;
+    color: #000;
+    padding: 0 10px;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.btn-setteh-download:hover .number-7 {
+    background: #000;
+    color: #ffdb58;
+}
+

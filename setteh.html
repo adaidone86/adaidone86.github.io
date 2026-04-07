@@ -3,57 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Life: Antonino Daidone</title>
+    <title>My Life: Antonino Daidone - Lavoro</title>
     <link rel="icon" type="image/png" href="img/ico/banana.png">
 
     <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/flip-animation.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/body.css">
     <link rel="stylesheet" href="css/style-art.css">
-    <link rel="stylesheet" href="css/index-animation.css">
 </head>
 <body>
 
 <div class="top-wrapper">
     <header class="main-header">
-        <img src="img/personali/foto-profilo.png" alt="Foto di Antonino Daidone" class="profile-img">
-
+        <div class="profile-flip-container">
+            <div class="profile-flip-card">
+                <img src="img/personali/foto-profilo.png" alt="Foto Precedente" class="profile-img front">
+                <img src="img/setteh/setteh.png" alt="Foto Lavoro" class="profile-img back">
+            </div>
+        </div>
         <div class="header-text">
             <h1>
                 Ciao, sono Antonino!!<br>
                 <span class="spostato-1">&nbsp;&nbsp;&nbsp;o Tonino!!</span><br>
                 <span class="spostato-2">o Nino!!</span>
             </h1>
-            <p>Benvenuti nel mio spazio digitale</p>
+            <p>Il Sacro Sette: Una Produzione "Daidone’s Brother"</p>
         </div>
     </header>
 
     <nav class="hobby-nav">
         <ul>
-            <li><a class="hobby-link disabled">Su di me 🏠</a></li>
+            <li><a href="index.html" class="hobby-link">Su di me 🏠</a></li>
             <li><a href="lavoro.html" class="hobby-link">Lavoro 🏢</a></li>
             <li><a href="trekking.html" class="hobby-link">Trekking 🥾</a></li>
             <li><a href="vinili.html" class="hobby-link">Vinili 💿</a></li>
-            <li><a href="setteh.html" class="hobby-link">Gioco del Setteh 7️⃣</a></li>
+            <li><a class="hobby-link disabled">Gioco del Setteh 7️⃣</a></li>
         </ul>
     </nav>
 </div>
 
 <div class="page-container">
-    <section class="art-section bg-home img-right">
-        <h2>Su di me</h2>
+    <section class="art-section">
+        <h2>Gioco del Setteh</h2>
         <p>
-            Mi definirei un esploratore di connessioni e di spazi. La mia vita è un equilibrio tra il silenzio dei
-            sentieri durante il trekking e l'energia esplosiva della boxe: mi piace muovermi, scoprire cosa c'è dopo la
-            prossima curva e superare i miei limiti. Sono una persona profondamente empatica e riflessiva, ma non senza
-            una buona dose di ironia.
+            "Cosa succede quando una 'cazzata' fraterna sfugge di mano? Nasce il <strong>Gioco del Setteh</strong>.
         </p>
         <p>
-            Quando non sono in viaggio, mi trovi circondato da amici e parenti (adoro fare nuove conoscenze!) o perso
-            tra i solchi di un vinile. Sto anche imparando a suonare la chitarra: per ora strimpello con risultati
-            discutibili, ma la passione è più forte della tecnica. Ah, un’ultima cosa: se vedi una banana ovunque, non
-            stupirti. È il mio simbolo, una sorta di compagna di vita che mi perseguita (e mi accompagna) ovunque io
-            vada.
+            Quella che era iniziata come un’idea strampalata di mio fratello — l’elevazione del <strong>Sette</strong> a
+            numero sacro — è diventata il cuore pulsante di un progetto ambizioso firmato <strong>Daidone’s
+            Brother</strong>. Abbiamo preso questa ossessione numerologica e l'abbiamo trasformata in un gioco di carte
+            collezionabili che attraversa il tempo: dalle antiche civiltà ai paradossi del mondo moderno, tutto ruota
+            attorno al potere del Sette.
+        </p>
+        <p>
+            Progettare questo universo non è solo una sfida creativa, ma un vero esercizio di bilanciamento matematico
+            (e di pazienza tra fratelli). Attualmente siamo nel pieno dello sviluppo della versione demo. Il nostro
+            obiettivo? Rendere le meccaniche fluide, divertenti e, soprattutto, comprensibili a chiunque, non solo ai
+            fanatici dei calcoli.
+        </p>
+        <hr style="width: 50%; border: 1px solid #ffdb58; margin: 20px auto;">
+        <p class="descrizione-finale">
+            <a href="mailto:daidone.antonino.86@gmail.com?subject=Richiesta Demo Setteh" class="btn-setteh-download">
+                <span class="number-7">7</span> Richiedi <span class="number-7">7</span>
+            </a>
+
+            <strong>Vuoi aiutarci a plasmare il gioco?</strong>
+            Presto sarà disponibile (su richiesta) un file di test per provare il gioco in anteprima. Stiamo cercando
+            pionieri disposti a mettere alla prova il sistema, scovare bug strategici e aiutarci a rendere il Setteh
+            un’esperienza fruibile per tutti. Restate sintonizzati, il sacro numero sta arrivando."
         </p>
     </section>
 </div>
@@ -94,8 +112,6 @@
 </footer>
 
 <script src="js/flip-memory.js"></script>
-
-<script src="js/index-animation.js"></script>
 
 </body>
 </html>
