@@ -40,7 +40,7 @@
 </div>
 
 <div class="page-container">
-    <section class="art-section bg-home img-left">
+    <section class="art-section bg-home img-left" id="scroll-target">
         <h2>Tutto gira attorno ad una banana</h2>
         <p>
             Se ti stai chiedendo perché c’è una banana in questo spazio digitale, beh, non è un
@@ -73,6 +73,10 @@
             dove è partito (una risata tra amici) ma che guarda avanti con una personalità unica ...
         </p>
     </section>
+    <div class="scroll-controls">
+        <button class="scroll-btn up" onclick="scrollText(-200)">▲</button>
+        <button class="scroll-btn down" onclick="scrollText(200)">▼</button>
+    </div>
 </div>
 
 <footer class="footer-minimal black-yellow">

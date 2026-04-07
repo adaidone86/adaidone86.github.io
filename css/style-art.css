@@ -183,3 +183,50 @@
     color: #ffdb58;
 }
 
+/* Controlli Giallo Banana */
+.scroll-controls {
+    position: absolute;
+    right: 30px; /* Spostate un po' più all'interno per sicurezza */
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 1000;
+    opacity: 0; /* Nascondiamo all'inizio */
+    visibility: hidden;
+    transition: opacity 0.5s ease;
+}
+
+/* Classe per mostrare le frecce dopo l'intro */
+.header-ready + .page-container .scroll-controls,
+.scroll-controls.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.scroll-btn {
+    background: #ffdb58; /* Giallo Banana */
+    border: 2px solid #ffdb58;
+    color: #000; /* Testo nero per contrasto */
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.scroll-btn:hover {
+    background: #000;
+    color: #ffdb58;
+    transform: scale(1.1);
+}
+
+.scroll-btn:active {
+    transform: translateY(2px);
+}
