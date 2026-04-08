@@ -37,5 +37,18 @@
     "guida_sito": "https://www.itinarrando.com/",
     "cartella_foto": "img/trekking/monte-bianco",
     "numero_foto": 8
+  },
+  {
+    "titolo": "Trekking ad Antella",
+    "luogo": "Antella",
+    "difficolta": "EE",
+    "durata": "19 Gennaio 2026",
+    "descrizione": "Esperienza intensa tra i ghiacciai e panorami alpini.",
+    "icona": "fa-map-location-dot",
+    "guida_nome": "CAI",
+    "guida_foto": "img/trekking/escursionisti/cai.png",
+    "guida_sito": "https://www.cai.it/",
+    "cartella_foto": "img/trekking/monte-bianco",
+    "numero_foto": 8
   }
 ]
