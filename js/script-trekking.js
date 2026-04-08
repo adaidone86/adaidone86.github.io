@@ -56,41 +56,43 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
     // 2. Funzione per CAMBIARE la foto grande
-    window.setMainPhoto = function(src, thumbElement) {
+    const aggiornaFotoGrande = (src, thumbElement) => {
         mainImg.style.opacity = 0;
         setTimeout(() => {
             mainImg.src = src;
             mainImg.style.opacity = 1;
         }, 100);
 
-        // Gestione classe active sulle miniature
         document.querySelectorAll('.thumbnail-img').forEach(t => t.classList.remove('active'));
         if(thumbElement) thumbElement.classList.add('active');
     };
 
-    // 3. Funzione APERTURA MODALE (Crea solo le foto esistenti)
+    // 3. Funzione APERTURA MODALE
     window.openModal = function(listaFoto) {
-        galleryContainer.innerHTML = ""; // Pulisce tutto
+        galleryContainer.innerHTML = "";
 
         listaFoto.forEach((foto, index) => {
             const thumb = document.createElement('img');
             thumb.src = foto;
             thumb.className = 'thumbnail-img';
 
-            // Protezione salvataggio
             thumb.oncontextmenu = () => false;
             thumb.setAttribute('draggable', false);
 
-            // CLICCA MINIATURA PER VEDERE GRANDE
-            thumb.onclick = (e) => {
+            // Click per cambiare foto grande
+            thumb.addEventListener('click', (e) => {
+                e.preventDefault();
                 e.stopPropagation();
-                setMainPhoto(foto, thumb);
-            };
+                aggiornaFotoGrande(foto, thumb);
+            });
 
-            // Se la foto non esiste sul server, non mostrarla (evita caselle vuote)
+            // Se la foto non esiste, rimuovi la miniatura
             thumb.onerror = () => thumb.remove();
 
-            if(index === 0) setMainPhoto(foto, thumb);
+            if(index === 0) {
+                mainImg.src = foto;
+                thumb.classList.add('active');
+            }
 
             galleryContainer.appendChild(thumb);
         });
