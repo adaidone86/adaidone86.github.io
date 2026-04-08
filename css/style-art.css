@@ -23,13 +23,6 @@
     background-color: transparent;
 }
 
-.art-section h2,
-.art-section p {
-    position: relative;
-    z-index: 2;
-    color: #1a1a1a;
-    text-shadow: 0 0 12px rgba(255, 255, 255, 0.9), 0 0 5px rgba(255, 255, 255, 0.8);
-}
 
 /* Base per l'immagine - Rimosso il posizionamento fisso */
 .art-section::before {

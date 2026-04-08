@@ -89,15 +89,20 @@ section::-webkit-scrollbar,
     width: 0;
 }
 
-/* Stile standard dei titoli H2 */
-section h2, .art-section h2 {
-    border-bottom: 2px solid #0077b5;
-    display: inline-block;
-    padding-bottom: 3px;
-    color: #0077b5;
-    margin-top: 0;
-    margin-bottom: 15px;
-}
+ section h2, .art-section h2 {
+     display: inline-block;
+     color: #f4d03f; /* Un giallo più saturo e visibile rispetto al giallo banana pallido */
+     text-transform: uppercase; /* Rende il titolo più imponente */
+     font-weight: 800; /* Molto marcato */
+     letter-spacing: 1px; /* Più respiro tra le lettere */
+     padding-bottom: 5px;
+     margin-top: 20px;
+     margin-bottom: 25px;
+     border-bottom: 4px solid #1a1a1a; /* Riga nera spessa per dare stacco */
+
+     /* Leggera ombra per staccare il giallo dallo sfondo chiaro */
+     text-shadow: 1px 1px 0px rgba(0,0,0,0.1);
+ }
 
 /* Stile standard dei paragrafi */
 section p, .art-section p {
