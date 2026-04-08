@@ -1,30 +1,50 @@
 /* ============================================================
-   WORK-ART.CSS - Versione Reset (Solo Struttura Testo)
+   WORK-ART.CSS - Stile Professionale CV (Reset + Allineamento)
    ============================================================ */
 
-/* Contenitore specifico per i blocchi di testo della pagina lavoro */
+/* Contenitore standard per i blocchi di testo */
 .relative-container {
     width: 100%;
-    max-width: 700px; /* Coerente con section p in body.css */
+    max-width: 700px;
     margin: 0 auto;
     position: relative;
     text-align: center;
 }
 
-/* Colore personalizzato per le HR (linee separatrici) in questa pagina */
+/* Classe per allineamento a sinistra (usata per le liste) */
+.text-left-block {
+    text-align: left !important;
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+}
+
+/* --- MODIFICA COLORE STRONG --- */
+.art-section strong {
+    color: #000000; /* Nero pieno */
+    font-weight: 700; /* Leggermente più marcato per risaltare senza il colore */
+}
+
+/* Stile per i titoli H3 */
+.art-section h3 {
+    color: #333;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+/* Linee separatici gialle */
 .art-section hr {
+    width: 50%;
     border: none;
     border-top: 2px solid #ffdb58;
-    width: 50%;
     margin: 30px auto;
 }
 
-/* Stile per i grassetti specifici del tuo percorso */
-.art-section strong {
-    color: #0077b5; /* Richiama il colore dei titoli H2 */
-}
-
-/* Padding aggiuntivo per l'ultima sezione per evitare che tocchi il footer */
+/* Spazio finale */
 .last-paragraph {
-    padding-bottom: 50px;
+    padding-bottom: 5px !important; /* Prima era 40px */
+    margin-bottom: 0 !important;
 }
