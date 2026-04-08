@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/body.css">
     <link rel="stylesheet" href="css/style-art.css">
+    <link rel="stylesheet" href="css/scroll-controls.css">
+    <link rel="stylesheet" href="css/buttons.css">
 </head>
 <body>
 
@@ -44,7 +46,7 @@
 </div>
 
 <div class="page-container">
-    <section class="art-section">
+    <section class="art-section" id="scroll-target">
         <h2>Gioco del Setteh</h2>
         <p>
             "Cosa succede quando una 'cazzata' fraterna sfugge di mano? Nasce il <strong>Gioco del Setteh</strong>.
@@ -63,17 +65,25 @@
             fanatici dei calcoli.
         </p>
         <hr style="width: 50%; border: 1px solid #ffdb58; margin: 20px auto;">
-        <p class="descrizione-finale">
-            <a href="mailto:daidone.antonino.86@gmail.com?subject=Richiesta Demo Setteh" class="btn-setteh-download">
-                <span class="number-7">7</span> Richiedi <span class="number-7">7</span>
-            </a>
+        <p>
 
             <strong>Vuoi aiutarci a plasmare il gioco?</strong>
             Presto sarà disponibile (su richiesta) un file di test per provare il gioco in anteprima. Stiamo cercando
             pionieri disposti a mettere alla prova il sistema, scovare bug strategici e aiutarci a rendere il Setteh
             un’esperienza fruibile per tutti. Restate sintonizzati, il sacro numero sta arrivando."
         </p>
+
+        <div class="cta-container">
+            <a href="mailto:daidone.antonino.86@gmail.com?subject=Richiesta Demo Setteh" class="btn-standard">
+                <span class="btn-icon">7</span> Richiedi Demo <span class="btn-icon">7</span>
+            </a>
+        </div>
     </section>
+
+    <div class="scroll-controls">
+        <button class="scroll-btn up" onclick="scrollText(-200)">▲</button>
+        <button class="scroll-btn down" onclick="scrollText(200)">▼</button>
+    </div>
 </div>
 
 <footer class="footer-minimal black-yellow">
@@ -112,6 +122,6 @@
 </footer>
 
 <script src="js/flip-memory.js"></script>
-
+<script src="js/scroll-handler.js"></script>
 </body>
 </html>
