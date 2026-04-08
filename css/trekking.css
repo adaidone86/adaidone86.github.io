@@ -1,109 +1,83 @@
 /* ============================================================
-   GRIGLIA TREKKING (trekking.css) - VERSION 2.2
+   GRIGLIA TREKKING (trekking.css) - UNIFICATA E COMPLETA
    ============================================================ */
 
-/* 1. BLOCCO SCROLL GLOBALE (Solo per questa pagina) */
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    overflow: hidden; /* Impedisce alla pagina intera di scorrere */
-}
-
-/* 2. AREA DI SCORRIMENTO INDIPENDENTE */
-.about-section {
-    position: fixed;
-    top: 100px; /* Altezza Header */
-    bottom: 60px; /* Altezza Footer */
-    left: 0;
-    right: 0;
-    overflow-y: auto;
-    display: block;
-    background-color: #f4f4f4;
-    cursor: ns-resize;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-    z-index: 10;
-}
-
-/* Nasconde la barra per Chrome, Safari e Opera */
-.about-section::-webkit-scrollbar {
-    display: none;
-}
-
-/* 3. GRIGLIA DEI CONTENUTI */
+/* 1. GRIGLIA DEI CONTENUTI */
 .trek-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    width: 90%;
-    max-width: 1000px;
-    margin: 0 auto;
-    padding-top: 100px;
-    padding-bottom: 150px;
+    gap: 25px;
+    width: 100%;
+    max-width: 900px;
+    margin: 40px auto;
+    padding-bottom: 50px;
     box-sizing: border-box;
 }
 
-/* 4. SINGOLA CARD TREKKING */
+/* 2. SINGOLA CARD TREKKING */
 .trek-item {
     background: #ffffff;
-    border-bottom: 4px solid var(--banana-yellow);
+    border-bottom: 4px solid #ffdb58;
     border-radius: 15px;
-    padding: 25px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
     display: flex;
     flex-direction: column;
     align-items: center;
-    transition: transform 0.3s ease;
-    min-height: 250px;
-    cursor: pointer; /* Ora tutta la card è cliccabile per le foto */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    text-align: center;
 }
 
 .trek-item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
 }
 
 .item-icon {
     font-size: 2rem;
-    color: var(--dark-bg);
-    margin-bottom: 15px;
+    color: #333;
+    margin-bottom: 10px;
 }
 
 .trek-item h3 {
     font-size: 1.1rem;
     margin: 10px 0;
     color: #1a1a1a;
+    font-weight: 700;
 }
 
 .tag {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     background: #f0f0f0;
-    padding: 4px 10px;
+    padding: 3px 12px;
     border-radius: 20px;
     color: #666;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    font-weight: 600;
 }
 
 .trek-details {
     display: flex;
     gap: 15px;
     font-size: 0.85rem;
-    color: #444;
+    color: #555;
     border-top: 1px solid #eee;
-    padding-top: 10px;
-    margin-top: 10px;
+    padding-top: 12px;
+    margin-top: auto;
+    width: 100%;
+    justify-content: center;
 }
 
 .desc {
     font-size: 0.9rem;
     color: #777;
-    margin-top: 10px;
+    margin: 10px 0;
     line-height: 1.4;
-    text-align: center;
 }
 
-/* --- BOX GUIDA ESCURSIONISTICA --- */
+/* --- BOX GUIDA --- */
 .guida-box {
     margin-top: 15px;
     padding-top: 15px;
@@ -111,13 +85,19 @@ html, body {
     width: 100%;
 }
 
+.guida-img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 2px solid #ffdb58;
+    object-fit: cover;
+}
+
 .guida-label {
     font-size: 0.65rem;
     color: #888;
-    margin-bottom: 8px;
+    margin-bottom: 5px;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    text-align: center;
 }
 
 .guida-link {
@@ -125,117 +105,116 @@ html, body {
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    color: #1a1a1a;
-    gap: 12px;
-    transition: all 0.2s ease;
-    cursor: pointer;
-}
-
-.guida-link:hover {
-    transform: scale(1.05);
-    color: var(--dark-bg);
-}
-
-.guida-img {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    border: 2px solid var(--banana-yellow);
-    object-fit: cover;
-    background-color: #f9f9f9;
-}
-
-.guida-link span {
-    font-size: 0.85rem;
+    color: #333;
+    gap: 10px;
     font-weight: bold;
-}
-
-.guida-link:hover span {
-    border-bottom: 1px solid var(--banana-yellow);
+    font-size: 0.85rem;
 }
 
 /* ============================================================
-   MODAL E GALLERIA ORIZZONTALE
+   MODAL CINEMA MODE (Foto Grande + Miniature)
    ============================================================ */
 
 .modal {
     display: none;
     position: fixed;
-    z-index: 3000; /* Sopra tutto */
+    z-index: 9999;
     left: 0;
     top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.95);
-    overflow: hidden; /* Blocca lo scroll verticale della modal */
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.98);
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
 }
 
 .modal-content {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
+    width: 95%;
+    height: 90%;
     display: flex;
-    align-items: center; /* Centra le foto verticalmente */
+    flex-direction: column;
+    align-items: center;
+}
+
+#main-photo-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+#active-main-img {
+    max-width: 100%;
+    max-height: 80vh; /* Ridotto leggermente per sicurezza */
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 0 50px rgba(0,0,0,0.8);
+    pointer-events: none;
+    -webkit-user-drag: none;
+    transition: opacity 0.2s ease-in-out;
 }
 
 #gallery-container {
-    display: flex; /* Foto affiancate */
-    gap: 30px;
-    padding: 0 50px;
+    height: 100px;
+    display: flex;
+    gap: 12px;
+    padding: 10px 40px;
     width: 100%;
-    overflow-x: auto; /* Abilita scorrimento orizzontale */
-    scroll-snap-type: x mandatory; /* Effetto calamita */
-    -webkit-overflow-scrolling: touch;
+    overflow-x: auto;
+    justify-content: flex-start;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.05);
+    border-top: 1px solid rgba(255, 219, 88, 0.2);
 }
 
-/* Scrollbar personalizzata per la galleria */
-#gallery-container::-webkit-scrollbar {
-    height: 8px;
-}
-#gallery-container::-webkit-scrollbar-thumb {
-    background: var(--banana-yellow);
-    border-radius: 10px;
+/* Nasconde scrollbar su vari browser */
+#gallery-container::-webkit-scrollbar { display: none; }
+#gallery-container {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
-.gallery-img {
-    flex: 0 0 auto;
-    width: auto;
-    max-width: 85vw; /* Occupa quasi tutta la larghezza */
-    height: 75vh;    /* Occupa gran parte dell'altezza */
-    object-fit: contain;
-    border-radius: 15px;
-    scroll-snap-align: center;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.6);
-    border: 2px solid rgba(255, 219, 88, 0.2);
+.thumbnail-img {
+    height: 70px;
+    width: 100px;
+    object-fit: cover;
+    border-radius: 6px;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    flex-shrink: 0;
+    -webkit-user-drag: none;
+}
+
+.thumbnail-img:hover, .thumbnail-img.active {
+    opacity: 1;
+    border-color: #ffdb58;
+    transform: scale(1.1);
 }
 
 .close-modal {
-    position: fixed;
-    top: 20px;
-    right: 35px;
-    color: var(--banana-yellow);
-    font-size: 60px;
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    color: #ffdb58;
+    font-size: 50px;
     font-weight: bold;
     cursor: pointer;
-    z-index: 3100;
-    transition: transform 0.2s;
+    z-index: 10005;
+    text-shadow: 0 0 10px black;
 }
 
-.close-modal:hover {
-    transform: scale(1.2);
-}
-
-/* 5. RESPONSIVE */
+/* RESPONSIVE */
 @media (max-width: 900px) {
-    .trek-grid { grid-template-columns: repeat(2, 1fr); }
+    .trek-grid { grid-template-columns: repeat(2, 1fr); padding: 0 20px; }
 }
-
 @media (max-width: 600px) {
-    .trek-grid {
-        grid-template-columns: 1fr;
-        padding-top: 40px;
-    }
-    .about-section { top: 80px; }
-    .gallery-img { height: 60vh; max-width: 90vw; }
+    .trek-grid { grid-template-columns: 1fr; }
+    .close-modal { top: 10px; right: 15px; font-size: 40px; }
 }

@@ -3,32 +3,30 @@ document.addEventListener("DOMContentLoaded", () => {
     const modal = document.getElementById('foto-modal');
     const galleryContainer = document.getElementById('gallery-container');
     const closeBtn = document.querySelector('.close-modal');
+    const mainImg = document.getElementById('active-main-img');
 
-    // 1. Caricamento dati dal JSON
+    // 1. Caricamento dati Trekking
     fetch('dati/trekking/trekking.json')
-        .then(response => {
-            if (!response.ok) throw new Error("Errore nel caricamento del JSON");
-            return response.json();
+        .then(res => {
+            if (!res.ok) throw new Error("Errore JSON");
+            return res.json();
         })
         .then(data => {
             grid.innerHTML = "";
-
             data.forEach(trek => {
                 const item = document.createElement('div');
                 item.className = 'trek-item';
 
-                // Gestione Guida (se presente)
                 let guidaHTML = "";
                 if (trek.guida_nome && trek.guida_nome !== "") {
                     guidaHTML = `
                         <div class="guida-box">
                             <p class="guida-label">Accompagnato da:</p>
-                            <a href="${trek.guida_sito}" target="_blank" class="guida-link" title="Sito di ${trek.guida_nome}">
+                            <a href="${trek.guida_sito}" target="_blank" class="guida-link">
                                 <img src="${trek.guida_foto}" alt="${trek.guida_nome}" class="guida-img">
                                 <span>${trek.guida_nome}</span>
                             </a>
-                        </div>
-                    `;
+                        </div>`;
                 }
 
                 item.innerHTML = `
@@ -43,51 +41,71 @@ document.addEventListener("DOMContentLoaded", () => {
                     ${guidaHTML}
                 `;
 
-                // 2. LOGICA APERTURA GALLERIA (Automatizzata)
                 item.addEventListener('click', (e) => {
-                    // Non aprire se clicchi sul link della guida
                     if (e.target.closest('.guida-link')) return;
-
-                    galleryContainer.innerHTML = ""; // Pulisce foto vecchie
-
                     if (trek.cartella_foto && trek.numero_foto > 0) {
-                        // Ciclo per generare i nomi file 1.jpg, 2.jpg...
-                        for (let i = 1; i <= trek.numero_foto; i++) {
-                            const img = document.createElement('img');
-                            img.src = `${trek.cartella_foto}/${i}.jpg`;
-                            img.className = "gallery-img";
-                            // Gestione errore se una foto manca
-                            img.onerror = () => img.style.display = 'none';
-                            galleryContainer.appendChild(img);
+                        const lista = [];
+                        for(let i=1; i<=trek.numero_foto; i++) {
+                            lista.push(`${trek.cartella_foto}/${i}.jpg`);
                         }
-
-                        modal.style.display = "block";
-                        document.body.style.overflow = "hidden"; // Blocca lo scroll della pagina
-                    } else {
-                        alert("Non ci sono ancora foto per questo trekking!");
+                        openModal(lista);
                     }
                 });
-
                 grid.appendChild(item);
             });
-        })
-        .catch(error => console.error("Errore:", error));
+        });
 
-    // 3. FUNZIONI DI CHIUSURA
-    const chiudiTutto = () => {
+    // 2. Funzione per CAMBIARE la foto grande
+    window.setMainPhoto = function(src, thumbElement) {
+        mainImg.style.opacity = 0;
+        setTimeout(() => {
+            mainImg.src = src;
+            mainImg.style.opacity = 1;
+        }, 100);
+
+        // Gestione classe active sulle miniature
+        document.querySelectorAll('.thumbnail-img').forEach(t => t.classList.remove('active'));
+        if(thumbElement) thumbElement.classList.add('active');
+    };
+
+    // 3. Funzione APERTURA MODALE (Crea solo le foto esistenti)
+    window.openModal = function(listaFoto) {
+        galleryContainer.innerHTML = ""; // Pulisce tutto
+
+        listaFoto.forEach((foto, index) => {
+            const thumb = document.createElement('img');
+            thumb.src = foto;
+            thumb.className = 'thumbnail-img';
+
+            // Protezione salvataggio
+            thumb.oncontextmenu = () => false;
+            thumb.setAttribute('draggable', false);
+
+            // CLICCA MINIATURA PER VEDERE GRANDE
+            thumb.onclick = (e) => {
+                e.stopPropagation();
+                setMainPhoto(foto, thumb);
+            };
+
+            // Se la foto non esiste sul server, non mostrarla (evita caselle vuote)
+            thumb.onerror = () => thumb.remove();
+
+            if(index === 0) setMainPhoto(foto, thumb);
+
+            galleryContainer.appendChild(thumb);
+        });
+
+        modal.style.display = "flex";
+        document.body.style.overflow = "hidden";
+    };
+
+    // 4. Chiusura
+    const chiudi = () => {
         modal.style.display = "none";
-        document.body.style.overflow = "auto"; // Riattiva lo scroll della pagina
+        document.body.style.overflow = "auto";
     };
 
-    closeBtn.onclick = chiudiTutto;
-
-    // Chiudi cliccando fuori dalle foto
-    window.onclick = (event) => {
-        if (event.target == modal) chiudiTutto();
-    };
-
-    // Chiudi con il tasto ESC per comodità
-    document.addEventListener('keydown', (e) => {
-        if (e.key === "Escape") chiudiTutto();
-    });
+    closeBtn.onclick = chiudi;
+    window.onclick = (e) => { if(e.target == modal) chiudi(); };
+    modal.oncontextmenu = (e) => e.preventDefault();
 });
