@@ -1,33 +1,12 @@
+/* ============================================================
+   BODY.CSS - Struttura Globale e Protezione Contenuti
+   ============================================================ */
+
 html, body {
     height: 100vh;
     margin: 0;
     padding: 0;
     overflow: hidden !important; /* Forza la sparizione della barra esterna */
-}
-
-section, .art-section {
-    width: 100%;
-    height: 100%;
-    padding: 20px 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-sizing: border-box;
-    text-align: center;
-    background-color: transparent;
-
-    /* NASCONDE COMPLETAMENTE LA BARRA MA PERMETTE LO SCROLL */
-    overflow-y: scroll !important;
-    overflow-x: hidden !important;
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* IE */
-}
-
-/* Nasconde la barra su Chrome/Safari */
-section::-webkit-scrollbar,
-.art-section::-webkit-scrollbar {
-    display: none !important;
-    width: 0;
 }
 
 html {
@@ -46,6 +25,28 @@ body {
     flex-direction: column;
     /* Permette agli elementi artistici esterni di sporgere */
     overflow: visible !important;
+
+    /* --- PROTEZIONE CONTENUTI: Impedisce la selezione del testo --- */
+    -webkit-user-select: none;  /* Chrome, Safari, Opera */
+    -moz-user-select: none;     /* Firefox */
+    -ms-user-select: none;      /* IE/Edge */
+    user-select: none;          /* Standard */
+}
+
+/* Riabilita la selezione solo per i bottoni e link, altrimenti sembrano "morti" */
+.scroll-btn, .btn-standard, .hobby-link, .main-header h1, .main-header p {
+    user-select: auto;
+}
+
+/* Protezione immagini: impedisce il trascinamento */
+img {
+    -webkit-user-drag: none;
+    pointer-events: none; /* L'immagine non reagisce al mouse, ma il tasto destro è già bloccato dal JS */
+}
+
+/* Riabilita i pointer-events per le immagini che devono essere cliccabili (se presenti) */
+.profile-img, .social-custom-icon {
+    pointer-events: auto;
 }
 
 /* Override per le animazioni intro */
@@ -57,7 +58,7 @@ body.animating {
 .page-container {
     position: relative;
     width: 100%;
-    height: calc(100vh - 200px); /* Aumentiamo un po' lo spazio per sicurezza */
+    height: calc(100vh - 200px);
     margin-top: 100px;
     overflow: hidden !important; /* Il contenitore non deve mai scrollare */
 }
@@ -74,11 +75,18 @@ section, .art-section {
     text-align: center;
     background-color: transparent;
 
-    /* Nasconde la barra ma permette lo scorrimento */
+    /* NASCONDE COMPLETAMENTE LA BARRA MA PERMETTE LO SCROLL */
     overflow-y: auto !important;
     overflow-x: hidden !important;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE */
+}
+
+/* Nasconde la barra su Chrome/Safari */
+section::-webkit-scrollbar,
+.art-section::-webkit-scrollbar {
+    display: none !important;
+    width: 0;
 }
 
 /* Stile standard dei titoli H2 */
@@ -98,7 +106,6 @@ section p, .art-section p {
     line-height: 1.6;
     font-size: 1.1rem;
 }
-
 
 .last-paragraph {
     margin-bottom: 80px !important; /* Forza spazio extra dopo l'ultimo testo */
