@@ -1,16 +1,16 @@
 [
   {
-    "titolo": "Sentiero degli Dei",
-    "luogo": "Costiera Amalfitana",
+    "titolo": "Trekking sopra Firenze sul Monte Morello",
+    "luogo": "Monte Morello",
     "difficolta": "E",
-    "durata": "4h",
-    "descrizione": "Un percorso mozzafiato sospeso tra cielo e mare.",
+    "data": "28 Marzo 2026",
+    "descrizione": "I monti di Firenze e la vista piana, con possibilità di trovare la neve",
     "icona": "fa-map-location-dot",
-    "guida_nome": "Dario Favi",
-    "guida_foto": "img/trekking/escursionisti/landscape.png",
-    "guida_sito": "https://landscapewalkingtours.com/",
-    "cartella_foto": "img/trekking/sentiero-dei-dei",
-    "numero_foto": 12
+    "guida_nome": "Filippo",
+    "guida_foto": "img/trekking/escursionisti/wemeet.png",
+    "guida_sito": "https://www.meetup.com/it-it/wemeet-toscana/",
+    "cartella_foto": "img/trekking/monte-morello",
+    "numero_foto": 21
   },
   {
     "titolo": "Monte Bianco",
