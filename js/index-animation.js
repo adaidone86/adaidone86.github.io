@@ -20,16 +20,3 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
-
-// Funzione globale per il movimento
-function scrollText(distance) {
-    const target = document.getElementById('scroll-target');
-    if (target) {
-        target.scrollBy({
-            top: distance,
-            behavior: 'smooth'
-        });
-    } else {
-        console.error("Errore: Elemento 'scroll-target' non trovato!");
-    }
-}

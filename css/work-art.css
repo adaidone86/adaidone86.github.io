@@ -1,31 +1,30 @@
-.art-bg-img {
-    position: absolute; /* Fondamentale per posizionarle liberamente */
-    width: 350px;       /* Puoi regolare la dimensione a piacere */
-    height: 350px;
-    object-fit: contain; /* Assicura che l'immagine non venga deformata */
-    z-index: 0;         /* Mette le immagini SOTTO il testo */
-    pointer-events: none; /* L'immagine non intralcia il mouse o la selezione testo */
+/* ============================================================
+   WORK-ART.CSS - Versione Reset (Solo Struttura Testo)
+   ============================================================ */
 
-    /* Filtri per renderle artistiche e leggere (opzionale, ma consigliato) */
-    filter: brightness(1.1) saturate(0.8);
-    opacity: 0.8;
-    display: block !important;
+/* Contenitore specifico per i blocchi di testo della pagina lavoro */
+.relative-container {
+    width: 100%;
+    max-width: 700px; /* Coerente con section p in body.css */
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
 }
 
-/* --- Posizionamento SPECIFICO 1: Alto a Sinistra --- */
-.img-top-left {
-    top: 50px;    /* Distanza dal bordo superiore della section */
-    left: 20px;   /* Distanza dal bordo sinistro */
-
-    /* Spostamento per farla sporgere a sinistra fuori dai 900px del corpo */
-    transform: translateX(-50%);
+/* Colore personalizzato per le HR (linee separatrici) in questa pagina */
+.art-section hr {
+    border: none;
+    border-top: 2px solid #ffdb58;
+    width: 50%;
+    margin: 30px auto;
 }
 
-/* --- Posizionamento SPECIFICO 2: Basso a Sinistra --- */
-.img-bottom-left {
-    bottom: 90px; /* Distanza dal bordo inferiore (quindi in basso) */
-    left: -100px;   /* Distanza dal bordo sinistro */
+/* Stile per i grassetti specifici del tuo percorso */
+.art-section strong {
+    color: #0077b5; /* Richiama il colore dei titoli H2 */
+}
 
-    /* Spostamento per farla sporgere a sinistra fuori dai 900px del corpo */
-    transform: translateX(200%);
+/* Padding aggiuntivo per l'ultima sezione per evitare che tocchi il footer */
+.last-paragraph {
+    padding-bottom: 50px;
 }

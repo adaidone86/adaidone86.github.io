@@ -1,0 +1,63 @@
+/* ============================================================
+   SCROLL-CONTROLS.CSS - Modulo frecce Giallo Banana
+   ============================================================ */
+
+.scroll-controls {
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 2000;
+    /* Inizialmente nascoste per l'animazione intro della home */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+/* Classe per mostrare le frecce (gestita dal JS) */
+.scroll-controls.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.scroll-btn {
+    background: #ffdb58; /* Giallo Banana */
+    border: 2px solid #ffdb58;
+    color: #000000;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    outline: none;
+}
+
+.scroll-btn:hover {
+    background: #000000;
+    color: #ffdb58;
+    transform: scale(1.1);
+}
+
+.scroll-btn:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive: sposta le frecce più all'interno su schermi piccoli */
+@media (max-width: 768px) {
+    .scroll-controls {
+        right: 15px;
+    }
+    .scroll-btn {
+        width: 40px;
+        height: 40px;
+    }
+}

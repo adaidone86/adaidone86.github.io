@@ -99,15 +99,6 @@ section p, .art-section p {
     font-size: 1.1rem;
 }
 
-/* Scrollbar minimale */
-section::-webkit-scrollbar {
-    display: none !important;
-}
-
-section::-webkit-scrollbar-thumb {
-    background: #ccc;
-    border-radius: 10px;
-}
 
 .last-paragraph {
     margin-bottom: 80px !important; /* Forza spazio extra dopo l'ultimo testo */
