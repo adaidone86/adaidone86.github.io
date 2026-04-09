@@ -8,32 +8,34 @@ function openVinylModal(dati, folderName) {
     const modal = document.getElementById('vinyl-modal');
     const videoContainer = document.getElementById('modal-video');
 
+    if (!modal || !videoContainer) return;
+
     // Inseriamo i testi
     document.getElementById('modal-title').innerText = dati.album;
     document.getElementById('modal-artist').innerText = dati.artista;
     document.getElementById('modal-description').innerText = dati.descrizione || "Nessun aneddoto disponibile per questo disco.";
 
     // Gestione Video (Cerca il file video.mp4 nella cartella del disco)
-    // Se nel JSON hai specificato un link diverso usa quello, altrimenti usa il default locale
     const videoSource = dati.video || `img/vinile/${folderName}/video.mp4`;
 
     videoContainer.innerHTML = `
-        <video controls autoplay muted loop>
+        <video controls autoplay muted loop style="width:100%; height:100%; object-fit:cover;">
             <source src="${videoSource}" type="video/mp4">
             Il tuo browser non supporta il tag video.
         </video>
     `;
 
     modal.style.display = "block";
-    document.body.style.overflow = "hidden"; // Blocca lo scroll della pagina
+    document.body.style.overflow = "hidden"; // Blocca lo scroll della pagina di sfondo
 }
 
 function closeModal() {
     const modal = document.getElementById('vinyl-modal');
     if (modal) {
         modal.style.display = "none";
-        document.getElementById('modal-video').innerHTML = ""; // Stoppa il video svuotando il contenitore
-        document.body.style.overflow = "auto"; // Riattiva lo scroll
+        const videoContainer = document.getElementById('modal-video');
+        if (videoContainer) videoContainer.innerHTML = ""; // Stoppa il video
+        document.body.style.overflow = ""; // Riattiva lo scroll
     }
 }
 
@@ -50,6 +52,8 @@ async function caricaCollezioneAutonoma() {
     const wrapper = document.getElementById('album-wrapper');
     const swiperElement = document.querySelector('.mySwiper');
     const loader = document.getElementById('loader-container');
+
+    if (!wrapper || !swiperElement) return;
 
     swiperElement.style.opacity = "0";
 
@@ -78,38 +82,50 @@ async function caricaCollezioneAutonoma() {
                         <div class="album-info">
                             <h3>${dati.album}</h3>
                             <p><strong>${dati.artista}</strong> | ${dati.anno || ''}</p>
-                            <span class="genere-tag" style="font-size: 0.8em; color: #0077b5;">${dati.genere}</span>
+                            <span class="genere-tag" style="font-size: 0.8em; color: #ffdb58; background: #000; padding: 2px 8px; border-radius: 10px;">${dati.genere}</span>
                         </div>
                     `;
 
-                    // --- AGGIUNGIAMO L'EVENTO CLICK PER IL MODAL ---
+                    // Evento click per aprire il modal
                     slide.addEventListener('click', () => {
                         openVinylModal(dati, nomeCartella);
                     });
 
                     wrapper.appendChild(slide);
 
+                    // Pre-caricamento immagini per evitare scatti allo Swiper
                     promesseImmagini.push(new Promise(resolve => {
                         const img = new Image();
                         img.src = coverPath;
                         img.onload = resolve;
                         img.onerror = resolve;
                     }));
-                } catch (e) { console.error("Errore caricamento disco:", e); }
+                } catch (e) {
+                    console.error("Errore caricamento disco:", nomeCartella, e);
+                }
             }
         }
 
+        // Aspetta che le immagini siano pronte
         await Promise.all(promesseImmagini);
 
-        swiperElement.style.display = "block";
+        if (loader) loader.style.display = "none";
+        swiperElement.style.opacity = "1";
 
-        new Swiper(".mySwiper", {
+        // --- INIZIALIZZAZIONE SWIPER ---
+        const swiper = new Swiper(".mySwiper", {
             effect: "cards",
             grabCursor: true,
-            mousewheel: true,
-            keyboard: {
-                enabled: true,
-                onlyInViewport: true,
+            initialSlide: 0,
+            speed: 350, // Velocità aumentata (era 600ms)
+            mousewheel: {
+                invert: false,
+                releaseOnEdges: false,
+                sensitivity: 1, // Puoi alzare a 2 o 3 se vuoi che basti un tocco minimo
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
             },
             cardsEffect: {
                 perSlideOffset: 12,
@@ -118,13 +134,17 @@ async function caricaCollezioneAutonoma() {
             }
         });
 
-        if (loader) loader.style.display = "none";
-        swiperElement.style.opacity = "1";
+        // --- FIX SCROLL: Blocca lo scroll della pagina quando il mouse è sopra lo Swiper ---
+        swiperElement.addEventListener('wheel', (e) => {
+            // Blocca la propagazione dell'evento wheel così scroll-handler.js non lo riceve
+            e.stopPropagation();
+        }, { passive: false });
 
     } catch (error) {
-        console.error("Errore generale:", error);
-        if (loader) loader.innerHTML = "<p>Errore nel caricamento dei vinili.</p>";
+        console.error("Errore generale durante il caricamento:", error);
+        if (loader) loader.innerHTML = "<p style='color: white;'>Errore nel caricamento della collezione.</p>";
     }
 }
 
-caricaCollezioneAutonoma();
+// Avvio
+document.addEventListener("DOMContentLoaded", caricaCollezioneAutonoma);

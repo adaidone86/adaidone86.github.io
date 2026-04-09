@@ -1,0 +1,96 @@
+/* ============================================================
+   VINILI-ART.CSS - Struttura Pagina e Modal
+   ============================================================ */
+
+.art-section-vinili {
+    /* 60px è lo spazio ideale per vedere l'ombra dell'ultima slide e il footer */
+    padding-bottom: 60px !important;
+}
+
+/* LOADER / SPINNER */
+#loader-container {
+    padding: 50px 0;
+    width: 100%;
+    text-align: center;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #ddd;
+    border-top: 5px solid #ffdb58;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 15px;
+}
+
+@keyframes spin { 100% { transform: rotate(360deg); } }
+
+/* MODAL (POP-UP DETTAGLI) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0; top: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.95);
+    backdrop-filter: blur(8px);
+}
+
+.modal-content {
+    background: #1a1a1a;
+    margin: 5% auto;
+    padding: 30px;
+    border: 2px solid #ffdb58;
+    width: 90%;
+    max-width: 900px;
+    border-radius: 20px;
+    color: white;
+    position: relative;
+    box-shadow: 0 0 30px rgba(255, 219, 88, 0.2);
+}
+
+.close-modal {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 40px;
+    color: #ffdb58;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.modal-body {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+@media (min-width: 850px) {
+    .modal-body { flex-direction: row; }
+}
+
+.modal-video-container {
+    flex: 1.2;
+    background: #000;
+    border-radius: 12px;
+    overflow: hidden;
+    aspect-ratio: 16/9;
+    border: 1px solid #333;
+}
+
+.modal-video-container iframe,
+.modal-video-container video,
+.modal-video-container img {
+    width: 100%; height: 100%; border: none; display: block;
+}
+
+.modal-info { flex: 0.8; text-align: left; }
+.modal-info h2 { color: #ffdb58; font-size: 1.8rem; margin-bottom: 10px; }
+.modal-info h3 {
+    color: #ccc;
+    border-bottom: 1px solid #333;
+    padding-bottom: 10px;
+    font-weight: normal;
+}
+.modal-info p { color: #eee; line-height: 1.6; margin-top: 15px; }
