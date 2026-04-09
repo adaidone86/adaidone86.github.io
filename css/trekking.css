@@ -10,9 +10,12 @@
     width: 100%;
     max-width: 900px;
     margin: 40px auto;
-    /* Spazio finale per far "respirare" l'ultima riga di card prima del footer */
-    padding-bottom: 40px;
+    /* Aumentiamo il padding bottom per evitare che l'ultima card
+       finisca dietro la barra di ricerca fissa */
+    padding-bottom: 180px !important;
     box-sizing: border-box;
+    position: relative;
+    z-index: 1;
 }
 
 /* 2. SINGOLA CARD TREKKING */
@@ -35,87 +38,74 @@
     box-shadow: 0 12px 25px rgba(0,0,0,0.15);
 }
 
-.item-icon {
-    font-size: 2rem;
-    color: #333;
-    margin-bottom: 10px;
-}
-
-.trek-item h3 {
-    font-size: 1.1rem;
-    margin: 10px 0;
-    color: #1a1a1a;
-    font-weight: 700;
-}
-
-.tag {
-    font-size: 0.75rem;
-    background: #f0f0f0;
-    padding: 3px 12px;
-    border-radius: 20px;
-    color: #666;
-    margin-bottom: 12px;
-    text-transform: uppercase;
-    font-weight: 600;
-}
-
-.trek-details {
-    display: flex;
-    gap: 15px;
-    font-size: 0.85rem;
-    color: #555;
-    border-top: 1px solid #eee;
-    padding-top: 12px;
-    margin-top: auto;
-    width: 100%;
-    justify-content: center;
-}
-
-.desc {
-    font-size: 0.9rem;
-    color: #777;
-    margin: 10px 0;
-    line-height: 1.4;
-}
+.item-icon { font-size: 2rem; color: #333; margin-bottom: 10px; }
+.trek-item h3 { font-size: 1.1rem; margin: 10px 0; color: #1a1a1a; font-weight: 700; }
+.tag { font-size: 0.75rem; background: #f0f0f0; padding: 3px 12px; border-radius: 20px; color: #666; margin-bottom: 12px; text-transform: uppercase; font-weight: 600; }
+.trek-details { display: flex; gap: 15px; font-size: 0.85rem; color: #555; border-top: 1px solid #eee; padding-top: 12px; margin-top: auto; width: 100%; justify-content: center; }
+.desc { font-size: 0.9rem; color: #777; margin: 10px 0; line-height: 1.4; }
 
 /* --- BOX GUIDA --- */
-.guida-box {
-    margin-top: 15px;
-    padding-top: 15px;
-    border-top: 1px dashed #ddd;
+.guida-box { margin-top: 15px; padding-top: 15px; border-top: 1px dashed #ddd; width: 100%; }
+.guida-img { width: 35px; height: 35px; border-radius: 50%; border: 2px solid #ffdb58; object-fit: cover; }
+.guida-label { font-size: 0.65rem; color: #888; margin-bottom: 5px; text-transform: uppercase; }
+.guida-link { display: flex; align-items: center; justify-content: center; text-decoration: none; color: #333; gap: 10px; font-weight: bold; font-size: 0.85rem; }
+
+/* --- BARRA DI RICERCA (Versione Fixed Bottom) --- */
+.search-container {
+    position: fixed;
+    /* Alziamo la barra a 80px dal fondo per lasciare spazio ai contatti */
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 500px;
+    z-index: 2000;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+}
+
+.search-box {
+    position: relative;
     width: 100%;
 }
 
-.guida-img {
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    border: 2px solid #ffdb58;
-    object-fit: cover;
+.search-box input {
+    width: 100%;
+    padding: 15px 20px 15px 55px;
+    border: 3px solid #ffdb58;
+    border-radius: 50px;
+    font-size: 1rem;
+    outline: none;
+    background: #ffffff;
+    /* Ombra più morbida per non appesantire i contatti sotto */
+    box-shadow: 0 -4px 20px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
 }
 
-.guida-label {
-    font-size: 0.65rem;
+.search-box input:focus {
+    border-color: #1a1a1a;
+    box-shadow: 0 -5px 30px rgba(255, 219, 88, 0.5);
+}
+
+.search-icon {
+    position: absolute;
+    left: 22px;
+    top: 50%;
+    transform: translateY(-50%);
     color: #888;
-    margin-bottom: 5px;
-    text-transform: uppercase;
+    font-size: 1.2rem;
+    z-index: 2;
+    pointer-events: none;
 }
 
-.guida-link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    color: #333;
-    gap: 10px;
-    font-weight: bold;
-    font-size: 0.85rem;
-}
 
-/* RESPONSIVE CARD */
+/* RESPONSIVE */
 @media (max-width: 900px) {
-    .trek-grid { grid-template-columns: repeat(2, 1fr); padding: 0 20px; }
+    .trek-grid { grid-template-columns: repeat(2, 1fr); padding: 0 20px 120px 20px; }
 }
+
 @media (max-width: 600px) {
     .trek-grid { grid-template-columns: 1fr; }
+    .search-container { bottom: 20px; } /* Più vicina al bordo su schermi piccoli */
 }
