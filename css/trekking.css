@@ -10,7 +10,8 @@
     width: 100%;
     max-width: 900px;
     margin: 40px auto;
-    padding-bottom: 50px;
+    /* Spazio finale per far "respirare" l'ultima riga di card prima del footer */
+    padding-bottom: 40px;
     box-sizing: border-box;
 }
 

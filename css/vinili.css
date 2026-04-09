@@ -4,8 +4,9 @@
 
 /* 1. LOADER / SPINNER */
 #loader-container {
-    padding: 30px 0;
+    padding: 50px 0; /* Aumentato il padding per centrarlo meglio visivamente */
     width: 100%;
+    text-align: center;
 }
 
 .spinner {
@@ -25,7 +26,8 @@
     width: 100%;
     max-width: 380px;
     height: 520px;
-    margin: 20px auto 100px !important; /* Spazio sotto per non coprire col footer */
+    /* Aumentiamo il margine inferiore a 120px per dare più aria rispetto al footer */
+    margin: 20px auto 120px !important;
     opacity: 0;
     transition: opacity 0.5s ease;
 }
@@ -45,6 +47,15 @@
     cursor: pointer;
     box-sizing: border-box;
     text-align: center;
+}
+
+.art-section:has(.mySwiper) {
+    padding-bottom: 100px !important;
+}
+
+/* Se il tuo browser non supporta :has, aggiungi questa classe specifica */
+.art-section-vinili {
+    padding-bottom: 100px !important;
 }
 
 .album-cover {

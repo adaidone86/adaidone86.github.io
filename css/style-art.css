@@ -68,3 +68,15 @@
 .bg-home::before {
     background-image: url('../img/home/banana-b&n.png');
 }
+
+/* Gestione dello spazio finale per le pagine narrative (Setteh, etc.) */
+.art-section .cta-container {
+    /* Aumentiamo il padding inferiore per distanziarci dal footer nero */
+    padding: 40px 0 100px 0 !important;
+    margin-top: 20px;
+}
+
+/* Assicuriamoci che l'ultimo paragrafo non "tocchi" il bottone */
+.art-section p:last-of-type {
+    margin-bottom: 20px;
+}
