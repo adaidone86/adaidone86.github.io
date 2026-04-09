@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/body.css">
     <link rel="stylesheet" href="css/trekking.css">
+    <link rel="stylesheet" href="css/cinema-mode.css">
     <link rel="stylesheet" href="css/scroll-controls.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -75,12 +76,14 @@
     </div>
 </div>
 
-<div id="foto-modal" class="modal">
-    <span class="close-modal">&times;</span>
-    <div class="modal-content">
+<div id="foto-modal" class="modal-cinema">
+    <span class="close-cinema" id="close-modal-btn">&times;</span>
+
+    <div class="modal-cinema-content">
         <div id="main-photo-container">
             <img id="active-main-img" src="" alt="Foto Grande">
         </div>
+
         <div id="gallery-container">
         </div>
     </div>

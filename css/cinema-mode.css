@@ -1,0 +1,119 @@
+/* ============================================================
+   CINEMA MODE - VISUALIZZATORE FOTO UNIVERSALE
+   ============================================================ */
+
+.modal-cinema {
+    display: none;
+    position: fixed;
+    z-index: 10000; /* Sopra a tutto */
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.98);
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.modal-cinema-content {
+    width: 95%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Contenitore Foto Principale */
+#main-photo-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 20px;
+    overflow: hidden;
+    max-height: calc(100vh - 160px);
+}
+
+#active-main-img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 0 50px rgba(0,0,0,0.8);
+    pointer-events: none; /* Protezione salvataggio */
+    -webkit-user-drag: none;
+    transition: opacity 0.2s ease-in-out;
+}
+
+/* Barra delle miniature in basso */
+#gallery-container {
+    position: relative;
+    z-index: 10010;
+    height: 100px;
+    display: flex;
+    gap: 12px;
+    padding: 10px 40px;
+    width: 100%;
+    overflow-x: auto;
+    justify-content: flex-start;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.05);
+    border-top: 1px solid rgba(255, 219, 88, 0.2);
+    pointer-events: auto !important;
+}
+
+/* Nasconde scrollbar su tutti i browser */
+#gallery-container::-webkit-scrollbar { display: none; }
+#gallery-container {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.thumbnail-img {
+    height: 70px;
+    width: 100px;
+    object-shrink: 0;
+    object-fit: cover;
+    border-radius: 6px;
+    cursor: pointer !important;
+    opacity: 0.5;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    pointer-events: auto !important;
+    -webkit-user-drag: none;
+}
+
+.thumbnail-img:hover,
+.thumbnail-img.active {
+    opacity: 1;
+    border-color: #ffdb58; /* Giallo Banana */
+    transform: scale(1.1);
+}
+
+/* Pulsante di chiusura */
+.close-cinema {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    color: #ffdb58;
+    font-size: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 10005;
+    text-shadow: 0 0 10px black;
+    transition: transform 0.2s;
+}
+
+.close-cinema:hover {
+    transform: scale(1.2);
+}
+
+/* Ottimizzazione Mobile */
+@media (max-width: 600px) {
+    .close-cinema { top: 10px; right: 15px; font-size: 40px; }
+    #gallery-container { height: 80px; padding: 10px 20px; }
+    .thumbnail-img { height: 50px; width: 80px; }
+}

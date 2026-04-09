@@ -2,8 +2,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const grid = document.getElementById('trek-grid');
     const modal = document.getElementById('foto-modal');
     const galleryContainer = document.getElementById('gallery-container');
-    const closeBtn = document.querySelector('.close-modal');
     const mainImg = document.getElementById('active-main-img');
+    const closeBtn = document.querySelector('.close-cinema');
 
     // 1. Caricamento dati Trekking
     fetch('dati/trekking/trekking.json')
@@ -29,13 +29,14 @@ document.addEventListener("DOMContentLoaded", () => {
                         </div>`;
                 }
 
+                // Visualizzazione aggiornata: Data e Km/Dislivello
                 item.innerHTML = `
                     <i class="fa-solid ${trek.icona} item-icon"></i>
                     <h3>${trek.titolo}</h3>
                     <p class="tag">${trek.luogo}</p>
                     <div class="trek-details">
-                        <p><strong>Difficoltà:</strong> ${trek.difficolta}</p>
-                        <p><strong>Durata:</strong> ${trek.durata}</p>
+                        <p><strong>Data:</strong> ${trek.data}</p>
+                        <p><strong>Info:</strong> ${trek["km/dislivello"]}</p>
                     </div>
                     <p class="desc">${trek.descrizione}</p>
                     ${guidaHTML}
@@ -53,61 +54,50 @@ document.addEventListener("DOMContentLoaded", () => {
                 });
                 grid.appendChild(item);
             });
-        });
+        })
+        .catch(err => console.error("Errore:", err));
 
-    // 2. Funzione per CAMBIARE la foto grande
     const aggiornaFotoGrande = (src, thumbElement) => {
         mainImg.style.opacity = 0;
         setTimeout(() => {
             mainImg.src = src;
             mainImg.style.opacity = 1;
         }, 100);
-
         document.querySelectorAll('.thumbnail-img').forEach(t => t.classList.remove('active'));
         if(thumbElement) thumbElement.classList.add('active');
     };
 
-    // 3. Funzione APERTURA MODALE
     window.openModal = function(listaFoto) {
         galleryContainer.innerHTML = "";
-
         listaFoto.forEach((foto, index) => {
             const thumb = document.createElement('img');
             thumb.src = foto;
             thumb.className = 'thumbnail-img';
-
             thumb.oncontextmenu = () => false;
             thumb.setAttribute('draggable', false);
-
-            // Click per cambiare foto grande
             thumb.addEventListener('click', (e) => {
                 e.preventDefault();
                 e.stopPropagation();
                 aggiornaFotoGrande(foto, thumb);
             });
-
-            // Se la foto non esiste, rimuovi la miniatura
             thumb.onerror = () => thumb.remove();
-
             if(index === 0) {
                 mainImg.src = foto;
                 thumb.classList.add('active');
             }
-
             galleryContainer.appendChild(thumb);
         });
-
         modal.style.display = "flex";
         document.body.style.overflow = "hidden";
     };
 
-    // 4. Chiusura
     const chiudi = () => {
         modal.style.display = "none";
         document.body.style.overflow = "auto";
     };
 
-    closeBtn.onclick = chiudi;
+    if (closeBtn) closeBtn.onclick = chiudi;
     window.onclick = (e) => { if(e.target == modal) chiudi(); };
+    document.addEventListener('keydown', (e) => { if (e.key === "Escape") chiudi(); });
     modal.oncontextmenu = (e) => e.preventDefault();
 });

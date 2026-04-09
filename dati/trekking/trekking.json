@@ -2,8 +2,8 @@
   {
     "titolo": "Trekking sopra Firenze sul Monte Morello",
     "luogo": "Monte Morello",
-    "difficolta": "E",
-    "data": "28 Marzo 2026",
+    "km/dislivello": "16km/500m",
+    "data": "28/03/2026",
     "descrizione": "I monti di Firenze e la vista piana, con possibilità di trovare la neve",
     "icona": "fa-map-location-dot",
     "guida_nome": "Filippo",
@@ -15,21 +15,21 @@
   {
     "titolo": "Trekking Anghiari, Trek al borgo della Battaglia",
     "luogo": "Anghiari",
-    "difficolta": "EE",
-    "durata": "11 Gennaio 2026",
+    "km/dislivello": "16km/500m",
+    "data": "11/01/2026",
     "descrizione": "Esperienza intensa tra i ghiacciai e panorami alpini.",
     "icona": "fa-map-location-dot",
     "guida_nome": "Dario Favi",
     "guida_foto": "img/trekking/escursionisti/landscape.png",
     "guida_sito": "https://landscapewalkingtours.com/",
     "cartella_foto": "img/trekking/anghiari",
-    "numero_foto": 8
+    "numero_foto": 24
   },
   {
     "titolo": "Trekking a Caltabellotta",
     "luogo": "Caltabellotta",
-    "difficolta": "EE",
-    "durata": "04 Gennaio 2026",
+    "km/dislivello": "16km/500m",
+    "data": "04/01/2026",
     "descrizione": "Esperienza intensa tra i ghiacciai e panorami alpini.",
     "icona": "fa-map-location-dot",
     "guida_nome": "Giacomo Criscenti",
@@ -41,8 +41,8 @@
   {
     "titolo": "Trekking ad Antella",
     "luogo": "Antella",
-    "difficolta": "EE",
-    "durata": "19 Gennaio 2026",
+    "km/dislivello": "16km/500m",
+    "data": "19/01/2026",
     "descrizione": "Esperienza intensa tra i ghiacciai e panorami alpini.",
     "icona": "fa-map-location-dot",
     "guida_nome": "CAI",
