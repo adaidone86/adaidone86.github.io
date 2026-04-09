@@ -12,7 +12,7 @@
     margin: 40px auto;
     /* Aumentiamo il padding bottom per evitare che l'ultima card
        finisca dietro la barra di ricerca fissa */
-    padding-bottom: 180px !important;
+    padding-bottom: 80px !important;
     box-sizing: border-box;
     position: relative;
     z-index: 1;

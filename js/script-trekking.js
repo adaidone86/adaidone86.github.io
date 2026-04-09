@@ -9,13 +9,28 @@ document.addEventListener("DOMContentLoaded", () => {
     let tuttiITrek = [];
 
     // --- 1. CARICAMENTO DATI ---
-    fetch('dati/trekking/trekking.json')
+fetch('dati/trekking/trekking.json')
         .then(res => {
             if (!res.ok) throw new Error("Errore nel caricamento del file JSON");
             return res.json();
         })
         .then(data => {
-            tuttiITrek = data;
+            // ORDINAMENTO: dal più recente al più vecchio
+            tuttiITrek = data.sort((a, b) => {
+                // Trasformiamo la stringa "GG/MM/AAAA" in un oggetto Date
+                // Dividiamo la stringa al carattere "/"
+                const dateA = a.data.split('/');
+                const dateB = b.data.split('/');
+
+                // Creiamo l'oggetto Date: new Date(anno, mese - 1, giorno)
+                // Il mese in JS parte da 0 (Gennaio è 0)
+                const d1 = new Date(dateA[2], dateA[1] - 1, dateA[0]);
+                const d2 = new Date(dateB[2], dateB[1] - 1, dateB[0]);
+
+                // Ordine decrescente (dal più recente al più vecchio)
+                return d2 - d1;
+            });
+
             renderTrek(tuttiITrek);
         })
         .catch(err => {
@@ -57,7 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     <p><strong>Data:</strong> ${trek.data}</p>
                     <p><strong>Info:</strong> ${trek["km/dislivello"]}</p>
                 </div>
-                <p class="desc">${trek.descrizione}</p>
+                <p class="desc">${trek.descrizione_breve}</p>
                 ${guidaHTML}
             `;
 

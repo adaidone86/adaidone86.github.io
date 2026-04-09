@@ -13,3 +13,4 @@ Neve / Ghiaccio         fa-snowflake
 Impronte                fa-shoe-prints
 Bussola                 fa-compass
 Tenda / Campeggio       fa-tent
+Mare                    fa-water 
