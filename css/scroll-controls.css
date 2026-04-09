@@ -3,15 +3,14 @@
    ============================================================ */
 
 .scroll-controls {
-    position: absolute;
-    right: 30px;
-    top: 50%;
+    position: fixed; /* Meglio fixed così restano lì anche se la pagina scorre */
+    right: 50px;     /* Aumenta questo valore per portarle più verso il bordo schermo */
+    top: 55%;        /* Abbassate leggermente per non stare proprio a metà */
     transform: translateY(-50%);
     display: flex;
     flex-direction: column;
     gap: 15px;
     z-index: 2000;
-    /* Inizialmente nascoste per l'animazione intro della home */
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.5s ease, visibility 0.5s ease;
@@ -52,12 +51,8 @@
 }
 
 /* Responsive: sposta le frecce più all'interno su schermi piccoli */
-@media (max-width: 768px) {
+@media (max-width: 1100px) {
     .scroll-controls {
-        right: 15px;
-    }
-    .scroll-btn {
-        width: 40px;
-        height: 40px;
+        right: 10px; /* Su schermi medi le attacchiamo al bordo destro */
     }
 }

@@ -50,3 +50,36 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
+
+// --- SCROLL UNIVERSALE (Mouse e Tastiera) ---
+
+document.addEventListener("wheel", (e) => {
+    const target = document.getElementById('scroll-target');
+    if (target) {
+        // Trasmette il movimento della rotellina al contenitore del testo
+        target.scrollBy({
+            top: e.deltaY,
+            behavior: 'auto' // 'auto' è più fluido per la rotellina rispetto a 'smooth'
+        });
+    }
+}, { passive: true });
+
+document.addEventListener("keydown", (e) => {
+    const target = document.getElementById('scroll-target');
+    if (!target) return;
+
+    const step = 100; // Quanti pixel scorrere a ogni pressione
+
+    if (e.key === "ArrowDown") {
+        target.scrollBy({ top: step, behavior: 'smooth' });
+    } else if (e.key === "ArrowUp") {
+        target.scrollBy({ top: -step, behavior: 'smooth' });
+    } else if (e.key === "PageDown") {
+        target.scrollBy({ top: window.innerHeight * 0.8, behavior: 'smooth' });
+    } else if (e.key === "PageUp") {
+        target.scrollBy({ top: -window.innerHeight * 0.8, behavior: 'smooth' });
+    } else if (e.key === " ") { // Barra spaziatrice
+        e.preventDefault(); // Impedisce il salto pagina standard
+        target.scrollBy({ top: window.innerHeight * 0.5, behavior: 'smooth' });
+    }
+});
