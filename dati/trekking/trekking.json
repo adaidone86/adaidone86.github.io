@@ -1,5 +1,19 @@
 [
   {
+    "titolo": "Punta Ala, tra cielo e mare",
+    "luogo": "Punta Ala (GR)",
+    "km/dislivello": "18km/550m",
+    "data": "17/03/2024",
+    "descrizione_breve": "Lungo i crinali di Punta Ala fino a Capo Civinini, tra panorami marini e spiagge candide",
+    "descrizione": "Punta Ala e la sua strepitosa costa, un percorso vario ed estremamente godibile tra mare e cielo che non mancherà di affascinare gli appassionati di percorsi panoramici costieri al di fuori dei circuiti più battuti.\n\nSaliremo sui panoramici crinali di poggi ammantati di essenze mediterranee e ci soffermeremo per riprendere il fiato….ammirando alcuni dei panorami più soprendenti che spaziano dal celebre Isolotto dello Sparviero di balbiana memoria alle Bandite di Scarlino e le isole dell’Arcipelago Toscano.\n\nRespireremo a lungo l’aria salmastra in questa entusiasmante “cavalcata” a fil di colle, raggiunto Poggio del Piastrone inizieremo una discesa che ci condurrà alla bellissima spiaggia di Capo Civinini, uno splendido arenile di sabbia fine e candida di circa 6 km che percorreremo fino ad arrivare a Punta Ala dove ammireremo il calar del sole di una giornata memorabile.",
+    "icona": "fa-water",
+    "guida_nome": "Dario Favi",
+    "guida_foto": "img/trekking/escursionisti/landscape.png",
+    "guida_sito": "https://landscapewalkingtours.com/",
+    "cartella_foto": "img/trekking/punta-ala",
+    "numero_foto": 0
+  },
+  {
     "titolo": "Escursione Penna di Lucchio",
     "luogo": "Uzzano (PT)",
     "km/dislivello": "12km/580m",
@@ -412,7 +426,7 @@
     "data": "28/03/2026",
     "descrizione_breve": "I monti di Firenze e la vista piana, con possibilità di trovare la neve",
     "descrizione": "I monti di Firenze e la vista piana, con possibilità di trovare la neve",
-    "icona": "fa-mountain",
+    "icona": "fa-map-location-dot",
     "guida_nome": "Filippo",
     "guida_foto": "img/trekking/escursionisti/wemeet.png",
     "guida_sito": "https://www.meetup.com/it-it/wemeet-toscana/",
