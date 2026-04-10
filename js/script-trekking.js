@@ -9,28 +9,19 @@ document.addEventListener("DOMContentLoaded", () => {
     let tuttiITrek = [];
 
     // --- 1. CARICAMENTO DATI ---
-fetch('dati/trekking/trekking.json')
+    fetch('dati/trekking/trekking.json')
         .then(res => {
             if (!res.ok) throw new Error("Errore nel caricamento del file JSON");
             return res.json();
         })
         .then(data => {
-            // ORDINAMENTO: dal più recente al più vecchio
             tuttiITrek = data.sort((a, b) => {
-                // Trasformiamo la stringa "GG/MM/AAAA" in un oggetto Date
-                // Dividiamo la stringa al carattere "/"
                 const dateA = a.data.split('/');
                 const dateB = b.data.split('/');
-
-                // Creiamo l'oggetto Date: new Date(anno, mese - 1, giorno)
-                // Il mese in JS parte da 0 (Gennaio è 0)
                 const d1 = new Date(dateA[2], dateA[1] - 1, dateA[0]);
                 const d2 = new Date(dateB[2], dateB[1] - 1, dateB[0]);
-
-                // Ordine decrescente (dal più recente al più vecchio)
                 return d2 - d1;
             });
-
             renderTrek(tuttiITrek);
         })
         .catch(err => {
@@ -42,12 +33,10 @@ fetch('dati/trekking/trekking.json')
     function renderTrek(lista) {
         if (!grid) return;
         grid.innerHTML = "";
-
         if (lista.length === 0) {
-            grid.innerHTML = `<p style="grid-column: 1/-1; color: #888; margin-top: 20px;">Nessun sentiero trovato con questi criteri...</p>`;
+            grid.innerHTML = `<p style="grid-column: 1/-1; color: #888; margin-top: 20px;">Nessun sentiero trovato...</p>`;
             return;
         }
-
         lista.forEach(trek => {
             const item = document.createElement('div');
             item.className = 'trek-item';
@@ -77,22 +66,20 @@ fetch('dati/trekking/trekking.json')
             `;
 
             item.addEventListener('click', (e) => {
-                // Non apre il modal se l'utente clicca sul link della guida
                 if (e.target.closest('.guida-link')) return;
-
                 if (trek.cartella_foto && trek.numero_foto > 0) {
                     const listaFoto = [];
                     for (let i = 1; i <= trek.numero_foto; i++) {
                         listaFoto.push(`${trek.cartella_foto}/${i}.jpg`);
                     }
-                    openModal(listaFoto);
+                    openModal(listaFoto, trek.titolo, trek.descrizione);
                 }
             });
             grid.appendChild(item);
         });
     }
 
-    // --- 3. LOGICA DI RICERCA (Filtro Dinamico) ---
+    // --- 3. RICERCA ---
     if (searchInput) {
         searchInput.addEventListener('input', (e) => {
             const termine = e.target.value.toLowerCase().trim();
@@ -106,39 +93,56 @@ fetch('dati/trekking/trekking.json')
     }
 
     // --- 4. GESTIONE MODAL CINEMA ---
-    const aggiornaFotoGrande = (src, thumbElement) => {
-        if (!mainImg) return;
-        mainImg.style.opacity = 0;
-        setTimeout(() => {
-            mainImg.src = src;
-            mainImg.style.opacity = 1;
-        }, 100);
 
-        document.querySelectorAll('.thumbnail-img').forEach(t => t.classList.remove('active'));
-        if (thumbElement) thumbElement.classList.add('active');
+    const cambiaFoto = (src, thumbElement) => {
+        if (!mainImg) return;
+
+        // Effetto transizione: abbassiamo opacità
+        mainImg.style.opacity = "0.3";
+
+        // Cambiamo sorgente
+        mainImg.src = src;
+
+        // Quando la nuova immagine è effettivamente caricata, riportiamo opacità a 1
+        mainImg.onload = () => {
+            mainImg.style.opacity = "1";
+        };
+
+        // Gestione classi "active" sulle miniature
+        const tutteLeThumb = document.querySelectorAll('.thumbnail-img');
+        tutteLeThumb.forEach(t => t.classList.remove('active'));
+        thumbElement.classList.add('active');
+
+        // Autoscroll della miniatura per tenerla centrata nella barra
+        thumbElement.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
     };
 
-    window.openModal = function (listaFoto) {
-        if (!galleryContainer || !modal) return;
+    window.openModal = function (listaFoto, titolo, descrizione) {
+        if (!galleryContainer || !modal || !mainImg) return;
+
+        document.getElementById('modal-title').innerText = titolo;
+        document.getElementById('modal-full-desc').innerText = descrizione;
+
         galleryContainer.innerHTML = "";
 
         listaFoto.forEach((foto, index) => {
             const thumb = document.createElement('img');
             thumb.src = foto;
             thumb.className = 'thumbnail-img';
-            thumb.oncontextmenu = () => false;
             thumb.setAttribute('draggable', false);
-
-            thumb.addEventListener('click', (e) => {
-                e.preventDefault();
-                e.stopPropagation();
-                aggiornaFotoGrande(foto, thumb);
-            });
 
             thumb.onerror = () => thumb.remove();
 
+            // ASSEGNAZIONE CLICK DIRETTA (Garantisce che il click venga catturato)
+            thumb.onclick = function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                cambiaFoto(foto, thumb);
+            };
+
             if (index === 0) {
-                if (mainImg) mainImg.src = foto;
+                mainImg.src = foto;
+                mainImg.style.opacity = "1";
                 thumb.classList.add('active');
             }
             galleryContainer.appendChild(thumb);
@@ -148,23 +152,30 @@ fetch('dati/trekking/trekking.json')
         document.body.style.overflow = "hidden";
     };
 
+    // --- 5. LOGICA CHIUSURA E INTERAZIONE ---
+
     const chiudi = () => {
-        if (modal) {
-            modal.style.display = "none";
-            document.body.style.overflow = "auto";
-        }
+        modal.style.display = "none";
+        document.body.style.overflow = "auto";
     };
 
     if (closeBtn) closeBtn.onclick = chiudi;
 
-    window.onclick = (e) => {
-        if (e.target == modal) chiudi();
-    };
-
+    // Chiusura con tasto ESC
     document.addEventListener('keydown', (e) => {
         if (e.key === "Escape") chiudi();
     });
 
-    // Protezione click destro nel modal
-    if (modal) modal.oncontextmenu = (e) => e.preventDefault();
+    // Scroll orizzontale gallery con rotellina
+    if (galleryContainer) {
+        galleryContainer.addEventListener("wheel", (evt) => {
+            evt.preventDefault();
+            galleryContainer.scrollLeft += evt.deltaY;
+        }, { passive: false });
+    }
+
+    // Disabilita click destro nel modal
+    if (modal) {
+        modal.oncontextmenu = (e) => e.preventDefault();
+    }
 });

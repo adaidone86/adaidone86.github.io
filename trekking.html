@@ -89,9 +89,17 @@
 <div id="foto-modal" class="modal-cinema">
     <span class="close-cinema" id="close-modal-btn">&times;</span>
 
-    <div class="modal-cinema-content">
-        <div id="main-photo-container">
-            <img id="active-main-img" src="" alt="Foto Grande">
+    <div class="modal-cinema-content" style="display: flex; flex-direction: column; height: 90vh; justify-content: space-between;">
+
+        <div class="modal-top-layout">
+            <div id="modal-desc-container">
+                <h2 id="modal-title"></h2>
+                <div id="modal-full-desc"></div>
+            </div>
+
+            <div id="main-photo-container">
+                <img id="active-main-img" src="" alt="Foto Grande">
+            </div>
         </div>
 
         <div id="gallery-container">
