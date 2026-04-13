@@ -85,12 +85,30 @@ function openVinylModal(dati, folderName) {
     infoContainer.insertAdjacentHTML('beforeend', tracklistHTML);
 
     const videoSource = dati.video || `img/vinile/${folderName}/video.mp4`;
+// --- GESTIONE VIDEO (YouTube o File Locale) ---
+const videoUrl = dati.video;
+const youtubeEmbed = ottieniEmbedYouTube(videoUrl);
+
+if (youtubeEmbed) {
+    // Se è un link YouTube, usiamo un iframe
+    videoContainer.innerHTML = `
+        <iframe
+            src="${youtubeEmbed}"
+            style="width:100%; height:100%; border:none;"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+        </iframe>
+    `;
+} else {
+    // Se non è YouTube, prova a caricarlo come file locale .mp4
+    const videoSource = videoUrl || `img/vinile/${folderName}/video.mp4`;
     videoContainer.innerHTML = `
         <video controls autoplay muted loop style="width:100%; height:100%; object-fit:cover;">
             <source src="${videoSource}" type="video/mp4">
             Il tuo browser non supporta il tag video.
         </video>
     `;
+}
 
     modal.style.display = "block";
     document.body.style.overflow = "hidden";
@@ -262,3 +280,19 @@ async function caricaCollezioneAutonoma() {
 }
 
 document.addEventListener("DOMContentLoaded", caricaCollezioneAutonoma);
+
+function ottieniEmbedYouTube(url) {
+    if (!url) return null;
+    let videoId = "";
+
+    // Se è un link standard (watch?v=)
+    if (url.includes("v=")) {
+        videoId = url.split("v=")[1].split("&")[0];
+    }
+    // Se è un link breve (youtu.be/)
+    else if (url.includes("youtu.be/")) {
+        videoId = url.split("youtu.be/")[1].split("?")[0];
+    }
+
+    return videoId ? `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1` : null;
+}
