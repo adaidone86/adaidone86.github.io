@@ -1,92 +1,189 @@
 /* MODAL BASE */
-.modal-cinema { display: none; position: fixed; z-index: 10000; left: 0; top: 0; width: 100vw; height: 100vh; background: rgba(0,0,0,0.98); align-items: center; justify-content: center; }
-.modal-cinema-content { width: 95%; height: 90vh; display: flex; flex-direction: column; justify-content: space-between; }
-.modal-top-layout { display: flex; gap: 30px; flex: 1; min-height: 0; margin-bottom: 20px; }
+.modal-cinema {
+    display: none;
+    position: fixed;
+    z-index: 10000;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.98);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-cinema-content {
+    width: 95%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.modal-top-layout {
+    display: flex;
+    gap: 30px;
+    flex: 1;
+    min-height: 0;
+    margin-bottom: 20px;
+}
 
 /* DESCRIZIONE E TAPPE */
-#modal-desc-container { flex: 0 0 32%; color: white; padding: 20px; background: rgba(255,255,255,0.05); border-radius: 12px; border: 1px solid rgba(255,219,88,0.2); overflow-y: auto; }
-#modal-title { color: #ffdb58; border-bottom: 1px solid #ffdb58; padding-bottom: 10px; }
-.giorni-nav { display: flex; flex-wrap: wrap; gap: 8px; margin: 15px 0; justify-content: center; border-bottom: 1px dashed rgba(255,219,88,0.3); padding-bottom: 10px; }
-.tappa-btn { background: #222; color: #ffdb58; border: 1px solid #ffdb58; padding: 6px 12px; border-radius: 20px; cursor: pointer; font-size: 0.8rem; }
-.tappa-btn.active { background: #ffdb58; color: #000; }
-.tappa-content { background: rgba(255,255,255,0.03); padding: 12px; border-left: 3px solid #ffdb58; margin-top: 10px; }
-.tappa-info-header { display: flex; justify-content: space-between; color: #ffdb58; font-weight: bold; margin-bottom: 5px; }
+#modal-desc-container {
+    flex: 0 0 32%;
+    color: white;
+    padding: 20px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 12px;
+    border: 1px solid rgba(255,219,88,0.2);
+    overflow-y: auto;
+}
 
-/* BOLLINI STATO SULLE CARD */
+#modal-title {
+    color: #ffdb58;
+    border-bottom: 1px solid #ffdb58;
+    padding-bottom: 10px;
+}
+
+.giorni-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 15px 0;
+    justify-content: center;
+    border-bottom: 1px dashed rgba(255,219,88,0.3);
+    padding-bottom: 10px;
+}
+
+.tappa-btn {
+    background: #222;
+    color: #ffdb58;
+    border: 1px solid #ffdb58;
+    padding: 6px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: all 0.2s;
+}
+
+.tappa-btn.active {
+    background: #ffdb58;
+    color: #000;
+}
+
+.tappa-content {
+    background: rgba(255,255,255,0.03);
+    padding: 12px;
+    border-left: 3px solid #ffdb58;
+    margin-top: 10px;
+}
+
+.tappa-info-header {
+    display: flex;
+    justify-content: space-between;
+    color: #ffdb58;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* BOLLINI STATO */
 .status-badge {
     position: absolute;
-    top: -12px;    /* Leggermente più fuori per dare stile */
+    top: -12px;
     right: -12px;
-    width: 36px;   /* Leggermente più grande per ospitare l'immagine */
+    width: 36px;
     height: 36px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 10;
-    border: 2px solid #222; /* Bordo scuro di stacco */
+    border: 2px solid #222;
     box-shadow: 0 4px 10px rgba(0,0,0,0.5);
-    overflow: hidden; /* Taglia l'immagine se esce dal cerchio */
-    background-color: #333; /* Colore base neutro */
-    transition: all 0.3s ease;
+    overflow: hidden;
+    background-color: #333;
 }
+
 .status-icon-img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* L'immagine copre tutto il cerchio senza deformarsi */
+    object-fit: cover;
     display: block;
 }
 
-/* --- STILI DI BASE (Colori se l'immagine ha trasparenze) --- */
-.badge-c {
-    background-color: #27ae60; /* Verde completato */
+.badge-c { background-color: #27ae60; }
+.badge-w { background-color: #f1c40f; }
+.badge-p { background-color: #e74c3c; }
+
+/* SCROLLBAR GIALLA */
+.custom-scrollbar::-webkit-scrollbar { width: 8px; height: 8px; }
+.custom-scrollbar::-webkit-scrollbar-track { background: rgba(255, 255, 255, 0.05); border-radius: 10px; }
+.custom-scrollbar::-webkit-scrollbar-thumb { background: #ffdb58; border-radius: 10px; border: 2px solid #1a1a1a; }
+#modal-full-desc, #gallery-container { scrollbar-width: thin; scrollbar-color: #ffdb58 rgba(255, 255, 255, 0.05); }
+
+/* FOTO E GALLERY - PARTE CRITICA PER IL CLICK */
+#main-photo-container {
+    flex: 1;
+    display: flex;
+    background: #000;
+    border-radius: 12px;
+    overflow: hidden;
 }
 
-.badge-w {
-    background-color: #f1c40f; /* Giallo WIP */
+#active-main-img {
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+    object-fit: contain;
 }
 
-.badge-p {
-    background-color: #e74c3c; /* Rosso programmato */
+#gallery-container {
+    width: 100%;
+    height: 120px; /* Spazio sufficiente per le miniature */
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    padding: 15px 0;
+    border-top: 1px solid #333;
+    position: relative;
+    z-index: 10; /* Sopra lo sfondo */
 }
 
-.pulse-wip {
-    animation: pulse-img 2s infinite ease-in-out;
+.thumbnail-img {
+    height: 80px;         /* Altezza fissa */
+    width: auto;          /* Mantiene proporzioni */
+    flex: 0 0 auto;       /* Impedisce il rimpicciolimento */
+    cursor: pointer;
+    border-radius: 6px;
+    opacity: 0.5;
+    border: 2px solid transparent;
+    position: relative;
+    z-index: 11;          /* Assicura che sia sopra il contenitore */
+    pointer-events: auto !important; /* Forza la cliccabilità */
+    transition: all 0.2s ease;
 }
 
-@keyframes pulse-img {
-    0% { transform: scale(1); opacity: 1; }
-    50% { transform: scale(1.05); opacity: 0.8; }
-    100% { transform: scale(1); opacity: 1; }
+.thumbnail-img.active {
+    opacity: 1;
+    border-color: #ffdb58; /* Bordo giallo visibile */
+    transform: scale(1.05);
 }
 
-/* --- STILE FALLBACK (Se l'immagine manca) --- */
-.status-badge.fallback-text {
-    font-weight: bold;
-    color: white;
-    font-size: 1.1rem;
-    font-family: sans-serif;
-    text-shadow: 0 1px 3px rgba(0,0,0,0.5);
-}
-/* Nel fallback per il giallo, testo nero */
-.badge-w.fallback-text {
-    color: #000;
-    text-shadow: none;
+.thumbnail-img:hover {
+    opacity: 0.8;
 }
 
-.bg-verde { background-color: #27ae60; }
-.bg-giallo { background-color: #f1c40f; color: #000; }
-.bg-rosso { background-color: #e74c3c; }
-.bg-giallo i { animation: digging 1.5s infinite ease-in-out; }
-@keyframes digging { 0%, 100% { transform: rotate(-10deg); } 50% { transform: rotate(10deg); } }
+.close-cinema {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    color: #ffdb58;
+    font-size: 50px;
+    cursor: pointer;
+    z-index: 10001;
+}
 
-/* FOTO E GALLERY */
-#main-photo-container { flex: 1; display: flex; background: #000; border-radius: 12px; overflow: hidden; }
-#active-main-img { max-width: 100%; max-height: 100%; margin: auto; object-fit: contain; }
-#gallery-container { width: 100%; height: 110px; display: flex; gap: 12px; overflow-x: auto; padding: 10px 0; border-top: 1px solid #333; }
-.thumbnail-img { height: 80px; flex: 0 0 auto; cursor: pointer; border-radius: 6px; opacity: 0.5; border: 2px solid transparent; }
-.thumbnail-img.active { opacity: 1; border-color: #ffdb58; }
-
-.close-cinema { position: absolute; top: 15px; right: 25px; color: #ffdb58; font-size: 50px; cursor: pointer; }
-
-@media (max-width: 900px) { .modal-top-layout { flex-direction: column; } #modal-desc-container { max-height: 350px; } }
+@media (max-width: 900px) {
+    .modal-top-layout { flex-direction: column; }
+    #modal-desc-container { max-height: 300px; flex: none; }
+}

@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const modal = document.getElementById('foto-modal');
     const galleryContainer = document.getElementById('gallery-container');
     const mainImg = document.getElementById('active-main-img');
-    const closeBtn = document.querySelector('.close-cinema');
+    const closeBtn = document.getElementById('close-modal-btn');
 
     let tuttiITrek = [];
     let viaggioCorrente = null;
@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
     fetch('dati/trekking/trekking.json')
         .then(res => res.json())
         .then(data => {
+            // Ordinamento decrescente per data
             tuttiITrek = data.sort((a, b) => {
                 const getStartDate = (t) => t.tipo === "viaggio" ? t.date.da : t.data;
                 const d1 = new Date(getStartDate(a).split('/').reverse().join('-'));
@@ -21,7 +22,10 @@ document.addEventListener("DOMContentLoaded", () => {
             });
             renderTrek(tuttiITrek);
         })
-        .catch(err => console.error("Errore caricamento dati:", err));
+        .catch(err => {
+            console.error("Errore caricamento JSON:", err);
+            if(grid) grid.innerHTML = "<p style='color:red;'>Errore nel caricamento dei dati.</p>";
+        });
 
     // --- 2. FUNZIONE RENDERING CARD ---
     function renderTrek(lista) {
@@ -31,27 +35,22 @@ document.addEventListener("DOMContentLoaded", () => {
         lista.forEach(trek => {
             const item = document.createElement('div');
             item.className = 'trek-item';
-            item.style.position = "relative";
 
-            // --- LOGICA BOLLINI ---
+            // BOLLINI STATO
             let bollinoHTML = "";
-            const imgPath = "img/trekking/";
-
-            if (trek.stato === "c") {
-                bollinoHTML = `<div class="status-badge badge-c" title="Completato"><img src="${imgPath}c.png" alt="C" class="status-icon-img"></div>`;
-            } else if (trek.stato === "w") {
-                bollinoHTML = `<div class="status-badge badge-w" title="In lavorazione"><img src="${imgPath}w.png" alt="W" class="status-icon-img pulse-wip"></div>`;
-            } else if (trek.stato === "p") {
-                bollinoHTML = `<div class="status-badge badge-p" title="In programma"><img src="${imgPath}p.png" alt="P" class="status-icon-img"></div>`;
+            if (trek.stato) {
+                bollinoHTML = `<div class="status-badge badge-${trek.stato}" title="${trek.stato === 'c' ? 'Completato' : (trek.stato === 'w' ? 'In lavorazione' : 'In programma')}">
+                    <img src="img/trekking/${trek.stato}.png" alt="${trek.stato}" class="status-icon-img" onerror="this.style.display='none'">
+                </div>`;
             }
 
-            // --- LOGICA GUIDA/ORGANIZZAZIONE ---
+            // GUIDA / ORGANIZZATORE
             let guidaHTML = "";
             if (trek.guida_foto && trek.guida_foto !== "-") {
                 guidaHTML = `
                     <div class="guida-box">
                         <p class="guida-label">Organizzato da:</p>
-                        <a href="${trek.guida_sito}" target="_blank" class="guida-link">
+                        <a href="${trek.guida_sito}" target="_blank" class="guida-link" onclick="event.stopPropagation();">
                             <img src="${trek.guida_foto}" alt="${trek.guida_nome}" class="guida-img">
                             <span>${trek.guida_nome !== "-" ? trek.guida_nome : "Sito Ufficiale"}</span>
                         </a>
@@ -65,7 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 ${bollinoHTML}
                 <i class="fa-solid ${trek.icona} item-icon"></i>
                 <h3>${trek.titolo}</h3>
-                <p class="tag">${trek.luogo}</p>
+                <span class="tag">${trek.luogo}</span>
                 <div class="trek-details">
                     <p><strong>Data:</strong> ${dataMostrata}</p>
                     <p><strong>Info:</strong> ${infoMostrata}</p>
@@ -74,26 +73,16 @@ document.addEventListener("DOMContentLoaded", () => {
                 ${guidaHTML}
             `;
 
-            // Click sulla card (evita il click se è un link alla guida)
-            item.addEventListener('click', (e) => {
-                if (e.target.closest('.guida-link')) return;
-                if (trek.stato === "p") return;
+            // EVENTO CLICK CARD (Apre modal solo se non è 'p')
+            item.onclick = () => {
+                if (trek.stato === "p") {
+                    alert("Questo trekking è in programma. Foto non ancora disponibili!");
+                    return;
+                }
                 openModal(trek);
-            });
+            };
 
             grid.appendChild(item);
-        });
-
-        // Gestione Fallback immagini bollini
-        document.querySelectorAll('.status-icon-img').forEach(img => {
-            img.onerror = function() {
-                const container = this.parentElement;
-                this.remove();
-                const stato = container.classList.contains('badge-c') ? 'C' :
-                              container.classList.contains('badge-w') ? 'W' : 'P';
-                container.innerText = stato;
-                container.classList.add('fallback-text');
-            };
         });
     }
 
@@ -101,23 +90,31 @@ document.addEventListener("DOMContentLoaded", () => {
     window.openModal = function (trek) {
         if (!modal) return;
         viaggioCorrente = trek;
-        document.getElementById('modal-title').innerText = trek.titolo;
-        const descContainer = document.getElementById('modal-full-desc');
+
+        const modalTitle = document.getElementById('modal-title');
+        const modalFullDesc = document.getElementById('modal-full-desc');
+
+        if (modalTitle) modalTitle.innerText = trek.titolo;
+
+        // Reset scroll della descrizione
+        if (modalFullDesc) modalFullDesc.scrollTop = 0;
 
         if (trek.tipo === "viaggio") {
-            descContainer.innerHTML = `
+            modalFullDesc.innerHTML = `
                 <div class="viaggio-header">
                     <p class="intro-desc">${trek.descrizione}</p>
-                    <div class="giorni-nav">${trek.tappe.map((_, i) => `<button class="tappa-btn" onclick="mostraTappa(${i})">Giorno ${i+1}</button>`).join('')}</div>
+                    <div class="giorni-nav">
+                        ${trek.tappe.map((_, i) => `<button class="tappa-btn" onclick="mostraTappa(${i})">Giorno ${i+1}</button>`).join('')}
+                    </div>
                 </div>
                 <div id="tappa-content" class="tappa-content"></div>
             `;
             mostraTappa(0);
         } else {
-            descContainer.innerHTML = `<p>${trek.descrizione}</p>`;
-            const foto = Array.from({length: trek.numero_foto}, (_, i) => `${trek.cartella_foto}/${i+1}.jpg`);
-            caricaGallery(foto);
+            modalFullDesc.innerHTML = `<p>${trek.descrizione}</p>`;
+            caricaGallery(trek.cartella_foto, trek.numero_foto);
         }
+
         modal.style.display = "flex";
         document.body.style.overflow = "hidden";
     };
@@ -133,38 +130,81 @@ document.addEventListener("DOMContentLoaded", () => {
             `;
         }
         document.querySelectorAll('.tappa-btn').forEach((b, i) => b.classList.toggle('active', i === idx));
-        const foto = Array.from({length: tappa.numero_foto}, (_, i) => `${tappa.cartella_foto}/${i+1}.jpg`);
-        caricaGallery(foto);
+        caricaGallery(tappa.cartella_foto, tappa.numero_foto);
     };
 
-    function caricaGallery(lista) {
-        if (!galleryContainer) return;
-        galleryContainer.innerHTML = "";
-        lista.forEach((f, i) => {
-            const img = document.createElement('img');
-            img.src = f;
-            img.className = 'thumbnail-img';
-            img.onclick = () => cambiaFoto(f, img);
-            if (i === 0) cambiaFoto(f, img);
-            galleryContainer.appendChild(img);
-        });
+function caricaGallery(folder, num) {
+    if (!galleryContainer) return;
+    galleryContainer.innerHTML = "";
+
+    if (!num || num === 0) {
+        if (mainImg) mainImg.src = "";
+        return;
     }
 
-    const cambiaFoto = (src, el) => {
+    let primaTrovata = false;
+
+    for (let i = 1; i <= num; i++) {
+        const imgSrc = `${folder}/${i}.jpg`;
+        const img = document.createElement('img');
+
+        img.src = imgSrc;
+        img.className = 'thumbnail-img';
+
+        // Gestione errore: se la foto non esiste, sparisce
+        img.onerror = function() {
+            console.warn("Immagine non trovata, la salto:", imgSrc);
+            this.remove();
+
+            // Se abbiamo rimosso quella che doveva essere la "active" e non ne abbiamo altre,
+            // il mainImg potrebbe rimanere vuoto. Gestiamolo se necessario.
+        };
+
+        // Gestione click: usiamo addEventListener che è più pulito
+        img.addEventListener('click', function() {
+            if (mainImg) {
+                mainImg.style.opacity = "0.5"; // Effetto transizione veloce
+                mainImg.src = imgSrc;
+                mainImg.onload = () => mainImg.style.opacity = "1";
+            }
+
+            // Rimuovi active da tutte e mettila a questa
+            document.querySelectorAll('.thumbnail-img').forEach(t => t.classList.remove('active'));
+            this.classList.add('active');
+        });
+
+        // Impostiamo la prima immagine del ciclo come "principale" di partenza
+        if (!primaTrovata) {
+            if (mainImg) mainImg.src = imgSrc;
+            img.classList.add('active');
+            primaTrovata = true;
+        }
+
+        galleryContainer.appendChild(img);
+    }
+
+    galleryContainer.scrollLeft = 0;
+}
+
+    window.cambiaFoto = function(src, el) {
         if (!mainImg) return;
         mainImg.src = src;
         document.querySelectorAll('.thumbnail-img').forEach(t => t.classList.remove('active'));
-        el.classList.add('active');
+        if(el) el.classList.add('active');
     };
 
-    const chiudi = () => {
-        if (modal) modal.style.display = "none";
+    const chiudiModal = () => {
+        modal.style.display = "none";
         document.body.style.overflow = "auto";
     };
 
-    if (closeBtn) closeBtn.onclick = chiudi;
+    if (closeBtn) closeBtn.onclick = chiudiModal;
 
-    // Gestione ricerca
+    window.addEventListener('click', (e) => {
+        if (e.target === modal) chiudiModal();
+    });
+
+    // --- 4. RICERCA ---
     if (searchInput) {
         searchInput.addEventListener('input', (e) => {
             const val = e.target.value.toLowerCase();

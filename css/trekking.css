@@ -1,5 +1,5 @@
 /* ============================================================
-   GRIGLIA TREKKING (trekking.css)
+   GRIGLIA TREKKING (trekking.css) - VERSION STANDARD 2.0
    ============================================================ */
 
 /* 1. GRIGLIA DEI CONTENUTI */
@@ -8,22 +8,20 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 25px;
     width: 100%;
-    max-width: 900px;
+    max-width: 1000px; /* Leggermente più largo per 3 colonne comode */
     margin: 40px auto;
-    /* Aumentiamo il padding bottom per evitare che l'ultima card
-       finisca dietro la barra di ricerca fissa */
-    padding-bottom: 80px !important;
+    padding-bottom: 120px !important;
     box-sizing: border-box;
     position: relative;
     z-index: 1;
 }
 
-/* 2. SINGOLA CARD TREKKING */
+/* 2. SINGOLA CARD TREKKING (Standardizzata) */
 .trek-item {
     background: #ffffff;
     border-bottom: 4px solid #ffdb58;
     border-radius: 15px;
-    padding: 20px;
+    padding: 25px 20px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.08);
     display: flex;
     flex-direction: column;
@@ -31,6 +29,9 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
     text-align: center;
+    position: relative; /* Necessario per il bollino in alto a destra */
+    height: 520px;      /* ALTEZZA FISSA STANDARD */
+    box-sizing: border-box;
 }
 
 .trek-item:hover {
@@ -38,36 +39,119 @@
     box-shadow: 0 12px 25px rgba(0,0,0,0.15);
 }
 
-.item-icon { font-size: 2rem; color: #333; margin-bottom: 10px; }
-.trek-item h3 { font-size: 1.1rem; margin: 10px 0; color: #1a1a1a; font-weight: 700; }
-.tag { font-size: 0.75rem; background: #f0f0f0; padding: 3px 12px; border-radius: 20px; color: #666; margin-bottom: 12px; text-transform: uppercase; font-weight: 600; }
-.trek-details { display: flex; gap: 15px; font-size: 0.85rem; color: #555; border-top: 1px solid #eee; padding-top: 12px; margin-top: auto; width: 100%; justify-content: center; }
-.desc { font-size: 0.9rem; color: #777; margin: 10px 0; line-height: 1.4; }
+/* Icona Standard */
+.item-icon {
+    font-size: 2.2rem;
+    color: #333;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
 
-/* --- BOX GUIDA --- */
-.guida-box { margin-top: 15px; padding-top: 15px; border-top: 1px dashed #ddd; width: 100%; }
-.guida-img { width: 35px; height: 35px; border-radius: 50%; border: 2px solid #ffdb58; object-fit: cover; }
-.guida-label { font-size: 0.65rem; color: #888; margin-bottom: 5px; text-transform: uppercase; }
-.guida-link { display: flex; align-items: center; justify-content: center; text-decoration: none; color: #333; gap: 10px; font-weight: bold; font-size: 0.85rem; }
+/* Titolo Standard (Max 2 righe) */
+.trek-item h3 {
+    font-size: 1.15rem;
+    margin: 15px 0 10px 0;
+    color: #1a1a1a;
+    font-weight: 700;
+    height: 3rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    line-height: 1.3;
+}
 
-/* --- BARRA DI RICERCA (Versione Fixed Bottom) --- */
+/* Tag / Luogo */
+.tag {
+    font-size: 0.7rem;
+    background: #f0f0f0;
+    padding: 4px 12px;
+    border-radius: 20px;
+    color: #666;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+/* Dettagli Tecnici (Data e KM) */
+.trek-details {
+    display: flex;
+    gap: 15px;
+    font-size: 0.82rem;
+    color: #555;
+    border-top: 1px solid #eee;
+    padding-top: 12px;
+    width: 100%;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+/* Descrizione Standard (Max 3 righe) */
+.desc {
+    font-size: 0.9rem;
+    color: #777;
+    margin: 15px 0;
+    line-height: 1.5;
+    height: 4.2rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* --- BOX GUIDA (Sempre in fondo alla card) --- */
+.guida-box {
+    margin-top: auto; /* Spinge il box in fondo */
+    padding-top: 15px;
+    border-top: 1px dashed #ddd;
+    width: 100%;
+}
+.guida-label { font-size: 0.6rem; color: #999; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.5px; }
+.guida-link { display: flex; align-items: center; justify-content: center; text-decoration: none; color: #333; gap: 10px; font-weight: 700; font-size: 0.85rem; }
+.guida-img { width: 32px; height: 32px; border-radius: 50%; border: 2px solid #ffdb58; object-fit: cover; }
+
+/* --- BOLLINI STATO (Posizionamento Angolo) --- */
+.status-badge {
+    position: absolute;
+    top: -12px;
+    right: -12px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    z-index: 10;
+    border: 2px solid #fff;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+    overflow: hidden;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.status-icon-img { width: 100%; height: 100%; object-fit: cover; }
+
+.badge-w .status-icon-img {
+    animation: pulse-wip 2s infinite ease-in-out;
+}
+
+@keyframes pulse-wip {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* --- BARRA DI RICERCA --- */
 .search-container {
     position: fixed;
-    /* Alziamo la barra a 80px dal fondo per lasciare spazio ai contatti */
     bottom: 50px;
     left: 50%;
     transform: translateX(-50%);
     width: 90%;
     max-width: 500px;
     z-index: 2000;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: center;
-}
-
-.search-box {
-    position: relative;
-    width: 100%;
 }
 
 .search-box input {
@@ -78,34 +162,18 @@
     font-size: 1rem;
     outline: none;
     background: #ffffff;
-    /* Ombra più morbida per non appesantire i contatti sotto */
     box-shadow: 0 -4px 20px rgba(0,0,0,0.15);
-    transition: all 0.3s ease;
 }
 
-.search-box input:focus {
-    border-color: #1a1a1a;
-    box-shadow: 0 -5px 30px rgba(255, 219, 88, 0.5);
-}
-
-.search-icon {
-    position: absolute;
-    left: 22px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #888;
-    font-size: 1.2rem;
-    z-index: 2;
-    pointer-events: none;
-}
-
+.search-icon { position: absolute; left: 22px; top: 50%; transform: translateY(-50%); color: #888; }
 
 /* RESPONSIVE */
-@media (max-width: 900px) {
-    .trek-grid { grid-template-columns: repeat(2, 1fr); padding: 0 20px 120px 20px; }
+@media (max-width: 950px) {
+    .trek-grid { grid-template-columns: repeat(2, 1fr); padding: 0 20px 140px 20px; }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
     .trek-grid { grid-template-columns: 1fr; }
-    .search-container { bottom: 20px; } /* Più vicina al bordo su schermi piccoli */
+    .trek-item { height: auto; min-height: 480px; } /* Altezza più flessibile su mobile */
+    .search-container { bottom: 20px; }
 }
