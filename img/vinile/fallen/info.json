@@ -10,73 +10,85 @@
             "disco": 1,
             "lato": "A",
             "n": 1,
-            "titolo": "Going Under"
+            "titolo": "Going Under",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/95/06/91/95069168-02c8-0082-0a35-4b91bdcea188/mzaf_7507373063998726677.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "A",
             "n": 2,
-            "titolo": "Bring Me to Life"
+            "titolo": "Bring Me to Life",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/3e/34/c4/3e34c400-9ad9-3859-6988-496c27728be4/mzaf_14936938522678789093.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "A",
             "n": 3,
-            "titolo": "Everybody's Fool"
+            "titolo": "Everybody's Fool",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/6a/5c/3d/6a5c3d57-a985-cafd-4149-11d678d92157/mzaf_16950088998595971646.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "A",
             "n": 4,
-            "titolo": "My Immortal"
+            "titolo": "My Immortal",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/09/ea/5c/09ea5ced-ef74-c081-43dd-db6a069e432f/mzaf_13463183518707863924.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "A",
             "n": 5,
-            "titolo": "Haunted"
+            "titolo": "Haunted",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/e6/d0/96/e6d096e6-7cd6-019b-edc7-d0f07ad817c6/mzaf_16608749144329494105.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "A",
             "n": 6,
-            "titolo": "Tourniquet"
+            "titolo": "Tourniquet",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/73/62/e9/7362e9d2-67df-5cb8-b200-70b6f78707b6/mzaf_14496135171607191954.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "B",
             "n": 7,
-            "titolo": "Imaginary"
+            "titolo": "Imaginary",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/01/ca/14/01ca14ef-3aaa-c9a6-be98-adb65e653ef7/mzaf_17777617500571328679.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "B",
             "n": 8,
-            "titolo": "Taking Over Me"
+            "titolo": "Taking Over Me",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/5c/99/4f/5c994f4f-ee8a-6bb1-ca9f-552a7ef69222/mzaf_2684711712552949457.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "B",
             "n": 9,
-            "titolo": "Hello"
+            "titolo": "Hello",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/cf/33/c4/cf33c4ae-4c48-198f-0298-7e0a06d0a07a/mzaf_3795642768454644216.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "B",
             "n": 10,
-            "titolo": "My Last Breath"
+            "titolo": "My Last Breath",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/a6/52/32/a65232c9-f24f-35cb-528e-e55b0a94448f/mzaf_16942160019595360029.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "B",
             "n": 11,
-            "titolo": "Whisper"
+            "titolo": "Whisper",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/a1/92/48/a192483b-d1a2-d350-4f1b-80ce3ac5fd9e/mzaf_5050987208498809471.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "B",
             "n": 12,
-            "titolo": "My Immortal (Band Version)"
+            "titolo": "My Immortal (Band Version)",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/70/3e/34/703e342c-a32e-1b15-846c-d921dad4a043/mzaf_906522258509547940.plus.aac.p.m4a"
         }
     ]
 }

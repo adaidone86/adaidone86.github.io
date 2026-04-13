@@ -10,73 +10,85 @@
             "disco": 1,
             "lato": "A",
             "n": 1,
-            "titolo": "Planet Telex"
+            "titolo": "Planet Telex",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/2a/89/31/2a8931cd-3ccc-1b83-225d-759e89e4cd34/mzaf_14134260997503685558.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "A",
             "n": 2,
-            "titolo": "The Bends"
+            "titolo": "The Bends",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/5a/1b/38/5a1b38c0-e751-b65a-91f4-5c0ecf8981fe/mzaf_13497506801332646990.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "A",
             "n": 3,
-            "titolo": "High and Dry"
+            "titolo": "High and Dry",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/a5/c9/75/a5c975f6-d8a1-4975-b66f-a16e0c49cb27/mzaf_6303791502772489233.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "A",
             "n": 4,
-            "titolo": "Fake Plastic Trees"
+            "titolo": "Fake Plastic Trees",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/88/7c/92/887c92d6-0979-9f01-1e9b-6762fca517bd/mzaf_1998812167371306210.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "A",
             "n": 5,
-            "titolo": "Bones"
+            "titolo": "Bones",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/8e/70/49/8e70494a-8072-45a6-116c-a21c5db16c01/mzaf_16999969639048262563.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "A",
             "n": 6,
-            "titolo": "(Nice Dream)"
+            "titolo": "(Nice Dream)",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/c2/ed/04/c2ed04b3-b960-97b6-5515-5db8167c9580/mzaf_16873795646063224379.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "B",
             "n": 7,
-            "titolo": "Just"
+            "titolo": "Just",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/03/a5/21/03a521e5-d3a4-87d4-4966-9530a1c79ae0/mzaf_1348815026268628507.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "B",
             "n": 8,
-            "titolo": "My Iron Lung"
+            "titolo": "My Iron Lung",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/25/e6/d4/25e6d426-dd1e-03a2-50d4-4606d9bb09b5/mzaf_10188444084718925797.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "B",
             "n": 9,
-            "titolo": "Bullet Proof ... I Wish I Was"
+            "titolo": "Bullet Proof ... I Wish I Was",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/5e/ae/9a/5eae9a9f-32d7-d8d6-fa80-7be5c2eb1ece/mzaf_649507979241863335.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "B",
             "n": 10,
-            "titolo": "Black Star"
+            "titolo": "Black Star",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/ea/bd/85/eabd8501-4338-c21c-7922-acc04af3ac35/mzaf_175550197550552181.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "B",
             "n": 11,
-            "titolo": "Sulk"
+            "titolo": "Sulk",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/0c/b9/ac/0cb9ac66-aebb-2d5a-1f00-f4fe1286ed53/mzaf_16958907133218294626.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "B",
             "n": 12,
-            "titolo": "Street Spirit (Fade Out)"
+            "titolo": "Street Spirit (Fade Out)",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/cc/d4/f2/ccd4f280-499c-fa45-bb7b-7b1baba555e3/mzaf_8792301374285941952.plus.aac.p.m4a"
         }
     ]
 }

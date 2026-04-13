@@ -10,67 +10,78 @@
             "disco": 1,
             "lato": "A",
             "n": 1,
-            "titolo": "Bad"
+            "titolo": "Bad",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/d5/04/19/d50419ad-9df8-79a6-8508-0aac6b9e33d7/mzaf_5985159341386882919.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "A",
             "n": 2,
-            "titolo": "The Way You Make Me Feel"
+            "titolo": "The Way You Make Me Feel",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/7c/6b/9e/7c6b9ee5-aad5-4690-4895-df6bb446267e/mzaf_589510707222491050.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "A",
             "n": 3,
-            "titolo": "Speed Demon"
+            "titolo": "Speed Demon",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/fe/29/9c/fe299cb0-151e-8123-155c-2090f713b316/mzaf_10759700546115586520.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "A",
             "n": 4,
-            "titolo": "Liberian Girl"
+            "titolo": "Liberian Girl",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/44/4f/48/444f482f-c26f-34da-f375-652af3e46898/mzaf_6111041991706266431.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "A",
             "n": 5,
-            "titolo": "Just Good Friends"
+            "titolo": "Just Good Friends",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/f5/91/99/f591995c-7861-5ae7-a5f7-3b6340abd024/mzaf_10214891922264392001.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "A",
             "n": 6,
-            "titolo": "Another Part of Me"
+            "titolo": "Another Part of Me",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/bc/15/81/bc1581e5-b47c-e4e4-99a5-8136a441e5cf/mzaf_10862649184074752059.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "B",
             "n": 7,
-            "titolo": "Man In the Mirror"
+            "titolo": "Man In the Mirror",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/ea/c4/a7/eac4a7d1-3e69-f019-2884-319eb95aede2/mzaf_11665025269459125069.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "B",
             "n": 8,
-            "titolo": "I Just Can't Stop Loving You"
+            "titolo": "I Just Can't Stop Loving You",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/83/66/e0/8366e045-4e0f-5adc-1510-ee187af9a4ab/mzaf_17631859629335111120.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "B",
             "n": 9,
-            "titolo": "Dirty Diana"
+            "titolo": "Dirty Diana",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/73/4b/44/734b44a3-a713-ae12-4300-767f8c93cfbc/mzaf_17268455553467963153.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "B",
             "n": 10,
-            "titolo": "Smooth Criminal"
+            "titolo": "Smooth Criminal",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/a5/48/5a/a5485a11-5297-6e85-ff93-755446feb421/mzaf_13100723468701283981.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "B",
             "n": 11,
-            "titolo": "Leave Me Alone"
+            "titolo": "Leave Me Alone",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/bd/0e/a2/bd0ea2a9-3696-96cf-7054-c10da791c5e2/mzaf_13884649680816607792.plus.aac.p.m4a"
         }
     ]
 }

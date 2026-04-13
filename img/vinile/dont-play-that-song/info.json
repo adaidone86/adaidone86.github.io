@@ -10,73 +10,85 @@
             "disco": 1,
             "lato": "A",
             "n": 1,
-            "titolo": "Don't Play That Song (You Lied)"
+            "titolo": "Don't Play That Song (You Lied)",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/f0/e7/cb/f0e7cbb1-3e60-b44f-0a48-1aa10a5010c6/mzaf_9442616972689455428.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "A",
             "n": 2,
-            "titolo": "Ecstasy"
+            "titolo": "Ecstasy",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/6d/5a/ec/6d5aec5a-24f2-e2a5-bd7b-f628611b193f/mzaf_13290129413962551849.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "A",
             "n": 3,
-            "titolo": "On the Horizon"
+            "titolo": "On the Horizon",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/9b/56/58/9b5658f7-188e-1e12-6d28-4e563a1df2c5/mzaf_623235035890479907.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "A",
             "n": 4,
-            "titolo": "Show Me the Way"
+            "titolo": "Show Me the Way",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/b5/e8/a3/b5e8a375-3e1d-0f83-470d-73f69a87e39a/mzaf_13142182842029765441.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "A",
             "n": 5,
-            "titolo": "Here Comes the Night"
+            "titolo": "Here Comes the Night",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/92/15/60/921560e1-6a1e-389e-2f0d-47f2c3ddc586/mzaf_15675794604501217440.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "A",
             "n": 6,
-            "titolo": "First Taste of Love"
+            "titolo": "First Taste of Love",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/58/42/64/584264cd-16de-8704-e4c0-14d1f7ce0088/mzaf_1058850105943766846.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "B",
             "n": 7,
-            "titolo": "Stand By Me"
+            "titolo": "Stand By Me",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/f4/f8/ec/f4f8ec79-c7a5-0324-5fad-f8ab8c8b1fb3/mzaf_2576721935455542013.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "B",
             "n": 8,
-            "titolo": "Yes"
+            "titolo": "Yes",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/84/ff/2f/84ff2f93-ff6b-4033-902e-e481cbeb3ec2/mzaf_10738244375204709246.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "B",
             "n": 9,
-            "titolo": "Young Boy Blues"
+            "titolo": "Young Boy Blues",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/f8/c9/ee/f8c9eef6-29e3-2cc6-aa9e-5dbe44b5ea37/mzaf_7433865180926822034.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "B",
             "n": 10,
-            "titolo": "The Hermit of Misty Mountain"
+            "titolo": "The Hermit of Misty Mountain",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/cf/f5/eb/cff5ebb5-84d4-16e7-9f22-6dccb8e4698f/mzaf_2610723831819893847.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "B",
             "n": 11,
-            "titolo": "I Promise Love"
+            "titolo": "I Promise Love",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/3c/44/d4/3c44d497-9b96-9766-73f4-c04eb18d329c/mzaf_5966182373655981999.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "B",
             "n": 12,
-            "titolo": "Brace Yourself"
+            "titolo": "Brace Yourself",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/df/d0/34/dfd03403-e5fa-6e0d-e446-974baa6936af/mzaf_1162684687844271483.plus.aac.p.m4a"
         }
     ]
 }

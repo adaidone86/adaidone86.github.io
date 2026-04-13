@@ -10,67 +10,78 @@
             "disco": 1,
             "lato": "A",
             "n": 1,
-            "titolo": "Jacqueline"
+            "titolo": "Jacqueline",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview112/v4/db/22/de/db22de6b-7395-61df-2f5e-0f14d9ef5726/mzaf_12600881749286178453.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "A",
             "n": 2,
-            "titolo": "Tell Her Tonight"
+            "titolo": "Tell Her Tonight",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview122/v4/00/16/2b/00162b4a-97bb-eae3-de59-979492f085f5/mzaf_16585072998175399502.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "A",
             "n": 3,
-            "titolo": "Take Me Out"
+            "titolo": "Take Me Out",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview112/v4/39/0b/12/390b12af-41bf-8587-3bbf-d54ad7c69f63/mzaf_6391656788554881067.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "A",
             "n": 4,
-            "titolo": "The Dark of the Matinée"
+            "titolo": "The Dark of the Matinée",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview112/v4/6d/64/35/6d643575-df6c-03a3-ea65-df403bf26c99/mzaf_1477025539827105282.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "A",
             "n": 5,
-            "titolo": "Auf Achse"
+            "titolo": "Auf Achse",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview122/v4/34/30/29/34302902-3049-9bf8-2cdf-88053235e9da/mzaf_17108942673919912348.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "A",
             "n": 6,
-            "titolo": "Cheating On You"
+            "titolo": "Cheating On You",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview112/v4/9d/f5/0a/9df50aa7-60d7-66b8-a65f-bf68ea7f1647/mzaf_1675288188574160575.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "B",
             "n": 7,
-            "titolo": "This Fire"
+            "titolo": "This Fire",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview112/v4/22/d4/0d/22d40d3b-4fea-6b5d-034d-fe35e8998ed0/mzaf_4841334949852880214.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "B",
             "n": 8,
-            "titolo": "Darts of Pleasure"
+            "titolo": "Darts of Pleasure",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview112/v4/22/30/13/2230139f-9dd5-8815-9128-e8063bf5e8a0/mzaf_4234361227146201515.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "B",
             "n": 9,
-            "titolo": "Michael"
+            "titolo": "Michael",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview122/v4/83/83/48/838348e9-b9e5-724b-1bc9-b5143a218b70/mzaf_13093577029108053543.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "B",
             "n": 10,
-            "titolo": "Come On Home"
+            "titolo": "Come On Home",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview112/v4/9a/f6/04/9af604ab-f370-f78f-e86c-07d16b58d091/mzaf_17427699164204343224.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "B",
             "n": 11,
-            "titolo": "40'"
+            "titolo": "40'",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview122/v4/d6/57/1e/d6571e52-9e1f-08ba-94ce-e20dd0d3890c/mzaf_5237620222843202662.plus.aac.p.m4a"
         }
     ]
 }

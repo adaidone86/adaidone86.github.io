@@ -10,67 +10,78 @@
             "disco": 1,
             "lato": "A",
             "n": 1,
-            "titolo": "Rehab"
+            "titolo": "Rehab",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/d4/6e/c3/d46ec306-7dae-3f52-02c9-86b7c84a8f33/mzaf_9679547428483928372.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "A",
             "n": 2,
-            "titolo": "You Know I'm No Good"
+            "titolo": "You Know I'm No Good",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/23/2f/9b/232f9b2b-d958-60b2-77fb-f9e92c997adc/mzaf_13121582137043431588.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "A",
             "n": 3,
-            "titolo": "Me & Mr. Jones"
+            "titolo": "Me & Mr. Jones",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/39/16/6d/39166d69-9f63-3886-9da7-d972d9cf08af/mzaf_16068563076100282897.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "A",
             "n": 4,
-            "titolo": "Just Friends"
+            "titolo": "Just Friends",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/f2/16/fa/f216fa76-f2e6-0496-94e0-7358a7718b5b/mzaf_15150181482436324878.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "A",
             "n": 5,
-            "titolo": "Back to Black"
+            "titolo": "Back to Black",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/0b/a0/e6/0ba0e61e-bbed-afab-3c8f-572fb227fc50/mzaf_16369036959438938784.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "A",
             "n": 6,
-            "titolo": "Love Is a Losing Game"
+            "titolo": "Love Is a Losing Game",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/13/98/1b/13981b1d-168a-7d1d-6f02-2b55d74da023/mzaf_4732975566797542921.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "B",
             "n": 7,
-            "titolo": "Tears Dry On Their Own"
+            "titolo": "Tears Dry On Their Own",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/da/95/46/da9546e7-19e0-a4b6-67bb-d8f7d8e8b0a1/mzaf_7162230293325845022.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "B",
             "n": 8,
-            "titolo": "Wake Up Alone"
+            "titolo": "Wake Up Alone",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/b2/68/05/b268058d-5d34-ff89-c552-994d62f2461e/mzaf_5135092114535775020.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "B",
             "n": 9,
-            "titolo": "Some Unholy War"
+            "titolo": "Some Unholy War",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/f8/34/bb/f834bbba-a901-1d02-2342-a84b24a9a170/mzaf_15410895904396548293.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "B",
             "n": 10,
-            "titolo": "He Can Only Hold Her"
+            "titolo": "He Can Only Hold Her",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/a1/06/38/a106387a-b03b-0b15-5edd-0541b82afb1f/mzaf_9553256768253273385.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "B",
             "n": 11,
-            "titolo": "Addicted"
+            "titolo": "Addicted",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/a0/3b/3c/a03b3c65-43d6-a0d4-c031-0a89cfe37530/mzaf_16221081308027781899.plus.aac.p.m4a"
         }
     ]
 }

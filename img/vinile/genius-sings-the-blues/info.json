@@ -10,73 +10,85 @@
             "disco": 1,
             "lato": "A",
             "n": 1,
-            "titolo": "Early In the Mornin'"
+            "titolo": "Early In the Mornin'",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview122/v4/45/cf/66/45cf66a4-4727-d12f-914e-c7703b83924d/mzaf_16983393275766028143.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "A",
             "n": 2,
-            "titolo": "Hard Times (No One Knows Better Than I)"
+            "titolo": "Hard Times (No One Knows Better Than I)",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview112/v4/4d/43/9e/4d439e2f-b2d2-47ec-ef95-b8c5e4a9497d/mzaf_16569034500090672599.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "A",
             "n": 3,
-            "titolo": "The Midnight Hour"
+            "titolo": "The Midnight Hour",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview122/v4/49/5a/5d/495a5d0f-891e-c999-d0a1-4265dcf9e657/mzaf_1145581720206980563.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "A",
             "n": 4,
-            "titolo": "(Night Time Is) The Right Time"
+            "titolo": "(Night Time Is) The Right Time",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview122/v4/ec/b3/7c/ecb37cc5-fefc-ad45-99f3-dfcfbc98dbf3/mzaf_18303465477008636562.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "A",
             "n": 5,
-            "titolo": "Feelin' Sad"
+            "titolo": "Feelin' Sad",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview112/v4/aa/39/c5/aa39c586-3720-fa1d-3e92-cf4e97edcef1/mzaf_15948166352244113374.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "A",
             "n": 6,
-            "titolo": "Ray's Blues"
+            "titolo": "Ray's Blues",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview122/v4/74/e7/88/74e78890-d1e1-0b83-9c56-54807336fb27/mzaf_7865748999829805967.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "B",
             "n": 7,
-            "titolo": "I'm Movin' On (Stereo Version)"
+            "titolo": "I'm Movin' On (Stereo Version)",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview122/v4/60/eb/72/60eb7249-6aaa-a39a-256f-11be7b27352c/mzaf_10890014333686436195.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "B",
             "n": 8,
-            "titolo": "I Believe to My Soul"
+            "titolo": "I Believe to My Soul",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview122/v4/44/64/43/44644356-a0cf-b55d-20fc-d7eff83f7225/mzaf_14347746660753020291.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "B",
             "n": 9,
-            "titolo": "Nobody Cares"
+            "titolo": "Nobody Cares",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview112/v4/ac/f0/d6/acf0d619-10f8-cf36-ffa0-852da8e9cefa/mzaf_7005121687456238976.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "B",
             "n": 10,
-            "titolo": "Mr. Charles' Blues"
+            "titolo": "Mr. Charles' Blues",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview112/v4/aa/19/54/aa195481-a96a-e938-b84f-b8d0e24c3d2c/mzaf_1422563573705539110.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "B",
             "n": 11,
-            "titolo": "Some Day Baby (LP Version)"
+            "titolo": "Some Day Baby (LP Version)",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview112/v4/a2/93/de/a293dea4-c162-a3b5-f7d2-f1265cbef93f/mzaf_3061639935271185690.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "B",
             "n": 12,
-            "titolo": "I Wonder Who"
+            "titolo": "I Wonder Who",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview122/v4/f3/0d/9e/f30d9e33-c892-ec87-eac9-7d3de48191f2/mzaf_14352743852216237194.plus.aac.p.m4a"
         }
     ]
 }

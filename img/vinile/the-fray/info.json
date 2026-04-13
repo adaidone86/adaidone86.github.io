@@ -10,61 +10,71 @@
             "disco": 1,
             "lato": "A",
             "n": 1,
-            "titolo": "Syndicate"
+            "titolo": "Syndicate",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/76/44/7c/76447c47-edcb-d700-7302-4067287bd6b6/mzaf_9346233689303557398.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "A",
             "n": 2,
-            "titolo": "Absolute"
+            "titolo": "Absolute",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/73/a5/dc/73a5dc02-db9e-fc68-d020-8de067f42fc6/mzaf_7574387515121479513.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "A",
             "n": 3,
-            "titolo": "You Found Me"
+            "titolo": "You Found Me",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/28/82/82/288282c6-8f86-fc71-750b-fb2a06791412/mzaf_164484163047415911.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "A",
             "n": 4,
-            "titolo": "Say When"
+            "titolo": "Say When",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/40/02/8b/40028bfd-0b50-87c7-ea11-2aefe930d13b/mzaf_4581618896269424412.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "A",
             "n": 5,
-            "titolo": "Never Say Never"
+            "titolo": "Never Say Never",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/f9/f2/82/f9f282fc-88e1-b260-f105-c4982bb42ff7/mzaf_8360947300500039069.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "A",
             "n": 6,
-            "titolo": "Where the Story Ends"
+            "titolo": "Where the Story Ends",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/2d/6b/b1/2d6bb13d-b68a-536c-525f-aad33d3215cf/mzaf_11128529392388491567.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "B",
             "n": 7,
-            "titolo": "Enough for Now"
+            "titolo": "Enough for Now",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/5d/d4/d4/5dd4d4bf-1b0a-9d84-6689-ba3a43f1d8ee/mzaf_12556331304838184115.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "B",
             "n": 8,
-            "titolo": "Ungodly Hour"
+            "titolo": "Ungodly Hour",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/07/1a/07/071a072c-771d-9532-62af-adfe0ca64e45/mzaf_4328215252812234155.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "B",
             "n": 9,
-            "titolo": "We Build Then We Break"
+            "titolo": "We Build Then We Break",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/ff/86/e5/ff86e561-580e-18d2-3191-3f014b24c351/mzaf_6568180783447972728.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "B",
             "n": 10,
-            "titolo": "Happiness"
+            "titolo": "Happiness",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/11/c7/8a/11c78ad0-fa5c-b858-0b5a-476164593846/mzaf_8888579570459155583.plus.aac.p.m4a"
         }
     ]
 }

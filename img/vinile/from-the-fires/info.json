@@ -10,49 +10,57 @@
             "disco": 1,
             "lato": "A",
             "n": 1,
-            "titolo": "Safari Song"
+            "titolo": "Safari Song",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/49/7b/d6/497bd6db-8c3a-62a8-414c-0b85e7b94e83/mzaf_14616919092869018665.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "A",
             "n": 2,
-            "titolo": "Edge of Darkness"
+            "titolo": "Edge of Darkness",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/20/53/d9/2053d9e0-0d5d-6b17-306d-b8ac95b738de/mzaf_17404732689649802665.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "A",
             "n": 3,
-            "titolo": "Flower Power"
+            "titolo": "Flower Power",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/13/e1/9d/13e19d46-49f9-a5b0-4fbc-2f55bfa68321/mzaf_16681127619780400559.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "A",
             "n": 4,
-            "titolo": "A Change is Gonna Come"
+            "titolo": "A Change is Gonna Come",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/f7/b4/31/f7b431b6-53e9-75ba-7726-27c0b0f6196d/mzaf_10985644954732776320.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "A",
             "n": 5,
-            "titolo": "Highway Tune"
+            "titolo": "Highway Tune",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/ea/56/75/ea56751d-8554-8573-0c9a-a46ae3ab441c/mzaf_6149157172828649119.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "A",
             "n": 6,
-            "titolo": "Meet On the Ledge"
+            "titolo": "Meet On the Ledge",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/ab/c1/1f/abc11ff5-3075-0017-1575-5aabf002bd4a/mzaf_17661475880767339765.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "B",
             "n": 7,
-            "titolo": "Talk On the Street"
+            "titolo": "Talk On the Street",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/9d/d4/79/9dd4790f-a7ea-9fc4-bab5-0fd1dff7acd9/mzaf_11536774171599221061.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "B",
             "n": 8,
-            "titolo": "Black Smoke Rising"
+            "titolo": "Black Smoke Rising",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/90/55/f1/9055f1e8-aa0a-48a6-30c6-2ae3f7cc9bb1/mzaf_5148690197214120712.plus.aac.p.m4a"
         }
     ]
 }

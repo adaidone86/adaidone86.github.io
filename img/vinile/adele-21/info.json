@@ -10,73 +10,85 @@
             "disco": 1,
             "lato": "A",
             "n": 1,
-            "titolo": "Rolling in the Deep"
+            "titolo": "Rolling in the Deep",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/9f/07/1d/9f071dc7-791c-c869-dfa2-06b25936a287/mzaf_11077490630806345321.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "A",
             "n": 2,
-            "titolo": "Rumour Has It"
+            "titolo": "Rumour Has It",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/b8/1b/91/b81b9194-3614-04cc-18bd-b653fadb05ff/mzaf_5784661747433425792.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "A",
             "n": 3,
-            "titolo": "Turning Tables"
+            "titolo": "Turning Tables",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/20/4f/ba/204fba6d-4c59-c918-4d3a-4b54cccc4717/mzaf_14754993233918272789.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "A",
             "n": 4,
-            "titolo": "Don't You Remember"
+            "titolo": "Don't You Remember",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/14/71/d9/1471d9e6-d65a-23d7-1b8d-b2dfdd171e75/mzaf_15046944444239976268.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "A",
             "n": 5,
-            "titolo": "Set Fire to the Rain"
+            "titolo": "Set Fire to the Rain",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/81/19/83/811983ba-173c-84f4-4058-fae8340abcdf/mzaf_13432775834568786807.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "A",
             "n": 6,
-            "titolo": "He Won't Go"
+            "titolo": "He Won't Go",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/b5/3e/cf/b53ecf6e-e505-59a9-e223-9515ce1da383/mzaf_15923039019305680849.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "B",
             "n": 7,
-            "titolo": "Take It All"
+            "titolo": "Take It All",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/51/78/db/5178dba3-dbe1-439b-e1f0-59d381e0a0b9/mzaf_15121489241953581499.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "B",
             "n": 8,
-            "titolo": "I'll Be Waiting"
+            "titolo": "I'll Be Waiting",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/52/73/1c/52731ce3-ef7c-4124-7775-23af4392ab97/mzaf_12788265907159431402.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "B",
             "n": 9,
-            "titolo": "One and Only"
+            "titolo": "One and Only",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/26/b0/54/26b0549c-ac6b-6c05-c93c-40cea9a46c43/mzaf_7826805358339553927.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "B",
             "n": 10,
-            "titolo": "Lovesong"
+            "titolo": "Lovesong",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/cb/e1/6f/cbe16fdb-b8f1-09d7-27b3-40aa2850308f/mzaf_6626315549193042816.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "B",
             "n": 11,
-            "titolo": "Someone Like You"
+            "titolo": "Someone Like You",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/ef/18/7b/ef187b7d-f487-e935-4ca1-af5748313710/mzaf_8455263230305249048.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "B",
             "n": 12,
-            "titolo": "I Found a Boy"
+            "titolo": "I Found a Boy",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/f8/8a/9d/f88a9d3b-d600-96e4-0fdf-96193c5812d2/mzaf_7172070030718182705.plus.aac.p.m4a"
         }
     ]
 }

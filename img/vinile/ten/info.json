@@ -10,43 +10,50 @@
             "disco": 1,
             "lato": "A",
             "n": 1,
-            "titolo": "Oceans (Live MTV Unplugged)"
+            "titolo": "Oceans (Live MTV Unplugged)",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/21/90/40/21904065-6fdd-746b-53cc-e466834e2ef3/mzaf_11689078100129520170.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "A",
             "n": 2,
-            "titolo": "State of Love and Trust (Live MTV Unplugged)"
+            "titolo": "State of Love and Trust (Live MTV Unplugged)",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/40/69/ec/4069ec15-b038-9378-09da-7eefb44fd69a/mzaf_5397656156938498754.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "A",
             "n": 3,
-            "titolo": "Alive (Live MTV Unplugged)"
+            "titolo": "Alive (Live MTV Unplugged)",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/13/5c/bc/135cbcc6-6423-289b-689c-cc7a510ae9b7/mzaf_991862888237237471.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "A",
             "n": 4,
-            "titolo": "Black (Live MTV Unplugged)"
+            "titolo": "Black (Live MTV Unplugged)",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/05/79/02/05790273-b4d9-b8bd-2924-77b1c9559bd9/mzaf_7060538248958756595.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "A",
             "n": 5,
-            "titolo": "Jeremy (Live MTV Unplugged)"
+            "titolo": "Jeremy (Live MTV Unplugged)",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/23/46/db/2346dbdc-8a21-fc79-5121-afcdfd19390a/mzaf_7036257329964337095.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "A",
             "n": 6,
-            "titolo": "Even Flow (Live MTV Unplugged)"
+            "titolo": "Even Flow (Live MTV Unplugged)",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/77/13/9c/77139c6f-bc8b-81d6-c60e-f60beb071757/mzaf_15441468028456835034.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "B",
             "n": 7,
-            "titolo": "Porch (Live MTV Unplugged)"
+            "titolo": "Porch (Live MTV Unplugged)",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/75/41/c0/7541c0f3-80af-2dcc-5579-1a74e7e83233/mzaf_11574164950941590146.plus.aac.p.m4a"
         }
     ]
 }

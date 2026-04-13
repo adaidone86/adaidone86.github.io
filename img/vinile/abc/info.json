@@ -10,73 +10,85 @@
             "disco": 1,
             "lato": "A",
             "n": 1,
-            "titolo": "The Love You Save"
+            "titolo": "The Love You Save",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/d3/cc/ad/d3ccadba-3063-760d-73bb-eb8887432eb0/mzaf_12878611304078062054.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "A",
             "n": 2,
-            "titolo": "One More Chance"
+            "titolo": "One More Chance",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/61/ae/0b/61ae0b9d-4d18-84d6-b480-7616a7e323d8/mzaf_5474036010643107185.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "A",
             "n": 3,
-            "titolo": "ABC"
+            "titolo": "ABC",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/72/94/bf/7294bfbd-eb3f-5a94-850d-19832babb514/mzaf_13854812385447671249.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "A",
             "n": 4,
-            "titolo": "2-4-6-8"
+            "titolo": "2-4-6-8",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/04/06/52/040652ee-24fa-7433-6b3e-851c781800a3/mzaf_16554130325946853646.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "A",
             "n": 5,
-            "titolo": "(Come 'Round Here) I'm the One You Need"
+            "titolo": "(Come 'Round Here) I'm the One You Need",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/35/bf/29/35bf29b6-ef37-899b-088e-d3cb1a135ffc/mzaf_13531454265345126126.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "A",
             "n": 6,
-            "titolo": "Don't Know Why I Love You"
+            "titolo": "Don't Know Why I Love You",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/12/5e/48/125e4809-15b0-1366-0176-b5f511cef8c9/mzaf_14448219227796454773.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "B",
             "n": 7,
-            "titolo": "Never Had a Dream Come True"
+            "titolo": "Never Had a Dream Come True",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/12/e6/92/12e692b9-f483-9888-e36c-66b3e04e2355/mzaf_14682630074067193843.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "B",
             "n": 8,
-            "titolo": "True Love Can Be Beautiful"
+            "titolo": "True Love Can Be Beautiful",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/fa/71/54/fa7154d1-9f08-ac9b-5afa-1a2b85ba516b/mzaf_4267590686852428769.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "B",
             "n": 9,
-            "titolo": "La La (Means I Love You)"
+            "titolo": "La La (Means I Love You)",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/e1/dc/f7/e1dcf7f9-f712-4aaa-9894-441b232647ae/mzaf_11638341313074557824.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "B",
             "n": 10,
-            "titolo": "I'll Bet You"
+            "titolo": "I'll Bet You",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/fb/f7/3c/fbf73cdd-a9c2-6a97-1cd3-52f6a597327c/mzaf_12004156403047778538.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "B",
             "n": 11,
-            "titolo": "I Found That Girl"
+            "titolo": "I Found That Girl",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/68/55/ba/6855ba1b-ec45-2719-93f2-5de28412e1d9/mzaf_1435653327840342041.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "B",
             "n": 12,
-            "titolo": "The Young Folks"
+            "titolo": "The Young Folks",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/6d/4a/ac/6d4aacfb-de94-0e36-a246-c789fe688a49/mzaf_17487353961962947629.plus.aac.p.m4a"
         }
     ]
 }

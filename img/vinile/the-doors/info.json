@@ -10,67 +10,78 @@
             "disco": 1,
             "lato": "A",
             "n": 1,
-            "titolo": "Break On Through (To The Other Side)"
+            "titolo": "Break On Through (To The Other Side)",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/bf/d3/9a/bfd39ab5-da3a-6356-b04b-4a8ad263e530/mzaf_13592991831784140212.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "A",
             "n": 2,
-            "titolo": "Soul Kitchen"
+            "titolo": "Soul Kitchen",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/20/90/47/2090477a-9995-4780-6b9b-b55baff14ba3/mzaf_5292300579962048741.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "A",
             "n": 3,
-            "titolo": "The Crystal Ship"
+            "titolo": "The Crystal Ship",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/ae/16/9b/ae169bda-9446-e378-d3d7-fa28fc3e753d/mzaf_13227091062906444182.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "A",
             "n": 4,
-            "titolo": "Twentieth Century Fox"
+            "titolo": "Twentieth Century Fox",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/37/56/e0/3756e017-a4bb-3136-8fb1-0e8d3a8b1142/mzaf_12559974224743317786.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "A",
             "n": 5,
-            "titolo": "Alabama Song (Whisky Bar)"
+            "titolo": "Alabama Song (Whisky Bar)",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/c5/f2/7e/c5f27e08-b669-e06b-982a-55d045ed2f18/mzaf_11074589774008682857.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "A",
             "n": 6,
-            "titolo": "Light My Fire"
+            "titolo": "Light My Fire",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/dd/61/8b/dd618b9b-c388-7ebc-458e-d2c214f196e5/mzaf_10866651626943461182.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "B",
             "n": 7,
-            "titolo": "Back Door Man"
+            "titolo": "Back Door Man",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/ba/8e/4e/ba8e4e11-0088-2a42-3d86-bd9778d3538b/mzaf_528174690019362102.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "B",
             "n": 8,
-            "titolo": "I Looked At You"
+            "titolo": "I Looked At You",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/00/84/78/00847885-2f80-2b91-2b35-d423d692827e/mzaf_1016878607853468297.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "B",
             "n": 9,
-            "titolo": "End Of The Night"
+            "titolo": "End Of The Night",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/cc/0e/20/cc0e204c-6fe9-507e-bbe7-394d1366e1dd/mzaf_1807745783314780336.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "B",
             "n": 10,
-            "titolo": "Take It As It Comes"
+            "titolo": "Take It As It Comes",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/c6/e0/98/c6e098c3-3924-be00-28ca-2b896ea88064/mzaf_11947200429290914927.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "B",
             "n": 11,
-            "titolo": "The End"
+            "titolo": "The End",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/52/d2/78/52d2788f-5bc2-a486-a805-a7c00109a6ea/mzaf_15424530324779408736.plus.aac.p.m4a"
         }
     ]
 }

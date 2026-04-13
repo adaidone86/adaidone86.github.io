@@ -66,8 +66,10 @@ def recupera_dati_album(artista, album):
             data = json.loads(response.read().decode())
             if data['results']:
                 album_id = data['results'][0]['collectionId']
+                # Otteniamo la cover in alta risoluzione
                 risultato["cover_url"] = data['results'][0]['artworkUrl100'].replace('100x100bb', '600x600bb')
 
+                # Seconda chiamata per ottenere i brani dell'album specifico
                 url_brani = f"https://itunes.apple.com/lookup?id={album_id}&entity=song"
                 with urllib.request.urlopen(url_brani) as resp_brani:
                     data_brani = json.loads(resp_brani.read().decode())
@@ -75,48 +77,48 @@ def recupera_dati_album(artista, album):
                     brani_temporanei = []
                     for item in data_brani['results']:
                         if item.get('wrapperType') == 'track':
-                            # Prendiamo anche il numero del disco
                             disco = item.get('discNumber', 1)
                             traccia = item.get('trackNumber', 0)
 
-                            # Calcolo lato approssimativo (Tracce 1-6 = A, 7+ = B)
-                            # Se l'API non lo dà, è il modo più pulito di presentarlo
+                            # Logica lato: solitamente 5-6 brani per lato su un vinile standard
                             lato = "A" if traccia <= 6 else "B"
 
                             brani_temporanei.append({
                                 "disco": disco,
                                 "lato": lato,
                                 "n": traccia,
-                                "titolo": item.get('trackName', 'Unknown')
+                                "titolo": item.get('trackName', 'Unknown'),
+                                "audio": item.get('previewUrl', '')  # <--- URL Anteprima Audio
                             })
 
-                    # Ordinamento accurato: Prima per Disco, poi per Traccia
+                    # Ordinamento: Prima per Disco, poi per numero Traccia
                     brani_temporanei.sort(key=lambda x: (x['disco'], x['n']))
-
                     risultato["canzoni"] = brani_temporanei
 
     except Exception as e:
         print(f"Errore API per {album}: {e}")
     return risultato
 
-print(f"🚀 Avvio procedura")
+print(f"🚀 Avvio procedura di aggiornamento collezione...")
 
 for v in vinili:
     artista_nome = v[0]
     album_nome = v[1]
     nome_cartella = v[4]
+
+    # Percorso cartella: img/vinile/nome-cartella
     folder_path = os.path.join("img", "vinile", nome_cartella)
     os.makedirs(folder_path, exist_ok=True)
 
     descrizione_disco = v[5] if (len(v) > 5 and v[5]) else "Questo disco fa parte della mia collezione personale."
     percorso_video = v[6] if (len(v) > 6 and v[6]) else f"img/vinile/{nome_cartella}/video.mp4"
 
-    # Recupero dati da API (Cover + Canzoni)
+    # Recupero dati da API (Cover + Tracklist strutturata con Audio)
     dati_api = {"cover_url": None, "canzoni": []}
     if DOWNLOAD_COVERS or RECUPERA_TRACKLIST:
         dati_api = recupera_dati_album(artista_nome, album_nome)
 
-    # Crea/Aggiorna JSON
+    # Creazione oggetto JSON finale
     json_data = {
         "artista": artista_nome,
         "album": album_nome,
@@ -124,13 +126,14 @@ for v in vinili:
         "genere": v[3],
         "descrizione": descrizione_disco,
         "video": percorso_video,
-        "tracklist": dati_api["canzoni"] # <--- Aggiunta lista canzoni
+        "tracklist": dati_api["canzoni"]
     }
 
+    # Scrittura del file info.json
     with open(os.path.join(folder_path, "info.json"), "w", encoding="utf-8") as f:
         json.dump(json_data, f, indent=4, ensure_ascii=False)
 
-    # Gestione Download Cover
+    # Gestione Download della Cover se richiesto
     messaggio_cover = "⏸️ Saltato"
     if DOWNLOAD_COVERS and dati_api["cover_url"]:
         cover_file = os.path.join(folder_path, "cover.jpg")
@@ -139,11 +142,11 @@ for v in vinili:
                 urllib.request.urlretrieve(dati_api["cover_url"], cover_file)
                 messaggio_cover = "✅ Scaricata"
             except:
-                messaggio_cover = "⚠️ Errore file"
+                messaggio_cover = "⚠️ Errore download"
         else:
             messaggio_cover = "⏭️ Esistente"
 
     status_track = f"🎵 {len(dati_api['canzoni'])} brani" if dati_api["canzoni"] else "❌ No tracklist"
     print(f"📦 {album_nome.ljust(30)} | {status_track} | Cover: {messaggio_cover}")
 
-print("\n✨ Operazione completata!")
+print("\n✨ Procedura completata con successo!")

@@ -10,73 +10,85 @@
             "disco": 1,
             "lato": "A",
             "n": 1,
-            "titolo": "Enter Sandman"
+            "titolo": "Enter Sandman",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/5e/2a/9f/5e2a9f3e-8428-2503-d5f1-7dac7e28d1c4/mzaf_6337827541016910036.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "A",
             "n": 2,
-            "titolo": "Sad But True"
+            "titolo": "Sad But True",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/d8/fe/cd/d8fecdde-60cf-0a4b-29fc-bc97cbbd9e09/mzaf_8546621644410159846.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "A",
             "n": 3,
-            "titolo": "Holier Than Thou"
+            "titolo": "Holier Than Thou",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/a4/12/49/a412493a-0e4c-cae1-6cc3-abbad036f063/mzaf_4519293975087916638.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "A",
             "n": 4,
-            "titolo": "The Unforgiven"
+            "titolo": "The Unforgiven",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/05/c9/19/05c919b8-3a41-d4ac-a716-5772f11ab96a/mzaf_10254255148266978074.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "A",
             "n": 5,
-            "titolo": "Wherever I May Roam"
+            "titolo": "Wherever I May Roam",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/e4/3e/8a/e43e8aa3-b294-5f6e-883f-5c64842fa2de/mzaf_12121480376683842214.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "A",
             "n": 6,
-            "titolo": "Don't Tread On Me"
+            "titolo": "Don't Tread On Me",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/c6/a8/68/c6a868be-6fd9-d5b8-e046-d3d2f3cae9fe/mzaf_4801183447141021087.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "B",
             "n": 7,
-            "titolo": "Through the Never"
+            "titolo": "Through the Never",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/03/fd/e7/03fde7f9-6886-b7bb-2740-a719729d0b15/mzaf_2308326229743579667.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "B",
             "n": 8,
-            "titolo": "Nothing Else Matters"
+            "titolo": "Nothing Else Matters",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/5d/53/60/5d536004-6054-2b42-9366-687a87d1e697/mzaf_17256071545271874072.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "B",
             "n": 9,
-            "titolo": "Of Wolf and Man"
+            "titolo": "Of Wolf and Man",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/b0/1c/bb/b01cbbe7-1132-a995-c960-092f79ad4fd0/mzaf_16433114684710257954.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "B",
             "n": 10,
-            "titolo": "The God That Failed"
+            "titolo": "The God That Failed",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/f5/36/53/f53653ac-34f0-1707-160b-d408a2370f09/mzaf_12343376602161356167.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "B",
             "n": 11,
-            "titolo": "My Friend of Misery"
+            "titolo": "My Friend of Misery",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/71/10/e2/7110e272-8ffd-8250-961b-892f880a35e5/mzaf_15286441546311657273.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "B",
             "n": 12,
-            "titolo": "The Struggle Within"
+            "titolo": "The Struggle Within",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/ef/89/5d/ef895d7f-5d77-fbf8-96fd-3b31ca2143e8/mzaf_12577103620963093877.plus.aac.p.m4a"
         }
     ]
 }

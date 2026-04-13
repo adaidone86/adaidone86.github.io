@@ -10,67 +10,78 @@
             "disco": 1,
             "lato": "A",
             "n": 1,
-            "titolo": "Like a Star"
+            "titolo": "Like a Star",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/16/cd/30/16cd3036-2cf6-de09-5fa8-1e08f5a38b01/mzaf_7762438969961578160.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "A",
             "n": 2,
-            "titolo": "Enchantment"
+            "titolo": "Enchantment",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/31/b1/da/31b1da78-b40f-53e9-9259-da554796e3fd/mzaf_11685034366234211448.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "A",
             "n": 3,
-            "titolo": "Put Your Records On"
+            "titolo": "Put Your Records On",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/93/a3/49/93a3498e-680f-31fe-02e4-1927c4960031/mzaf_18007051220253292659.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "A",
             "n": 4,
-            "titolo": "Till It Happens to You"
+            "titolo": "Till It Happens to You",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/f5/b4/6c/f5b46c9d-8682-d9ff-04b9-2ab69123fd6f/mzaf_4490249360273338201.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "A",
             "n": 5,
-            "titolo": "Trouble Sleeping"
+            "titolo": "Trouble Sleeping",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/0b/63/83/0b638340-809e-db27-a826-bc7502f49c55/mzaf_1258937284634582935.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "A",
             "n": 6,
-            "titolo": "Call Me When You Get This"
+            "titolo": "Call Me When You Get This",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/9f/3e/f9/9f3ef9f1-430f-de03-e6b5-c6d4f3197815/mzaf_15405686348272886200.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "B",
             "n": 7,
-            "titolo": "Choux Pastry Heart"
+            "titolo": "Choux Pastry Heart",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/ba/e9/b3/bae9b3af-7f2d-2f76-6e8d-127623623f92/mzaf_4133937405759537761.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "B",
             "n": 8,
-            "titolo": "Breathless"
+            "titolo": "Breathless",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/63/a7/e6/63a7e6ff-7d11-6ad4-0edf-ce52e0513b0a/mzaf_12751255822025127000.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "B",
             "n": 9,
-            "titolo": "I'd Like To"
+            "titolo": "I'd Like To",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/88/29/9e/88299e24-83f5-d133-1200-f3657b9f40db/mzaf_13473929438959824984.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "B",
             "n": 10,
-            "titolo": "Butterfly"
+            "titolo": "Butterfly",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/6c/0d/11/6c0d11f2-4fca-1774-7660-84723a95e756/mzaf_9985011890403778455.plus.aac.p.m4a"
         },
         {
             "disco": 1,
             "lato": "B",
             "n": 11,
-            "titolo": "Seasons Change"
+            "titolo": "Seasons Change",
+            "audio": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/b8/60/cf/b860cfc7-d0a9-c362-3846-31de3c29ee9b/mzaf_14559756758856184650.plus.aac.p.m4a"
         }
     ]
 }
