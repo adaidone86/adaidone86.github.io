@@ -1,5 +1,5 @@
 /* ============================================================
-   GRIGLIA TREKKING (trekking.css) - VERSION STANDARD 2.0
+   GRIGLIA TREKKING (trekking.css) - VERSION HOVER EXPAND 2.2
    ============================================================ */
 
 /* 1. GRIGLIA DEI CONTENUTI */
@@ -8,7 +8,7 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 25px;
     width: 100%;
-    max-width: 1000px; /* Leggermente più largo per 3 colonne comode */
+    max-width: 1000px;
     margin: 40px auto;
     padding-bottom: 120px !important;
     box-sizing: border-box;
@@ -16,7 +16,7 @@
     z-index: 1;
 }
 
-/* 2. SINGOLA CARD TREKKING (Standardizzata) */
+/* 2. SINGOLA CARD TREKKING */
 .trek-item {
     background: #ffffff;
     border-bottom: 4px solid #ffdb58;
@@ -26,17 +26,26 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+                box-shadow 0.3s ease,
+                height 0.3s ease;
     cursor: pointer;
     text-align: center;
-    position: relative; /* Necessario per il bollino in alto a destra */
-    height: 520px;      /* ALTEZZA FISSA STANDARD */
+    position: relative;
+    height: 520px;      /* Altezza base */
     box-sizing: border-box;
+    z-index: 1;
+    /* CAMBIO CRITICO: usiamo visible per non tagliare il bollino */
+    overflow: visible;
 }
 
 .trek-item:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+    transform: scale(1.05) translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    height: auto;
+    min-height: 520px;
+    z-index: 100;
+    background: #fff;
 }
 
 /* Icona Standard */
@@ -49,7 +58,7 @@
     flex-shrink: 0;
 }
 
-/* Titolo Standard (Max 2 righe) */
+/* Titolo Standard */
 .trek-item h3 {
     font-size: 1.15rem;
     margin: 15px 0 10px 0;
@@ -61,6 +70,12 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
     line-height: 1.3;
+}
+
+.trek-item:hover h3 {
+    height: auto;
+    -webkit-line-clamp: unset;
+    display: block;
 }
 
 /* Tag / Luogo */
@@ -76,7 +91,7 @@
     flex-shrink: 0;
 }
 
-/* Dettagli Tecnici (Data e KM) */
+/* Dettagli Tecnici */
 .trek-details {
     display: flex;
     gap: 15px;
@@ -89,7 +104,7 @@
     flex-shrink: 0;
 }
 
-/* Descrizione Standard (Max 3 righe) */
+/* Descrizione */
 .desc {
     font-size: 0.9rem;
     color: #777;
@@ -102,45 +117,56 @@
     overflow: hidden;
 }
 
-/* --- BOX GUIDA (Sempre in fondo alla card) --- */
+.trek-item:hover .desc {
+    height: auto;
+    -webkit-line-clamp: unset;
+    display: block;
+}
+
+/* --- BOX GUIDA --- */
 .guida-box {
-    margin-top: auto; /* Spinge il box in fondo */
+    margin-top: auto;
     padding-top: 15px;
     border-top: 1px dashed #ddd;
     width: 100%;
 }
-.guida-label { font-size: 0.6rem; color: #999; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.5px; }
+.guida-label { font-size: 0.6rem; color: #999; margin-bottom: 6px; text-transform: uppercase; }
 .guida-link { display: flex; align-items: center; justify-content: center; text-decoration: none; color: #333; gap: 10px; font-weight: 700; font-size: 0.85rem; }
 .guida-img { width: 32px; height: 32px; border-radius: 50%; border: 2px solid #ffdb58; object-fit: cover; }
 
-/* --- BOLLINI STATO (Posizionamento Angolo) --- */
+/* --- BOLLINI STATO (FISSARE IL TAGLIO) --- */
 .status-badge {
     position: absolute;
-    top: -12px;
-    right: -12px;
-    width: 36px;
-    height: 36px;
+    top: -15px;      /* Spostato leggermente più su */
+    right: -15px;    /* Spostato leggermente più a destra */
+    width: 40px;     /* Leggermente più grande */
+    height: 40px;
     border-radius: 50%;
-    z-index: 10;
-    border: 2px solid #fff;
-    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+    z-index: 110;    /* Sempre sopra la card anche in hover */
+    border: 3px solid #fff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     overflow: hidden;
     background: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
+    pointer-events: none; /* Evita che il bollino blocchi il click sulla card */
 }
 
-.status-icon-img { width: 100%; height: 100%; object-fit: cover; }
+.status-icon-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
 
 .badge-w .status-icon-img {
     animation: pulse-wip 2s infinite ease-in-out;
 }
 
 @keyframes pulse-wip {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.1); }
-    100% { transform: scale(1); }
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.15); }
 }
 
 /* --- BARRA DI RICERCA --- */
@@ -174,6 +200,7 @@
 
 @media (max-width: 650px) {
     .trek-grid { grid-template-columns: 1fr; }
-    .trek-item { height: auto; min-height: 480px; } /* Altezza più flessibile su mobile */
-    .search-container { bottom: 20px; }
+    .trek-item { height: auto; min-height: 480px; overflow: visible; }
+    .trek-item:hover { transform: none; }
+    .status-badge { top: -10px; right: -10px; } /* Più piccolo su mobile */
 }
