@@ -46,26 +46,30 @@ function openVinylModal(dati, folderName) {
         });
         buttonsHTML += `</div>`;
 
-        // 3. Creiamo i contenitori delle liste (con tasto Play)
+        // 3. Creiamo i contenitori delle liste (con tasto Play intelligente)
         let listsHTML = `<div class="tracklist-containers">`;
         keys.forEach((key, index) => {
             const displayStyle = index === 0 ? 'block' : 'none';
             listsHTML += `
                 <ul id="${key.replace(/\s/g, '-')}" class="tab-content" style="display: ${displayStyle}; list-style: none; padding-left: 0;">
-                    ${groups[key].map(brano => `
+                    ${groups[key].map(brano => {
+                        // Se nel JSON c'è già l'audio, lo usiamo, altrimenti lo cercherà tramite artista e titolo
+                        const paramAudio = brano.audio ? `'${brano.audio}'` : 'null';
+                        const artistaPulito = dati.artista.replace(/'/g, "\\'");
+                        const titoloPulito = brano.titolo.replace(/'/g, "\\'");
+
+                        return `
                         <li style="margin-bottom: 8px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #222; padding-bottom: 5px; font-size: 0.9em;">
                             <div style="flex: 1;">
                                 <span style="color: #ffdb58; font-weight: bold; margin-right: 10px;">${brano.n}.</span>
                                 <span>${brano.titolo}</span>
                             </div>
-                            ${brano.audio ? `
-                                <button class="play-btn" onclick="gestisciAudio('${brano.audio}', this)"
-                                        style="background: transparent; border: none; color: #ffdb58; cursor: pointer; font-size: 1.2em; padding: 0 5px;">
-                                    <i class="fas fa-play-circle"></i>
-                                </button>
-                            ` : ''}
-                        </li>
-                    `).join('')}
+                            <button class="play-btn" onclick="gestisciAudio(this, ${paramAudio}, '${artistaPulito}', '${titoloPulito}')"
+                                    style="background: transparent; border: none; color: #ffdb58; cursor: pointer; font-size: 1.2em; padding: 0 5px;">
+                                <i class="fas fa-play-circle"></i>
+                            </button>
+                        </li>`;
+                    }).join('')}
                 </ul>`;
         });
         listsHTML += `</div>`;
@@ -84,43 +88,35 @@ function openVinylModal(dati, folderName) {
     if (vecchiaTracklist) vecchiaTracklist.remove();
     infoContainer.insertAdjacentHTML('beforeend', tracklistHTML);
 
-    const videoSource = dati.video || `img/vinile/${folderName}/video.mp4`;
-// --- GESTIONE VIDEO (YouTube o File Locale) ---
-const videoUrl = dati.video;
-const youtubeEmbed = ottieniEmbedYouTube(videoUrl);
+    // --- GESTIONE VIDEO (YouTube o File Locale) ---
+    const videoUrl = dati.video;
+    const youtubeEmbed = ottieniEmbedYouTube(videoUrl);
 
-if (youtubeEmbed) {
-    // Se è un link YouTube, usiamo un iframe
-    videoContainer.innerHTML = `
-        <iframe
-            src="${youtubeEmbed}"
-            style="width:100%; height:100%; border:none;"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen>
-        </iframe>
-    `;
-} else {
-    // Se non è YouTube, prova a caricarlo come file locale .mp4
-    const videoSource = videoUrl || `img/vinile/${folderName}/video.mp4`;
-    videoContainer.innerHTML = `
-        <video controls autoplay muted loop style="width:100%; height:100%; object-fit:cover;">
-            <source src="${videoSource}" type="video/mp4">
-            Il tuo browser non supporta il tag video.
-        </video>
-    `;
-}
+    if (youtubeEmbed) {
+        videoContainer.innerHTML = `
+            <iframe src="${youtubeEmbed}" style="width:100%; height:100%; border:none;"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+            </iframe>`;
+    } else {
+        const videoSource = videoUrl || `img/vinile/${folderName}/video.mp4`;
+        videoContainer.innerHTML = `
+            <video controls autoplay muted loop style="width:100%; height:100%; object-fit:cover;">
+                <source src="${videoSource}" type="video/mp4">
+                Il tuo browser non supporta il tag video.
+            </video>`;
+    }
 
     modal.style.display = "block";
     document.body.style.overflow = "hidden";
 }
 
-// --- GESTIONE AUDIO ---
+// --- GESTIONE AUDIO DINAMICA ---
 
-window.gestisciAudio = function(url, btn) {
+window.gestisciAudio = async function(btn, audioFisso, artista, titolo) {
     const icon = btn.querySelector('i');
 
-    // Se stiamo già riproducendo questo brano, lo mettiamo in pausa
-    if (audioCorrente && audioCorrente.src === url) {
+    // Se stiamo già riproducendo questo specifico brano
+    if (audioCorrente && audioCorrente.dataset.titolo === titolo) {
         if (audioCorrente.paused) {
             audioCorrente.play();
             icon.classList.replace('fa-play-circle', 'fa-pause-circle');
@@ -131,28 +127,51 @@ window.gestisciAudio = function(url, btn) {
         return;
     }
 
-    // Se clicchiamo un altro brano, fermiamo quello precedente
     fermaAudio();
 
-    // Avviamo il nuovo audio
-    audioCorrente = new Audio(url);
-    bottoneCorrente = btn;
-    audioCorrente.play();
-    icon.classList.replace('fa-play-circle', 'fa-pause-circle');
+    let urlDaRiprodurre = audioFisso;
 
-    // Quando l'anteprima finisce
-    audioCorrente.onended = () => {
-        icon.classList.replace('fa-pause-circle', 'fa-play-circle');
-        audioCorrente = null;
-        bottoneCorrente = null;
-    };
+    // Se non abbiamo l'URL nel JSON, lo cerchiamo su iTunes
+    if (!urlDaRiprodurre) {
+        icon.classList.replace('fa-play-circle', 'fa-spinner');
+        icon.classList.add('fa-spin');
+
+        try {
+            const query = encodeURIComponent(`${artista} ${titolo}`);
+            const response = await fetch(`https://itunes.apple.com/search?term=${query}&entity=song&limit=1`);
+            const data = await response.json();
+            if (data.results.length > 0) {
+                urlDaRiprodurre = data.results[0].previewUrl;
+            }
+        } catch (error) {
+            console.error("Errore recupero iTunes:", error);
+        }
+    }
+
+    if (urlDaRiprodurre) {
+        audioCorrente = new Audio(urlDaRiprodurre);
+        audioCorrente.dataset.titolo = titolo;
+        bottoneCorrente = btn;
+        audioCorrente.play();
+        icon.classList.remove('fa-spin');
+        icon.classList.replace('fa-play-circle', 'fa-pause-circle');
+        icon.classList.replace('fa-spinner', 'fa-pause-circle');
+
+        audioCorrente.onended = () => fermaAudio();
+    } else {
+        alert("Anteprima non disponibile.");
+        icon.classList.remove('fa-spin');
+        icon.classList.replace('fa-spinner', 'fa-play-circle');
+    }
 };
 
 function fermaAudio() {
     if (audioCorrente) {
         audioCorrente.pause();
         if (bottoneCorrente) {
-            bottoneCorrente.querySelector('i').classList.replace('fa-pause-circle', 'fa-play-circle');
+            const icon = bottoneCorrente.querySelector('i');
+            icon.classList.remove('fa-spin');
+            icon.className = 'fas fa-play-circle';
         }
         audioCorrente = null;
         bottoneCorrente = null;
@@ -180,24 +199,25 @@ function closeModal() {
     const modal = document.getElementById('vinyl-modal');
     if (modal) {
         modal.style.display = "none";
-        fermaAudio(); // Ferma l'audio alla chiusura
+        fermaAudio();
         const videoContainer = document.getElementById('modal-video');
         if (videoContainer) videoContainer.innerHTML = "";
         document.body.style.overflow = "";
     }
 }
 
-document.addEventListener('click', (e) => {
-    if (e.target.classList.contains('close-modal')) {
-        closeModal();
+function ottieniEmbedYouTube(url) {
+    if (!url || !url.includes("youtube.com") && !url.includes("youtu.be")) return null;
+    let videoId = "";
+    if (url.includes("v=")) {
+        videoId = url.split("v=")[1].split("&")[0];
+    } else if (url.includes("youtu.be/")) {
+        videoId = url.split("youtu.be/")[1].split("?")[0];
     }
-});
+    return videoId ? `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1` : null;
+}
 
-document.addEventListener('keydown', (e) => {
-    if (e.key === "Escape") {
-        closeModal();
-    }
-});
+// --- CARICAMENTO COLLEZIONE ---
 
 async function caricaCollezioneAutonoma() {
     const wrapper = document.getElementById('album-wrapper');
@@ -233,13 +253,9 @@ async function caricaCollezioneAutonoma() {
                             <h3>${dati.album}</h3>
                             <p><strong>${dati.artista}</strong> | ${dati.anno || ''}</p>
                             <span class="genere-tag" style="font-size: 0.8em; color: #ffdb58; background: #000; padding: 2px 8px; border-radius: 10px;">${dati.genere}</span>
-                        </div>
-                    `;
+                        </div>`;
 
-                    slide.addEventListener('click', () => {
-                        openVinylModal(dati, nomeCartella);
-                    });
-
+                    slide.addEventListener('click', () => openVinylModal(dati, nomeCartella));
                     wrapper.appendChild(slide);
 
                     promesseImmagini.push(new Promise(resolve => {
@@ -248,51 +264,25 @@ async function caricaCollezioneAutonoma() {
                         img.onload = resolve;
                         img.onerror = resolve;
                     }));
-                } catch (e) {
-                    console.error("Errore caricamento disco:", nomeCartella, e);
-                }
+                } catch (e) { console.error("Errore disco:", nomeCartella); }
             }
         }
 
         await Promise.all(promesseImmagini);
-
         if (loader) loader.style.display = "none";
         swiperElement.style.opacity = "1";
 
-        const swiper = new Swiper(".mySwiper", {
+        new Swiper(".mySwiper", {
             effect: "cards",
             grabCursor: true,
-            initialSlide: 0,
             speed: 350,
-            mousewheel: { invert: false, releaseOnEdges: false, sensitivity: 1 },
+            mousewheel: { invert: false, sensitivity: 1 },
             navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
-            cardsEffect: { perSlideOffset: 12, perSlideRotate: 2, slideShadows: true }
         });
 
-        swiperElement.addEventListener('wheel', (e) => {
-            e.stopPropagation();
-        }, { passive: false });
-
-    } catch (error) {
-        console.error("Errore generale durante il caricamento:", error);
-        if (loader) loader.innerHTML = "<p style='color: white;'>Errore nel caricamento della collezione.</p>";
-    }
+    } catch (error) { console.error("Errore caricamento:", error); }
 }
 
 document.addEventListener("DOMContentLoaded", caricaCollezioneAutonoma);
-
-function ottieniEmbedYouTube(url) {
-    if (!url) return null;
-    let videoId = "";
-
-    // Se è un link standard (watch?v=)
-    if (url.includes("v=")) {
-        videoId = url.split("v=")[1].split("&")[0];
-    }
-    // Se è un link breve (youtu.be/)
-    else if (url.includes("youtu.be/")) {
-        videoId = url.split("youtu.be/")[1].split("?")[0];
-    }
-
-    return videoId ? `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1` : null;
-}
+document.addEventListener('click', (e) => { if (e.target.classList.contains('close-modal')) closeModal(); });
+document.addEventListener('keydown', (e) => { if (e.key === "Escape") closeModal(); });

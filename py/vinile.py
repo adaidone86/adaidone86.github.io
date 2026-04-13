@@ -8,6 +8,7 @@ import urllib.parse
 # ==========================================
 DOWNLOAD_COVERS = False      # Metti True se vuoi scaricare cover.jpg
 RECUPERA_TRACKLIST = True   # Metti True per avere le canzoni nel JSON
+INCLUDI_LINK_AUDIO = False   # Se False, non inserisce il campo "audio" nel JSON (il JS li cercherà al volo)
 # ==========================================
 
 # Struttura: [Artista, Album, Anno, Genere, NomeCartella, Descrizione (opzionale), Video (opzionale)]
@@ -66,10 +67,8 @@ def recupera_dati_album(artista, album):
             data = json.loads(response.read().decode())
             if data['results']:
                 album_id = data['results'][0]['collectionId']
-                # Otteniamo la cover in alta risoluzione
                 risultato["cover_url"] = data['results'][0]['artworkUrl100'].replace('100x100bb', '600x600bb')
 
-                # Seconda chiamata per ottenere i brani dell'album specifico
                 url_brani = f"https://itunes.apple.com/lookup?id={album_id}&entity=song"
                 with urllib.request.urlopen(url_brani) as resp_brani:
                     data_brani = json.loads(resp_brani.read().decode())
@@ -79,19 +78,22 @@ def recupera_dati_album(artista, album):
                         if item.get('wrapperType') == 'track':
                             disco = item.get('discNumber', 1)
                             traccia = item.get('trackNumber', 0)
-
-                            # Logica lato: solitamente 5-6 brani per lato su un vinile standard
                             lato = "A" if traccia <= 6 else "B"
 
-                            brani_temporanei.append({
+                            # Costruiamo l'oggetto brano
+                            brano = {
                                 "disco": disco,
                                 "lato": lato,
                                 "n": traccia,
-                                "titolo": item.get('trackName', 'Unknown'),
-                                "audio": item.get('previewUrl', '')  # <--- URL Anteprima Audio
-                            })
+                                "titolo": item.get('trackName', 'Unknown')
+                            }
 
-                    # Ordinamento: Prima per Disco, poi per numero Traccia
+                            # Inseriamo il link audio solo se il flag è True
+                            if INCLUDI_LINK_AUDIO:
+                                brano["audio"] = item.get('previewUrl', '')
+
+                            brani_temporanei.append(brano)
+
                     brani_temporanei.sort(key=lambda x: (x['disco'], x['n']))
                     risultato["canzoni"] = brani_temporanei
 
@@ -106,19 +108,16 @@ for v in vinili:
     album_nome = v[1]
     nome_cartella = v[4]
 
-    # Percorso cartella: img/vinile/nome-cartella
     folder_path = os.path.join("img", "vinile", nome_cartella)
     os.makedirs(folder_path, exist_ok=True)
 
     descrizione_disco = v[5] if (len(v) > 5 and v[5]) else "Questo disco fa parte della mia collezione personale."
     percorso_video = v[6] if (len(v) > 6 and v[6]) else f"img/vinile/{nome_cartella}/video.mp4"
 
-    # Recupero dati da API (Cover + Tracklist strutturata con Audio)
     dati_api = {"cover_url": None, "canzoni": []}
     if DOWNLOAD_COVERS or RECUPERA_TRACKLIST:
         dati_api = recupera_dati_album(artista_nome, album_nome)
 
-    # Creazione oggetto JSON finale
     json_data = {
         "artista": artista_nome,
         "album": album_nome,
@@ -129,11 +128,9 @@ for v in vinili:
         "tracklist": dati_api["canzoni"]
     }
 
-    # Scrittura del file info.json
     with open(os.path.join(folder_path, "info.json"), "w", encoding="utf-8") as f:
         json.dump(json_data, f, indent=4, ensure_ascii=False)
 
-    # Gestione Download della Cover se richiesto
     messaggio_cover = "⏸️ Saltato"
     if DOWNLOAD_COVERS and dati_api["cover_url"]:
         cover_file = os.path.join(folder_path, "cover.jpg")
@@ -147,6 +144,7 @@ for v in vinili:
             messaggio_cover = "⏭️ Esistente"
 
     status_track = f"🎵 {len(dati_api['canzoni'])} brani" if dati_api["canzoni"] else "❌ No tracklist"
-    print(f"📦 {album_nome.ljust(30)} | {status_track} | Cover: {messaggio_cover}")
+    status_audio = "(Link ON)" if INCLUDI_LINK_AUDIO else "(Link OFF - Dinamico)"
+    print(f"📦 {album_nome.ljust(30)} | {status_track} {status_audio} | Cover: {messaggio_cover}")
 
 print("\n✨ Procedura completata con successo!")
