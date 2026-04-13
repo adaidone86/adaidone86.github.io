@@ -28,63 +28,71 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
     // --- 2. FUNZIONE RENDERING CARD ---
-    function renderTrek(lista) {
-        if (!grid) return;
-        grid.innerHTML = "";
+ function renderTrek(lista) {
+     if (!grid) return;
+     grid.innerHTML = "";
 
-        lista.forEach(trek => {
-            const item = document.createElement('div');
-            item.className = 'trek-item';
+     lista.forEach(trek => {
+         const item = document.createElement('div');
+         item.className = 'trek-item';
 
-            // BOLLINI STATO
-            let bollinoHTML = "";
-            if (trek.stato) {
-                bollinoHTML = `<div class="status-badge badge-${trek.stato}" title="${trek.stato === 'c' ? 'Completato' : (trek.stato === 'w' ? 'In lavorazione' : 'In programma')}">
-                    <img src="img/trekking/${trek.stato}.png" alt="${trek.stato}" class="status-icon-img" onerror="this.style.display='none'">
-                </div>`;
-            }
+         // --- GESTIONE FUMETTO E CURSORE PER STATO "P" ---
+         if (trek.stato === "p") {
+             // Aggiunge il fumetto al passaggio del mouse
+             item.title = "Questo trekking è in programma. Foto non ancora disponibili!";
+             // Cambia il cursore in un cerchio sbarrato
+             item.style.cursor = "not-allowed";
+         }
 
-            // GUIDA / ORGANIZZATORE
-            let guidaHTML = "";
-            if (trek.guida_foto && trek.guida_foto !== "-") {
-                guidaHTML = `
-                    <div class="guida-box">
-                        <p class="guida-label">Organizzato da:</p>
-                        <a href="${trek.guida_sito}" target="_blank" class="guida-link" onclick="event.stopPropagation();">
-                            <img src="${trek.guida_foto}" alt="${trek.guida_nome}" class="guida-img">
-                            <span>${trek.guida_nome !== "-" ? trek.guida_nome : "Sito Ufficiale"}</span>
-                        </a>
-                    </div>`;
-            }
+         // BOLLINI STATO
+         let bollinoHTML = "";
+         if (trek.stato) {
+             bollinoHTML = `<div class="status-badge badge-${trek.stato}" title="${trek.stato === 'c' ? 'Completato' : (trek.stato === 'w' ? 'In lavorazione' : 'In programma')}">
+                 <img src="img/trekking/${trek.stato}.png" alt="${trek.stato}" class="status-icon-img" onerror="this.style.display='none'">
+             </div>`;
+         }
 
-            const dataMostrata = trek.tipo === "viaggio" ? `Dal ${trek.date.da} al ${trek.date.al}` : trek.data;
-            const infoMostrata = trek.tipo === "viaggio" ? "Multi-tappa" : trek["km/dislivello"];
+         // GUIDA / ORGANIZZATORE
+         let guidaHTML = "";
+         if (trek.guida_foto && trek.guida_foto !== "-") {
+             guidaHTML = `
+                 <div class="guida-box">
+                     <p class="guida-label">Organizzato da:</p>
+                     <a href="${trek.guida_sito}" target="_blank" class="guida-link" onclick="event.stopPropagation();">
+                         <img src="${trek.guida_foto}" alt="${trek.guida_nome}" class="guida-img">
+                         <span>${trek.guida_nome !== "-" ? trek.guida_nome : "Sito Ufficiale"}</span>
+                     </a>
+                 </div>`;
+         }
 
-            item.innerHTML = `
-                ${bollinoHTML}
-                <i class="fa-solid ${trek.icona} item-icon"></i>
-                <h3>${trek.titolo}</h3>
-                <span class="tag">${trek.luogo}</span>
-                <div class="trek-details">
-                    <p><strong>Data:</strong> ${dataMostrata}</p>
-                    <p><strong>Info:</strong> ${infoMostrata}</p>
-                </div>
-                <p class="desc">${trek.descrizione_breve}</p>
-                ${guidaHTML}
-            `;
+         const dataMostrata = trek.tipo === "viaggio" ? `Dal ${trek.date.da} al ${trek.date.al}` : trek.data;
+         const infoMostrata = trek.tipo === "viaggio" ? "Multi-tappa" : trek["km/dislivello"];
 
-            // EVENTO CLICK CARD (Apre modal solo se non è 'p')
-            item.onclick = () => {
-                if (trek.stato === "p") {
-                    alert("Questo trekking è in programma. Foto non ancora disponibili!");
-                    return;
-                }
-                openModal(trek);
-            };
+         item.innerHTML = `
+             ${bollinoHTML}
+             <i class="fa-solid ${trek.icona} item-icon"></i>
+             <h3>${trek.titolo}</h3>
+             <span class="tag">${trek.luogo}</span>
+             <div class="trek-details">
+                 <p><strong>Data:</strong> ${dataMostrata}</p>
+                 <p><strong>Info:</strong> ${infoMostrata}</p>
+             </div>
+             <p class="desc">${trek.descrizione_breve}</p>
+             ${guidaHTML}
+         `;
 
-            grid.appendChild(item);
-        });
-    }
+         // --- EVENTO CLICK CARD (Niente alert) ---
+         item.onclick = () => {
+             // Se in programma, la funzione si ferma qui senza fare nulla
+             if (trek.stato === "p") return;
+
+             // Altrimenti apre il modal
+             openModal(trek);
+         };
+
+         grid.appendChild(item);
+     });
+ }
 
     // --- 3. GESTIONE MODAL ---
     window.openModal = function (trek) {
