@@ -1,5 +1,96 @@
 [
   {
+    "tipo": "viaggio",
+    "titolo": "Sicilia: la perla nera del mediterraneo tra trekking, capperi e dammusi",
+    "luogo": "Pantelleria",
+    "date": {
+      "da": "07/05/2026",
+      "al": "10/05/2026"
+    },
+    "tappe": [
+      {
+        "giorno": "07/05/2026",
+        "km/dislivello": "8.5km/50m",
+        "descrizione_tappa": "Lago di Venere e Punta Spadillo - Trekking di benvenuto alla scoperta dell’incantevole costa nord Dati tecnici: Lunghezza: 8,5 km - Dislivello: +50 m/-300 m - Difficoltà: poco impegnativo.",
+        "cartella_foto": "img/trekking/pantelleria/g01",
+        "numero_foto": 1
+      },
+      {
+        "giorno": "08/05/2026",
+        "km/dislivello": "11km/500m",
+        "descrizione_tappa": "Piana di Ghirlanda - Un’immersione nel paesaggio pantesco, tra dammusi, capperi e passito Dati Tecnici: Lunghezza: 11 km - Dislivello: +300 m/-400 - Difficoltà: mediamente impegnativo.",
+        "cartella_foto": "img/trekking/pantelleria/g02",
+        "numero_foto": 1
+      },
+      {
+        "giorno": "09/05/2026",
+        "km/dislivello": "12km/650m",
+        "descrizione_tappa": "Montagna Grande - Trekking nel cuore dell’Isola, tra verdi crateri spenti e surreali fumarole attive Dati Tecnici: Lunghezza: 12 km - Dislivello: +650 m - Difficoltà: mediamente  impegnativo.",
+        "cartella_foto": "img/trekking/pantelleria/g03",
+        "numero_foto": 1
+      },
+      {
+        "giorno": "10/05/2026",
+        "km/dislivello": "0km/0m",
+        "descrizione_tappa": "Testimonianze del passato di un’isola straordinaria - sito archeologico del Sesi.",
+        "cartella_foto": "img/trekking/pantelleria/g04",
+        "numero_foto": 1
+      }
+    ],
+    "descrizione_breve": "Pantelleria: tra laghi, dammusi e sapori UNESCO, un viaggio unico nella natura selvaggia della Perla Nera",
+    "descrizione": "Pantelleria è un'isola unica, sospesa tra influenze tunisine e siciliane, resa straordinaria dalla sua posizione che ha favorito un mix eccezionale di elementi naturali e culturali. La visita al Parco Nazionale dell'isola, il primo e unico in Sicilia, offre un’immersione totale in questo paesaggio esotico e affascinante: dal Lago di Venere all'Arco dell'Elefante, dai boschi di Montagna Grande alle vedute sconfinanti sul mare. Tra crateri spenti, piane fumaroliche e scogliere imponenti, Pantelleria rivela il suo carattere autentico, con i tipici dammusi, i muretti a secco e i giardini panteschi. In questa terra apparentemente ostile, nascono eccellenze gastronomiche come il cappero e il passito, riconosciute come patrimonio UNESCO. Un viaggio che unisce natura e sapori intensi, svelando il fascino della “Perla Nera” del Mediterraneo.",
+    "icona": "fa-compass",
+    "guida_nome": "Giacomo Criscenti",
+    "guida_foto": "img/trekking/escursionisti/itinerrando.png",
+    "guida_sito": "https://www.itinarrando.com/"
+  },
+  {
+    "tipo": "giornaliero",
+    "titolo": "Mare, trekking e nuove amicizie",
+    "luogo": "Scarlino",
+    "km/dislivello": "11km/350m",
+    "data": "25/04/2026",
+    "descrizione_breve": "Anello da Scarlino a Cala Violina: profumi di macchia mediterranea, mare blu e sabbia finissima",
+    "descrizione": "Escursione ad anello nel cuore della Maremma, da Scarlino a Cala Violina. Cammineremo immersi nei profumi del lentisco e del rosmarino, con il blu del mare che fa capolino tra i lecci. Arrivati a destinazione, scarpe in mano, avremo finalmente l’occasione di camminare scalzi sulla sabbia finissima.",
+    "icona": "fa-map-location-dot",
+    "guida_nome": "Filippo Bianchi",
+    "guida_foto": "img/trekking/escursionisti/wemeet.png",
+    "guida_sito": "https://www.meetup.com/it-it/wemeet-toscana/",
+    "cartella_foto": "img/trekking/scarlino",
+    "numero_foto": 1
+  },
+  {
+    "tipo": "giornaliero",
+    "titolo": "Passo di Dante e monte Moriglione",
+    "luogo": "-",
+    "km/dislivello": "13km/600m",
+    "data": "19/04/2026",
+    "descrizione_breve": "-",
+    "descrizione": "-",
+    "icona": "fa-tree",
+    "guida_nome": "Matteo Cafferecci",
+    "guida_foto": "img/trekking/escursionisti/wemeet.png",
+    "guida_sito": "https://www.meetup.com/it-it/wemeet-toscana/",
+    "cartella_foto": "img/trekking/monte-moriglione",
+    "numero_foto": 1
+  },
+  {
+    "tipo": "giornaliero",
+    "titolo": "Pienza e la Val D'Orcia",
+    "luogo": "Pienza, San Quirico D'Orcia",
+    "km/dislivello": "18km/500m",
+    "data": "11/04/2026",
+    "descrizione_breve": "Tra Pienza e San Quirico: un anello di colline verdi, cipressi e borghi nel cuore della Val D'Orcia",
+    "descrizione": "Escursione ad anello nel cuore della Val D’Orcia che tocca due dei borghi più belli della Toscana: Pienza e San Quirico D’Orcia. A fargli da contorno ci sono vasti panorami, verdi colline, campi coltivati, cipressi, fioriture e antichi casolari.",
+    "icona": "fa-map-location-dot",
+    "guida_nome": "Filippo Bianchi",
+    "guida_foto": "img/trekking/escursionisti/wemeet.png",
+    "guida_sito": "https://www.meetup.com/it-it/wemeet-toscana/",
+    "cartella_foto": "img/trekking/val-d-orcia",
+    "numero_foto": 1
+  },
+  {
+    "tipo": "giornaliero",
     "titolo": "Punta Ala, tra cielo e mare",
     "luogo": "Punta Ala (GR)",
     "km/dislivello": "18km/550m",
@@ -14,6 +105,7 @@
     "numero_foto": 1
   },
   {
+    "tipo": "giornaliero",
     "titolo": "Escursione Penna di Lucchio",
     "luogo": "Uzzano (PT)",
     "km/dislivello": "12km/580m",
@@ -21,13 +113,14 @@
     "descrizione_breve": "Verso la Penna di Lucchio da Croce a Veglia, tra crinali tecnici e vette per esperti",
     "descrizione": "Il cammino conduce prima verso Croce a Veglia, punto panoramico che offre ampie vedute sulla valle e sulle montagne circostanti. Da qui il percorso prosegue verso la Penna di Lucchio, spettacolare cima rocciosa e simbolo dell’escursionismo più avventuroso della zona, con passaggi che richiedono passo sicuro, attenzione e buona esperienza su terreno impervio.\nL’intero itinerario alterna boschi, crinali e tratti più tecnici, regalando un’escursione intensa e molto gratificante per chi ama la montagna vera, lontana dai percorsi più frequentati.\nUn’escursione impegnativa e spettacolare, pensata per escursionisti esperti. Ideale per chi cerca avventura, panorami spettacolari e un’esperienza di montagna autentica, da vivere con rispetto, attenzione e spirito di gruppo.",
     "icona": "fa-tree",
-    "guida_nome": "Matteo",
+    "guida_nome": "Matteo Cafferecci",
     "guida_foto": "img/trekking/escursionisti/wemeet.png",
     "guida_sito": "https://www.meetup.com/it-it/wemeet-toscana/",
     "cartella_foto": "img/trekking/penna-lucchio",
     "numero_foto": 1
   },
   {
+    "tipo": "giornaliero",
     "titolo": "L'Acquerino: camminata fra salsicce e la base militare",
     "luogo": "Riserva Naturale dell'Acquerino (PT)",
     "km/dislivello": "10,6km/430m",
@@ -35,13 +128,14 @@
     "descrizione_breve": "Tra i boschi dell'Acquerino, tra braci al Rifugio Faggione e il mistero di una base militare",
     "descrizione": "Un’escursione immersa nella natura incontaminata della Riserva Naturale dell’Acquerino, tra fitti boschi di faggi e abeti, silenzi profondi e atmosfere autentiche dell’Appennino pistoiese.\nIl cammino si sviluppa su sentieri ben tracciati e conduce al Rifugio Faggione delle Valli, un’area attrezzata immersa nel verde. Qui è prevista una sosta conviviale: utilizzeremo i punti fuoco presenti per accendere un fuoco e gustare due salsicce alla brace, condividendo un momento di relax e socialità nel pieno rispetto dell’ambiente e delle regole dell’area protetta.\nDopo la pausa, l’escursione prosegue verso una base militare abbandonata, luogo suggestivo e ricco di fascino, testimonianza silenziosa del passato, perfettamente inserita nel contesto naturale circostante. E tu avrai il coraggio di entrarci?",
     "icona": "fa-tree",
-    "guida_nome": "Matteo",
+    "guida_nome": "Matteo Cafferecci",
     "guida_foto": "img/trekking/escursionisti/wemeet.png",
     "guida_sito": "https://www.meetup.com/it-it/wemeet-toscana/",
     "cartella_foto": "img/trekking/acquerino",
     "numero_foto": 1
   },
   {
+    "tipo": "giornaliero",
     "titolo": "Escursione Monte Piglione",
     "luogo": "Alto Matanna",
     "km/dislivello": "12km/500m",
@@ -49,13 +143,14 @@
     "descrizione_breve": "Anello panoramico da Alto Matanna tra i crinali delle Apuane, per amanti del trekking vero",
     "descrizione": "Bellissima escursione ad anello sulle Alpi Apuane con partenza da Alto Matanna ( 40 minuti in auto dal punto di ritrovo) ideale per chi ama i sentieri panoramici e un po’ di dislivello. Il percorso attraversa boschi e crinali aperti, regalando scorci spettacolari sulle montagne circostanti e sulla costa nelle giornate più limpide.\nIl giro è abbastanza lungo con un notevole dislivello, si deve essere abituati a camminare in salita e nel bosco, ma chi mi conosce sa che la filosofia dietro a queste camminate è che un po’ si deve soffrire, non è la camminata di moda con degustazione.\nUn itinerario perfetto per chi cerca una giornata di trekking immerso nella natura, lontano dal caos, tra silenzi, crinali e viste indimenticabili.",
     "icona": "fa-mountain",
-    "guida_nome": "Matteo",
+    "guida_nome": "Matteo Cafferecci",
     "guida_foto": "img/trekking/escursionisti/wemeet.png",
     "guida_sito": "https://www.meetup.com/it-it/wemeet-toscana/",
     "cartella_foto": "img/trekking/monte-piglione",
     "numero_foto": 1
   },
   {
+    "tipo": "giornaliero",
     "titolo": "Cammino Costiero Etrusco a Populonia",
     "luogo": "Costa degli Etruschi (LI)",
     "km/dislivello": "15,5km/250m",
@@ -70,6 +165,7 @@
     "numero_foto": 1
   },
   {
+    "tipo": "giornaliero",
     "titolo": "La Riserva Naturale di Castelvecchio con visita archeologica",
     "luogo": "Val d'Elsa (SI)",
     "km/dislivello": "15,5km/350m",
@@ -84,6 +180,7 @@
     "numero_foto": 1
   },
   {
+    "tipo": "giornaliero",
     "titolo": "Vivo d'Orcia e le Sorgenti dell'Ermicciolo",
     "luogo": "Amiata (SI)",
     "km/dislivello": "13km/380m",
@@ -98,6 +195,7 @@
     "numero_foto": 1
   },
   {
+    "tipo": "giornaliero",
     "titolo": "Montecerboli e San Michele alle Formiche",
     "luogo": "Alta Val di Cecina (PI)",
     "km/dislivello": "13km/400m",
@@ -112,6 +210,7 @@
     "numero_foto": 1
   },
   {
+    "tipo": "giornaliero",
     "titolo": "Valle della Luna, Incanto di Pietra e Mare",
     "luogo": "Monti Livornesi",
     "km/dislivello": "17km/560m",
@@ -126,6 +225,7 @@
     "numero_foto": 1
   },
   {
+    "tipo": "giornaliero",
     "titolo": "Lago dell’Accesa e Cascata Bruna",
     "luogo": "Colline Metallifere (GR)",
     "km/dislivello": "16km/380m",
@@ -140,6 +240,7 @@
     "numero_foto": 1
   },
   {
+    "tipo": "giornaliero",
     "titolo": "Ghizzano, il Borgo Colorato",
     "luogo": "Valdera (PI)",
     "km/dislivello": "16km/300m",
@@ -154,6 +255,7 @@
     "numero_foto": 1
   },
   {
+    "tipo": "giornaliero",
     "titolo": "Cala Violina e le Bandite di Scarlino",
     "luogo": "Riserva Naturale Bandite di Scarlino (GR)",
     "km/dislivello": "14km/400m",
@@ -168,6 +270,7 @@
     "numero_foto": 1
   },
   {
+    "tipo": "giornaliero",
     "titolo": "Cala Violina e le Bandite di Scarlino",
     "luogo": "Riserva Naturale Bandite di Scarlino (GR)",
     "km/dislivello": "14km/400m",
@@ -182,6 +285,7 @@
     "numero_foto": 1
   },
   {
+    "tipo": "giornaliero",
     "titolo": "I Vigneti di Tignanello",
     "luogo": "Chianti Fiorentino",
     "km/dislivello": "17km/380m",
@@ -196,6 +300,7 @@
     "numero_foto": 1
   },
   {
+    "tipo": "giornaliero",
     "titolo": "Montieri sulle vie dell’Argento",
     "luogo": "Colline Metallifere (GR)",
     "km/dislivello": "13km/600m",
@@ -210,6 +315,7 @@
     "numero_foto": 1
   },
   {
+    "tipo": "giornaliero",
     "titolo": "Castagnata e Foliage ai Faggi di Javello",
     "luogo": "Appennino Pratese",
     "km/dislivello": "12km/700m",
@@ -224,6 +330,7 @@
     "numero_foto": 1
   },
   {
+    "tipo": "giornaliero",
     "titolo": "Montepulciano e Monticchiello, tra Chiana ed Orcia",
     "luogo": "Val di Chiana - Val d'Orcia (SI)",
     "km/dislivello": "17km/550m",
@@ -238,6 +345,7 @@
     "numero_foto": 1
   },
   {
+    "tipo": "giornaliero",
     "titolo": "Abbraccio Wild Grill",
     "luogo": "Alto Mugello (FI)",
     "km/dislivello": "9,5km/350m",
@@ -252,6 +360,7 @@
     "numero_foto": 1
   },
   {
+    "tipo": "giornaliero",
     "titolo": "La Straordinaria Foresta della Lama",
     "luogo": "Parco Nazionale Foreste Casentinesi (AR)",
     "km/dislivello": "15km/800m",
@@ -266,6 +375,7 @@
     "numero_foto": 1
   },
   {
+    "tipo": "giornaliero",
     "titolo": "Cascata di Moraduccio, tuffi e avventura",
     "luogo": "-",
     "km/dislivello": "-km/-m",
@@ -280,6 +390,7 @@
     "numero_foto": 1
   },
   {
+    "tipo": "giornaliero",
     "titolo": "La Selvaggia Valle del Rovigo",
     "luogo": "Alto Mugello (FI)",
     "km/dislivello": "16km/680m",
@@ -294,6 +405,7 @@
     "numero_foto": 1
   },
   {
+    "tipo": "giornaliero",
     "titolo": "Le Cascate di San Godenzo",
     "luogo": "Alto Mugello (FI)",
     "km/dislivello": "13km/500m",
@@ -308,6 +420,7 @@
     "numero_foto": 1
   },
   {
+    "tipo": "giornaliero",
     "titolo": "Acquatrek: Le Piscine del Diaterna",
     "luogo": "Appenino Tosco Romagnolo (FI)",
     "km/dislivello": "7,5km/350m",
@@ -322,6 +435,7 @@
     "numero_foto": 1
   },
   {
+    "tipo": "giornaliero",
     "titolo": "Canyon di Calignaia, Trek & Bagno",
     "luogo": "Costa Livornese",
     "km/dislivello": "12km/400m",
@@ -336,6 +450,7 @@
     "numero_foto": 1
   },
   {
+    "tipo": "giornaliero",
     "titolo": "Masso delle Fanciulle, Trek & Bagno",
     "luogo": "Alta Val di Cecina",
     "km/dislivello": "16km/500m",
@@ -350,6 +465,7 @@
     "numero_foto": 1
   },
   {
+    "tipo": "giornaliero",
     "titolo": "Sgranar per Colli",
     "luogo": "Borgo a Buggiano (PT)",
     "km/dislivello": "10km/-m",
@@ -364,6 +480,7 @@
     "numero_foto": 1
   },
   {
+    "tipo": "giornaliero",
     "titolo": "Porto Ercole ed i Forti Spagnoli",
     "luogo": "Argentario (GR)",
     "km/dislivello": "12km/550m",
@@ -378,6 +495,7 @@
     "numero_foto": 1
   },
   {
+    "tipo": "giornaliero",
     "titolo": "Libbiano, le rupi e le pieghe del Trossa",
     "luogo": "Alta Val di Cecina",
     "km/dislivello": "12km/550m",
@@ -392,6 +510,7 @@
     "numero_foto": 1
   },
   {
+    "tipo": "giornaliero",
     "titolo": "I Tesori della Valle del Pavone",
     "luogo": "Alta Val di Cecina",
     "km/dislivello": "15km/750m",
@@ -406,6 +525,7 @@
     "numero_foto": 1
   },
   {
+    "tipo": "giornaliero",
     "titolo": "Cala di Forno, Parco della Maremma",
     "luogo": "Parco Naturale della Maremma (GR)",
     "km/dislivello": "19km/300m",
@@ -420,6 +540,7 @@
     "numero_foto": 1
   },
   {
+    "tipo": "giornaliero",
     "titolo": "Trekking sopra Firenze sul Monte Morello",
     "luogo": "Monte Morello",
     "km/dislivello": "13km/700m",
@@ -427,13 +548,14 @@
     "descrizione_breve": "I monti di Firenze e la vista piana, con possibilità di trovare la neve",
     "descrizione": "I monti di Firenze e la vista piana, con possibilità di trovare la neve",
     "icona": "fa-map-location-dot",
-    "guida_nome": "Filippo",
+    "guida_nome": "Filippo Bianchi",
     "guida_foto": "img/trekking/escursionisti/wemeet.png",
     "guida_sito": "https://www.meetup.com/it-it/wemeet-toscana/",
     "cartella_foto": "img/trekking/monte-morello",
     "numero_foto": 21
   },
   {
+    "tipo": "giornaliero",
     "titolo": "Anghiari, Trek al borgo della Battaglia",
     "luogo": "Valtiberina Toscana",
     "km/dislivello": "12km/200m",
@@ -448,6 +570,7 @@
     "numero_foto": 24
   },
   {
+    "tipo": "giornaliero",
     "titolo": "Trekking a Caltabellotta",
     "luogo": "Caltabellotta",
     "km/dislivello": "20km/-m",
@@ -462,6 +585,7 @@
     "numero_foto": 22
   },
   {
+    "tipo": "giornaliero",
     "titolo": "Anello Antella - Montisoni - Fontesanta",
     "luogo": "Antella",
     "km/dislivello": "17km/560m",

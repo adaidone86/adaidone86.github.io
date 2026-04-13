@@ -17,6 +17,55 @@ Tenda / Campeggio       fa-tent
 Mare                    fa-water
 Foglia / Natura         fa-leaf / fa-seedling
 Indicazioni             fa-map-signs
+----------------------------------------------------------------------------------------------------------------------------------
+Il Json deve essere così composto.
+Se Trekking giornaliero:
+{
+"tipo": "giornaliero",
+"titolo": "Mare, trekking e nuove amicizie",
+"luogo": "Scarlino",
+"data": "25/04/2026",
+"km_dislivello": "11km / 350m",
+"descrizione_breve": "Anello da Scarlino a Cala Violina: profumi di macchia mediterranea, mare blu e sabbia finissima",
+"descrizione": "...",
+"icona": "fa-map-location-dot",
+"guida_nome": "Filippo Bianchi",
+"guida_foto": "img/trekking/escursionisti/wemeet.png",
+"guida_sito": "https://www.meetup.com/it-it/wemeet-toscana/",
+"cartella_foto": "img/trekking/scarlino",
+"numero_foto": 1
+}
+
+
+Se invece è un viaggio Trekking:
+{
+"tipo": "viaggio",
+"titolo": "Sicilia: la perla nera del mediterraneo tra trekking, capperi e dammusi",
+"luogo": "Pantelleria",
+"date": {
+"da": "07/05/2026",
+"al": "10/05/2026"
+},
+"tappe": [
+{ "giorno": 1, "km": 5, "dislivello": 100 },
+{ "giorno": 2, "km": 8, "dislivello": 300 },
+{ "giorno": 3, "km": 7, "dislivello": 200 }
+],
+"totale_km": "20km",
+"descrizione_breve": "Pantelleria: tra laghi, dammusi e sapori UNESCO, un viaggio unico nella natura selvaggia della Perla Nera",
+"descrizione": "...",
+"icona": "fa-briefcase",
+"guida_nome": "Giacomo Criscenti",
+"guida_foto": "img/trekking/escursionisti/itinerrando.png",
+"guida_sito": "https://www.itinarrando.com/",
+"cartella_foto": "img/trekking/pantelleria",
+"numero_foto": 1
+}
+
+
+
+
+
 
 PAGINA VINILI
 Aggiungere Manualmente traccia audio sul json:

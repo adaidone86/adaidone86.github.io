@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const closeBtn = document.querySelector('.close-cinema');
 
     let tuttiITrek = [];
+    let viaggioCorrente = null; // Memorizza i dati del viaggio aperto per i Tab
 
     // --- 1. CARICAMENTO DATI ---
     fetch('dati/trekking/trekking.json')
@@ -16,8 +17,9 @@ document.addEventListener("DOMContentLoaded", () => {
         })
         .then(data => {
             tuttiITrek = data.sort((a, b) => {
-                const dateA = a.data.split('/');
-                const dateB = b.data.split('/');
+                const getStartDate = (t) => t.tipo === "viaggio" ? t.date.da : t.data;
+                const dateA = getStartDate(a).split('/');
+                const dateB = getStartDate(b).split('/');
                 const d1 = new Date(dateA[2], dateA[1] - 1, dateA[0]);
                 const d2 = new Date(dateB[2], dateB[1] - 1, dateB[0]);
                 return d2 - d1;
@@ -33,16 +35,21 @@ document.addEventListener("DOMContentLoaded", () => {
     function renderTrek(lista) {
         if (!grid) return;
         grid.innerHTML = "";
-        if (lista.length === 0) {
-            grid.innerHTML = `<p style="grid-column: 1/-1; color: #888; margin-top: 20px;">Nessun sentiero trovato...</p>`;
-            return;
-        }
+
         lista.forEach(trek => {
             const item = document.createElement('div');
             item.className = 'trek-item';
 
+            const dataMostrata = trek.tipo === "viaggio"
+                ? `Dal ${trek.date.da} al ${trek.date.al}`
+                : trek.data;
+
+            const infoMostrata = trek.tipo === "viaggio"
+                ? "Multi-tappa"
+                : trek["km/dislivello"];
+
             let guidaHTML = "";
-            if (trek.guida_nome && trek.guida_nome !== "") {
+            if (trek.guida_nome) {
                 guidaHTML = `
                     <div class="guida-box">
                         <p class="guida-label">Accompagnato da:</p>
@@ -58,8 +65,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 <h3>${trek.titolo}</h3>
                 <p class="tag">${trek.luogo}</p>
                 <div class="trek-details">
-                    <p><strong>Data:</strong> ${trek.data}</p>
-                    <p><strong>Info:</strong> ${trek["km/dislivello"]}</p>
+                    <p><strong>Data:</strong> ${dataMostrata}</p>
+                    <p><strong>Info:</strong> ${infoMostrata}</p>
                 </div>
                 <p class="desc">${trek.descrizione_breve}</p>
                 ${guidaHTML}
@@ -67,115 +74,134 @@ document.addEventListener("DOMContentLoaded", () => {
 
             item.addEventListener('click', (e) => {
                 if (e.target.closest('.guida-link')) return;
-                if (trek.cartella_foto && trek.numero_foto > 0) {
-                    const listaFoto = [];
-                    for (let i = 1; i <= trek.numero_foto; i++) {
-                        listaFoto.push(`${trek.cartella_foto}/${i}.jpg`);
-                    }
-                    openModal(listaFoto, trek.titolo, trek.descrizione);
-                }
+                openModal(trek);
             });
             grid.appendChild(item);
         });
     }
 
-    // --- 3. RICERCA ---
-    if (searchInput) {
-        searchInput.addEventListener('input', (e) => {
-            const termine = e.target.value.toLowerCase().trim();
-            const filtrati = tuttiITrek.filter(trek =>
-                trek.titolo.toLowerCase().includes(termine) ||
-                trek.luogo.toLowerCase().includes(termine) ||
-                trek.descrizione.toLowerCase().includes(termine)
-            );
-            renderTrek(filtrati);
-        });
-    }
+    // --- 3. GESTIONE MODAL CINEMA ---
 
-    // --- 4. GESTIONE MODAL CINEMA ---
+    window.openModal = function (trek) {
+        if (!modal || !mainImg) return;
+        viaggioCorrente = trek;
 
-    const cambiaFoto = (src, thumbElement) => {
-        if (!mainImg) return;
+        document.getElementById('modal-title').innerText = trek.titolo;
+        const descContainer = document.getElementById('modal-full-desc');
 
-        // Effetto transizione: abbassiamo opacità
-        mainImg.style.opacity = "0.3";
-
-        // Cambiamo sorgente
-        mainImg.src = src;
-
-        // Quando la nuova immagine è effettivamente caricata, riportiamo opacità a 1
-        mainImg.onload = () => {
-            mainImg.style.opacity = "1";
-        };
-
-        // Gestione classi "active" sulle miniature
-        const tutteLeThumb = document.querySelectorAll('.thumbnail-img');
-        tutteLeThumb.forEach(t => t.classList.remove('active'));
-        thumbElement.classList.add('active');
-
-        // Autoscroll della miniatura per tenerla centrata nella barra
-        thumbElement.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
-    };
-
-    window.openModal = function (listaFoto, titolo, descrizione) {
-        if (!galleryContainer || !modal || !mainImg) return;
-
-        document.getElementById('modal-title').innerText = titolo;
-        document.getElementById('modal-full-desc').innerText = descrizione;
-
-        galleryContainer.innerHTML = "";
-
-        listaFoto.forEach((foto, index) => {
-            const thumb = document.createElement('img');
-            thumb.src = foto;
-            thumb.className = 'thumbnail-img';
-            thumb.setAttribute('draggable', false);
-
-            thumb.onerror = () => thumb.remove();
-
-            // ASSEGNAZIONE CLICK DIRETTA (Garantisce che il click venga catturato)
-            thumb.onclick = function(e) {
-                e.preventDefault();
-                e.stopPropagation();
-                cambiaFoto(foto, thumb);
-            };
-
-            if (index === 0) {
-                mainImg.src = foto;
-                mainImg.style.opacity = "1";
-                thumb.classList.add('active');
+        if (trek.tipo === "viaggio") {
+            // Layout VIAGGIO: Descrizione fissa + Bottoni + Area Tappa
+            descContainer.innerHTML = `
+                <div class="viaggio-header">
+                    <p class="intro-desc">${trek.descrizione}</p>
+                    <div class="giorni-nav" id="giorni-nav">
+                        ${trek.tappe.map((_, idx) => `
+                            <button class="tappa-btn" onclick="mostraTappa(${idx})">Giorno ${idx + 1}</button>
+                        `).join('')}
+                    </div>
+                </div>
+                <div id="tappa-content" class="tappa-content"></div>
+            `;
+            // Attiva automaticamente il primo giorno
+            mostraTappa(0);
+        } else {
+            // Layout GIORNALIERO: Classico come prima
+            descContainer.innerHTML = `<p>${trek.descrizione}</p>`;
+            const listaFoto = [];
+            for (let i = 1; i <= trek.numero_foto; i++) {
+                listaFoto.push(`${trek.cartella_foto}/${i}.jpg`);
             }
-            galleryContainer.appendChild(thumb);
-        });
+            caricaGallery(listaFoto);
+        }
 
         modal.style.display = "flex";
         document.body.style.overflow = "hidden";
     };
 
-    // --- 5. LOGICA CHIUSURA E INTERAZIONE ---
+    // FUNZIONE PER CAMBIARE TAPPA (Solo per Viaggi)
+    window.mostraTappa = function (indice) {
+        const tappa = viaggioCorrente.tappe[indice];
+        const contentArea = document.getElementById('tappa-content');
+        const btns = document.querySelectorAll('.tappa-btn');
 
+        // Gestione stato bottoni
+        btns.forEach((b, i) => b.classList.toggle('active', i === indice));
+
+        // Iniezione testo tappa
+        contentArea.innerHTML = `
+            <div class="tappa-info-header">
+                <span class="tappa-data"><i class="far fa-calendar"></i> ${tappa.giorno}</span>
+                <span class="tappa-stats"><i class="fas fa-route"></i> ${tappa["km/dislivello"]}</span>
+            </div>
+            <p class="tappa-desc-text">${tappa.descrizione_tappa}</p>
+        `;
+
+        // Caricamento foto della tappa specifica
+        const listaFotoTappa = [];
+        for (let i = 1; i <= tappa.numero_foto; i++) {
+            listaFotoTappa.push(`${tappa.cartella_foto}/${i}.jpg`);
+        }
+        caricaGallery(listaFotoTappa);
+    };
+
+    // FUNZIONE PER POPOLARE LA GALLERY
+    function caricaGallery(lista) {
+        galleryContainer.innerHTML = "";
+        if (lista.length === 0) {
+            mainImg.src = ""; // O un'immagine di default
+            mainImg.alt = "Nessuna foto disponibile";
+            return;
+        }
+
+        lista.forEach((foto, index) => {
+            const thumb = document.createElement('img');
+            thumb.src = foto;
+            thumb.className = 'thumbnail-img';
+            thumb.onclick = () => cambiaFoto(foto, thumb);
+
+            if (index === 0) {
+                cambiaFoto(foto, thumb);
+            }
+            galleryContainer.appendChild(thumb);
+        });
+    }
+
+    const cambiaFoto = (src, thumbElement) => {
+        mainImg.style.opacity = "0.3";
+        mainImg.src = src;
+        mainImg.onload = () => mainImg.style.opacity = "1";
+
+        document.querySelectorAll('.thumbnail-img').forEach(t => t.classList.remove('active'));
+        thumbElement.classList.add('active');
+        thumbElement.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+    };
+
+    // --- 4. CHIUSURA E UTILITY ---
     const chiudi = () => {
         modal.style.display = "none";
         document.body.style.overflow = "auto";
     };
 
     if (closeBtn) closeBtn.onclick = chiudi;
+    document.addEventListener('keydown', (e) => { if (e.key === "Escape") chiudi(); });
 
-    // Chiusura con tasto ESC
-    document.addEventListener('keydown', (e) => {
-        if (e.key === "Escape") chiudi();
-    });
+    if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+            const t = e.target.value.toLowerCase();
+            const f = tuttiITrek.filter(x =>
+                x.titolo.toLowerCase().includes(t) ||
+                x.luogo.toLowerCase().includes(t) ||
+                x.descrizione.toLowerCase().includes(t)
+            );
+            renderTrek(f);
+        });
+    }
 
-    // Scroll orizzontale gallery con rotellina
+    // Scroll gallery orizzontale
     if (galleryContainer) {
         galleryContainer.addEventListener("wheel", (evt) => {
             evt.preventDefault();
             galleryContainer.scrollLeft += evt.deltaY;
         }, { passive: false });
-    }
-
-    // Disabilita click destro nel modal
-    if (modal) {
-        modal.oncontextmenu = (e) => e.preventDefault();
     }
 });

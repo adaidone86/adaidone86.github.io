@@ -20,7 +20,6 @@
     height: 90vh;
     display: flex;
     flex-direction: column;
-    /* Spazio tra layout superiore (foto+testo) e gallery inferiore */
     justify-content: space-between;
 }
 
@@ -30,21 +29,23 @@
     flex-direction: row;
     gap: 30px;
     width: 100%;
-    flex: 1; /* Occupa tutto lo spazio centrale */
-    min-height: 0; /* Permette lo scroll interno se il testo è lungo */
+    flex: 1;
+    min-height: 0;
     margin-bottom: 20px;
 }
 
 /* Pannello descrizione (30%) */
 #modal-desc-container {
-    flex: 0 0 30%;
+    flex: 0 0 32%;
     text-align: left;
     color: white;
-    overflow-y: auto;
+    overflow-y: hidden; /* Lo scroll sarà gestito dal sotto-contenitore */
     padding: 20px;
     background: rgba(255, 255, 255, 0.05);
     border-radius: 12px;
     border: 1px solid rgba(255, 219, 88, 0.2);
+    display: flex;
+    flex-direction: column;
 }
 
 #modal-title {
@@ -54,17 +55,75 @@
     border-bottom: 1px solid #ffdb58;
     padding-bottom: 10px;
     margin-bottom: 15px;
+    flex-shrink: 0;
 }
 
+/* Contenitore interno scrollabile per descrizioni e tappe */
 #modal-full-desc {
     font-size: 0.95rem;
     line-height: 1.6;
-    white-space: pre-line;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+/* --- STILE PULSANTI GIORNI (Stile Vinili) --- */
+.giorni-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 15px 0;
+    padding-bottom: 15px;
+    border-bottom: 1px dashed rgba(255, 219, 88, 0.3);
+    /* AGGIUNTA: Centra i bottoni nello spazio disponibile */
+    justify-content: center;
+}
+
+.tappa-btn {
+    background-color: #222;
+    color: #ffdb58;
+    border: 1px solid #ffdb58;
+    padding: 6px 14px;
+    border-radius: 20px; /* Effetto pastiglia */
+    cursor: pointer;
+    font-size: 0.8rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+.tappa-btn:hover, .tappa-btn.active {
+    background-color: #ffdb58;
+    color: #000;
+    transform: translateY(-2px);
+}
+
+/* --- CONTENUTO TAPPA SELEZIONATA --- */
+.tappa-content {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 12px;
+    border-radius: 8px;
+    border-left: 3px solid #ffdb58;
+    margin-top: 10px;
+}
+
+.tappa-info-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #ffdb58;
+    font-size: 0.85rem;
+}
+
+.tappa-desc-text {
+    font-style: italic;
+    color: #ddd;
+    margin: 0;
 }
 
 /* Contenitore Foto Grande (70%) */
 #main-photo-container {
-    flex: 0 0 70%;
+    flex: 1;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -77,53 +136,47 @@
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
-    opacity: 1;
     transition: opacity 0.2s ease-in-out;
 }
 
-/* 2. Barra delle miniature (Sempre in basso) */
+/* 2. Barra delle miniature */
 #gallery-container {
     width: 100%;
-    height: 110px; /* Altezza necessaria per vedere le immagini */
-    display: flex; /* Mette le miniature in riga */
+    height: 110px;
+    display: flex;
     align-items: center;
     gap: 12px;
     padding: 10px 0;
-    overflow-x: auto; /* Permette lo scroll orizzontale */
+    overflow-x: auto;
     border-top: 1px solid #333;
-    position: relative;
-    z-index: 10010;
-}
-
-/* Personalizzazione Scrollbar */
-#gallery-container::-webkit-scrollbar {
-    height: 10px;
-}
-#gallery-container::-webkit-scrollbar-track {
-    background: #1a1a1a;
-    border-radius: 10px;
-}
-#gallery-container::-webkit-scrollbar-thumb {
-    background: #ffdb58;
-    border-radius: 10px;
-    border: 2px solid #1a1a1a;
 }
 
 .thumbnail-img {
-    height: 80px; /* Altezza fissa delle miniature */
-    flex: 0 0 auto; /* Impedisce alle immagini di restringersi */
+    height: 80px;
+    flex: 0 0 auto;
     cursor: pointer;
     border-radius: 6px;
     opacity: 0.5;
     transition: all 0.3s ease;
     border: 2px solid transparent;
-    pointer-events: auto !important;
 }
 
 .thumbnail-img.active, .thumbnail-img:hover {
     opacity: 1;
     border: 2px solid #ffdb58;
     transform: scale(1.05);
+}
+
+/* Scrollbar Personalizzata */
+#modal-full-desc::-webkit-scrollbar,
+#gallery-container::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+#modal-full-desc::-webkit-scrollbar-thumb,
+#gallery-container::-webkit-scrollbar-thumb {
+    background: #ffdb58;
+    border-radius: 10px;
 }
 
 /* Pulsante di chiusura */
@@ -136,22 +189,21 @@
     font-weight: bold;
     cursor: pointer;
     z-index: 10005;
-    transition: 0.2s;
 }
 
 /* 3. Ottimizzazione Mobile */
 @media (max-width: 900px) {
     .modal-top-layout {
         flex-direction: column;
-        overflow-y: auto; /* Permette di scorrere tutto su mobile */
+        overflow-y: auto;
     }
     #modal-desc-container {
         flex: 0 0 auto;
         width: 100%;
-        max-height: 200px; /* Limita il testo su mobile */
+        max-height: 350px;
     }
     #main-photo-container {
-        flex: 0 0 300px; /* Altezza fissa minima per la foto su mobile */
+        flex: 0 0 300px;
         width: 100%;
     }
 }
