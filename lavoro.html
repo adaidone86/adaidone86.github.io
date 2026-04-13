@@ -10,10 +10,19 @@
     <link rel="stylesheet" href="css/flip-animation.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/body.css">
-    <link rel="stylesheet" href="css/work-art.css"> <link rel="stylesheet" href="css/scroll-controls.css">
+    <link rel="stylesheet" href="css/work-art.css">
+    <link rel="stylesheet" href="css/scroll-controls.css">
     <link rel="stylesheet" href="css/buttons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+<div id="quote-overlay" class="quote-overlay">
+    <div class="quote-content">
+        <span class="close-quote" title="Chiudi">&times;</span>
+        <p id="quote-text"></p>
+        <strong id="quote-author"></strong>
+    </div>
+</div>
 
 <div class="top-wrapper">
     <header class="main-header">
@@ -34,6 +43,11 @@
     </header>
 
     <nav class="hobby-nav">
+        <div class="quote-trigger-wrapper">
+            <button id="btn-random-quote" title="Clicca per una perla di saggezza">
+                <i class="fa-solid fa-lightbulb"></i> Ispirazione?
+            </button>
+        </div>
         <ul>
             <li><a href="index.html" class="hobby-link">Su di me 🏠</a></li>
             <li><a class="hobby-link disabled">Lavoro 🏢</a></li>
@@ -154,6 +168,7 @@
 </footer>
 <script src="js/flip-memory.js"></script>
 <script src="js/scroll-handler.js"></script>
+<script src="js/quote-handler.js"></script>
 
 </body>
 </html>
