@@ -6,18 +6,83 @@
     "descrizione": "Contiene la celeberrima Iris, un pezzo di storia degli anni '90.",
     "video": "img/vinile/dizzy-up-the-girl/video.mp4",
     "tracklist": [
-        "Dizzy",
-        "Slide",
-        "Broadway",
-        "January Friend",
-        "Black Balloon",
-        "Bullet Proof",
-        "Amigone",
-        "All Eyes on Me",
-        "Full Forever",
-        "Acoustic #3",
-        "Iris",
-        "Extra Pale",
-        "Hate This Place"
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 1,
+            "titolo": "Dizzy"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 2,
+            "titolo": "Slide"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 3,
+            "titolo": "Broadway"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 4,
+            "titolo": "January Friend"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 5,
+            "titolo": "Black Balloon"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 6,
+            "titolo": "Bullet Proof"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 7,
+            "titolo": "Amigone"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 8,
+            "titolo": "All Eyes on Me"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 9,
+            "titolo": "Full Forever"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 10,
+            "titolo": "Acoustic #3"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 11,
+            "titolo": "Iris"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 12,
+            "titolo": "Extra Pale"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 13,
+            "titolo": "Hate This Place"
+        }
     ]
 }

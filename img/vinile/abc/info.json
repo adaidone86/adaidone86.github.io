@@ -6,17 +6,77 @@
     "descrizione": "L'energia contagiosa di un giovanissimo Michael Jackson.",
     "video": "img/vinile/abc/video.mp4",
     "tracklist": [
-        "The Love You Save",
-        "One More Chance",
-        "ABC",
-        "2-4-6-8",
-        "(Come 'Round Here) I'm the One You Need",
-        "Don't Know Why I Love You",
-        "Never Had a Dream Come True",
-        "True Love Can Be Beautiful",
-        "La La (Means I Love You)",
-        "I'll Bet You",
-        "I Found That Girl",
-        "The Young Folks"
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 1,
+            "titolo": "The Love You Save"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 2,
+            "titolo": "One More Chance"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 3,
+            "titolo": "ABC"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 4,
+            "titolo": "2-4-6-8"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 5,
+            "titolo": "(Come 'Round Here) I'm the One You Need"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 6,
+            "titolo": "Don't Know Why I Love You"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 7,
+            "titolo": "Never Had a Dream Come True"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 8,
+            "titolo": "True Love Can Be Beautiful"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 9,
+            "titolo": "La La (Means I Love You)"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 10,
+            "titolo": "I'll Bet You"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 11,
+            "titolo": "I Found That Girl"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 12,
+            "titolo": "The Young Folks"
+        }
     ]
 }

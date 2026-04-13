@@ -4,38 +4,73 @@ const repo = "adaidone86.github.io";
 
 // --- FUNZIONI PER IL MODAL (POP-UP) ---
 
+// --- FUNZIONI PER IL MODAL (POP-UP) ---
+
 function openVinylModal(dati, folderName) {
     const modal = document.getElementById('vinyl-modal');
     const videoContainer = document.getElementById('modal-video');
 
     if (!modal || !videoContainer) return;
 
-    // Inseriamo i testi base
     document.getElementById('modal-title').innerText = dati.album;
     document.getElementById('modal-artist').innerText = dati.artista;
     document.getElementById('modal-description').innerText = dati.descrizione || "Nessun aneddoto disponibile per questo disco.";
 
-    // --- NUOVA GESTIONE TRACKLIST ---
+    // --- GESTIONE TRACKLIST CON TAB ---
     let tracklistHTML = "";
     if (dati.tracklist && dati.tracklist.length > 0) {
+        // 1. Raggruppiamo i brani per Disco e Lato
+        const groups = {};
+        dati.tracklist.forEach(brano => {
+            const key = `Disco ${brano.disco} - Lato ${brano.lato}`;
+            if (!groups[key]) groups[key] = [];
+            groups[key].push(brano);
+        });
+
+        const keys = Object.keys(groups); // Es. ["Disco 1 - Lato A", "Disco 1 - Lato B"]
+
+        // 2. Creiamo i bottoncini (Tab)
+        let buttonsHTML = `<div class="tracklist-tabs" style="margin-bottom: 15px; display: flex; gap: 10px; flex-wrap: wrap;">`;
+        keys.forEach((key, index) => {
+            const activeClass = index === 0 ? 'active-tab' : '';
+            buttonsHTML += `
+                <button class="tab-btn ${activeClass}"
+                        onclick="mostraTabTracklist(this, '${key.replace(/\s/g, '-')}')"
+                        style="padding: 5px 12px; border: 1px solid #ffdb58; background: transparent; color: #ffdb58; cursor: pointer; border-radius: 5px; font-size: 0.8em;">
+                    ${key}
+                </button>`;
+        });
+        buttonsHTML += `</div>`;
+
+        // 3. Creiamo i contenitori delle liste
+        let listsHTML = `<div class="tracklist-containers">`;
+        keys.forEach((key, index) => {
+            const displayStyle = index === 0 ? 'block' : 'none';
+            listsHTML += `
+                <ul id="${key.replace(/\s/g, '-')}" class="tab-content" style="display: ${displayStyle}; list-style: none; padding-left: 0;">
+                    ${groups[key].map(brano => `
+                        <li style="margin-bottom: 5px; font-size: 0.9em;">
+                            <span style="color: #ffdb58; font-weight: bold; margin-right: 10px;">${brano.n}.</span>
+                            ${brano.titolo}
+                        </li>
+                    `).join('')}
+                </ul>`;
+        });
+        listsHTML += `</div>`;
+
         tracklistHTML = `
-            <div class="modal-tracklist">
-                <h4><i class="fas fa-list"></i> Canzoni:</h4>
-                <ol>
-                    ${dati.tracklist.map(canzone => `<li>${canzone}</li>`).join('')}
-                </ol>
+            <div class="modal-tracklist" style="margin-top: 20px; border-top: 1px solid #333; padding-top: 15px;">
+                <h4 style="color: #ffdb58; margin-bottom: 15px;"><i class="fas fa-list"></i> Tracce</h4>
+                ${buttonsHTML}
+                ${listsHTML}
             </div>
         `;
     }
 
-    // Aggiungiamo la tracklist sotto la descrizione (o dove preferisci)
     const infoContainer = document.querySelector('.modal-info');
-    // Rimuoviamo eventuali tracklist precedenti se il modal viene riaperto
     const vecchiaTracklist = infoContainer.querySelector('.modal-tracklist');
     if (vecchiaTracklist) vecchiaTracklist.remove();
-
     infoContainer.insertAdjacentHTML('beforeend', tracklistHTML);
-    // --------------------------------
 
     // Gestione Video
     const videoSource = dati.video || `img/vinile/${folderName}/video.mp4`;
@@ -50,6 +85,25 @@ function openVinylModal(dati, folderName) {
     document.body.style.overflow = "hidden";
 }
 
+// Funzione globale per cambiare Tab (deve essere fuori dalle altre funzioni)
+window.mostraTabTracklist = function(btn, targetId) {
+    // Rimuovi classe active da tutti i bottoni del modal
+    const parent = btn.parentElement;
+    parent.querySelectorAll('.tab-btn').forEach(b => {
+        b.style.background = "transparent";
+        b.style.color = "#ffdb58";
+    });
+
+    // Nascondi tutte le liste
+    const container = parent.nextElementSibling;
+    container.querySelectorAll('.tab-content').forEach(ul => ul.style.display = "none");
+
+    // Attiva quello cliccato
+    btn.style.background = "#ffdb58";
+    btn.style.color = "#000";
+    document.getElementById(targetId).style.display = "block";
+}
+
 function closeModal() {
     const modal = document.getElementById('vinyl-modal');
     if (modal) {
@@ -60,9 +114,17 @@ function closeModal() {
     }
 }
 
-// Chiudi cliccando sulla X o fuori dal modal
+// Chiudi SOLO se clicchi sulla X
 document.addEventListener('click', (e) => {
-    if (e.target.classList.contains('close-modal') || e.target.id === 'vinyl-modal') {
+    // Verifichiamo se l'elemento cliccato ha la classe 'close-modal'
+    if (e.target.classList.contains('close-modal')) {
+        closeModal();
+    }
+});
+
+// Opzionale: Permetti la chiusura premendo il tasto ESC sulla tastiera
+document.addEventListener('keydown', (e) => {
+    if (e.key === "Escape") {
         closeModal();
     }
 });

@@ -6,15 +6,65 @@
     "descrizione": "Un muro di suono dedicato alla memoria di Bon Scott.",
     "video": "img/vinile/back-in-black/video.mp4",
     "tracklist": [
-        "Hells Bells",
-        "Shoot to Thrill",
-        "What Do You Do for Money Honey",
-        "Givin the Dog a Bone",
-        "Let Me Put My Love Into You",
-        "Back In Black",
-        "You Shook Me All Night Long",
-        "Have a Drink On Me",
-        "Shake a Leg",
-        "Rock and Roll Ain't Noise Pollution"
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 1,
+            "titolo": "Hells Bells"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 2,
+            "titolo": "Shoot to Thrill"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 3,
+            "titolo": "What Do You Do for Money Honey"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 4,
+            "titolo": "Givin the Dog a Bone"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 5,
+            "titolo": "Let Me Put My Love Into You"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 6,
+            "titolo": "Back In Black"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 7,
+            "titolo": "You Shook Me All Night Long"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 8,
+            "titolo": "Have a Drink On Me"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 9,
+            "titolo": "Shake a Leg"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 10,
+            "titolo": "Rock and Roll Ain't Noise Pollution"
+        }
     ]
 }

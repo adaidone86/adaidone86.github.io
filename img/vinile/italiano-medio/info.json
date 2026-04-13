@@ -6,22 +6,107 @@
     "descrizione": "L'ironia di J-Ax che fotografa i vizi dell'Italia.",
     "video": "img/vinile/italiano-medio/video.mp4",
     "tracklist": [
-        "Prima qualità",
-        "Bestie mutanti",
-        "La mia ragazza Mena (feat. Bruno De Filippi)",
-        "La canzone del dito",
-        "Senza dubbio",
-        "La nuova stella del pop (numero 1 in Italia)",
-        "A pugni col mondo",
-        "Caravita",
-        "I consigli di un pirla",
-        "1972",
-        "Manate",
-        "Cara mia ex",
-        "L'Italiano medio",
-        "Sputate al re",
-        "La finestra",
-        "Commodore 64 Vs PC",
-        "Il mio viaggio"
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 1,
+            "titolo": "Prima qualità"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 2,
+            "titolo": "Bestie mutanti"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 3,
+            "titolo": "La mia ragazza Mena (feat. Bruno De Filippi)"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 4,
+            "titolo": "La canzone del dito"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 5,
+            "titolo": "Senza dubbio"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 6,
+            "titolo": "La nuova stella del pop (numero 1 in Italia)"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 7,
+            "titolo": "A pugni col mondo"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 8,
+            "titolo": "Caravita"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 9,
+            "titolo": "I consigli di un pirla"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 10,
+            "titolo": "1972"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 11,
+            "titolo": "Manate"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 12,
+            "titolo": "Cara mia ex"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 13,
+            "titolo": "L'Italiano medio"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 14,
+            "titolo": "Sputate al re"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 15,
+            "titolo": "La finestra"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 16,
+            "titolo": "Commodore 64 Vs PC"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 17,
+            "titolo": "Il mio viaggio"
+        }
     ]
 }

@@ -6,16 +6,71 @@
     "descrizione": "Soul delicato e solare, perfetto per il relax.",
     "video": "img/vinile/corinne-bailey-rae/video.mp4",
     "tracklist": [
-        "Like a Star",
-        "Enchantment",
-        "Put Your Records On",
-        "Till It Happens to You",
-        "Trouble Sleeping",
-        "Call Me When You Get This",
-        "Choux Pastry Heart",
-        "Breathless",
-        "I'd Like To",
-        "Butterfly",
-        "Seasons Change"
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 1,
+            "titolo": "Like a Star"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 2,
+            "titolo": "Enchantment"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 3,
+            "titolo": "Put Your Records On"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 4,
+            "titolo": "Till It Happens to You"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 5,
+            "titolo": "Trouble Sleeping"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 6,
+            "titolo": "Call Me When You Get This"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 7,
+            "titolo": "Choux Pastry Heart"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 8,
+            "titolo": "Breathless"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 9,
+            "titolo": "I'd Like To"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 10,
+            "titolo": "Butterfly"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 11,
+            "titolo": "Seasons Change"
+        }
     ]
 }

@@ -6,17 +6,77 @@
     "descrizione": "Riff magnetici e un sound notturno e sexy.",
     "video": "img/vinile/am/video.mp4",
     "tracklist": [
-        "Do I Wanna Know?",
-        "R U Mine?",
-        "One for the Road",
-        "Arabella",
-        "I Want It All",
-        "No. 1 Party Anthem",
-        "Mad Sounds",
-        "Fireside",
-        "Why'd You Only Call Me When You're High?",
-        "Snap Out of It",
-        "Knee Socks",
-        "I Wanna Be Yours"
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 1,
+            "titolo": "Do I Wanna Know?"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 2,
+            "titolo": "R U Mine?"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 3,
+            "titolo": "One for the Road"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 4,
+            "titolo": "Arabella"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 5,
+            "titolo": "I Want It All"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 6,
+            "titolo": "No. 1 Party Anthem"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 7,
+            "titolo": "Mad Sounds"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 8,
+            "titolo": "Fireside"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 9,
+            "titolo": "Why'd You Only Call Me When You're High?"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 10,
+            "titolo": "Snap Out of It"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 11,
+            "titolo": "Knee Socks"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 12,
+            "titolo": "I Wanna Be Yours"
+        }
     ]
 }

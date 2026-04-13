@@ -6,17 +6,77 @@
     "descrizione": "L'esordio record del re delle ballate moderne.",
     "video": "img/vinile/divinely-uninspired/video.mp4",
     "tracklist": [
-        "Grace (Instrumental)",
-        "Bruises (Instrumental)",
-        "Hold Me While You Wait (Instrumental)",
-        "Slide Away (Instrumental)",
-        "Maybe (Instrumental)",
-        "Forever (Instrumental)",
-        "One (Instrumental)",
-        "Don't Get Me Wrong (Instrumental)",
-        "Hollywood (Instrumental)",
-        "Lost on You (Instrumental)",
-        "Fade (Instrumental)",
-        "Headspace (Instrumental)"
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 1,
+            "titolo": "Grace (Instrumental)"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 2,
+            "titolo": "Bruises (Instrumental)"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 3,
+            "titolo": "Hold Me While You Wait (Instrumental)"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 4,
+            "titolo": "Slide Away (Instrumental)"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 5,
+            "titolo": "Maybe (Instrumental)"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 6,
+            "titolo": "Forever (Instrumental)"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 7,
+            "titolo": "One (Instrumental)"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 8,
+            "titolo": "Don't Get Me Wrong (Instrumental)"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 9,
+            "titolo": "Hollywood (Instrumental)"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 10,
+            "titolo": "Lost on You (Instrumental)"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 11,
+            "titolo": "Fade (Instrumental)"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 12,
+            "titolo": "Headspace (Instrumental)"
+        }
     ]
 }

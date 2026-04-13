@@ -6,18 +6,83 @@
     "descrizione": "Contiene Bitter Sweet Symphony, un inno generazionale.",
     "video": "img/vinile/urban-hymns/video.mp4",
     "tracklist": [
-        "Bitter Sweet Symphony",
-        "Sonnet",
-        "The Rolling People",
-        "The Drugs Don't Work",
-        "Catching the Butterfly",
-        "Neon Wilderness",
-        "Space and Time",
-        "Weeping Willow",
-        "Lucky Man",
-        "One Day",
-        "This Time",
-        "Velvet Morning",
-        "Come On"
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 1,
+            "titolo": "Bitter Sweet Symphony"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 2,
+            "titolo": "Sonnet"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 3,
+            "titolo": "The Rolling People"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 4,
+            "titolo": "The Drugs Don't Work"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 5,
+            "titolo": "Catching the Butterfly"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 6,
+            "titolo": "Neon Wilderness"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 7,
+            "titolo": "Space and Time"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 8,
+            "titolo": "Weeping Willow"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 9,
+            "titolo": "Lucky Man"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 10,
+            "titolo": "One Day"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 11,
+            "titolo": "This Time"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 12,
+            "titolo": "Velvet Morning"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 13,
+            "titolo": "Come On"
+        }
     ]
 }

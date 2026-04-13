@@ -6,17 +6,77 @@
     "descrizione": "Il blues mediterraneo che ha cambiato la musica italiana.",
     "video": "img/vinile/nero-a-meta/video.mp4",
     "tracklist": [
-        "I Say I' Sto Ccà",
-        "Musica Musica",
-        "Quanno Chiove",
-        "Puozze Passà' Nu Guaio",
-        "Voglio Di Più",
-        "Appocundria",
-        "A Me Me Piace 'O Blues",
-        "E So' Cuntento 'E Sta'",
-        "Nun Me Scoccià",
-        "Alleria",
-        "A Testa In Giù",
-        "Sotto 'O Sole"
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 1,
+            "titolo": "I Say I' Sto Ccà"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 2,
+            "titolo": "Musica Musica"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 3,
+            "titolo": "Quanno Chiove"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 4,
+            "titolo": "Puozze Passà' Nu Guaio"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 5,
+            "titolo": "Voglio Di Più"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 6,
+            "titolo": "Appocundria"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 7,
+            "titolo": "A Me Me Piace 'O Blues"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 8,
+            "titolo": "E So' Cuntento 'E Sta'"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 9,
+            "titolo": "Nun Me Scoccià"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 10,
+            "titolo": "Alleria"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 11,
+            "titolo": "A Testa In Giù"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 12,
+            "titolo": "Sotto 'O Sole"
+        }
     ]
 }

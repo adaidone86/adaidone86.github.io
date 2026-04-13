@@ -6,17 +6,77 @@
     "descrizione": "Un mix epico di rock, elettronica e fantascienza.",
     "video": "img/vinile/black-holes/video.mp4",
     "tracklist": [
-        "Take a Bow",
-        "Starlight",
-        "Supermassive Black Hole",
-        "Map of the Problematique",
-        "Soldier's Poem",
-        "Invincible",
-        "Assassin",
-        "Exo-Politics",
-        "City of Delusion",
-        "Hoodoo",
-        "Knights of Cydonia",
-        "Glorious (Bonus Track)"
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 1,
+            "titolo": "Take a Bow"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 2,
+            "titolo": "Starlight"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 3,
+            "titolo": "Supermassive Black Hole"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 4,
+            "titolo": "Map of the Problematique"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 5,
+            "titolo": "Soldier's Poem"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 6,
+            "titolo": "Invincible"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 7,
+            "titolo": "Assassin"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 8,
+            "titolo": "Exo-Politics"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 9,
+            "titolo": "City of Delusion"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 10,
+            "titolo": "Hoodoo"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 11,
+            "titolo": "Knights of Cydonia"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 12,
+            "titolo": "Glorious (Bonus Track)"
+        }
     ]
 }

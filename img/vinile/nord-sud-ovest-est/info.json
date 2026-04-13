@@ -6,21 +6,101 @@
     "descrizione": "Il viaggio zaino in spalla della generazione anni '90.",
     "video": "img/vinile/nord-sud-ovest-est/video.mp4",
     "tracklist": [
-        "Il Pappagallo",
-        "Sei Un Mito",
-        "Non Ci Spezziamo",
-        "Come Mai",
-        "Rotta X Casa Di Dio",
-        "Nord Sud Ovest Est",
-        "Ma Perché",
-        "Weekend",
-        "Cumuli",
-        "Nella Notte",
-        "Caterina (Aeroplano)",
-        "L'ultimo bicchiere (Demo Version)",
-        "Sei un mito (Stefano Secchi Remix)",
-        "Come mai (Bliss Team Remix)",
-        "Nord sud ovest est (Datura Sonora Remix)",
-        "Nella notte (Molella Remix)"
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 1,
+            "titolo": "Il Pappagallo"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 2,
+            "titolo": "Sei Un Mito"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 3,
+            "titolo": "Non Ci Spezziamo"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 4,
+            "titolo": "Come Mai"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 5,
+            "titolo": "Rotta X Casa Di Dio"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 6,
+            "titolo": "Nord Sud Ovest Est"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 7,
+            "titolo": "Ma Perché"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 8,
+            "titolo": "Weekend"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 9,
+            "titolo": "Cumuli"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 10,
+            "titolo": "Nella Notte"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 11,
+            "titolo": "Caterina (Aeroplano)"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 12,
+            "titolo": "L'ultimo bicchiere (Demo Version)"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 13,
+            "titolo": "Sei un mito (Stefano Secchi Remix)"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 14,
+            "titolo": "Come mai (Bliss Team Remix)"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 15,
+            "titolo": "Nord sud ovest est (Datura Sonora Remix)"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 16,
+            "titolo": "Nella notte (Molella Remix)"
+        }
     ]
 }

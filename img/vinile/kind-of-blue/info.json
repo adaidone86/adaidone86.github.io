@@ -6,10 +6,35 @@
     "descrizione": "Il capolavoro del jazz modale, un disco che non stanca mai.",
     "video": "img/vinile/kind-of-blue/video.mp4",
     "tracklist": [
-        "So What",
-        "Freddie Freeloader",
-        "Blue In Green",
-        "All Blues",
-        "Flamenco Sketches"
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 1,
+            "titolo": "So What"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 2,
+            "titolo": "Freddie Freeloader"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 3,
+            "titolo": "Blue In Green"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 4,
+            "titolo": "All Blues"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 5,
+            "titolo": "Flamenco Sketches"
+        }
     ]
 }

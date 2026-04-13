@@ -6,21 +6,101 @@
     "descrizione": "Il nuovo inizio dopo anni di silenzio.",
     "video": "img/vinile/from-zero/video.mp4",
     "tracklist": [
-        "Papercut",
-        "One Step Closer",
-        "With You",
-        "Points of Authority",
-        "Crawling",
-        "Runaway",
-        "By Myself",
-        "In the End",
-        "A Place for My Head",
-        "Forgotten",
-        "Cure for the Itch",
-        "Pushing Me Away",
-        "High Voltage (Bonus Track)",
-        "My December (Bonus Track)",
-        "Pts.Of.Athrty (The Crystal Method Remix)",
-        "Papercut (Live at Milton Keynes)"
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 1,
+            "titolo": "Papercut"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 2,
+            "titolo": "One Step Closer"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 3,
+            "titolo": "With You"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 4,
+            "titolo": "Points of Authority"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 5,
+            "titolo": "Crawling"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 6,
+            "titolo": "Runaway"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 7,
+            "titolo": "By Myself"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 8,
+            "titolo": "In the End"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 9,
+            "titolo": "A Place for My Head"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 10,
+            "titolo": "Forgotten"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 11,
+            "titolo": "Cure for the Itch"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 12,
+            "titolo": "Pushing Me Away"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 13,
+            "titolo": "High Voltage (Bonus Track)"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 14,
+            "titolo": "My December (Bonus Track)"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 15,
+            "titolo": "Pts.Of.Athrty (The Crystal Method Remix)"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 16,
+            "titolo": "Papercut (Live at Milton Keynes)"
+        }
     ]
 }

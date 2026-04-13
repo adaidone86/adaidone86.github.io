@@ -6,17 +6,77 @@
     "descrizione": "Ray Charles nel suo elemento naturale: il blues.",
     "video": "img/vinile/genius-sings-the-blues/video.mp4",
     "tracklist": [
-        "Early In the Mornin'",
-        "Hard Times (No One Knows Better Than I)",
-        "The Midnight Hour",
-        "(Night Time Is) The Right Time",
-        "Feelin' Sad",
-        "Ray's Blues",
-        "I'm Movin' On (Stereo Version)",
-        "I Believe to My Soul",
-        "Nobody Cares",
-        "Mr. Charles' Blues",
-        "Some Day Baby (LP Version)",
-        "I Wonder Who"
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 1,
+            "titolo": "Early In the Mornin'"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 2,
+            "titolo": "Hard Times (No One Knows Better Than I)"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 3,
+            "titolo": "The Midnight Hour"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 4,
+            "titolo": "(Night Time Is) The Right Time"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 5,
+            "titolo": "Feelin' Sad"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 6,
+            "titolo": "Ray's Blues"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 7,
+            "titolo": "I'm Movin' On (Stereo Version)"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 8,
+            "titolo": "I Believe to My Soul"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 9,
+            "titolo": "Nobody Cares"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 10,
+            "titolo": "Mr. Charles' Blues"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 11,
+            "titolo": "Some Day Baby (LP Version)"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 12,
+            "titolo": "I Wonder Who"
+        }
     ]
 }

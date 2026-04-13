@@ -6,15 +6,65 @@
     "descrizione": "Il disco che ha fuso gospel e blues creando il soul.",
     "video": "img/vinile/whatd-i-say/video.mp4",
     "tracklist": [
-        "What'd I Say, Pt. 1",
-        "Jumpin' In the Morning",
-        "You Be My Baby (Stereo Version)",
-        "Tell Me How Do You Feel (Stereo Version)",
-        "What Kind of Man Are You",
-        "Rockhouse, Pts. 1 & 2",
-        "Roll With My Baby",
-        "Tell All the World About You (Stereo Version)",
-        "My Bonnie (Stereo Version)",
-        "That's Enough"
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 1,
+            "titolo": "What'd I Say, Pt. 1"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 2,
+            "titolo": "Jumpin' In the Morning"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 3,
+            "titolo": "You Be My Baby (Stereo Version)"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 4,
+            "titolo": "Tell Me How Do You Feel (Stereo Version)"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 5,
+            "titolo": "What Kind of Man Are You"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 6,
+            "titolo": "Rockhouse, Pts. 1 & 2"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 7,
+            "titolo": "Roll With My Baby"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 8,
+            "titolo": "Tell All the World About You (Stereo Version)"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 9,
+            "titolo": "My Bonnie (Stereo Version)"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 10,
+            "titolo": "That's Enough"
+        }
     ]
 }

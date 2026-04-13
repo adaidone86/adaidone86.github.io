@@ -6,16 +6,71 @@
     "descrizione": "Il re del pop al suo apice creativo dopo Thriller.",
     "video": "img/vinile/bad/video.mp4",
     "tracklist": [
-        "Bad",
-        "The Way You Make Me Feel",
-        "Speed Demon",
-        "Liberian Girl",
-        "Just Good Friends",
-        "Another Part of Me",
-        "Man In the Mirror",
-        "I Just Can't Stop Loving You",
-        "Dirty Diana",
-        "Smooth Criminal",
-        "Leave Me Alone"
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 1,
+            "titolo": "Bad"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 2,
+            "titolo": "The Way You Make Me Feel"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 3,
+            "titolo": "Speed Demon"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 4,
+            "titolo": "Liberian Girl"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 5,
+            "titolo": "Just Good Friends"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 6,
+            "titolo": "Another Part of Me"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 7,
+            "titolo": "Man In the Mirror"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 8,
+            "titolo": "I Just Can't Stop Loving You"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 9,
+            "titolo": "Dirty Diana"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 10,
+            "titolo": "Smooth Criminal"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 11,
+            "titolo": "Leave Me Alone"
+        }
     ]
 }

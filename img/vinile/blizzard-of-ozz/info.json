@@ -6,24 +6,119 @@
     "descrizione": "L'inizio della carriera solista del Principe delle Tenebre.",
     "video": "img/vinile/blizzard-of-ozz/video.mp4",
     "tracklist": [
-        "I Don't Know",
-        "Crazy Train",
-        "Goodbye to Romance",
-        "Dee",
-        "Suicide Solution",
-        "Mr. Crowley",
-        "No Bone Movies",
-        "Revelation (Mother Earth)",
-        "Steal Away (The Night)",
-        "You Looking at Me, Looking at You",
-        "Goodbye to Romance (2010 Guitar & Vocal Mix)",
-        "RR (Outtake from \"Blizzard of Ozz\" Sessions)",
-        "I Don't Know (Live from Blizzard of Ozz Tour)",
-        "Crazy Train (Live from Blizzard of Ozz Tour)",
-        "Mr. Crowley (Live from Blizzard of Ozz Tour)",
-        "Revelation (Mother Earth) [Live from Blizzard of Ozz Tour]",
-        "Steal Away (The Night) [Live from Blizzard of Ozz Tour]",
-        "Suicide Solution (Live from Blizzard of Ozz Tour)",
-        "You Said It All (Live)"
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 1,
+            "titolo": "I Don't Know"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 2,
+            "titolo": "Crazy Train"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 3,
+            "titolo": "Goodbye to Romance"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 4,
+            "titolo": "Dee"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 5,
+            "titolo": "Suicide Solution"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 6,
+            "titolo": "Mr. Crowley"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 7,
+            "titolo": "No Bone Movies"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 8,
+            "titolo": "Revelation (Mother Earth)"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 9,
+            "titolo": "Steal Away (The Night)"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 10,
+            "titolo": "You Looking at Me, Looking at You"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 11,
+            "titolo": "Goodbye to Romance (2010 Guitar & Vocal Mix)"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 12,
+            "titolo": "RR (Outtake from \"Blizzard of Ozz\" Sessions)"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 13,
+            "titolo": "I Don't Know (Live from Blizzard of Ozz Tour)"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 14,
+            "titolo": "Crazy Train (Live from Blizzard of Ozz Tour)"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 15,
+            "titolo": "Mr. Crowley (Live from Blizzard of Ozz Tour)"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 16,
+            "titolo": "Revelation (Mother Earth) [Live from Blizzard of Ozz Tour]"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 17,
+            "titolo": "Steal Away (The Night) [Live from Blizzard of Ozz Tour]"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 18,
+            "titolo": "Suicide Solution (Live from Blizzard of Ozz Tour)"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 19,
+            "titolo": "You Said It All (Live)"
+        }
     ]
 }

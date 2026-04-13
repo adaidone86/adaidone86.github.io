@@ -6,6 +6,11 @@
     "descrizione": "Energia pura, il miglior album d'esordio hard rock di sempre.",
     "video": "img/vinile/appetite-for-destruction/video.mp4",
     "tracklist": [
-        "Appetite for Destruction"
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 1,
+            "titolo": "Appetite for Destruction"
+        }
     ]
 }

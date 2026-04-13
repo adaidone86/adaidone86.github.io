@@ -6,19 +6,89 @@
     "descrizione": "La voce definitiva del blues e dell'R&B classico.",
     "video": "img/vinile/at-last/video.mp4",
     "tracklist": [
-        "Anything To Say You're Mine",
-        "My Dearest Darling",
-        "Trust In Me",
-        "A Sunday Kind of Love",
-        "Tough Mary",
-        "I Just Want To Make Love To You",
-        "At Last",
-        "All I Could Do Was Cry",
-        "Stormy Weather",
-        "Girl of My Dreams",
-        "My Heart Cries (feat. Harvey Fuqua)",
-        "Spoonful",
-        "It's a Crying Shame",
-        "If I Can't Have You (feat. Harvey Fuqua)"
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 1,
+            "titolo": "Anything To Say You're Mine"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 2,
+            "titolo": "My Dearest Darling"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 3,
+            "titolo": "Trust In Me"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 4,
+            "titolo": "A Sunday Kind of Love"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 5,
+            "titolo": "Tough Mary"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 6,
+            "titolo": "I Just Want To Make Love To You"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 7,
+            "titolo": "At Last"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 8,
+            "titolo": "All I Could Do Was Cry"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 9,
+            "titolo": "Stormy Weather"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 10,
+            "titolo": "Girl of My Dreams"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 11,
+            "titolo": "My Heart Cries (feat. Harvey Fuqua)"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 12,
+            "titolo": "Spoonful"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 13,
+            "titolo": "It's a Crying Shame"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 14,
+            "titolo": "If I Can't Have You (feat. Harvey Fuqua)"
+        }
     ]
 }

@@ -6,15 +6,65 @@
     "descrizione": "Melodie al pianoforte cariche di emozione.",
     "video": "img/vinile/the-fray/video.mp4",
     "tracklist": [
-        "Syndicate",
-        "Absolute",
-        "You Found Me",
-        "Say When",
-        "Never Say Never",
-        "Where the Story Ends",
-        "Enough for Now",
-        "Ungodly Hour",
-        "We Build Then We Break",
-        "Happiness"
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 1,
+            "titolo": "Syndicate"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 2,
+            "titolo": "Absolute"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 3,
+            "titolo": "You Found Me"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 4,
+            "titolo": "Say When"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 5,
+            "titolo": "Never Say Never"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 6,
+            "titolo": "Where the Story Ends"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 7,
+            "titolo": "Enough for Now"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 8,
+            "titolo": "Ungodly Hour"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 9,
+            "titolo": "We Build Then We Break"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 10,
+            "titolo": "Happiness"
+        }
     ]
 }

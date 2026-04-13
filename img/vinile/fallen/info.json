@@ -6,17 +6,77 @@
     "descrizione": "Gothic rock potente con la voce angelica di Amy Lee.",
     "video": "img/vinile/fallen/video.mp4",
     "tracklist": [
-        "Going Under",
-        "Bring Me to Life",
-        "Everybody's Fool",
-        "My Immortal",
-        "Haunted",
-        "Tourniquet",
-        "Imaginary",
-        "Taking Over Me",
-        "Hello",
-        "My Last Breath",
-        "Whisper",
-        "My Immortal (Band Version)"
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 1,
+            "titolo": "Going Under"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 2,
+            "titolo": "Bring Me to Life"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 3,
+            "titolo": "Everybody's Fool"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 4,
+            "titolo": "My Immortal"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 5,
+            "titolo": "Haunted"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 6,
+            "titolo": "Tourniquet"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 7,
+            "titolo": "Imaginary"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 8,
+            "titolo": "Taking Over Me"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 9,
+            "titolo": "Hello"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 10,
+            "titolo": "My Last Breath"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 11,
+            "titolo": "Whisper"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 12,
+            "titolo": "My Immortal (Band Version)"
+        }
     ]
 }

@@ -6,21 +6,101 @@
     "descrizione": "Un mix perfetto di energia live e precisione in studio.",
     "video": "img/vinile/moonflower/video.mp4",
     "tracklist": [
-        "Dawn / Go Within",
-        "Carnaval (Live)",
-        "Let the Children Play (Live)",
-        "Jugando (Live)",
-        "I'll Be Waiting",
-        "Zulu",
-        "Bahia",
-        "Black Magic Woman / Gypsy Queen (Live)",
-        "Dance Sister Dance (Baila Mi Hermana) [Live]",
-        "Europa (Earth's Cry Heaven's Smile) [Live]",
-        "She's Not There",
-        "Flor d'Luna (Moonflower)",
-        "Soul Sacrifice / Head, Hands & Feet (Live)",
-        "El Morocco",
-        "Transcendance",
-        "Savor / Toussaint L'Overture (Live)"
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 1,
+            "titolo": "Dawn / Go Within"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 2,
+            "titolo": "Carnaval (Live)"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 3,
+            "titolo": "Let the Children Play (Live)"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 4,
+            "titolo": "Jugando (Live)"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 5,
+            "titolo": "I'll Be Waiting"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 6,
+            "titolo": "Zulu"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 7,
+            "titolo": "Bahia"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 8,
+            "titolo": "Black Magic Woman / Gypsy Queen (Live)"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 9,
+            "titolo": "Dance Sister Dance (Baila Mi Hermana) [Live]"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 10,
+            "titolo": "Europa (Earth's Cry Heaven's Smile) [Live]"
+        },
+        {
+            "disco": 2,
+            "lato": "A",
+            "n": 1,
+            "titolo": "She's Not There"
+        },
+        {
+            "disco": 2,
+            "lato": "A",
+            "n": 2,
+            "titolo": "Flor d'Luna (Moonflower)"
+        },
+        {
+            "disco": 2,
+            "lato": "A",
+            "n": 3,
+            "titolo": "Soul Sacrifice / Head, Hands & Feet (Live)"
+        },
+        {
+            "disco": 2,
+            "lato": "A",
+            "n": 4,
+            "titolo": "El Morocco"
+        },
+        {
+            "disco": 2,
+            "lato": "A",
+            "n": 5,
+            "titolo": "Transcendance"
+        },
+        {
+            "disco": 2,
+            "lato": "A",
+            "n": 6,
+            "titolo": "Savor / Toussaint L'Overture (Live)"
+        }
     ]
 }

@@ -6,12 +6,47 @@
     "descrizione": "L'anima di Seattle racchiusa in un disco potente e cupo.",
     "video": "img/vinile/ten/video.mp4",
     "tracklist": [
-        "Oceans (Live MTV Unplugged)",
-        "State of Love and Trust (Live MTV Unplugged)",
-        "Alive (Live MTV Unplugged)",
-        "Black (Live MTV Unplugged)",
-        "Jeremy (Live MTV Unplugged)",
-        "Even Flow (Live MTV Unplugged)",
-        "Porch (Live MTV Unplugged)"
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 1,
+            "titolo": "Oceans (Live MTV Unplugged)"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 2,
+            "titolo": "State of Love and Trust (Live MTV Unplugged)"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 3,
+            "titolo": "Alive (Live MTV Unplugged)"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 4,
+            "titolo": "Black (Live MTV Unplugged)"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 5,
+            "titolo": "Jeremy (Live MTV Unplugged)"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 6,
+            "titolo": "Even Flow (Live MTV Unplugged)"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 7,
+            "titolo": "Porch (Live MTV Unplugged)"
+        }
     ]
 }

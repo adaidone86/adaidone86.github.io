@@ -6,16 +6,71 @@
     "descrizione": "Un'anima tormentata e una voce jazz prestata al soul moderno.",
     "video": "img/vinile/back-to-black-amy/video.mp4",
     "tracklist": [
-        "Rehab",
-        "You Know I'm No Good",
-        "Me & Mr. Jones",
-        "Just Friends",
-        "Back to Black",
-        "Love Is a Losing Game",
-        "Tears Dry On Their Own",
-        "Wake Up Alone",
-        "Some Unholy War",
-        "He Can Only Hold Her",
-        "Addicted"
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 1,
+            "titolo": "Rehab"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 2,
+            "titolo": "You Know I'm No Good"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 3,
+            "titolo": "Me & Mr. Jones"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 4,
+            "titolo": "Just Friends"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 5,
+            "titolo": "Back to Black"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 6,
+            "titolo": "Love Is a Losing Game"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 7,
+            "titolo": "Tears Dry On Their Own"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 8,
+            "titolo": "Wake Up Alone"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 9,
+            "titolo": "Some Unholy War"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 10,
+            "titolo": "He Can Only Hold Her"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 11,
+            "titolo": "Addicted"
+        }
     ]
 }

@@ -6,13 +6,53 @@
     "descrizione": "Il ritorno del rock classico con una voce che ricorda i Led Zeppelin.",
     "video": "img/vinile/from-the-fires/video.mp4",
     "tracklist": [
-        "Safari Song",
-        "Edge of Darkness",
-        "Flower Power",
-        "A Change is Gonna Come",
-        "Highway Tune",
-        "Meet On the Ledge",
-        "Talk On the Street",
-        "Black Smoke Rising"
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 1,
+            "titolo": "Safari Song"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 2,
+            "titolo": "Edge of Darkness"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 3,
+            "titolo": "Flower Power"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 4,
+            "titolo": "A Change is Gonna Come"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 5,
+            "titolo": "Highway Tune"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 6,
+            "titolo": "Meet On the Ledge"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 7,
+            "titolo": "Talk On the Street"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 8,
+            "titolo": "Black Smoke Rising"
+        }
     ]
 }

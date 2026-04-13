@@ -6,17 +6,77 @@
     "descrizione": "Il passaggio verso il rock sperimentale e malinconico.",
     "video": "img/vinile/the-bends/video.mp4",
     "tracklist": [
-        "Planet Telex",
-        "The Bends",
-        "High and Dry",
-        "Fake Plastic Trees",
-        "Bones",
-        "(Nice Dream)",
-        "Just",
-        "My Iron Lung",
-        "Bullet Proof ... I Wish I Was",
-        "Black Star",
-        "Sulk",
-        "Street Spirit (Fade Out)"
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 1,
+            "titolo": "Planet Telex"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 2,
+            "titolo": "The Bends"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 3,
+            "titolo": "High and Dry"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 4,
+            "titolo": "Fake Plastic Trees"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 5,
+            "titolo": "Bones"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 6,
+            "titolo": "(Nice Dream)"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 7,
+            "titolo": "Just"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 8,
+            "titolo": "My Iron Lung"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 9,
+            "titolo": "Bullet Proof ... I Wish I Was"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 10,
+            "titolo": "Black Star"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 11,
+            "titolo": "Sulk"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 12,
+            "titolo": "Street Spirit (Fade Out)"
+        }
     ]
 }

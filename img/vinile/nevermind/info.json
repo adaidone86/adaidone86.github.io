@@ -6,6 +6,11 @@
     "descrizione": "Il disco che ha definito una generazione.",
     "video": "img/vinile/nevermind/video.mp4",
     "tracklist": [
-        "Nevermind"
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 1,
+            "titolo": "Nevermind"
+        }
     ]
 }

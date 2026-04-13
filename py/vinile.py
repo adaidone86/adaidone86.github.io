@@ -57,13 +57,8 @@ vinili = [
 ]
 
 def recupera_dati_album(artista, album):
-    """
-    Recupera URL cover e lista canzoni in un'unica chiamata API
-    """
     query = urllib.parse.quote(f"{artista} {album}")
-    # Usiamo entity=album per trovare l'album, poi cerchiamo i brani tramite l'ID trovato
     url_ricerca = f"https://itunes.apple.com/search?term={query}&entity=album&limit=1"
-
     risultato = {"cover_url": None, "canzoni": []}
 
     try:
@@ -73,17 +68,35 @@ def recupera_dati_album(artista, album):
                 album_id = data['results'][0]['collectionId']
                 risultato["cover_url"] = data['results'][0]['artworkUrl100'].replace('100x100bb', '600x600bb')
 
-                # Seconda chiamata per ottenere i brani dell'album trovato
                 url_brani = f"https://itunes.apple.com/lookup?id={album_id}&entity=song"
                 with urllib.request.urlopen(url_brani) as resp_brani:
                     data_brani = json.loads(resp_brani.read().decode())
-                    # Il primo risultato della lookup è l'album stesso, i successivi sono i brani
+
+                    brani_temporanei = []
                     for item in data_brani['results']:
-                        if item['wrapperType'] == 'track':
-                            risultato["canzoni"].append(item['trackName'])
+                        if item.get('wrapperType') == 'track':
+                            # Prendiamo anche il numero del disco
+                            disco = item.get('discNumber', 1)
+                            traccia = item.get('trackNumber', 0)
+
+                            # Calcolo lato approssimativo (Tracce 1-6 = A, 7+ = B)
+                            # Se l'API non lo dà, è il modo più pulito di presentarlo
+                            lato = "A" if traccia <= 6 else "B"
+
+                            brani_temporanei.append({
+                                "disco": disco,
+                                "lato": lato,
+                                "n": traccia,
+                                "titolo": item.get('trackName', 'Unknown')
+                            })
+
+                    # Ordinamento accurato: Prima per Disco, poi per Traccia
+                    brani_temporanei.sort(key=lambda x: (x['disco'], x['n']))
+
+                    risultato["canzoni"] = brani_temporanei
+
     except Exception as e:
         print(f"Errore API per {album}: {e}")
-
     return risultato
 
 print(f"🚀 Avvio procedura")

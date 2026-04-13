@@ -6,17 +6,77 @@
     "descrizione": "Emozioni crude e una potenza vocale senza precedenti.",
     "video": "img/vinile/adele-21/video.mp4",
     "tracklist": [
-        "Rolling in the Deep",
-        "Rumour Has It",
-        "Turning Tables",
-        "Don't You Remember",
-        "Set Fire to the Rain",
-        "He Won't Go",
-        "Take It All",
-        "I'll Be Waiting",
-        "One and Only",
-        "Lovesong",
-        "Someone Like You",
-        "I Found a Boy"
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 1,
+            "titolo": "Rolling in the Deep"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 2,
+            "titolo": "Rumour Has It"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 3,
+            "titolo": "Turning Tables"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 4,
+            "titolo": "Don't You Remember"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 5,
+            "titolo": "Set Fire to the Rain"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 6,
+            "titolo": "He Won't Go"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 7,
+            "titolo": "Take It All"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 8,
+            "titolo": "I'll Be Waiting"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 9,
+            "titolo": "One and Only"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 10,
+            "titolo": "Lovesong"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 11,
+            "titolo": "Someone Like You"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 12,
+            "titolo": "I Found a Boy"
+        }
     ]
 }

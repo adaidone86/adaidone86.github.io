@@ -6,17 +6,77 @@
     "descrizione": "L'opera rock definitiva, contiene Bohemian Rhapsody.",
     "video": "img/vinile/night-at-the-opera/video.mp4",
     "tracklist": [
-        "Death On Two Legs (Dedicated To...)",
-        "Lazing On a Sunday Afternoon",
-        "I'm In Love With My Car",
-        "You're My Best Friend",
-        "'39",
-        "Sweet Lady",
-        "Seaside Rendezvous",
-        "The Prophet's Song",
-        "Love of My Life",
-        "Good Company",
-        "Bohemian Rhapsody",
-        "God Save the Queen"
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 1,
+            "titolo": "Death On Two Legs (Dedicated To...)"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 2,
+            "titolo": "Lazing On a Sunday Afternoon"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 3,
+            "titolo": "I'm In Love With My Car"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 4,
+            "titolo": "You're My Best Friend"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 5,
+            "titolo": "'39"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 6,
+            "titolo": "Sweet Lady"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 7,
+            "titolo": "Seaside Rendezvous"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 8,
+            "titolo": "The Prophet's Song"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 9,
+            "titolo": "Love of My Life"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 10,
+            "titolo": "Good Company"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 11,
+            "titolo": "Bohemian Rhapsody"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 12,
+            "titolo": "God Save the Queen"
+        }
     ]
 }

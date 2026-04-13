@@ -6,22 +6,107 @@
     "descrizione": "Il groove assoluto che ha fatto ballare il mondo intero.",
     "video": "img/vinile/earth-wind-fire-hits/video.mp4",
     "tracklist": [
-        "Shining Star",
-        "That's the Way of the World",
-        "September",
-        "Can't Hide Love",
-        "Got to Get You Into My Life",
-        "Sing a Song",
-        "Gratitude",
-        "Serpentine Fire",
-        "Fantasy",
-        "Kalimba Story",
-        "Mighty Mighty",
-        "Reasons",
-        "Saturday Nite",
-        "Let's Groove",
-        "Boogie Wonderland (with The Emotions)",
-        "After the Love Has Gone",
-        "Getaway"
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 1,
+            "titolo": "Shining Star"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 2,
+            "titolo": "That's the Way of the World"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 3,
+            "titolo": "September"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 4,
+            "titolo": "Can't Hide Love"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 5,
+            "titolo": "Got to Get You Into My Life"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 6,
+            "titolo": "Sing a Song"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 7,
+            "titolo": "Gratitude"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 8,
+            "titolo": "Serpentine Fire"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 9,
+            "titolo": "Fantasy"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 10,
+            "titolo": "Kalimba Story"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 11,
+            "titolo": "Mighty Mighty"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 12,
+            "titolo": "Reasons"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 13,
+            "titolo": "Saturday Nite"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 14,
+            "titolo": "Let's Groove"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 15,
+            "titolo": "Boogie Wonderland (with The Emotions)"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 16,
+            "titolo": "After the Love Has Gone"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 17,
+            "titolo": "Getaway"
+        }
     ]
 }

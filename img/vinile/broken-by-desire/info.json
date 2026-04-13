@@ -6,19 +6,89 @@
     "descrizione": "Canzoni d'amore struggenti e sincerità disarmante.",
     "video": "img/vinile/broken-by-desire/video.mp4",
     "tracklist": [
-        "Forget Me",
-        "Wish You The Best",
-        "Pointless",
-        "Heavenly Kind Of State Of Mind",
-        "Haven't You Ever Been In Love Before?",
-        "Love The Hell Out Of You",
-        "Burning",
-        "Any Kind Of Life",
-        "The Pretender",
-        "Leave Me Slowly",
-        "How This Ends",
-        "How I'm Feeling Now",
-        "How I'm Feeling Now (Orchestral Version)",
-        "Burning (Orchestral Version)"
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 1,
+            "titolo": "Forget Me"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 2,
+            "titolo": "Wish You The Best"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 3,
+            "titolo": "Pointless"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 4,
+            "titolo": "Heavenly Kind Of State Of Mind"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 5,
+            "titolo": "Haven't You Ever Been In Love Before?"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 6,
+            "titolo": "Love The Hell Out Of You"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 7,
+            "titolo": "Burning"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 8,
+            "titolo": "Any Kind Of Life"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 9,
+            "titolo": "The Pretender"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 10,
+            "titolo": "Leave Me Slowly"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 11,
+            "titolo": "How This Ends"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 12,
+            "titolo": "How I'm Feeling Now"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 13,
+            "titolo": "How I'm Feeling Now (Orchestral Version)"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 14,
+            "titolo": "Burning (Orchestral Version)"
+        }
     ]
 }

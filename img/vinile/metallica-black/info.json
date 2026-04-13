@@ -6,17 +6,77 @@
     "descrizione": "Il disco che ha portato il metal nelle classifiche mondiali.",
     "video": "img/vinile/metallica-black/video.mp4",
     "tracklist": [
-        "Enter Sandman",
-        "Sad But True",
-        "Holier Than Thou",
-        "The Unforgiven",
-        "Wherever I May Roam",
-        "Don't Tread On Me",
-        "Through the Never",
-        "Nothing Else Matters",
-        "Of Wolf and Man",
-        "The God That Failed",
-        "My Friend of Misery",
-        "The Struggle Within"
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 1,
+            "titolo": "Enter Sandman"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 2,
+            "titolo": "Sad But True"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 3,
+            "titolo": "Holier Than Thou"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 4,
+            "titolo": "The Unforgiven"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 5,
+            "titolo": "Wherever I May Roam"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 6,
+            "titolo": "Don't Tread On Me"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 7,
+            "titolo": "Through the Never"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 8,
+            "titolo": "Nothing Else Matters"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 9,
+            "titolo": "Of Wolf and Man"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 10,
+            "titolo": "The God That Failed"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 11,
+            "titolo": "My Friend of Misery"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 12,
+            "titolo": "The Struggle Within"
+        }
     ]
 }

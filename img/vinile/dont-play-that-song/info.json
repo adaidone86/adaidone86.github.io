@@ -6,17 +6,77 @@
     "descrizione": "Puro soul anni '60, un classico intramontabile.",
     "video": "img/vinile/dont-play-that-song/video.mp4",
     "tracklist": [
-        "Don't Play That Song (You Lied)",
-        "Ecstasy",
-        "On the Horizon",
-        "Show Me the Way",
-        "Here Comes the Night",
-        "First Taste of Love",
-        "Stand By Me",
-        "Yes",
-        "Young Boy Blues",
-        "The Hermit of Misty Mountain",
-        "I Promise Love",
-        "Brace Yourself"
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 1,
+            "titolo": "Don't Play That Song (You Lied)"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 2,
+            "titolo": "Ecstasy"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 3,
+            "titolo": "On the Horizon"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 4,
+            "titolo": "Show Me the Way"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 5,
+            "titolo": "Here Comes the Night"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 6,
+            "titolo": "First Taste of Love"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 7,
+            "titolo": "Stand By Me"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 8,
+            "titolo": "Yes"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 9,
+            "titolo": "Young Boy Blues"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 10,
+            "titolo": "The Hermit of Misty Mountain"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 11,
+            "titolo": "I Promise Love"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 12,
+            "titolo": "Brace Yourself"
+        }
     ]
 }

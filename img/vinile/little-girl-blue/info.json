@@ -6,16 +6,71 @@
     "descrizione": "L'eleganza e la forza di una delle voci più iconiche del jazz.",
     "video": "img/vinile/little-girl-blue/video.mp4",
     "tracklist": [
-        "Mood Indigo (2021 - Stereo Remaster)",
-        "Don't Smoke in Bed (2021 - Stereo Remaster)",
-        "He Needs Me (2021 - Stereo Remaster)",
-        "Little Girl Blue (2021 - Stereo Remaster)",
-        "Love Me or Leave Me (2021 - Stereo Remaster)",
-        "My Baby Just Cares for Me (2021 - Stereo Remaster)",
-        "Good Bait (2021 - Stereo Remaster)",
-        "Plain Gold Ring (2021 - Stereo Remaster)",
-        "You'll Never Walk Alone (2021 - Stereo Remaster)",
-        "I Loves You, Porgy (2021 - Stereo Remaster)",
-        "Central Park Blues (2021 - Stereo Remaster)"
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 1,
+            "titolo": "Mood Indigo (2021 - Stereo Remaster)"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 2,
+            "titolo": "Don't Smoke in Bed (2021 - Stereo Remaster)"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 3,
+            "titolo": "He Needs Me (2021 - Stereo Remaster)"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 4,
+            "titolo": "Little Girl Blue (2021 - Stereo Remaster)"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 5,
+            "titolo": "Love Me or Leave Me (2021 - Stereo Remaster)"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 6,
+            "titolo": "My Baby Just Cares for Me (2021 - Stereo Remaster)"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 7,
+            "titolo": "Good Bait (2021 - Stereo Remaster)"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 8,
+            "titolo": "Plain Gold Ring (2021 - Stereo Remaster)"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 9,
+            "titolo": "You'll Never Walk Alone (2021 - Stereo Remaster)"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 10,
+            "titolo": "I Loves You, Porgy (2021 - Stereo Remaster)"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 11,
+            "titolo": "Central Park Blues (2021 - Stereo Remaster)"
+        }
     ]
 }

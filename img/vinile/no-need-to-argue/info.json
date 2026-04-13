@@ -6,18 +6,83 @@
     "descrizione": "Il disco di Zombie, un capolavoro di Dolores O'Riordan.",
     "video": "img/vinile/no-need-to-argue/video.mp4",
     "tracklist": [
-        "Ode To My Family (2025 Remastered)",
-        "I Can't Be With You (2025 Remastered)",
-        "Twenty One (2025 Remastered)",
-        "Zombie (2025 Remastered)",
-        "Empty (2025 Remastered)",
-        "Everything I Said (2025 Remastered)",
-        "The Icicle Melts (2025 Remastered)",
-        "Disappointment (2025 Remastered)",
-        "Ridiculous Thoughts (2025 Remastered)",
-        "Dreaming My Dreams (2025 Remastered)",
-        "Yeats' Grave (2025 Remastered)",
-        "Daffodil Lament (2025 Remastered)",
-        "No Need To Argue (2025 Remastered)"
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 1,
+            "titolo": "Ode To My Family (2025 Remastered)"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 2,
+            "titolo": "I Can't Be With You (2025 Remastered)"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 3,
+            "titolo": "Twenty One (2025 Remastered)"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 4,
+            "titolo": "Zombie (2025 Remastered)"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 5,
+            "titolo": "Empty (2025 Remastered)"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 6,
+            "titolo": "Everything I Said (2025 Remastered)"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 7,
+            "titolo": "The Icicle Melts (2025 Remastered)"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 8,
+            "titolo": "Disappointment (2025 Remastered)"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 9,
+            "titolo": "Ridiculous Thoughts (2025 Remastered)"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 10,
+            "titolo": "Dreaming My Dreams (2025 Remastered)"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 11,
+            "titolo": "Yeats' Grave (2025 Remastered)"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 12,
+            "titolo": "Daffodil Lament (2025 Remastered)"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 13,
+            "titolo": "No Need To Argue (2025 Remastered)"
+        }
     ]
 }

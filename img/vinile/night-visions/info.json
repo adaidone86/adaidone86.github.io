@@ -6,18 +6,83 @@
     "descrizione": "L'esordio che ha dominato le radio di tutto il mondo.",
     "video": "img/vinile/night-visions/video.mp4",
     "tracklist": [
-        "Radioactive",
-        "Tiptoe",
-        "It's Time",
-        "Demons",
-        "On Top of the World",
-        "Amsterdam",
-        "Hear Me",
-        "Every Night",
-        "Bleeding Out",
-        "Underdog",
-        "Nothing Left to Say / Rocks",
-        "Working Man",
-        "Fallen"
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 1,
+            "titolo": "Radioactive"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 2,
+            "titolo": "Tiptoe"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 3,
+            "titolo": "It's Time"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 4,
+            "titolo": "Demons"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 5,
+            "titolo": "On Top of the World"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 6,
+            "titolo": "Amsterdam"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 7,
+            "titolo": "Hear Me"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 8,
+            "titolo": "Every Night"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 9,
+            "titolo": "Bleeding Out"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 10,
+            "titolo": "Underdog"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 11,
+            "titolo": "Nothing Left to Say / Rocks"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 12,
+            "titolo": "Working Man"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 13,
+            "titolo": "Fallen"
+        }
     ]
 }

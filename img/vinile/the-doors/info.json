@@ -6,16 +6,71 @@
     "descrizione": "L'esordio folgorante di Jim Morrison e soci.",
     "video": "img/vinile/the-doors/video.mp4",
     "tracklist": [
-        "Break On Through (To The Other Side)",
-        "Soul Kitchen",
-        "The Crystal Ship",
-        "Twentieth Century Fox",
-        "Alabama Song (Whisky Bar)",
-        "Light My Fire",
-        "Back Door Man",
-        "I Looked At You",
-        "End Of The Night",
-        "Take It As It Comes",
-        "The End"
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 1,
+            "titolo": "Break On Through (To The Other Side)"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 2,
+            "titolo": "Soul Kitchen"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 3,
+            "titolo": "The Crystal Ship"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 4,
+            "titolo": "Twentieth Century Fox"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 5,
+            "titolo": "Alabama Song (Whisky Bar)"
+        },
+        {
+            "disco": 1,
+            "lato": "A",
+            "n": 6,
+            "titolo": "Light My Fire"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 7,
+            "titolo": "Back Door Man"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 8,
+            "titolo": "I Looked At You"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 9,
+            "titolo": "End Of The Night"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 10,
+            "titolo": "Take It As It Comes"
+        },
+        {
+            "disco": 1,
+            "lato": "B",
+            "n": 11,
+            "titolo": "The End"
+        }
     ]
 }
