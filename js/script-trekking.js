@@ -20,87 +20,86 @@ document.addEventListener("DOMContentLoaded", () => {
                 return d2 - d1;
             });
             renderTrek(tuttiITrek);
-        });
+        })
+        .catch(err => console.error("Errore caricamento dati:", err));
 
     // --- 2. FUNZIONE RENDERING CARD ---
-function renderTrek(lista) {
-    if (!grid) return;
-    grid.innerHTML = "";
+    function renderTrek(lista) {
+        if (!grid) return;
+        grid.innerHTML = "";
 
-    lista.forEach(trek => {
-        const item = document.createElement('div');
-        item.className = 'trek-item';
-        // Assicuriamoci che la card abbia posizione relativa
-        item.style.position = "relative";
+        lista.forEach(trek => {
+            const item = document.createElement('div');
+            item.className = 'trek-item';
+            item.style.position = "relative";
 
-        // --- NUOVA LOGICA BOLLINI CON IMMAGINI ---
-        let bollinoHTML = "";
-        const imgPath = "img/trekking/"; // Percorso base delle immagini stato
+            // --- LOGICA BOLLINI ---
+            let bollinoHTML = "";
+            const imgPath = "img/trekking/";
 
-        if (trek.stato === "c") {
-            bollinoHTML = `
-                <div class="status-badge badge-c" title="Completato">
-                    <img src="${imgPath}c.png" alt="C" class="status-icon-img">
-                </div>`;
-        } else if (trek.stato === "w") {
-            bollinoHTML = `
-                <div class="status-badge badge-w" title="In lavorazione">
-                    <img src="${imgPath}w.png" alt="W" class="status-icon-img pulse-wip">
-                </div>`;
-        } else if (trek.stato === "p") {
-            bollinoHTML = `
-                <div class="status-badge badge-p" title="In programma">
-                    <img src="${imgPath}p.png" alt="P" class="status-icon-img">
-                </div>`;
-        }
+            if (trek.stato === "c") {
+                bollinoHTML = `<div class="status-badge badge-c" title="Completato"><img src="${imgPath}c.png" alt="C" class="status-icon-img"></div>`;
+            } else if (trek.stato === "w") {
+                bollinoHTML = `<div class="status-badge badge-w" title="In lavorazione"><img src="${imgPath}w.png" alt="W" class="status-icon-img pulse-wip"></div>`;
+            } else if (trek.stato === "p") {
+                bollinoHTML = `<div class="status-badge badge-p" title="In programma"><img src="${imgPath}p.png" alt="P" class="status-icon-img"></div>`;
+            }
 
-        // --- GESTIONE FALLBACK (Se l'immagine non carica) ---
-        // Questa logica serve se per caso un file PNG manca.
-        // Verrà aggiunto un listener 'onerror' all'immagine appena creata.
+            // --- LOGICA GUIDA/ORGANIZZAZIONE ---
+            let guidaHTML = "";
+            if (trek.guida_foto && trek.guida_foto !== "-") {
+                guidaHTML = `
+                    <div class="guida-box">
+                        <p class="guida-label">Organizzato da:</p>
+                        <a href="${trek.guida_sito}" target="_blank" class="guida-link">
+                            <img src="${trek.guida_foto}" alt="${trek.guida_nome}" class="guida-img">
+                            <span>${trek.guida_nome !== "-" ? trek.guida_nome : "Sito Ufficiale"}</span>
+                        </a>
+                    </div>`;
+            }
 
-        // ... resto della logica per date e info (invariata) ...
-        const dataMostrata = trek.tipo === "viaggio" ? `Dal ${trek.date.da} al ${trek.date.al}` : trek.data;
-        const infoMostrata = trek.tipo === "viaggio" ? "Multi-tappa" : trek["km/dislivello"];
+            const dataMostrata = trek.tipo === "viaggio" ? `Dal ${trek.date.da} al ${trek.date.al}` : trek.data;
+            const infoMostrata = trek.tipo === "viaggio" ? "Multi-tappa" : trek["km/dislivello"];
 
-        item.innerHTML = `
-            ${bollinoHTML}
-            <i class="fa-solid ${trek.icona} item-icon"></i>
-            <h3>${trek.titolo}</h3>
-            <p class="tag">${trek.luogo}</p>
-            <div class="trek-details">
-                <p><strong>Data:</strong> ${dataMostrata}</p>
-                <p><strong>Info:</strong> ${infoMostrata}</p>
-            </div>
-            <p class="desc">${trek.descrizione_breve}</p>
-        `;
+            item.innerHTML = `
+                ${bollinoHTML}
+                <i class="fa-solid ${trek.icona} item-icon"></i>
+                <h3>${trek.titolo}</h3>
+                <p class="tag">${trek.luogo}</p>
+                <div class="trek-details">
+                    <p><strong>Data:</strong> ${dataMostrata}</p>
+                    <p><strong>Info:</strong> ${infoMostrata}</p>
+                </div>
+                <p class="desc">${trek.descrizione_breve}</p>
+                ${guidaHTML}
+            `;
 
-        // --- GESTIONE CLICK SULLA CARD ---
-        item.addEventListener('click', () => {
-            // Se lo stato è 'p' (programmato), non apriamo il modal
-            if (trek.stato === "p") return;
-            openModal(trek);
+            // Click sulla card (evita il click se è un link alla guida)
+            item.addEventListener('click', (e) => {
+                if (e.target.closest('.guida-link')) return;
+                if (trek.stato === "p") return;
+                openModal(trek);
+            });
+
+            grid.appendChild(item);
         });
 
-        grid.appendChild(item);
-    });
+        // Gestione Fallback immagini bollini
+        document.querySelectorAll('.status-icon-img').forEach(img => {
+            img.onerror = function() {
+                const container = this.parentElement;
+                this.remove();
+                const stato = container.classList.contains('badge-c') ? 'C' :
+                              container.classList.contains('badge-w') ? 'W' : 'P';
+                container.innerText = stato;
+                container.classList.add('fallback-text');
+            };
+        });
+    }
 
-    // --- LOGICA DI FALLBACK POST-RENDERING ---
-    // Cerca tutte le immagini dei bollini e, se danno errore, applica lo stile testuale vecchio.
-    document.querySelectorAll('.status-icon-img').forEach(img => {
-        img.onerror = function() {
-            const container = this.parentElement;
-            // Rimuove l'immagine corrotta
-            this.remove();
-            // Inietta il testo (C, W, P) come fallback
-            const stato = container.classList.contains('badge-c') ? 'C' :
-                          container.classList.contains('badge-w') ? 'W' : 'P';
-            container.innerText = stato;
-            container.classList.add('fallback-text'); // Aggiunge classe per stile testo
-        };
-    });
-}
     // --- 3. GESTIONE MODAL ---
     window.openModal = function (trek) {
+        if (!modal) return;
         viaggioCorrente = trek;
         document.getElementById('modal-title').innerText = trek.titolo;
         const descContainer = document.getElementById('modal-full-desc');
@@ -124,21 +123,27 @@ function renderTrek(lista) {
     };
 
     window.mostraTappa = function (idx) {
+        if (!viaggioCorrente) return;
         const tappa = viaggioCorrente.tappe[idx];
-        document.getElementById('tappa-content').innerHTML = `
-            <div class="tappa-info-header"><span>${tappa.giorno}</span><span>${tappa["km/dislivello"]}</span></div>
-            <p class="tappa-desc-text">${tappa.descrizione_tappa}</p>
-        `;
+        const content = document.getElementById('tappa-content');
+        if (content) {
+            content.innerHTML = `
+                <div class="tappa-info-header"><span>${tappa.giorno}</span><span>${tappa["km/dislivello"]}</span></div>
+                <p class="tappa-desc-text">${tappa.descrizione_tappa}</p>
+            `;
+        }
         document.querySelectorAll('.tappa-btn').forEach((b, i) => b.classList.toggle('active', i === idx));
         const foto = Array.from({length: tappa.numero_foto}, (_, i) => `${tappa.cartella_foto}/${i+1}.jpg`);
         caricaGallery(foto);
     };
 
     function caricaGallery(lista) {
+        if (!galleryContainer) return;
         galleryContainer.innerHTML = "";
         lista.forEach((f, i) => {
             const img = document.createElement('img');
-            img.src = f; img.className = 'thumbnail-img';
+            img.src = f;
+            img.className = 'thumbnail-img';
             img.onclick = () => cambiaFoto(f, img);
             if (i === 0) cambiaFoto(f, img);
             galleryContainer.appendChild(img);
@@ -146,11 +151,28 @@ function renderTrek(lista) {
     }
 
     const cambiaFoto = (src, el) => {
+        if (!mainImg) return;
         mainImg.src = src;
         document.querySelectorAll('.thumbnail-img').forEach(t => t.classList.remove('active'));
         el.classList.add('active');
     };
 
-    const chiudi = () => { modal.style.display = "none"; document.body.style.overflow = "auto"; };
-    closeBtn.onclick = chiudi;
+    const chiudi = () => {
+        if (modal) modal.style.display = "none";
+        document.body.style.overflow = "auto";
+    };
+
+    if (closeBtn) closeBtn.onclick = chiudi;
+
+    // Gestione ricerca
+    if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+            const val = e.target.value.toLowerCase();
+            const filtrati = tuttiITrek.filter(t =>
+                t.titolo.toLowerCase().includes(val) ||
+                t.luogo.toLowerCase().includes(val)
+            );
+            renderTrek(filtrati);
+        });
+    }
 });
