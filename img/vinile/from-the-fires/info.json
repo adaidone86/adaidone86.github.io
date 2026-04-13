@@ -4,5 +4,15 @@
     "anno": "2017",
     "genere": "Hard rock",
     "descrizione": "Il ritorno del rock classico con una voce che ricorda i Led Zeppelin.",
-    "video": "img/vinile/from-the-fires/video.mp4"
+    "video": "img/vinile/from-the-fires/video.mp4",
+    "tracklist": [
+        "Safari Song",
+        "Edge of Darkness",
+        "Flower Power",
+        "A Change is Gonna Come",
+        "Highway Tune",
+        "Meet On the Ledge",
+        "Talk On the Street",
+        "Black Smoke Rising"
+    ]
 }

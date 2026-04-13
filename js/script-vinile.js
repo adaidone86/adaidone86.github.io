@@ -10,14 +10,35 @@ function openVinylModal(dati, folderName) {
 
     if (!modal || !videoContainer) return;
 
-    // Inseriamo i testi
+    // Inseriamo i testi base
     document.getElementById('modal-title').innerText = dati.album;
     document.getElementById('modal-artist').innerText = dati.artista;
     document.getElementById('modal-description').innerText = dati.descrizione || "Nessun aneddoto disponibile per questo disco.";
 
-    // Gestione Video (Cerca il file video.mp4 nella cartella del disco)
-    const videoSource = dati.video || `img/vinile/${folderName}/video.mp4`;
+    // --- NUOVA GESTIONE TRACKLIST ---
+    let tracklistHTML = "";
+    if (dati.tracklist && dati.tracklist.length > 0) {
+        tracklistHTML = `
+            <div class="modal-tracklist">
+                <h4><i class="fas fa-list"></i> Canzoni:</h4>
+                <ol>
+                    ${dati.tracklist.map(canzone => `<li>${canzone}</li>`).join('')}
+                </ol>
+            </div>
+        `;
+    }
 
+    // Aggiungiamo la tracklist sotto la descrizione (o dove preferisci)
+    const infoContainer = document.querySelector('.modal-info');
+    // Rimuoviamo eventuali tracklist precedenti se il modal viene riaperto
+    const vecchiaTracklist = infoContainer.querySelector('.modal-tracklist');
+    if (vecchiaTracklist) vecchiaTracklist.remove();
+
+    infoContainer.insertAdjacentHTML('beforeend', tracklistHTML);
+    // --------------------------------
+
+    // Gestione Video
+    const videoSource = dati.video || `img/vinile/${folderName}/video.mp4`;
     videoContainer.innerHTML = `
         <video controls autoplay muted loop style="width:100%; height:100%; object-fit:cover;">
             <source src="${videoSource}" type="video/mp4">
@@ -26,7 +47,7 @@ function openVinylModal(dati, folderName) {
     `;
 
     modal.style.display = "block";
-    document.body.style.overflow = "hidden"; // Blocca lo scroll della pagina di sfondo
+    document.body.style.overflow = "hidden";
 }
 
 function closeModal() {

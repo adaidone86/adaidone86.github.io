@@ -4,5 +4,17 @@
     "anno": "1980",
     "genere": "Hard rock",
     "descrizione": "Un muro di suono dedicato alla memoria di Bon Scott.",
-    "video": "img/vinile/back-in-black/video.mp4"
+    "video": "img/vinile/back-in-black/video.mp4",
+    "tracklist": [
+        "Hells Bells",
+        "Shoot to Thrill",
+        "What Do You Do for Money Honey",
+        "Givin the Dog a Bone",
+        "Let Me Put My Love Into You",
+        "Back In Black",
+        "You Shook Me All Night Long",
+        "Have a Drink On Me",
+        "Shake a Leg",
+        "Rock and Roll Ain't Noise Pollution"
+    ]
 }

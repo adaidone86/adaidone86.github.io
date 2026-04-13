@@ -4,5 +4,14 @@
     "anno": "1991",
     "genere": "Grunge / Rock alternativo",
     "descrizione": "L'anima di Seattle racchiusa in un disco potente e cupo.",
-    "video": "img/vinile/ten/video.mp4"
+    "video": "img/vinile/ten/video.mp4",
+    "tracklist": [
+        "Oceans (Live MTV Unplugged)",
+        "State of Love and Trust (Live MTV Unplugged)",
+        "Alive (Live MTV Unplugged)",
+        "Black (Live MTV Unplugged)",
+        "Jeremy (Live MTV Unplugged)",
+        "Even Flow (Live MTV Unplugged)",
+        "Porch (Live MTV Unplugged)"
+    ]
 }

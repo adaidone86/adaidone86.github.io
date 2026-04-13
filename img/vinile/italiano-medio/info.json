@@ -4,5 +4,24 @@
     "anno": "2003",
     "genere": "Rap rock",
     "descrizione": "L'ironia di J-Ax che fotografa i vizi dell'Italia.",
-    "video": "img/vinile/italiano-medio/video.mp4"
+    "video": "img/vinile/italiano-medio/video.mp4",
+    "tracklist": [
+        "Prima qualità",
+        "Bestie mutanti",
+        "La mia ragazza Mena (feat. Bruno De Filippi)",
+        "La canzone del dito",
+        "Senza dubbio",
+        "La nuova stella del pop (numero 1 in Italia)",
+        "A pugni col mondo",
+        "Caravita",
+        "I consigli di un pirla",
+        "1972",
+        "Manate",
+        "Cara mia ex",
+        "L'Italiano medio",
+        "Sputate al re",
+        "La finestra",
+        "Commodore 64 Vs PC",
+        "Il mio viaggio"
+    ]
 }

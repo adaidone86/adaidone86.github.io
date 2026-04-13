@@ -4,5 +4,19 @@
     "anno": "1991",
     "genere": "Heavy metal",
     "descrizione": "Il disco che ha portato il metal nelle classifiche mondiali.",
-    "video": "img/vinile/metallica-black/video.mp4"
+    "video": "img/vinile/metallica-black/video.mp4",
+    "tracklist": [
+        "Enter Sandman",
+        "Sad But True",
+        "Holier Than Thou",
+        "The Unforgiven",
+        "Wherever I May Roam",
+        "Don't Tread On Me",
+        "Through the Never",
+        "Nothing Else Matters",
+        "Of Wolf and Man",
+        "The God That Failed",
+        "My Friend of Misery",
+        "The Struggle Within"
+    ]
 }

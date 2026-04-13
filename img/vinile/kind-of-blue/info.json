@@ -4,5 +4,12 @@
     "anno": "1959",
     "genere": "Modal jazz",
     "descrizione": "Il capolavoro del jazz modale, un disco che non stanca mai.",
-    "video": "img/vinile/kind-of-blue/video.mp4"
+    "video": "img/vinile/kind-of-blue/video.mp4",
+    "tracklist": [
+        "So What",
+        "Freddie Freeloader",
+        "Blue In Green",
+        "All Blues",
+        "Flamenco Sketches"
+    ]
 }

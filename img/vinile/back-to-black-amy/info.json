@@ -4,5 +4,18 @@
     "anno": "2006",
     "genere": "Contemporary R&B",
     "descrizione": "Un'anima tormentata e una voce jazz prestata al soul moderno.",
-    "video": "img/vinile/back-to-black-amy/video.mp4"
+    "video": "img/vinile/back-to-black-amy/video.mp4",
+    "tracklist": [
+        "Rehab",
+        "You Know I'm No Good",
+        "Me & Mr. Jones",
+        "Just Friends",
+        "Back to Black",
+        "Love Is a Losing Game",
+        "Tears Dry On Their Own",
+        "Wake Up Alone",
+        "Some Unholy War",
+        "He Can Only Hold Her",
+        "Addicted"
+    ]
 }

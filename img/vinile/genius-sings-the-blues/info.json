@@ -4,5 +4,19 @@
     "anno": "1961",
     "genere": "R&B / Blues / Soul",
     "descrizione": "Ray Charles nel suo elemento naturale: il blues.",
-    "video": "img/vinile/genius-sings-the-blues/video.mp4"
+    "video": "img/vinile/genius-sings-the-blues/video.mp4",
+    "tracklist": [
+        "Early In the Mornin'",
+        "Hard Times (No One Knows Better Than I)",
+        "The Midnight Hour",
+        "(Night Time Is) The Right Time",
+        "Feelin' Sad",
+        "Ray's Blues",
+        "I'm Movin' On (Stereo Version)",
+        "I Believe to My Soul",
+        "Nobody Cares",
+        "Mr. Charles' Blues",
+        "Some Day Baby (LP Version)",
+        "I Wonder Who"
+    ]
 }

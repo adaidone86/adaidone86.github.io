@@ -4,5 +4,18 @@
     "anno": "2004",
     "genere": "Indie rock",
     "descrizione": "Il disco che ha fatto ballare tutta l'Europa indie.",
-    "video": "img/vinile/franz-ferdinand/video.mp4"
+    "video": "img/vinile/franz-ferdinand/video.mp4",
+    "tracklist": [
+        "Jacqueline",
+        "Tell Her Tonight",
+        "Take Me Out",
+        "The Dark of the Matinée",
+        "Auf Achse",
+        "Cheating On You",
+        "This Fire",
+        "Darts of Pleasure",
+        "Michael",
+        "Come On Home",
+        "40'"
+    ]
 }

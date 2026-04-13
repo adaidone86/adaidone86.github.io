@@ -4,5 +4,20 @@
     "anno": "1997",
     "genere": "Britpop",
     "descrizione": "Contiene Bitter Sweet Symphony, un inno generazionale.",
-    "video": "img/vinile/urban-hymns/video.mp4"
+    "video": "img/vinile/urban-hymns/video.mp4",
+    "tracklist": [
+        "Bitter Sweet Symphony",
+        "Sonnet",
+        "The Rolling People",
+        "The Drugs Don't Work",
+        "Catching the Butterfly",
+        "Neon Wilderness",
+        "Space and Time",
+        "Weeping Willow",
+        "Lucky Man",
+        "One Day",
+        "This Time",
+        "Velvet Morning",
+        "Come On"
+    ]
 }

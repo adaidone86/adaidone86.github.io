@@ -4,5 +4,19 @@
     "anno": "1995",
     "genere": "Alternative rock",
     "descrizione": "Il passaggio verso il rock sperimentale e malinconico.",
-    "video": "img/vinile/the-bends/video.mp4"
+    "video": "img/vinile/the-bends/video.mp4",
+    "tracklist": [
+        "Planet Telex",
+        "The Bends",
+        "High and Dry",
+        "Fake Plastic Trees",
+        "Bones",
+        "(Nice Dream)",
+        "Just",
+        "My Iron Lung",
+        "Bullet Proof ... I Wish I Was",
+        "Black Star",
+        "Sulk",
+        "Street Spirit (Fade Out)"
+    ]
 }

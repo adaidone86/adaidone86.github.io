@@ -4,5 +4,18 @@
     "anno": "1987",
     "genere": "Pop / Dance",
     "descrizione": "Il re del pop al suo apice creativo dopo Thriller.",
-    "video": "img/vinile/bad/video.mp4"
+    "video": "img/vinile/bad/video.mp4",
+    "tracklist": [
+        "Bad",
+        "The Way You Make Me Feel",
+        "Speed Demon",
+        "Liberian Girl",
+        "Just Good Friends",
+        "Another Part of Me",
+        "Man In the Mirror",
+        "I Just Can't Stop Loving You",
+        "Dirty Diana",
+        "Smooth Criminal",
+        "Leave Me Alone"
+    ]
 }

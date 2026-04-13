@@ -4,5 +4,17 @@
     "anno": "2009",
     "genere": "Rock alternativo",
     "descrizione": "Melodie al pianoforte cariche di emozione.",
-    "video": "img/vinile/the-fray/video.mp4"
+    "video": "img/vinile/the-fray/video.mp4",
+    "tracklist": [
+        "Syndicate",
+        "Absolute",
+        "You Found Me",
+        "Say When",
+        "Never Say Never",
+        "Where the Story Ends",
+        "Enough for Now",
+        "Ungodly Hour",
+        "We Build Then We Break",
+        "Happiness"
+    ]
 }

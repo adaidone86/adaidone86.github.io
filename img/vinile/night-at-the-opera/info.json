@@ -4,5 +4,19 @@
     "anno": "1975",
     "genere": "Progressive rock",
     "descrizione": "L'opera rock definitiva, contiene Bohemian Rhapsody.",
-    "video": "img/vinile/night-at-the-opera/video.mp4"
+    "video": "img/vinile/night-at-the-opera/video.mp4",
+    "tracklist": [
+        "Death On Two Legs (Dedicated To...)",
+        "Lazing On a Sunday Afternoon",
+        "I'm In Love With My Car",
+        "You're My Best Friend",
+        "'39",
+        "Sweet Lady",
+        "Seaside Rendezvous",
+        "The Prophet's Song",
+        "Love of My Life",
+        "Good Company",
+        "Bohemian Rhapsody",
+        "God Save the Queen"
+    ]
 }

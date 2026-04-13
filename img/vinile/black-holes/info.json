@@ -4,5 +4,19 @@
     "anno": "2006",
     "genere": "Rock alternativo",
     "descrizione": "Un mix epico di rock, elettronica e fantascienza.",
-    "video": "img/vinile/black-holes/video.mp4"
+    "video": "img/vinile/black-holes/video.mp4",
+    "tracklist": [
+        "Take a Bow",
+        "Starlight",
+        "Supermassive Black Hole",
+        "Map of the Problematique",
+        "Soldier's Poem",
+        "Invincible",
+        "Assassin",
+        "Exo-Politics",
+        "City of Delusion",
+        "Hoodoo",
+        "Knights of Cydonia",
+        "Glorious (Bonus Track)"
+    ]
 }

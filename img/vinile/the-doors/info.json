@@ -4,5 +4,18 @@
     "anno": "1967",
     "genere": "Rock psichedelico",
     "descrizione": "L'esordio folgorante di Jim Morrison e soci.",
-    "video": "img/vinile/the-doors/video.mp4"
+    "video": "img/vinile/the-doors/video.mp4",
+    "tracklist": [
+        "Break On Through (To The Other Side)",
+        "Soul Kitchen",
+        "The Crystal Ship",
+        "Twentieth Century Fox",
+        "Alabama Song (Whisky Bar)",
+        "Light My Fire",
+        "Back Door Man",
+        "I Looked At You",
+        "End Of The Night",
+        "Take It As It Comes",
+        "The End"
+    ]
 }

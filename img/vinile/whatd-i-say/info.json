@@ -4,5 +4,17 @@
     "anno": "1959",
     "genere": "Rhythm and blues / Soul",
     "descrizione": "Il disco che ha fuso gospel e blues creando il soul.",
-    "video": "img/vinile/whatd-i-say/video.mp4"
+    "video": "img/vinile/whatd-i-say/video.mp4",
+    "tracklist": [
+        "What'd I Say, Pt. 1",
+        "Jumpin' In the Morning",
+        "You Be My Baby (Stereo Version)",
+        "Tell Me How Do You Feel (Stereo Version)",
+        "What Kind of Man Are You",
+        "Rockhouse, Pts. 1 & 2",
+        "Roll With My Baby",
+        "Tell All the World About You (Stereo Version)",
+        "My Bonnie (Stereo Version)",
+        "That's Enough"
+    ]
 }

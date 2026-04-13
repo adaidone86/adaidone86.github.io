@@ -4,5 +4,23 @@
     "anno": "1993",
     "genere": "Pop",
     "descrizione": "Il viaggio zaino in spalla della generazione anni '90.",
-    "video": "img/vinile/nord-sud-ovest-est/video.mp4"
+    "video": "img/vinile/nord-sud-ovest-est/video.mp4",
+    "tracklist": [
+        "Il Pappagallo",
+        "Sei Un Mito",
+        "Non Ci Spezziamo",
+        "Come Mai",
+        "Rotta X Casa Di Dio",
+        "Nord Sud Ovest Est",
+        "Ma Perché",
+        "Weekend",
+        "Cumuli",
+        "Nella Notte",
+        "Caterina (Aeroplano)",
+        "L'ultimo bicchiere (Demo Version)",
+        "Sei un mito (Stefano Secchi Remix)",
+        "Come mai (Bliss Team Remix)",
+        "Nord sud ovest est (Datura Sonora Remix)",
+        "Nella notte (Molella Remix)"
+    ]
 }

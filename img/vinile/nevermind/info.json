@@ -4,5 +4,8 @@
     "anno": "1991",
     "genere": "Grunge",
     "descrizione": "Il disco che ha definito una generazione.",
-    "video": "img/vinile/nevermind/video.mp4"
+    "video": "img/vinile/nevermind/video.mp4",
+    "tracklist": [
+        "Nevermind"
+    ]
 }

@@ -4,5 +4,19 @@
     "anno": "1970",
     "genere": "R&B/Soul",
     "descrizione": "L'energia contagiosa di un giovanissimo Michael Jackson.",
-    "video": "img/vinile/abc/video.mp4"
+    "video": "img/vinile/abc/video.mp4",
+    "tracklist": [
+        "The Love You Save",
+        "One More Chance",
+        "ABC",
+        "2-4-6-8",
+        "(Come 'Round Here) I'm the One You Need",
+        "Don't Know Why I Love You",
+        "Never Had a Dream Come True",
+        "True Love Can Be Beautiful",
+        "La La (Means I Love You)",
+        "I'll Bet You",
+        "I Found That Girl",
+        "The Young Folks"
+    ]
 }

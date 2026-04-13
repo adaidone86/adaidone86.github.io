@@ -4,5 +4,8 @@
     "anno": "1987",
     "genere": "Hard rock",
     "descrizione": "Energia pura, il miglior album d'esordio hard rock di sempre.",
-    "video": "img/vinile/appetite-for-destruction/video.mp4"
+    "video": "img/vinile/appetite-for-destruction/video.mp4",
+    "tracklist": [
+        "Appetite for Destruction"
+    ]
 }

@@ -4,5 +4,19 @@
     "anno": "2011",
     "genere": "Pop soul",
     "descrizione": "Emozioni crude e una potenza vocale senza precedenti.",
-    "video": "img/vinile/adele-21/video.mp4"
+    "video": "img/vinile/adele-21/video.mp4",
+    "tracklist": [
+        "Rolling in the Deep",
+        "Rumour Has It",
+        "Turning Tables",
+        "Don't You Remember",
+        "Set Fire to the Rain",
+        "He Won't Go",
+        "Take It All",
+        "I'll Be Waiting",
+        "One and Only",
+        "Lovesong",
+        "Someone Like You",
+        "I Found a Boy"
+    ]
 }

@@ -4,5 +4,21 @@
     "anno": "1960",
     "genere": "R&B / Blues",
     "descrizione": "La voce definitiva del blues e dell'R&B classico.",
-    "video": "img/vinile/at-last/video.mp4"
+    "video": "img/vinile/at-last/video.mp4",
+    "tracklist": [
+        "Anything To Say You're Mine",
+        "My Dearest Darling",
+        "Trust In Me",
+        "A Sunday Kind of Love",
+        "Tough Mary",
+        "I Just Want To Make Love To You",
+        "At Last",
+        "All I Could Do Was Cry",
+        "Stormy Weather",
+        "Girl of My Dreams",
+        "My Heart Cries (feat. Harvey Fuqua)",
+        "Spoonful",
+        "It's a Crying Shame",
+        "If I Can't Have You (feat. Harvey Fuqua)"
+    ]
 }

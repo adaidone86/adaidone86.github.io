@@ -3,7 +3,6 @@
    ============================================================ */
 
 .art-section-vinili {
-    /* 60px è lo spazio ideale per vedere l'ombra dell'ultima slide e il footer */
     padding-bottom: 60px !important;
 }
 
@@ -31,7 +30,10 @@
     display: none;
     position: fixed;
     z-index: 9999;
-    left: 0; top: 0; width: 100%; height: 100%;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
     background: rgba(0,0,0,0.95);
     backdrop-filter: blur(8px);
 }
@@ -49,6 +51,42 @@
     box-shadow: 0 0 30px rgba(255, 219, 88, 0.2);
 }
 
+/* TRACKLIST NEL MODAL */
+.modal-tracklist {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 219, 88, 0.3);
+    text-align: left;
+}
+
+.modal-tracklist h4 {
+    color: #ffdb58;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+.modal-tracklist ol {
+    padding-left: 20px;
+    max-height: 200px;
+    overflow-y: auto;
+    color: #eee;
+    font-size: 0.9rem;
+}
+
+.modal-tracklist li {
+    margin-bottom: 5px;
+    padding-bottom: 2px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* SCROLLBAR TRACKLIST */
+.modal-tracklist ol::-webkit-scrollbar { width: 5px; }
+.modal-tracklist ol::-webkit-scrollbar-thumb {
+    background: #ffdb58;
+    border-radius: 10px;
+}
+
 .close-modal {
     position: absolute;
     right: 20px;
@@ -57,8 +95,12 @@
     color: #ffdb58;
     cursor: pointer;
     transition: transform 0.2s;
+    z-index: 10;
 }
 
+.close-modal:hover { transform: scale(1.1); }
+
+/* CORPO DEL MODAL */
 .modal-body {
     display: flex;
     flex-direction: column;
@@ -66,10 +108,7 @@
     margin-top: 20px;
 }
 
-@media (min-width: 850px) {
-    .modal-body { flex-direction: row; }
-}
-
+/* MEDIA PLAYER CONTAINER */
 .modal-video-container {
     flex: 1.2;
     background: #000;
@@ -79,18 +118,44 @@
     border: 1px solid #333;
 }
 
+/* Raggruppati per evitare ripetizioni */
 .modal-video-container iframe,
 .modal-video-container video,
 .modal-video-container img {
-    width: 100%; height: 100%; border: none; display: block;
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+    object-fit: cover; /* Aggiunto per consistenza visiva */
 }
 
-.modal-info { flex: 0.8; text-align: left; }
-.modal-info h2 { color: #ffdb58; font-size: 1.8rem; margin-bottom: 10px; }
+/* INFORMAZIONI */
+.modal-info {
+    flex: 0.8;
+    text-align: left;
+}
+
+.modal-info h2 {
+    color: #ffdb58;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
 .modal-info h3 {
     color: #ccc;
     border-bottom: 1px solid #333;
     padding-bottom: 10px;
     font-weight: normal;
+    font-size: 1.2rem;
 }
-.modal-info p { color: #eee; line-height: 1.6; margin-top: 15px; }
+
+.modal-info p {
+    color: #eee;
+    line-height: 1.6;
+    margin-top: 15px;
+}
+
+/* RESPONSIVE */
+@media (min-width: 850px) {
+    .modal-body { flex-direction: row; }
+}

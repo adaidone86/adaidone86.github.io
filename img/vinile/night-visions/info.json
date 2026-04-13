@@ -4,5 +4,20 @@
     "anno": "2012",
     "genere": "Rock alternativo",
     "descrizione": "L'esordio che ha dominato le radio di tutto il mondo.",
-    "video": "img/vinile/night-visions/video.mp4"
+    "video": "img/vinile/night-visions/video.mp4",
+    "tracklist": [
+        "Radioactive",
+        "Tiptoe",
+        "It's Time",
+        "Demons",
+        "On Top of the World",
+        "Amsterdam",
+        "Hear Me",
+        "Every Night",
+        "Bleeding Out",
+        "Underdog",
+        "Nothing Left to Say / Rocks",
+        "Working Man",
+        "Fallen"
+    ]
 }

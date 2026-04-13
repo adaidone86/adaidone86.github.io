@@ -4,5 +4,20 @@
     "anno": "1998",
     "genere": "Rock alternativo",
     "descrizione": "Contiene la celeberrima Iris, un pezzo di storia degli anni '90.",
-    "video": "img/vinile/dizzy-up-the-girl/video.mp4"
+    "video": "img/vinile/dizzy-up-the-girl/video.mp4",
+    "tracklist": [
+        "Dizzy",
+        "Slide",
+        "Broadway",
+        "January Friend",
+        "Black Balloon",
+        "Bullet Proof",
+        "Amigone",
+        "All Eyes on Me",
+        "Full Forever",
+        "Acoustic #3",
+        "Iris",
+        "Extra Pale",
+        "Hate This Place"
+    ]
 }

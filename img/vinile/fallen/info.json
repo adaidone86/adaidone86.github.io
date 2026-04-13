@@ -4,5 +4,19 @@
     "anno": "2003",
     "genere": "Nu metal",
     "descrizione": "Gothic rock potente con la voce angelica di Amy Lee.",
-    "video": "img/vinile/fallen/video.mp4"
+    "video": "img/vinile/fallen/video.mp4",
+    "tracklist": [
+        "Going Under",
+        "Bring Me to Life",
+        "Everybody's Fool",
+        "My Immortal",
+        "Haunted",
+        "Tourniquet",
+        "Imaginary",
+        "Taking Over Me",
+        "Hello",
+        "My Last Breath",
+        "Whisper",
+        "My Immortal (Band Version)"
+    ]
 }

@@ -4,5 +4,23 @@
     "anno": "1977",
     "genere": "Rock",
     "descrizione": "Un mix perfetto di energia live e precisione in studio.",
-    "video": "img/vinile/moonflower/video.mp4"
+    "video": "img/vinile/moonflower/video.mp4",
+    "tracklist": [
+        "Dawn / Go Within",
+        "Carnaval (Live)",
+        "Let the Children Play (Live)",
+        "Jugando (Live)",
+        "I'll Be Waiting",
+        "Zulu",
+        "Bahia",
+        "Black Magic Woman / Gypsy Queen (Live)",
+        "Dance Sister Dance (Baila Mi Hermana) [Live]",
+        "Europa (Earth's Cry Heaven's Smile) [Live]",
+        "She's Not There",
+        "Flor d'Luna (Moonflower)",
+        "Soul Sacrifice / Head, Hands & Feet (Live)",
+        "El Morocco",
+        "Transcendance",
+        "Savor / Toussaint L'Overture (Live)"
+    ]
 }
