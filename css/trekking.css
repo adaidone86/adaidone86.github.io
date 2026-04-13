@@ -193,6 +193,18 @@
 
 .search-icon { position: absolute; left: 22px; top: 50%; transform: translateY(-50%); color: #888; }
 
+
+.descrizione-approfondita p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+    color: #444; /* O #ccc se lo sfondo è scuro */
+}
+
+.descrizione-approfondita strong {
+    color: #1a1a1a; /* O #ffdb58 se preferisci il richiamo al giallo */
+}
+
+
 /* RESPONSIVE */
 @media (max-width: 950px) {
     .trek-grid { grid-template-columns: repeat(2, 1fr); padding: 0 20px 140px 20px; }

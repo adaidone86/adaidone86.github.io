@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/body.css">
     <link rel="stylesheet" href="css/trekking.css">
     <link rel="stylesheet" href="css/cinema-mode.css">
+    <link rel="stylesheet" href="css/trekking-legenda.css">
     <link rel="stylesheet" href="css/scroll-controls.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -59,12 +60,68 @@
                 ma non senza una buona dose di ironia.
             </p>
             <hr style="width: 50%; border: 1px solid #ffdb58; margin: 20px auto;">
-            <p>
-                Qui sotto puoi trovare la lista dei miei trekking e cliccando sulla card puoi anche vedere le foto che
-                ho selezionato, le più belle fatte durante l'escursione:
-            </p>
+            <div class="descrizione-approfondita">
+                <p>
+                    In questa sezione ho raccolto tutte le mie esperienze. Ogni <strong>card</strong> che
+                    vedi qui sotto rappresenta un'avventura diversa, suddivisa principalmente in due tipologie:
+                </p>
+                <br>
+                <ul style="list-style: none; padding: 0; margin: 20px auto; text-align: left; max-width: fit-content;">
+                    <li style="margin-bottom: 12px; display: flex; align-items: center; gap: 10px;">
+                        <span style="font-size: 1.5rem;">🏔️</span>
+                        <span><strong>Trekking Giornalieri:</strong> Escursioni intense concentrate in un'unica giornata.</span>
+                    </li>
+                    <li style="display: flex; align-items: center; gap: 10px;">
+                        <span style="font-size: 1.5rem;">⛺</span>
+                        <span><strong>Viaggi Multitappa:</strong> Veri e propri cammini di più giorni, dove il sentiero diventa casa.</span>
+                    </li>
+                </ul>
+                <br>
+                <p>
+                    Per molti di questi trekking ho indicato l'<strong>associazione o la guida</strong> che ha
+                    organizzato l'uscita: cliccando sul loro nome verrai riportato al sito ufficiale. Non ricevo
+                    compensi per questo, lo faccio perché credo nel valore della condivisione e spero che qualcuno di
+                    voi decida di unirsi a questi splendidi gruppi per camminare insieme!
+                </p>
+                <p>
+                    Cliccando su ogni card potrai accedere alla <strong>galleria fotografica</strong> con gli scatti più
+                    belli. E se cerchi qualcosa di specifico, usa pure la <strong>barra di ricerca</strong> che trovi
+                    fluttuante sopra il footer: ti aiuterà a trovare sentieri, vette o luoghi in un istante.
+                </p>
+            </div>
         </div>
 
+        <div class="legenda-container">
+            <div class="legenda-item">
+                <div class="legenda-icon-wrapper">
+                    <img src="img/trekking/c.png" alt="C">
+                </div>
+                <div class="legenda-text">
+                    <strong>Completato</strong>
+                    <p>Foto e dettagli disponibili.</p>
+                </div>
+            </div>
+
+            <div class="legenda-item">
+                <div class="legenda-icon-wrapper pulse-legenda">
+                    <img src="img/trekking/w.png" alt="W">
+                </div>
+                <div class="legenda-text">
+                    <strong>In lavorazione</strong>
+                    <p>Contenuti in arrivo...</p>
+                </div>
+            </div>
+
+            <div class="legenda-item">
+                <div class="legenda-icon-wrapper" style="border-color: #777;">
+                    <img src="img/trekking/p.png" alt="P">
+                </div>
+                <div class="legenda-text">
+                    <strong>In programma</strong>
+                    <p>Prossime escursioni.</p>
+                </div>
+            </div>
+        </div>
         <hr style="width: 50%; border: none; border-top: 2px solid #ffdb58; margin: 30px auto;">
 
         <div class="search-container">
@@ -73,12 +130,12 @@
                 <input type="text" id="trek-search" placeholder="Cerca un sentiero, una vetta o un luogo...">
             </div>
         </div>
+
         <div class="trek-grid" id="trek-grid">
             <p style="color: #333;">Caricamento sentieri...</p>
         </div>
 
     </section>
-
 
     <div class="scroll-controls">
         <button class="scroll-btn up" onclick="scrollText(-300)">▲</button>
@@ -93,8 +150,7 @@
         <div class="modal-top-layout">
             <div id="modal-desc-container">
                 <h2 id="modal-title"></h2>
-                <div id="modal-full-desc" class="custom-scrollbar">
-                </div>
+                <div id="modal-full-desc" class="custom-scrollbar"></div>
             </div>
 
             <div id="main-photo-container">
@@ -102,8 +158,7 @@
             </div>
         </div>
 
-        <div id="gallery-container" class="custom-scrollbar">
-        </div>
+        <div id="gallery-container" class="custom-scrollbar"></div>
     </div>
 </div>
 
