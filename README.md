@@ -22,6 +22,7 @@ Il Json deve essere così composto.
 Se Trekking giornaliero:
 {
 "tipo": "giornaliero",
+"stato": "c",
 "titolo": "Mare, trekking e nuove amicizie",
 "luogo": "Scarlino",
 "data": "25/04/2026",
@@ -40,6 +41,7 @@ Se Trekking giornaliero:
 Se invece è un viaggio Trekking:
 {
 "tipo": "viaggio",
+"stato": "c",
 "titolo": "Sicilia: la perla nera del mediterraneo tra trekking, capperi e dammusi",
 "luogo": "Pantelleria",
 "date": {
@@ -47,26 +49,52 @@ Se invece è un viaggio Trekking:
 "al": "10/05/2026"
 },
 "tappe": [
-{ "giorno": 1, "km": 5, "dislivello": 100 },
-{ "giorno": 2, "km": 8, "dislivello": 300 },
-{ "giorno": 3, "km": 7, "dislivello": 200 }
-],
-"totale_km": "20km",
-"descrizione_breve": "Pantelleria: tra laghi, dammusi e sapori UNESCO, un viaggio unico nella natura selvaggia della Perla Nera",
-"descrizione": "...",
-"icona": "fa-briefcase",
-"guida_nome": "Giacomo Criscenti",
-"guida_foto": "img/trekking/escursionisti/itinerrando.png",
-"guida_sito": "https://www.itinarrando.com/",
-"cartella_foto": "img/trekking/pantelleria",
+{
+"giorno": "07/05/2026",
+"km/dislivello": "8.5km/50m",
+"descrizione_tappa": "Lago di Venere e Punta Spadillo - Trekking di benvenuto alla scoperta dell’incantevole costa nord Dati tecnici: Lunghezza: 8,5 km - Dislivello: +50 m/-300 m - Difficoltà: poco impegnativo.",
+"cartella_foto": "img/trekking/pantelleria/g01",
+"numero_foto": 1
+},
+{
+"giorno": "08/05/2026",
+"km/dislivello": "11km/500m",
+"descrizione_tappa": "Piana di Ghirlanda - Un’immersione nel paesaggio pantesco, tra dammusi, capperi e passito Dati Tecnici: Lunghezza: 11 km - Dislivello: +300 m/-400 - Difficoltà: mediamente impegnativo.",
+"cartella_foto": "img/trekking/pantelleria/g02",
+"numero_foto": 1
+},
+{
+"giorno": "09/05/2026",
+"km/dislivello": "12km/650m",
+"descrizione_tappa": "Montagna Grande - Trekking nel cuore dell’Isola, tra verdi crateri spenti e surreali fumarole attive Dati Tecnici: Lunghezza: 12 km - Dislivello: +650 m - Difficoltà: mediamente  impegnativo.",
+"cartella_foto": "img/trekking/pantelleria/g03",
+"numero_foto": 1
+},
+{
+"giorno": "10/05/2026",
+"km/dislivello": "0km/0m",
+"descrizione_tappa": "Testimonianze del passato di un’isola straordinaria - sito archeologico del Sesi.",
+"cartella_foto": "img/trekking/pantelleria/g04",
 "numero_foto": 1
 }
+],
+"descrizione_breve": "Pantelleria: tra laghi, dammusi e sapori UNESCO, un viaggio unico nella natura selvaggia della Perla Nera",
+"descrizione": "Pantelleria è un'isola unica, sospesa tra influenze tunisine e siciliane, resa straordinaria dalla sua posizione che ha favorito un mix eccezionale di elementi naturali e culturali. La visita al Parco Nazionale dell'isola, il primo e unico in Sicilia, offre un’immersione totale in questo paesaggio esotico e affascinante: dal Lago di Venere all'Arco dell'Elefante, dai boschi di Montagna Grande alle vedute sconfinanti sul mare. Tra crateri spenti, piane fumaroliche e scogliere imponenti, Pantelleria rivela il suo carattere autentico, con i tipici dammusi, i muretti a secco e i giardini panteschi. In questa terra apparentemente ostile, nascono eccellenze gastronomiche come il cappero e il passito, riconosciute come patrimonio UNESCO. Un viaggio che unisce natura e sapori intensi, svelando il fascino della “Perla Nera” del Mediterraneo.",
+"icona": "fa-compass",
+"guida_nome": "Giacomo Criscenti",
+"guida_foto": "img/trekking/escursionisti/itinerrando.png",
+"guida_sito": "https://www.itinarrando.com/"
+}
+------------------------------------------------------------------------------------------------------------------------
+Ricordo che il campo:
+"stato": può avere i seguenti valori:
+"c" = completato
+"w" = work in progress
+"p" = programmato
 
-
-
-
-
-
+------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------
 PAGINA VINILI
 Aggiungere Manualmente traccia audio sul json:
 {
