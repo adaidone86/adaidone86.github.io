@@ -117,3 +117,17 @@ Aggiungere Manualmente traccia audio sul json:
     
     ]
 }
+
+
+
+
+// URL di esempio per il satellite (Esri è ottimo perché non richiede API key immediate)
+private satelliteUrl: string =
+'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}';
+// Layer per le VIE (quello che stai usando ora)
+private roadsUrl: string =
+'https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Transportation/MapServer/tile/%7Bz%7D/%7By%7D/%7Bx%7D';
+
+// Layer per CITTA' e CONFINI
+private placesUrl: string =
+'https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/%7Bz%7D/%7By%7D/%7Bx%7D';
