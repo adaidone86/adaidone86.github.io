@@ -689,7 +689,7 @@
   },
   {
     "tipo": "giornaliero",
-    "stato": "w",
+    "stato": "c",
     "titolo": "I Tesori della Valle del Pavone",
     "luogo": "Alta Val di Cecina",
     "km/dislivello": "15km/750m",
@@ -701,7 +701,7 @@
     "guida_foto": "img/trekking/escursionisti/landscape.png",
     "guida_sito": "https://landscapewalkingtours.com/",
     "cartella_foto": "img/trekking/tesori-del-pavone",
-    "numero_foto": 1
+    "numero_foto": 63
   },
   {
     "tipo": "giornaliero",
@@ -717,7 +717,7 @@
     "guida_foto": "img/trekking/escursionisti/landscape.png",
     "guida_sito": "https://landscapewalkingtours.com/",
     "cartella_foto": "img/trekking/cala-di-forno",
-    "numero_foto": 1
+    "numero_foto": 30
   },
   {
     "tipo": "giornaliero",
