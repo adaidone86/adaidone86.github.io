@@ -11,12 +11,9 @@ let swiperInstance = null;
 // --- 1. FUNZIONE RENDERING SLIDE ---
 function renderAlbumSlides(albums) {
     const wrapper = document.getElementById('album-wrapper');
-    const swiperContainer = document.querySelector('.mySwiper');
     if (!wrapper) return;
 
-    // Invece di svuotare subito, diamo un feedback fluido (opzionale)
     wrapper.style.opacity = "0.5";
-
     wrapper.innerHTML = "";
 
     if (albums.length === 0) {
@@ -38,25 +35,21 @@ function renderAlbumSlides(albums) {
         });
     }
 
-    // Qui sta il trucco: non distruggiamo se non necessario
     if (!swiperInstance) {
         initOrUpdateSwiper();
     } else {
-        // Chiediamo a Swiper di ricalcolare le slide senza distruggere l'oggetto
         swiperInstance.update();
-        swiperInstance.slideTo(0, 0); // Torna al primo disco dopo il filtro
+        swiperInstance.slideTo(0, 0);
     }
 
     wrapper.style.opacity = "1";
 }
 
 function initOrUpdateSwiper() {
-    // Inizializzazione pulita solo la prima volta
     swiperInstance = new Swiper(".mySwiper", {
         effect: "cards",
         grabCursor: true,
         speed: 350,
-        // Miglioriamo la gestione della memoria
         observer: true,
         observeParents: true,
         mousewheel: { invert: false, sensitivity: 1 },
@@ -95,13 +88,9 @@ async function caricaCollezioneAutonoma() {
         const risultati = await Promise.all(promesseDati);
         allAlbums = risultati.filter(r => r !== undefined);
 
-        // Rendering iniziale
         renderAlbumSlides(allAlbums);
 
-        // --- INIZIALIZZA RICERCA GLOBALE ---
         if (typeof initGlobalSearch === "function") {
-            // Usiamo le chiavi "semplici" perché il nuovo handler ibrido
-            // cercherà da solo dentro l'oggetto .dati
             initGlobalSearch('vinyl-search', allAlbums, renderAlbumSlides, ['artista', 'album', 'genere']);
         }
 
@@ -115,15 +104,12 @@ async function caricaCollezioneAutonoma() {
 document.querySelectorAll('.filter-btn').forEach(btn => {
     btn.addEventListener('click', () => {
         const selectedGenre = btn.getAttribute('data-genre').toLowerCase();
-
-        // Gestione classe active
         document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
 
         if (selectedGenre === "all") {
             renderAlbumSlides(allAlbums);
         } else {
-            // MODIFICA QUI: usiamo includes invece di ===
             const filtrati = allAlbums.filter(a => {
                 const genereAlbum = (a.dati.genere || "").toLowerCase();
                 return genereAlbum.includes(selectedGenre);
@@ -134,7 +120,19 @@ document.querySelectorAll('.filter-btn').forEach(btn => {
 });
 
 // --- 4. FUNZIONI MODAL & AUDIO ---
-function openVinylModal(dati, folderName) {
+
+// Funzione helper per verificare se un file esiste (es. il video)
+async function fileEsiste(url) {
+    if (!url) return false;
+    try {
+        const response = await fetch(url, { method: 'HEAD' });
+        return response.ok;
+    } catch {
+        return false;
+    }
+}
+
+async function openVinylModal(dati, folderName) {
     const modal = document.getElementById('vinyl-modal');
     const videoContainer = document.getElementById('modal-video');
     if (!modal || !videoContainer) return;
@@ -145,7 +143,7 @@ function openVinylModal(dati, folderName) {
     document.getElementById('modal-artist').innerText = dati.artista;
     document.getElementById('modal-description').innerText = dati.descrizione || "Nessun aneddoto disponibile.";
 
-    // Generazione Tracklist (Logica invariata per funzionalità specifica)
+    // Tracklist (logica originale mantenuta)
     let tracklistHTML = "";
     if (dati.tracklist && dati.tracklist.length > 0) {
         const groups = {};
@@ -179,7 +177,6 @@ function openVinylModal(dati, folderName) {
                 }).join('')}</ul>`;
         });
         listsHTML += `</div>`;
-
         tracklistHTML = `<div class="modal-tracklist" style="margin-top: 20px; border-top: 1px solid #333; padding-top: 15px;"><h4 style="color: #ffdb58; margin-bottom: 15px;"><i class="fas fa-list"></i> Tracce</h4>${buttonsHTML}${listsHTML}</div>`;
     }
 
@@ -188,14 +185,33 @@ function openVinylModal(dati, folderName) {
     if (vecchiaTracklist) vecchiaTracklist.remove();
     infoContainer.insertAdjacentHTML('beforeend', tracklistHTML);
 
+    // --- NUOVA LOGICA VIDEO / COVER SICURA ---
     const videoUrl = dati.video;
     const youtubeEmbed = ottieniEmbedYouTube(videoUrl);
+    const coverPath = `img/vinile/${folderName}/cover.jpg`;
+    const localVideoPath = `img/vinile/${folderName}/video.mp4`;
 
     if (youtubeEmbed) {
+        // Caso 1: YouTube (ha sempre la priorità)
         videoContainer.innerHTML = `<iframe src="${youtubeEmbed}" style="width:100%; height:100%; border:none;" allow="autoplay; encrypted-media" allowfullscreen></iframe>`;
     } else {
-        const videoSource = videoUrl || `img/vinile/${folderName}/video.mp4`;
-        videoContainer.innerHTML = `<video controls autoplay muted loop style="width:100%; height:100%; object-fit:cover;"><source src="${videoSource}" type="video/mp4"></video>`;
+        // Caso 2: Video locale o Cover
+        // Se c'è un link video diretto (non YT) nel JSON, usiamo quello, altrimenti cerchiamo video.mp4
+        const videoDaTestare = videoUrl || localVideoPath;
+
+        // Verifichiamo se il file video esiste davvero sul server
+        const esiste = await fileEsiste(videoDaTestare);
+
+        if (esiste && videoDaTestare.toLowerCase().endsWith('.mp4')) {
+            videoContainer.innerHTML = `
+                <video id="modal-video-element" controls autoplay muted loop style="width:100%; height:100%; object-fit:cover;">
+                    <source src="${videoDaTestare}" type="video/mp4">
+                    Il tuo browser non supporta il tag video.
+                </video>`;
+        } else {
+            // Se il video non esiste o il campo è vuoto, carichiamo la cover
+            videoContainer.innerHTML = `<img src="${coverPath}" style="width:100%; height:100%; object-fit:cover;" alt="Cover">`;
+        }
     }
 
     modal.style.display = "block";
