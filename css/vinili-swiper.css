@@ -1,112 +1,139 @@
 /* ============================================================
-   VINILI-SWIPER.CSS - Slider dei dischi (Versione Corretta)
+   VINILI-SWIPER.CSS - Slider dei dischi (Versione Ottimizzata)
    ============================================================ */
 
 .mySwiper {
     width: 100%;
     max-width: 380px;
-    height: 520px;
-    /* Spazio bilanciato: 20px sopra, 50px sotto per non distanziare troppo il footer */
-    margin: 20px auto 50px !important;
+    /* Aumentata l'altezza per contenere comodamente copertina + testi + genere */
+    height: 580px;
+    margin: 20px auto 80px !important;
     opacity: 0;
     transition: opacity 0.5s ease;
-    /* Fondamentale: permette alle frecce di "uscire" dai bordi dello swiper */
+    /* Permette alle frecce e alle ombre dei testi di essere visibili */
     overflow: visible !important;
+    min-height: 500px;
 }
 
 /* CARD VINILE (SLIDE) */
 .swiper-slide.album-item {
     background: #fff;
     border-radius: 20px;
-    padding: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    padding: 15px; /* Ridotto leggermente per dare respiro ai testi */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
     border: 1px solid #eee;
     cursor: pointer;
     box-sizing: border-box;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Evita che i testi vengano tagliati durante l'animazione */
+    backface-visibility: hidden;
 }
 
 .album-cover {
     width: 100%;
     aspect-ratio: 1/1;
-    border-radius: 10px;
-    border: 4px solid #1a1a1a;
+    border-radius: 12px;
+    border: 3px solid #1a1a1a;
     pointer-events: none;
     object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* CONTENITORE INFO DISCO */
+.album-info {
+    width: 100%;
+    padding: 10px 0;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .album-info h3 {
-    margin: 15px 0 5px;
+    margin: 10px 0 5px;
     color: #1a1a1a;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+    line-height: 1.2;
+    /* Evita che titoli troppo lunghi rompano il layout */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 .album-info p {
-    color: #666;
-    font-size: 0.9rem;
-    margin: 2px 0;
+    color: #555;
+    font-size: 0.85rem;
+    margin: 2px 0 10px;
 }
 
-/* FRECCE PERSONALIZZATE (Giallo Banana) */
+/* FRECCE PERSONALIZZATE */
 .swiper-button-next,
 .swiper-button-prev {
     display: flex !important;
     color: #ffdb58 !important;
-    background: rgba(0, 0, 0, 0.75);
-    width: 50px !important;
-    height: 50px !important;
+    background: rgba(0, 0, 0, 0.8);
+    width: 45px !important;
+    height: 45px !important;
     border-radius: 50%;
     border: 2px solid #ffdb58;
-    transition: all 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     top: 50%;
     transform: translateY(-50%);
-    z-index: 20; /* Sopra le slide */
+    z-index: 100;
 }
 
-/* Icona interna alle frecce */
 .swiper-button-next:after,
 .swiper-button-prev:after {
-    font-size: 18px !important;
+    font-size: 16px !important;
     font-weight: bold;
 }
 
-/* Posizionamento esterno: -100px per non sovrapporsi ai vinili */
-.swiper-button-prev {
-    left: -150px !important; /* Aumentato da -100px */
-}
+.swiper-button-prev { left: -120px !important; }
+.swiper-button-next { right: -120px !important; }
 
-.swiper-button-next {
-    right: -150px !important;
-}
-
-/* Effetto Hover */
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
     background: #ffdb58 !important;
     color: #000 !important;
-    transform: translateY(-50%) scale(1.1);
-    box-shadow: 0 0 15px rgba(255, 219, 88, 0.4);
+    transform: translateY(-50%) scale(1.15);
+}
+
+#album-wrapper {
+    transition: opacity 0.3s ease;
 }
 
 /* --- RESPONSIVE --- */
 
-/* Schermi medi (Laptop/Tablet): stringiamo le frecce per non farle uscire dal monitor */
 @media (max-width: 1200px) {
-    .swiper-button-prev { left: -80px !important; }
-    .swiper-button-next { right: -80px !important; }
+    .swiper-button-prev { left: -70px !important; }
+    .swiper-button-next { right: -70px !important; }
 }
 
-/* Schermi piccoli (Smartphone): riportiamo le frecce dentro o le nascondiamo */
-@media (max-width: 650px) {
-    .swiper-button-prev {
-        left: 5px !important;
-    }
-    .swiper-button-next {
-        right: 5px !important;
-    }
-    /* Su mobile nascondiamo l'overflow per evitare scroll orizzontali del body */
+@media (max-width: 768px) {
     .mySwiper {
-        max-width: 300px;
+        max-width: 320px;
+        height: 540px;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        /* Posizionate più in basso su mobile per non coprire la cover */
+        top: 40%;
+    }
+
+    .swiper-button-prev { left: -10px !important; }
+    .swiper-button-next { right: -10px !important; }
+}
+
+@media (max-width: 480px) {
+    .mySwiper {
+        max-width: 280px;
+        /* Su schermi piccolissimi nascondiamo l'overflow esterno per la stabilità */
         overflow: hidden !important;
     }
+    .swiper-button-prev, .swiper-button-next { display: none !important; }
 }

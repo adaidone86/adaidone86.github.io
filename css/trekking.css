@@ -35,8 +35,7 @@
     height: 520px;      /* Altezza base */
     box-sizing: border-box;
     z-index: 1;
-    /* CAMBIO CRITICO: usiamo visible per non tagliare il bollino */
-    overflow: visible;
+    overflow: visible; /* Necessario per non tagliare i bollini di stato */
 }
 
 .trek-item:hover {
@@ -130,19 +129,42 @@
     border-top: 1px dashed #ddd;
     width: 100%;
 }
-.guida-label { font-size: 0.6rem; color: #999; margin-bottom: 6px; text-transform: uppercase; }
-.guida-link { display: flex; align-items: center; justify-content: center; text-decoration: none; color: #333; gap: 10px; font-weight: 700; font-size: 0.85rem; }
-.guida-img { width: 32px; height: 32px; border-radius: 50%; border: 2px solid #ffdb58; object-fit: cover; }
 
-/* --- BOLLINI STATO (FISSARE IL TAGLIO) --- */
+.guida-label {
+    font-size: 0.6rem;
+    color: #999;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+}
+
+.guida-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #333;
+    gap: 10px;
+    font-weight: 700;
+    font-size: 0.85rem;
+}
+
+.guida-img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 2px solid #ffdb58;
+    object-fit: cover;
+}
+
+/* --- BOLLINI STATO --- */
 .status-badge {
     position: absolute;
-    top: -15px;      /* Spostato leggermente più su */
-    right: -15px;    /* Spostato leggermente più a destra */
-    width: 40px;     /* Leggermente più grande */
+    top: -15px;
+    right: -15px;
+    width: 40px;
     height: 40px;
     border-radius: 50%;
-    z-index: 110;    /* Sempre sopra la card anche in hover */
+    z-index: 110;
     border: 3px solid #fff;
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     overflow: hidden;
@@ -150,7 +172,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    pointer-events: none; /* Evita che il bollino blocchi il click sulla card */
+    pointer-events: none;
 }
 
 .status-icon-img {
@@ -169,50 +191,39 @@
     50% { transform: scale(1.15); }
 }
 
-/* --- BARRA DI RICERCA --- */
-.search-container {
-    position: fixed;
-    bottom: 50px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 90%;
-    max-width: 500px;
-    z-index: 2000;
-}
-
-.search-box input {
-    width: 100%;
-    padding: 15px 20px 15px 55px;
-    border: 3px solid #ffdb58;
-    border-radius: 50px;
-    font-size: 1rem;
-    outline: none;
-    background: #ffffff;
-    box-shadow: 0 -4px 20px rgba(0,0,0,0.15);
-}
-
-.search-icon { position: absolute; left: 22px; top: 50%; transform: translateY(-50%); color: #888; }
-
-
+/* --- TESTI SEZIONE --- */
 .descrizione-approfondita p {
     margin-bottom: 15px;
     line-height: 1.6;
-    color: #444; /* O #ccc se lo sfondo è scuro */
+    color: #444;
 }
 
 .descrizione-approfondita strong {
-    color: #1a1a1a; /* O #ffdb58 se preferisci il richiamo al giallo */
+    color: #1a1a1a;
 }
-
 
 /* RESPONSIVE */
 @media (max-width: 950px) {
-    .trek-grid { grid-template-columns: repeat(2, 1fr); padding: 0 20px 140px 20px; }
+    .trek-grid {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0 20px 140px 20px;
+    }
 }
 
 @media (max-width: 650px) {
-    .trek-grid { grid-template-columns: 1fr; }
-    .trek-item { height: auto; min-height: 480px; overflow: visible; }
-    .trek-item:hover { transform: none; }
-    .status-badge { top: -10px; right: -10px; } /* Più piccolo su mobile */
+    .trek-grid {
+        grid-template-columns: 1fr;
+    }
+    .trek-item {
+        height: auto;
+        min-height: 480px;
+        overflow: visible;
+    }
+    .trek-item:hover {
+        transform: none;
+    }
+    .status-badge {
+        top: -10px;
+        right: -10px;
+    }
 }

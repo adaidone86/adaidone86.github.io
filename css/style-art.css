@@ -5,7 +5,8 @@
 .page-container {
     position: relative;
     width: 100%;
-    height: calc(100vh - 160px);
+    /* Altezza minima per garantire lo scroll corretto */
+    min-height: calc(100vh - 160px);
     margin-top: 100px;
     overflow: visible !important;
 }
@@ -17,66 +18,92 @@
     flex-direction: column;
     align-items: center;
     box-sizing: border-box;
-    overflow-y: auto;
-    overflow-x: visible !important;
+    position: relative;
+    z-index: 1; /* Il testo sta sopra l'immagine ::before */
     text-align: center;
     background-color: transparent;
 }
 
-
-/* Base per l'immagine - Rimosso il posizionamento fisso */
+/* Base per l'immagine di sfondo (Banana) */
 .art-section::before {
     content: "";
-    position: absolute;
-    width: 550px;
-    height: 550px;
+    position: fixed; /* Mantiene l'immagine ferma durante lo scroll */
+    width: 500px;
+    height: 500px;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    z-index: 0;
+    z-index: -1; /* Posiziona l'immagine dietro al testo */
     pointer-events: none;
     filter: brightness(1.1) saturate(0.8);
-    opacity: 0.85;
+    opacity: 0.65; /* Trasparenza per non disturbare la lettura */
     display: block !important;
 }
 
 /* --- CLASSI DI POSIZIONAMENTO --- */
 
-/* Posizione a Destra (quella che avevi prima) */
-.img-right::before {
-    top: 50%;
-    left: 65%;
-    transform: translateY(-70%);
+/* POSIZIONE HOME: In basso a sinistra sopra il footer */
+.img-left::before {
+    bottom: 60px; /* Distanza dal fondo schermo */
+    left: -80px;  /* Leggermente "tagliata" a sinistra per effetto artistico */
+    top: auto;    /* Resetta eventuali top */
+    transform: rotate(-10deg); /* Una leggera rotazione per dinamismo */
 }
 
-/* Posizione Centrale (quella che hai chiesto per Work) */
+/* POSIZIONE DESTRA: Per altre sezioni narrative */
+.img-right::before {
+    top: 55%;
+    right: 5%;
+    left: auto;
+    transform: translateY(-50%);
+}
+
+/* POSIZIONE CENTRALE: Per la pagina Lavoro o sezioni ampie */
 .img-center::before {
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -60%);
-    width: 1000px;
-    height: 1000px;
+    transform: translate(-50%, -50%);
+    width: 850px;
+    height: 850px;
+    opacity: 0.4;
 }
 
-/* Esempio Posizione a Sinistra (opzionale) */
-.img-left::before {
-    top: 40%;
-    left: 20%;
-    transform: translate(-100%, -50%);
-}
-
+/* --- SFONDI SPECIFICI --- */
 .bg-home::before {
     background-image: url('../img/home/banana-b&n.png');
 }
 
-/* Gestione dello spazio finale per le pagine narrative (Setteh, etc.) */
+/* --- GESTIONE SPAZI E CONTENUTI --- */
+
+/* Gestione dello spazio finale per le pagine narrative */
 .art-section .cta-container {
-    /* Aumentiamo il padding inferiore per distanziarci dal footer nero */
     padding: 40px 0 100px 0 !important;
     margin-top: 20px;
 }
 
-/* Assicuriamoci che l'ultimo paragrafo non "tocchi" il bottone */
+/* Distanza tra l'ultimo paragrafo e gli elementi successivi */
 .art-section p:last-of-type {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+/* Linea di separazione orizzontale */
+hr {
+    width: 50%;
+    border: none;
+    border-top: 1px solid var(--banana-yellow);
+    margin: 20px auto;
+}
+
+/* --- RESPONSIVE PER DISPOSITIVI MOBILI --- */
+@media (max-width: 768px) {
+    .art-section::before {
+        width: 300px;
+        height: 300px;
+        opacity: 0.3; /* Più tenue su mobile */
+    }
+
+    .img-left::before {
+        bottom: 80px;
+        left: -50px;
+    }
 }
