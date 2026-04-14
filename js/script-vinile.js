@@ -108,8 +108,6 @@ async function caricaCollezioneAutonoma() {
 }
 
 // --- 3. GESTIONE FILTRI GENERE ---
-// (Manteniamo i bottoni Filtro Rapido se presenti nel tuo HTML)
-// --- 3. GESTIONE FILTRI GENERE ---
 document.querySelectorAll('.filter-btn').forEach(btn => {
     btn.addEventListener('click', () => {
         const selectedGenre = btn.getAttribute('data-genre').toLowerCase();
