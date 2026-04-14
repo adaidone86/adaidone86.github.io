@@ -109,16 +109,23 @@ async function caricaCollezioneAutonoma() {
 
 // --- 3. GESTIONE FILTRI GENERE ---
 // (Manteniamo i bottoni Filtro Rapido se presenti nel tuo HTML)
+// --- 3. GESTIONE FILTRI GENERE ---
 document.querySelectorAll('.filter-btn').forEach(btn => {
     btn.addEventListener('click', () => {
-        const genere = btn.getAttribute('data-genre');
+        const selectedGenre = btn.getAttribute('data-genre').toLowerCase();
+
+        // Gestione classe active
         document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
 
-        if (genere === "all") {
+        if (selectedGenre === "all") {
             renderAlbumSlides(allAlbums);
         } else {
-            const filtrati = allAlbums.filter(a => a.dati.genere.toLowerCase() === genere.toLowerCase());
+            // MODIFICA QUI: usiamo includes invece di ===
+            const filtrati = allAlbums.filter(a => {
+                const genereAlbum = (a.dati.genere || "").toLowerCase();
+                return genereAlbum.includes(selectedGenre);
+            });
             renderAlbumSlides(filtrati);
         }
     });
