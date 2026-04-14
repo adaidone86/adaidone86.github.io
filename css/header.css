@@ -7,8 +7,11 @@
 
 /* RESET & BODY ADJUSTMENT */
 body {
-    padding-top: 140px !important;
+    /* Riduciamo da 140px a 100px (l'altezza esatta dell'header)
+       o al massimo 105px per sicurezza */
+    padding-top: 60px !important;
     background-color: #f4f4f4;
+    margin: 0;
 }
 
 .top-wrapper {
