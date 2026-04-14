@@ -1,6 +1,167 @@
 [
   {
     "tipo": "viaggio",
+    "stato": "w",
+    "titolo": "Madeira Trek",
+    "luogo": "Madeira",
+    "date": {
+      "da": "03/07/2025",
+      "al": "12/07/2025"
+    },
+    "tappe": [
+      {
+        "giorno": "03/07/2025",
+        "km/dislivello": "-",
+        "descrizione_tappa": "-",
+        "cartella_foto": "img/trekking/madeira/g01",
+        "numero_foto": 1
+      },
+      {
+        "giorno": "04/07/2025",
+        "km/dislivello": "-",
+        "descrizione_tappa": "-",
+        "cartella_foto": "img/trekking/madeira/g02",
+        "numero_foto": 1
+      },
+      {
+        "giorno": "05/07/2025",
+        "km/dislivello": "-",
+        "descrizione_tappa": "-",
+        "cartella_foto": "img/trekking/madeira/g03",
+        "numero_foto": 1
+      },
+      {
+        "giorno": "06/07/2025",
+        "km/dislivello": "-",
+        "descrizione_tappa": "-",
+        "cartella_foto": "img/trekking/madeira/g04",
+        "numero_foto": 1
+      },
+      {
+        "giorno": "07/07/2025",
+        "km/dislivello": "-",
+        "descrizione_tappa": "-",
+        "cartella_foto": "img/trekking/madeira/g05",
+        "numero_foto": 1
+      },
+      {
+        "giorno": "08/07/2025",
+        "km/dislivello": "-",
+        "descrizione_tappa": "-",
+        "cartella_foto": "img/trekking/madeira/g06",
+        "numero_foto": 1
+      },
+      {
+        "giorno": "09/07/2025",
+        "km/dislivello": "-",
+        "descrizione_tappa": "-",
+        "cartella_foto": "img/trekking/madeira/g07",
+        "numero_foto": 1
+      },
+      {
+        "giorno": "10/07/2025",
+        "km/dislivello": "-",
+        "descrizione_tappa": "-",
+        "cartella_foto": "img/trekking/madeira/g08",
+        "numero_foto": 1
+      },
+      {
+        "giorno": "11/07/2025",
+        "km/dislivello": "-",
+        "descrizione_tappa": "-",
+        "cartella_foto": "img/trekking/madeira/g09",
+        "numero_foto": 1
+      },
+      {
+        "giorno": "12/07/2025",
+        "km/dislivello": "-",
+        "descrizione_tappa": "-",
+        "cartella_foto": "img/trekking/madeira/g10",
+        "numero_foto": 1
+      }
+    ],
+    "descrizione_breve": "-",
+    "descrizione": "-",
+    "icona": "fa-compass",
+    "guida_nome": "Cecilia Montemitro",
+    "guida_foto": "img/trekking/escursionisti/av.png",
+    "guida_sito": "https://www.viaggiavventurenelmondo.it/"
+  },{
+  "tipo": "viaggio",
+  "stato": "p",
+  "titolo": "La rotta dei due mari",
+  "luogo": "Puglia",
+  "date": {
+    "da": "17/05/2026",
+    "al": "24/05/2026"
+  },
+  "tappe": [
+    {
+      "giorno": "17/05/2026",
+      "km/dislivello": "-",
+      "descrizione_tappa": "-",
+      "cartella_foto": "img/trekking/rotta-due-mari/g01",
+      "numero_foto": 1
+    },
+    {
+      "giorno": "18/05/2026",
+      "km/dislivello": "-",
+      "descrizione_tappa": "-",
+      "cartella_foto": "img/trekking/rotta-due-mari/g02",
+      "numero_foto": 1
+    },
+    {
+      "giorno": "19/05/2026",
+      "km/dislivello": "-",
+      "descrizione_tappa": "-",
+      "cartella_foto": "img/trekking/rotta-due-mari/g03",
+      "numero_foto": 1
+    },
+    {
+      "giorno": "20/05/2026",
+      "km/dislivello": "-",
+      "descrizione_tappa": "-",
+      "cartella_foto": "img/trekking/rotta-due-mari/g04",
+      "numero_foto": 1
+    },
+    {
+      "giorno": "21/05/2026",
+      "km/dislivello": "-",
+      "descrizione_tappa": "-",
+      "cartella_foto": "img/trekking/rotta-due-mari/g05",
+      "numero_foto": 1
+    },
+    {
+      "giorno": "22/05/2026",
+      "km/dislivello": "-",
+      "descrizione_tappa": "-",
+      "cartella_foto": "img/trekking/rotta-due-mari/g06",
+      "numero_foto": 1
+    },
+    {
+      "giorno": "23/05/2026",
+      "km/dislivello": "-",
+      "descrizione_tappa": "-",
+      "cartella_foto": "img/trekking/rotta-due-mari/g07",
+      "numero_foto": 1
+    },
+    {
+      "giorno": "24/05/2026",
+      "km/dislivello": "-",
+      "descrizione_tappa": "-",
+      "cartella_foto": "img/trekking/rotta-due-mari/g08",
+      "numero_foto": 1
+    }
+  ],
+  "descrizione_breve": "-",
+  "descrizione": "-",
+  "icona": "fa-compass",
+  "guida_nome": "La rotta dei due mari",
+  "guida_foto": "img/trekking/escursionisti/duemari.jpg",
+  "guida_sito": "https://www.larottadeiduemari.it/"
+},
+  {
+    "tipo": "viaggio",
     "stato": "p",
     "titolo": "La rotta dei due mari",
     "luogo": "Puglia",
