@@ -14,11 +14,8 @@ function renderAlbumSlides(albums) {
     const swiperContainer = document.querySelector('.mySwiper');
     if (!wrapper) return;
 
-    // Distruggi swiper esistente prima di svuotare
-    if (swiperInstance) {
-        swiperInstance.destroy(true, true);
-        swiperInstance = null;
-    }
+    // Invece di svuotare subito, diamo un feedback fluido (opzionale)
+    wrapper.style.opacity = "0.5";
 
     wrapper.innerHTML = "";
 
@@ -41,20 +38,27 @@ function renderAlbumSlides(albums) {
         });
     }
 
-    // Re-inizializza Swiper
-    setTimeout(() => {
+    // Qui sta il trucco: non distruggiamo se non necessario
+    if (!swiperInstance) {
         initOrUpdateSwiper();
-        if (swiperContainer) swiperContainer.style.opacity = "1";
-    }, 50);
+    } else {
+        // Chiediamo a Swiper di ricalcolare le slide senza distruggere l'oggetto
+        swiperInstance.update();
+        swiperInstance.slideTo(0, 0); // Torna al primo disco dopo il filtro
+    }
+
+    wrapper.style.opacity = "1";
 }
 
 function initOrUpdateSwiper() {
-    if (swiperInstance) swiperInstance.destroy(true, true);
-
+    // Inizializzazione pulita solo la prima volta
     swiperInstance = new Swiper(".mySwiper", {
         effect: "cards",
         grabCursor: true,
         speed: 350,
+        // Miglioriamo la gestione della memoria
+        observer: true,
+        observeParents: true,
         mousewheel: { invert: false, sensitivity: 1 },
         navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
     });
