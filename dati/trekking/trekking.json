@@ -257,7 +257,7 @@
   },
   {
     "tipo": "giornaliero",
-    "stato": "w",
+    "stato": "c",
     "titolo": "Punta Ala, tra cielo e mare",
     "luogo": "Punta Ala (GR)",
     "km/dislivello": "18km/550m",
@@ -269,7 +269,7 @@
     "guida_foto": "img/trekking/escursionisti/landscape.png",
     "guida_sito": "https://landscapewalkingtours.com/",
     "cartella_foto": "img/trekking/punta-ala",
-    "numero_foto": 1
+    "numero_foto": 33
   },
   {
     "tipo": "giornaliero",
