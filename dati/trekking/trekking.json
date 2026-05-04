@@ -209,7 +209,7 @@
   },
   {
     "tipo": "giornaliero",
-    "stato": "p",
+    "stato": "w",
     "titolo": "Mare, trekking e nuove amicizie",
     "luogo": "Scarlino",
     "km/dislivello": "11km/350m",
@@ -225,7 +225,7 @@
   },
   {
     "tipo": "giornaliero",
-    "stato": "p",
+    "stato": "w",
     "titolo": "Passo di Dante e monte Moriglione",
     "luogo": "-",
     "km/dislivello": "13km/600m",
