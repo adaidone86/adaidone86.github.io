@@ -562,6 +562,22 @@
   {
     "tipo": "giornaliero",
     "stato": "c",
+    "titolo": "Escursione a Monte Cofano",
+    "luogo": "Custonaci (TP)",
+    "km/dislivello": "7km/250m",
+    "data": "15/09/2024",
+    "descrizione_breve": "Trekking ad anello a Monte Cofano tra mare, torri storiche, siti archeologici e biodiversità",
+    "descrizione": "La maestosa Riserva di Monte Cofano, tra i Golfi di Bonagia e Cofano, offre un suggestivo percorso ad anello tra natura incontaminata, pareti rocciose e macchia mediterranea. Partendo da Cala Buguto, l'itinerario unisce panorami spettacolari a siti di grande interesse storico e archeologico.\n\nLungo il cammino incontreremo l'antica Torre di San Giovanni e la Grotta del Crocefisso, testimonianze di difesa costiera e insediamenti neolitici. Scopriremo inoltre la devozione locale presso la Cappella del Crocefisso e i resti dell'antica Eraclea greca, con le sue fortificazioni e cisterne scavate nella roccia.\n\nL'escursione prosegue verso l'esclusiva Torre della Tonnara, unica in Sicilia per la sua pianta stellata, per poi concludersi presso il Gorgo Cofano, una preziosa pozza stagionale ricca di biodiversità, prima di rientrare al punto di partenza.",
+    "icona": "fa-water",
+    "guida_nome": "Nessuna",
+    "guida_foto": "img/trekking/escursionisti/",
+    "guida_sito": "",
+    "cartella_foto": "img/trekking/monte-cofano",
+    "numero_foto": 17
+  },
+  {
+    "tipo": "giornaliero",
+    "stato": "c",
     "titolo": "La Selvaggia Valle del Rovigo",
     "luogo": "Alto Mugello (FI)",
     "km/dislivello": "16km/680m",
