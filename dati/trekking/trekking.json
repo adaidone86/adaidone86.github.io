@@ -609,7 +609,7 @@
   },
   {
     "tipo": "giornaliero",
-    "stato": "w",
+    "stato": "c",
     "titolo": "Canyon di Calignaia, Trek & Bagno",
     "luogo": "Costa Livornese",
     "km/dislivello": "12km/400m",
@@ -621,7 +621,7 @@
     "guida_foto": "img/trekking/escursionisti/landscape.png",
     "guida_sito": "https://landscapewalkingtours.com/",
     "cartella_foto": "img/trekking/canyon-calignaia",
-    "numero_foto": 1
+    "numero_foto": 31
   },
   {
     "tipo": "giornaliero",
