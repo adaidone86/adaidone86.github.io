@@ -529,7 +529,7 @@
   },
   {
     "tipo": "giornaliero",
-    "stato": "w",
+    "stato": "c",
     "titolo": "La Straordinaria Foresta della Lama",
     "luogo": "Parco Nazionale Foreste Casentinesi (AR)",
     "km/dislivello": "15km/800m",
@@ -541,7 +541,7 @@
     "guida_foto": "img/trekking/escursionisti/landscape.png",
     "guida_sito": "https://landscapewalkingtours.com/",
     "cartella_foto": "img/trekking/foresta-lama",
-    "numero_foto": 1
+    "numero_foto": 58
   },
   {
     "tipo": "giornaliero",
