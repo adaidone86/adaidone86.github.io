@@ -433,11 +433,11 @@
   },
   {
     "tipo": "giornaliero",
-    "stato": "w",
+    "stato": "c",
     "titolo": "Cala Violina e le Bandite di Scarlino",
     "luogo": "Riserva Naturale Bandite di Scarlino (GR)",
     "km/dislivello": "14km/400m",
-    "data": "26/01/2024",
+    "data": "26/01/2025",
     "descrizione_breve": "Trekking d'inverno nelle Bandite di Scarlino, tra la macchia e l'azzurro di Cala Violina",
     "descrizione": "Escursione talmente bella che non ha bisogno di molte presentazioni.\n\nPercorreremo i sentieri della la preziosa Riserva Naturale delle Bandite di Scarlino, area di antichi insediamenti preistorici ed etruschi immersi nella verde macchia mediterranea per ammirare incredibili panorami costieri fino ad arrivare alle celebri Cale Civette, Violina e Martina.\n\nAbbiamo scelto il periodo invernale per poter ammirare questi luoghi attratti dal fascino del mite inverno mediterraneo che sa regalare un’intimità e connessione con la natura probabilmente assente in altre stagioni, provare per credere.",
     "icona": "fa-water",
@@ -445,7 +445,7 @@
     "guida_foto": "img/trekking/escursionisti/landscape.png",
     "guida_sito": "https://landscapewalkingtours.com/",
     "cartella_foto": "img/trekking/cala-violina",
-    "numero_foto": 1
+    "numero_foto": 26
   },
   {
     "tipo": "giornaliero",
