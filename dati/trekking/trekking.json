@@ -561,7 +561,7 @@
   },
   {
     "tipo": "giornaliero",
-    "stato": "w",
+    "stato": "c",
     "titolo": "La Selvaggia Valle del Rovigo",
     "luogo": "Alto Mugello (FI)",
     "km/dislivello": "16km/680m",
@@ -573,7 +573,7 @@
     "guida_foto": "img/trekking/escursionisti/landscape.png",
     "guida_sito": "https://landscapewalkingtours.com/",
     "cartella_foto": "img/trekking/calle-del-rovigo",
-    "numero_foto": 1
+    "numero_foto": 45
   },
   {
     "tipo": "giornaliero",
