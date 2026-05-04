@@ -657,7 +657,7 @@
   },
   {
     "tipo": "giornaliero",
-    "stato": "w",
+    "stato": "c",
     "titolo": "Porto Ercole ed i Forti Spagnoli",
     "luogo": "Argentario (GR)",
     "km/dislivello": "12km/550m",
@@ -669,7 +669,7 @@
     "guida_foto": "img/trekking/escursionisti/landscape.png",
     "guida_sito": "https://landscapewalkingtours.com/",
     "cartella_foto": "img/trekking/porto-ercole",
-    "numero_foto": 1
+    "numero_foto": 46
   },
   {
     "tipo": "giornaliero",
