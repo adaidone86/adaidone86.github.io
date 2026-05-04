@@ -673,7 +673,7 @@
   },
   {
     "tipo": "giornaliero",
-    "stato": "w",
+    "stato": "c",
     "titolo": "Libbiano, le rupi e le pieghe del Trossa",
     "luogo": "Alta Val di Cecina",
     "km/dislivello": "12km/550m",
@@ -685,7 +685,7 @@
     "guida_foto": "img/trekking/escursionisti/landscape.png",
     "guida_sito": "https://landscapewalkingtours.com/",
     "cartella_foto": "img/trekking/libbiano",
-    "numero_foto": 1
+    "numero_foto": 37
   },
   {
     "tipo": "giornaliero",
