@@ -577,7 +577,7 @@
   },
   {
     "tipo": "giornaliero",
-    "stato": "w",
+    "stato": "c",
     "titolo": "Le Cascate di San Godenzo",
     "luogo": "Alto Mugello (FI)",
     "km/dislivello": "13km/500m",
@@ -589,7 +589,7 @@
     "guida_foto": "img/trekking/escursionisti/landscape.png",
     "guida_sito": "https://landscapewalkingtours.com/",
     "cartella_foto": "img/trekking/cascate-san-godenzo",
-    "numero_foto": 1
+    "numero_foto": 32
   },
   {
     "tipo": "giornaliero",
