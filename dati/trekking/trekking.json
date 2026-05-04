@@ -641,7 +641,7 @@
   },
   {
     "tipo": "giornaliero",
-    "stato": "w",
+    "stato": "c",
     "titolo": "Sgranar per Colli",
     "luogo": "Borgo a Buggiano (PT)",
     "km/dislivello": "10km/-m",
@@ -653,7 +653,7 @@
     "guida_foto": "img/trekking/escursionisti/sgranar.png",
     "guida_sito": "https://sgranarpercolli.it/",
     "cartella_foto": "img/trekking/sgranar-per-colli",
-    "numero_foto": 1
+    "numero_foto": 22
   },
   {
     "tipo": "giornaliero",
