@@ -385,7 +385,7 @@
   },
   {
     "tipo": "giornaliero",
-    "stato": "w",
+    "stato": "c",
     "titolo": "Valle della Luna, Incanto di Pietra e Mare",
     "luogo": "Monti Livornesi",
     "km/dislivello": "17km/560m",
@@ -397,7 +397,7 @@
     "guida_foto": "img/trekking/escursionisti/landscape.png",
     "guida_sito": "https://landscapewalkingtours.com/",
     "cartella_foto": "img/trekking/valle-luna",
-    "numero_foto": 1
+    "numero_foto": 88
   },
   {
     "tipo": "giornaliero",
