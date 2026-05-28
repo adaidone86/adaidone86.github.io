@@ -449,7 +449,7 @@
   },
   {
     "tipo": "giornaliero",
-    "stato": "w",
+    "stato": "c",
     "titolo": "I Vigneti di Tignanello",
     "luogo": "Chianti Fiorentino",
     "km/dislivello": "17km/380m",
@@ -461,7 +461,7 @@
     "guida_foto": "img/trekking/escursionisti/landscape.png",
     "guida_sito": "https://landscapewalkingtours.com/",
     "cartella_foto": "img/trekking/tignanello",
-    "numero_foto": 1
+    "numero_foto": 82
   },
   {
     "tipo": "giornaliero",
