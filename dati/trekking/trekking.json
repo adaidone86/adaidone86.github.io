@@ -513,7 +513,7 @@
   },
   {
     "tipo": "giornaliero",
-    "stato": "w",
+    "stato": "c",
     "titolo": "Abbraccio Wild Grill",
     "luogo": "Alto Mugello (FI)",
     "km/dislivello": "9,5km/350m",
@@ -525,7 +525,7 @@
     "guida_foto": "img/trekking/escursionisti/landscape.png",
     "guida_sito": "https://landscapewalkingtours.com/",
     "cartella_foto": "img/trekking/cascata-abbraccio",
-    "numero_foto": 1
+    "numero_foto": 66
   },
   {
     "tipo": "giornaliero",
