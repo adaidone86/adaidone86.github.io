@@ -417,7 +417,7 @@
   },
   {
     "tipo": "giornaliero",
-    "stato": "w",
+    "stato": "c",
     "titolo": "Ghizzano, il Borgo Colorato",
     "luogo": "Valdera (PI)",
     "km/dislivello": "16km/300m",
@@ -429,7 +429,7 @@
     "guida_foto": "img/trekking/escursionisti/landscape.png",
     "guida_sito": "https://landscapewalkingtours.com/",
     "cartella_foto": "img/trekking/ghizzano",
-    "numero_foto": 1
+    "numero_foto": 93
   },
   {
     "tipo": "giornaliero",
