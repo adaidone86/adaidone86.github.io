@@ -465,7 +465,7 @@
   },
   {
     "tipo": "giornaliero",
-    "stato": "w",
+    "stato": "c",
     "titolo": "Montieri sulle vie dell’Argento",
     "luogo": "Colline Metallifere (GR)",
     "km/dislivello": "13km/600m",
@@ -477,7 +477,7 @@
     "guida_foto": "img/trekking/escursionisti/landscape.png",
     "guida_sito": "https://landscapewalkingtours.com/",
     "cartella_foto": "img/trekking/montieri",
-    "numero_foto": 1
+    "numero_foto": 119
   },
   {
     "tipo": "giornaliero",
@@ -493,7 +493,7 @@
     "guida_foto": "img/trekking/escursionisti/landscape.png",
     "guida_sito": "https://landscapewalkingtours.com/",
     "cartella_foto": "img/trekking/foliage-javello",
-    "numero_foto": 1
+    "numero_foto": 92
   },
   {
     "tipo": "giornaliero",
