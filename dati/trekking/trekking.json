@@ -497,7 +497,7 @@
   },
   {
     "tipo": "giornaliero",
-    "stato": "w",
+    "stato": "c",
     "titolo": "Montepulciano e Monticchiello, tra Chiana ed Orcia",
     "luogo": "Val di Chiana - Val d'Orcia (SI)",
     "km/dislivello": "17km/550m",
@@ -509,7 +509,7 @@
     "guida_foto": "img/trekking/escursionisti/landscape.png",
     "guida_sito": "https://landscapewalkingtours.com/",
     "cartella_foto": "img/trekking/montepulciano-monticchiello",
-    "numero_foto": 1
+    "numero_foto": 175
   },
   {
     "tipo": "giornaliero",
