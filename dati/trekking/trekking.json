@@ -369,7 +369,7 @@
   },
   {
     "tipo": "giornaliero",
-    "stato": "w",
+    "stato": "c",
     "titolo": "Montecerboli e San Michele alle Formiche",
     "luogo": "Alta Val di Cecina (PI)",
     "km/dislivello": "13km/400m",
@@ -381,7 +381,7 @@
     "guida_foto": "img/trekking/escursionisti/landscape.png",
     "guida_sito": "https://landscapewalkingtours.com/",
     "cartella_foto": "img/trekking/montecerboli-san-michele",
-    "numero_foto": 1
+    "numero_foto": 31
   },
   {
     "tipo": "giornaliero",
