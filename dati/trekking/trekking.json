@@ -401,7 +401,7 @@
   },
   {
     "tipo": "giornaliero",
-    "stato": "w",
+    "stato": "c",
     "titolo": "Lago dell’Accesa e Cascata Bruna",
     "luogo": "Colline Metallifere (GR)",
     "km/dislivello": "16km/380m",
@@ -413,7 +413,7 @@
     "guida_foto": "img/trekking/escursionisti/landscape.png",
     "guida_sito": "https://landscapewalkingtours.com/",
     "cartella_foto": "img/trekking/lago-accesa",
-    "numero_foto": 1
+    "numero_foto": 20
   },
   {
     "tipo": "giornaliero",
