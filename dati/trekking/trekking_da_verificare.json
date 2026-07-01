@@ -1,0 +1,50 @@
+[
+  {
+  "tipo": "giornaliero",
+  "stato": "w",
+  "titolo": "Cascata di Moraduccio, tuffi e avventura",
+  "luogo": "-",
+  "km/dislivello": "-km/-m",
+  "data": "08/09/2024",
+  "descrizione_breve": "-",
+  "descrizione": "-",
+  "icona": "fa-mountain",
+  "guida_nome": "Dario Favi",
+  "guida_foto": "img/trekking/escursionisti/landscape.png",
+  "guida_sito": "https://landscapewalkingtours.com/",
+  "cartella_foto": "img/trekking/moraduccio",
+  "numero_foto": 1
+},
+{
+  "tipo": "giornaliero",
+  "stato": "w",
+  "titolo": "Acquatrek: Le Piscine del Diaterna",
+  "luogo": "Appenino Tosco Romagnolo (FI)",
+  "km/dislivello": "7,5km/350m",
+  "data": "07/07/2024",
+  "descrizione_breve": "Trekking fluviale nel Diaterna tra acque cristalline, cascate e falesie dell'Appennino",
+  "descrizione": "Il Diaterna è un vero e proprio gioiello dell’Appennino Tosco-Romagnolo vicino a Firenzuola.\n\nAffluente del Santerno in cui si getta nei pressi di Camaggiore, ha nelle acque azzurre e limpide la sua particolarità più evidente. Bianchi massi d’origine calcarea in cui spiccano i colori dell’acqua cristallina, lastroni di roccia ed imponenti falesie, ombrosi e rigogliosi boschi formano un luogo che profuma d’Appennino selvaggio.\n\nSeguiremo uno dei tratti più spettacolari del torrente in alveo fluviale attraverso pozze d’acqua e piccole cascate, forre e spiagge ciottolose, ci bagneremo e ci fermeremo nei tratti più suggestivi nella discesa verso Camaggiore, un’esperienza esilarante ed anti-calura in un ambiente straordinario.",
+  "icona": "fa-tree",
+  "guida_nome": "Dario Favi",
+  "guida_foto": "img/trekking/escursionisti/landscape.png",
+  "guida_sito": "https://landscapewalkingtours.com/",
+  "cartella_foto": "img/trekking/acquatrek-diaterna",
+  "numero_foto": 1
+},
+{
+    "tipo": "giornaliero",
+    "stato": "w",
+    "titolo": "Masso delle Fanciulle, Trek & Bagno",
+    "luogo": "Alta Val di Cecina",
+    "km/dislivello": "16km/500m",
+    "data": "23/06/2024",
+    "descrizione_breve": "Trekking nel Berignone tra boschi e castelli, con tuffo finale al Masso degli Specchi",
+    "descrizione": "Fantastico anello escursionistico all’interno della Riserva Naturale del Berignone, uno dei polmoni verdi della Toscana.\n\nScopriremo angoli fluviali paradisiaci, boschi d’intatta macchia mediterranea, sorprendenti affioramenti geologici per finire con un bagno ristoratore presso la favolosa piscina naturale del Masso degli Specchi!\n\nPartiremo con il facile guado sul Cecina per portarci subito all’interno della storica Riserva, frequentata da legnaioli e carbonai nonchè luogo simbolo della Resistenza.\nAttraverso un ombreggiato sentiero immerso nella macchia mediterranea arriveremo ad uno straordinario punto panoramico da cui si può ammirare tutta la valle, per poi dirigerci verso il Torrente Sellate e la confluenza con il Botro al Rio ed i suoi spettacolari conglomerati.\n\nSaliremo allo storico Castello dei Vescovi, antica Rocca Medievale in posizione strategica dal turbolento passato, per poi proseguire verso la nostra strabiliante meta finale, il tratto sul Fiume Cecina dove tra pozze, piscine naturali e cascatelle arriveremo al Masso delle Fanciulle ed al Masso degli Specchi per un tuffo ristoratore.",
+    "icona": "fa-map-location-dot",
+    "guida_nome": "Dario Favi",
+    "guida_foto": "img/trekking/escursionisti/landscape.png",
+    "guida_sito": "https://landscapewalkingtours.com/",
+    "cartella_foto": "img/trekking/masso-fanciulle",
+    "numero_foto": 1
+  }
+]

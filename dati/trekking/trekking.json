@@ -1,7 +1,7 @@
 [
   {
     "tipo": "viaggio",
-    "stato": "w",
+    "stato": "c",
     "titolo": "Madeira Trek",
     "luogo": "Madeira",
     "date": {
@@ -10,74 +10,67 @@
     },
     "tappe": [
       {
-        "giorno": "03/07/2025",
-        "km/dislivello": "-",
-        "descrizione_tappa": "-",
-        "cartella_foto": "img/trekking/madeira/g01",
-        "numero_foto": 1
-      },
-      {
         "giorno": "04/07/2025",
         "km/dislivello": "-",
         "descrizione_tappa": "-",
         "cartella_foto": "img/trekking/madeira/g02",
-        "numero_foto": 1
+        "numero_foto": 39
       },
       {
         "giorno": "05/07/2025",
         "km/dislivello": "-",
         "descrizione_tappa": "-",
         "cartella_foto": "img/trekking/madeira/g03",
-        "numero_foto": 1
+        "numero_foto": 51
       },
       {
         "giorno": "06/07/2025",
         "km/dislivello": "-",
         "descrizione_tappa": "-",
         "cartella_foto": "img/trekking/madeira/g04",
-        "numero_foto": 1
+        "numero_foto": 26
       },
       {
         "giorno": "07/07/2025",
         "km/dislivello": "-",
         "descrizione_tappa": "-",
         "cartella_foto": "img/trekking/madeira/g05",
-        "numero_foto": 1
+        "numero_foto": 72
       },
       {
         "giorno": "08/07/2025",
         "km/dislivello": "-",
         "descrizione_tappa": "-",
         "cartella_foto": "img/trekking/madeira/g06",
-        "numero_foto": 1
+        "numero_foto": 45
       },
       {
         "giorno": "09/07/2025",
         "km/dislivello": "-",
         "descrizione_tappa": "-",
         "cartella_foto": "img/trekking/madeira/g07",
-        "numero_foto": 1
+        "numero_foto": 68
       },
       {
         "giorno": "10/07/2025",
         "km/dislivello": "-",
         "descrizione_tappa": "-",
         "cartella_foto": "img/trekking/madeira/g08",
-        "numero_foto": 1
+        "numero_foto": 55
       },
       {
         "giorno": "11/07/2025",
         "km/dislivello": "-",
         "descrizione_tappa": "-",
         "cartella_foto": "img/trekking/madeira/g09",
-        "numero_foto": 1
+        "numero_foto": 81
       },
       {
         "giorno": "12/07/2025",
         "km/dislivello": "-",
         "descrizione_tappa": "-",
         "cartella_foto": "img/trekking/madeira/g10",
-        "numero_foto": 1
+        "numero_foto": 61|
       }
     ],
     "descrizione_breve": "-",
@@ -369,7 +362,7 @@
   },
   {
     "tipo": "giornaliero",
-    "stato": "c",
+    "stato": "w",
     "titolo": "Montecerboli e San Michele alle Formiche",
     "luogo": "Alta Val di Cecina (PI)",
     "km/dislivello": "13km/400m",
@@ -381,11 +374,11 @@
     "guida_foto": "img/trekking/escursionisti/landscape.png",
     "guida_sito": "https://landscapewalkingtours.com/",
     "cartella_foto": "img/trekking/montecerboli-san-michele",
-    "numero_foto": 31
+    "numero_foto": 1
   },
   {
     "tipo": "giornaliero",
-    "stato": "c",
+    "stato": "w",
     "titolo": "Valle della Luna, Incanto di Pietra e Mare",
     "luogo": "Monti Livornesi",
     "km/dislivello": "17km/560m",
@@ -397,11 +390,11 @@
     "guida_foto": "img/trekking/escursionisti/landscape.png",
     "guida_sito": "https://landscapewalkingtours.com/",
     "cartella_foto": "img/trekking/valle-luna",
-    "numero_foto": 88
+    "numero_foto": 1
   },
   {
     "tipo": "giornaliero",
-    "stato": "c",
+    "stato": "w",
     "titolo": "Lago dell’Accesa e Cascata Bruna",
     "luogo": "Colline Metallifere (GR)",
     "km/dislivello": "16km/380m",
@@ -413,11 +406,11 @@
     "guida_foto": "img/trekking/escursionisti/landscape.png",
     "guida_sito": "https://landscapewalkingtours.com/",
     "cartella_foto": "img/trekking/lago-accesa",
-    "numero_foto": 20
+    "numero_foto": 1
   },
   {
     "tipo": "giornaliero",
-    "stato": "c",
+    "stato": "w",
     "titolo": "Ghizzano, il Borgo Colorato",
     "luogo": "Valdera (PI)",
     "km/dislivello": "16km/300m",
@@ -429,7 +422,7 @@
     "guida_foto": "img/trekking/escursionisti/landscape.png",
     "guida_sito": "https://landscapewalkingtours.com/",
     "cartella_foto": "img/trekking/ghizzano",
-    "numero_foto": 93
+    "numero_foto": 1
   },
   {
     "tipo": "giornaliero",
@@ -449,7 +442,7 @@
   },
   {
     "tipo": "giornaliero",
-    "stato": "c",
+    "stato": "w",
     "titolo": "I Vigneti di Tignanello",
     "luogo": "Chianti Fiorentino",
     "km/dislivello": "17km/380m",
@@ -461,11 +454,11 @@
     "guida_foto": "img/trekking/escursionisti/landscape.png",
     "guida_sito": "https://landscapewalkingtours.com/",
     "cartella_foto": "img/trekking/tignanello",
-    "numero_foto": 82
+    "numero_foto": 1
   },
   {
     "tipo": "giornaliero",
-    "stato": "c",
+    "stato": "w",
     "titolo": "Montieri sulle vie dell’Argento",
     "luogo": "Colline Metallifere (GR)",
     "km/dislivello": "13km/600m",
@@ -477,11 +470,11 @@
     "guida_foto": "img/trekking/escursionisti/landscape.png",
     "guida_sito": "https://landscapewalkingtours.com/",
     "cartella_foto": "img/trekking/montieri",
-    "numero_foto": 119
+    "numero_foto": 1
   },
   {
     "tipo": "giornaliero",
-    "stato": "c",
+    "stato": "w",
     "titolo": "Castagnata e Foliage ai Faggi di Javello",
     "luogo": "Appennino Pratese",
     "km/dislivello": "12km/700m",
@@ -493,11 +486,11 @@
     "guida_foto": "img/trekking/escursionisti/landscape.png",
     "guida_sito": "https://landscapewalkingtours.com/",
     "cartella_foto": "img/trekking/foliage-javello",
-    "numero_foto": 92
+    "numero_foto": 1
   },
   {
     "tipo": "giornaliero",
-    "stato": "c",
+    "stato": "w",
     "titolo": "Montepulciano e Monticchiello, tra Chiana ed Orcia",
     "luogo": "Val di Chiana - Val d'Orcia (SI)",
     "km/dislivello": "17km/550m",
@@ -509,11 +502,11 @@
     "guida_foto": "img/trekking/escursionisti/landscape.png",
     "guida_sito": "https://landscapewalkingtours.com/",
     "cartella_foto": "img/trekking/montepulciano-monticchiello",
-    "numero_foto": 175
+    "numero_foto": 1
   },
   {
     "tipo": "giornaliero",
-    "stato": "c",
+    "stato": "w",
     "titolo": "Abbraccio Wild Grill",
     "luogo": "Alto Mugello (FI)",
     "km/dislivello": "9,5km/350m",
@@ -525,7 +518,7 @@
     "guida_foto": "img/trekking/escursionisti/landscape.png",
     "guida_sito": "https://landscapewalkingtours.com/",
     "cartella_foto": "img/trekking/cascata-abbraccio",
-    "numero_foto": 66
+    "numero_foto": 1
   },
   {
     "tipo": "giornaliero",
@@ -542,22 +535,6 @@
     "guida_sito": "https://landscapewalkingtours.com/",
     "cartella_foto": "img/trekking/foresta-lama",
     "numero_foto": 58
-  },
-  {
-    "tipo": "giornaliero",
-    "stato": "w",
-    "titolo": "Cascata di Moraduccio, tuffi e avventura",
-    "luogo": "-",
-    "km/dislivello": "-km/-m",
-    "data": "08/09/2024",
-    "descrizione_breve": "-",
-    "descrizione": "-",
-    "icona": "fa-mountain",
-    "guida_nome": "Dario Favi",
-    "guida_foto": "img/trekking/escursionisti/landscape.png",
-    "guida_sito": "https://landscapewalkingtours.com/",
-    "cartella_foto": "img/trekking/moraduccio",
-    "numero_foto": 1
   },
   {
     "tipo": "giornaliero",
@@ -609,22 +586,6 @@
   },
   {
     "tipo": "giornaliero",
-    "stato": "w",
-    "titolo": "Acquatrek: Le Piscine del Diaterna",
-    "luogo": "Appenino Tosco Romagnolo (FI)",
-    "km/dislivello": "7,5km/350m",
-    "data": "07/07/2024",
-    "descrizione_breve": "Trekking fluviale nel Diaterna tra acque cristalline, cascate e falesie dell'Appennino",
-    "descrizione": "Il Diaterna è un vero e proprio gioiello dell’Appennino Tosco-Romagnolo vicino a Firenzuola.\n\nAffluente del Santerno in cui si getta nei pressi di Camaggiore, ha nelle acque azzurre e limpide la sua particolarità più evidente. Bianchi massi d’origine calcarea in cui spiccano i colori dell’acqua cristallina, lastroni di roccia ed imponenti falesie, ombrosi e rigogliosi boschi formano un luogo che profuma d’Appennino selvaggio.\n\nSeguiremo uno dei tratti più spettacolari del torrente in alveo fluviale attraverso pozze d’acqua e piccole cascate, forre e spiagge ciottolose, ci bagneremo e ci fermeremo nei tratti più suggestivi nella discesa verso Camaggiore, un’esperienza esilarante ed anti-calura in un ambiente straordinario.",
-    "icona": "fa-tree",
-    "guida_nome": "Dario Favi",
-    "guida_foto": "img/trekking/escursionisti/landscape.png",
-    "guida_sito": "https://landscapewalkingtours.com/",
-    "cartella_foto": "img/trekking/acquatrek-diaterna",
-    "numero_foto": 1
-  },
-  {
-    "tipo": "giornaliero",
     "stato": "c",
     "titolo": "Canyon di Calignaia, Trek & Bagno",
     "luogo": "Costa Livornese",
@@ -638,22 +599,6 @@
     "guida_sito": "https://landscapewalkingtours.com/",
     "cartella_foto": "img/trekking/canyon-calignaia",
     "numero_foto": 31
-  },
-  {
-    "tipo": "giornaliero",
-    "stato": "w",
-    "titolo": "Masso delle Fanciulle, Trek & Bagno",
-    "luogo": "Alta Val di Cecina",
-    "km/dislivello": "16km/500m",
-    "data": "23/06/2024",
-    "descrizione_breve": "Trekking nel Berignone tra boschi e castelli, con tuffo finale al Masso degli Specchi",
-    "descrizione": "Fantastico anello escursionistico all’interno della Riserva Naturale del Berignone, uno dei polmoni verdi della Toscana.\n\nScopriremo angoli fluviali paradisiaci, boschi d’intatta macchia mediterranea, sorprendenti affioramenti geologici per finire con un bagno ristoratore presso la favolosa piscina naturale del Masso degli Specchi!\n\nPartiremo con il facile guado sul Cecina per portarci subito all’interno della storica Riserva, frequentata da legnaioli e carbonai nonchè luogo simbolo della Resistenza.\nAttraverso un ombreggiato sentiero immerso nella macchia mediterranea arriveremo ad uno straordinario punto panoramico da cui si può ammirare tutta la valle, per poi dirigerci verso il Torrente Sellate e la confluenza con il Botro al Rio ed i suoi spettacolari conglomerati.\n\nSaliremo allo storico Castello dei Vescovi, antica Rocca Medievale in posizione strategica dal turbolento passato, per poi proseguire verso la nostra strabiliante meta finale, il tratto sul Fiume Cecina dove tra pozze, piscine naturali e cascatelle arriveremo al Masso delle Fanciulle ed al Masso degli Specchi per un tuffo ristoratore.",
-    "icona": "fa-map-location-dot",
-    "guida_nome": "Dario Favi",
-    "guida_foto": "img/trekking/escursionisti/landscape.png",
-    "guida_sito": "https://landscapewalkingtours.com/",
-    "cartella_foto": "img/trekking/masso-fanciulle",
-    "numero_foto": 1
   },
   {
     "tipo": "giornaliero",
